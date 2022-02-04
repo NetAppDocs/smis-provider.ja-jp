@@ -1,0 +1,43 @@
+---
+permalink: task-add-cim-server-users.html 
+sidebar: sidebar 
+keywords: validate, storage systems, cim user, cim server 
+summary: ストレージシステムを検証する前に、 CIM サーバの使用を許可された CIM ユーザを追加する必要があります。 
+---
+= CIM サーバーユーザーを追加します
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+ストレージシステムを検証する前に、 CIM サーバの使用を許可された CIM ユーザを追加する必要があります。
+
+
+
+== 作業を開始する前に
+
+* Administrator としてログインしている必要があります。
+* SMI-S プロバイダにアクセスしておく必要があります。
+
+
+
+
+== 手順
+
+. ローカルユーザアカウントを作成します。
+. 管理者グループにユーザを追加します。
++
+詳細については、 _System documentation を参照してください。
+
+. CIM サーバーユーザーを追加します。
++
+`*CIMUser-A-u_user_name_*`
+
++
+たとえば、「 Chris 」という名前の CIM サーバユーザを追加するには、次のように入力します。
+
++
+「 * CIMUser-A-u Chris * 」のように表示されます
+
+. プロンプトが表示されたら、パスワードを入力してもう一度入力します。
+

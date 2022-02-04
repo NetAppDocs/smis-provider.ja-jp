@@ -1,0 +1,58 @@
+---
+permalink: task-configure-log-settings.html 
+sidebar: sidebar 
+keywords: system message, directory, netapp si-s provider, cim server log 
+summary: デフォルトでは、すべてのシステムメッセージがログに記録されます。また、デフォルトでは、システムメッセージログは NetApp SMI-S Provider がインストールされているディレクトリの logs ディレクトリにあります。CIM サーバログに書き込まれるシステムメッセージの場所とレベルを変更できます。たとえば、指定したディレクトリにログを保存し、致命的なシステムメッセージのみを CIM サーバログに書き込むように設定できます。 
+---
+= ログ設定を構成します
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+デフォルトでは、すべてのシステムメッセージがログに記録されます。また、デフォルトでは、システム・メッセージ・ログは NetApp SMI-S Provider がインストールされているディレクトリの「 logs 」ディレクトリに配置されます。CIM サーバログに書き込まれるシステムメッセージの場所とレベルを変更できます。たとえば、指定したディレクトリにログを保存し、致命的なシステムメッセージのみを CIM サーバログに書き込むように設定できます。
+
+
+
+== 作業を開始する前に
+
+* Administrator としてのログインクレデンシャルが必要です。
+* ホストシステムに Administrator としてログインしている必要があります。
+
+
+
+
+== 手順
+
+. NetApp SMI-S Provider にアクセスします。
+. 次のいずれかの操作を実行します。
++
+[cols="3*"]
+|===
+| アクション | コマンドを実行します | 追加情報 
+
+
+ a| 
+システムメッセージロギングレベルを変更します
+ a| 
+'*cimconfig -s logLevel=_new_log_level_-p *
+ a| 
+たとえば ' ログ・レベルを "`informing" に変更する場合は '+`*cimconfig -s logLevel=informion-p *` コマンドを入力します
+
+
+
+ a| 
+システム・メッセージ・ログ・ディレクトリを変更します
+ a| 
+`*cimconfig -s logdir=new_log_directory-p *`_new_log_directory_`s にスペースが含まれている場合は ' 引用符 (`_new log directory_") で囲む必要があります
+ a| 
+たとえば ' ログ・ディレクトリを "serverLogs" に変更する場合は ' 次のコマンドを入力します
+
+`*cimconfig -s logdir=serverLogs-p *`
+
+|===
+. CIM サーバを再起動します。
++
+`*SMIS cimserver restart*`
+
+

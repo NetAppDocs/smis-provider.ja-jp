@@ -1,0 +1,33 @@
+---
+permalink: reference-data-ontap-smi-s-agent-components.html 
+sidebar: sidebar 
+keywords: smi-s provider 
+summary: NetApp SMI-S Provider は、ストレージシステムの管理と監視を可能にする 3 つのコンポーネントで構成されます。 CIMOM 、プロバイダオブジェクト、リポジトリです。 
+---
+= NetApp SMI-S プロバイダのコンポーネント
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp SMI-S Provider は、ストレージシステムの管理と監視を可能にする 3 つのコンポーネントで構成されます。 CIMOM 、プロバイダオブジェクト、リポジトリです。
+
+* * CIMOM *
++
+これは NetApp SMI-S プロバイダの基盤です。CIMOM は、各アプリケーション要求を収集、検証、および認証してから、アプリケーションに応答します。各要求を処理するために適切なプロバイダを呼び出すことで、各要求のコンジットとなります。
+
+* * プロバイダオブジェクト *
++
+ホストが SMI-S プロバイダへのコマンドまたはクエリを発行すると、 CIMOM は共有ライブラリオブジェクトをロードし、そのオブジェクトを呼び出して要求を処理し、結果の情報をホストに返します。
+
++
+[NOTE]
+====
+Windows ホストでは、 DLL オブジェクトを使用します。
+
+====
+* * リポジトリ *
++
+CIMOM は、リポジトリにフラットファイルデータベースを使用します。CIM レベルで必要な永続的データを格納します。
+
+

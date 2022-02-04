@@ -1,0 +1,33 @@
+---
+permalink: reference-connection-refused-error.html 
+sidebar: sidebar 
+keywords: troubleshooting, issue, encounter 
+summary: NetApp SMI-S プロバイダで発生した問題。 
+---
+= 接続が拒否されました
+:icons: font
+:imagesdir: ./media/
+
+
+* * メッセージ *
++
+「接続が拒否されました」
+
+* * 原因 *
++
+CIM サーバが起動していません。
+
+* * 是正措置 *
++
+NetApp SMI-S Provider をインストールしたディレクトリ内の bin ディレクトリに移動し、次のコマンドを入力して、 CIM サーバが起動していることを確認します。
+
++
+「 SMIS cimserver status 」
+
++
+CIM サーバが実行されていない場合は、次のコマンドを入力します。
+
++
+「 SMIS cimserver start 」
+
+

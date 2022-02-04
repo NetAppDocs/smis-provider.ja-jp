@@ -1,0 +1,33 @@
+---
+permalink: reference-vm-provisioning-in-scvmm-fails-with-insufficient-system-resources-error.html 
+sidebar: sidebar 
+keywords: troubleshooting, issue, encounter 
+summary: NetApp SMI-S プロバイダで発生した問題。 
+---
+= 要求されたサービスを完了するための十分なシステムリソースがありません
+:icons: font
+:imagesdir: ./media/
+
+
+* * メッセージ *
++
+「要求されたサービスを完了するには、システムリソースが不足しています
+
+* * 概要 *
++
+このメッセージは、 SCVMM で 1 つのファイル共有に多数の VM をプロビジョニングすると、接続あたりの同じユーザセッション数が上限に達した場合に表示されます。
+
++
+SCVMM は、 Hyper-V ホストごとに 1 つの TCP 接続を作成します。各接続は、 Hyper-V ホストのコンピュータ名（ computer$ ）と SCVMM 「 Run As account 」という 2 つのユーザーによる多数のセッションを作成します。コンピュータ $ とのセッションの数は、その Hyper-V ホストに導入されている仮想ハードディスクの数と同じです。
+
++
+デフォルト値の ［ 接続ごとの最大同一ユーザーセッション数 ］ は 50 です。この制限により、 SCVMM を使用した大規模な VM 導入がブロックされます。この問題は、 Hyper-V ホストあたり 50 台を超える VM を導入する場合に使用します。
+
+* * 是正措置 *
++
+CIFS プロトコルと同じ接続の最大セッション数を制御するカウンタを増やします。たとえば、次のコマンドは、同じ接続の最大ユーザセッション数をデフォルトの 50 から 100 に変更します。
+
++
+`* SVM::***>cifs op modify -max-Same -user-sessions-per-connection 100*`
+
+

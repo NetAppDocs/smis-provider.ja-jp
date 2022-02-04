@@ -1,0 +1,59 @@
+---
+permalink: reference-smis-refresh.html 
+sidebar: sidebar 
+keywords: smi-s provider, automatic, information, storage systems 
+summary: デフォルトでは、 SMI-S Provider は 60 分（ 3 、 600 秒）ごとにストレージシステムから情報を自動的に取得します。SMIS refresh コマンドを使用すると、特定のストレージシステムを手動で更新できます。 
+---
+= SMIS 更新
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+デフォルトでは、 SMI-S Provider は 60 分（ 3 、 600 秒）ごとにストレージシステムから情報を自動的に取得します。特定のストレージ・システムを手動で更新するには 'SMIS refresh コマンドを使用します
+
+
+
+== 構文
+
+「 SMISE_RESIST_SYSTEM_IP_` 」と入力します
+
+「 [-t ｛ * http * | * https * ｝ ] 」
+
+
+
+== 場所
+
+C ： \Program Files （ x86 ） \NetApp\SMIS\Pegasus\bin`
+
+
+
+== 権限レベル
+
+有効なユーザ名とパスワードを持つユーザ
+
+
+
+== パラメータ
+
+* '*_storage_system_IP_*'
++
+特定のストレージ・システムを更新します。
+
+* '*[-t { http|http}]*`
++
+使用するプロトコル： HTTPS （デフォルト）または HTTP
+
+
+
+
+
+== 例
+
+「 smis refresh 」コマンドとその出力は次のとおりです。
+
+[listing]
+----
+smis refresh 10.32.1.4
+Return Value= 0
+----

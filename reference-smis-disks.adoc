@@ -1,0 +1,60 @@
+---
+permalink: reference-smis-disks.html 
+sidebar: sidebar 
+keywords: thesmis, disk, command, display, information, storage, systems 
+summary: このコマンドを実行すると、ストレージシステムのディスク情報が表示されます。SMIS ディスクは、 Data ONTAP 7-Mode コントローラで使用する場合にのみ機能します。 
+---
+= SMIS ディスク
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「 smis disks 」コマンドを使用すると、ストレージ・システムのディスク情報が表示されます。「 SMIS disks 」は、 Data ONTAP 7-Mode コントローラで使用する場合にのみ機能します。
+
+
+
+== 構文
+
+SMIS ディスク
+
+「 [-t ｛ * http * | * https * ｝ ] 」
+
+
+
+== 場所
+
+C ： \Program Files （ x86 ） \NetApp\SMIS\Pegasus\bin`
+
+
+
+== 権限レベル
+
+有効なユーザ名とパスワードを持つユーザ
+
+
+
+== パラメータ
+
+* '*[-t { http|http}]*`
++
+使用するプロトコル： HTTPS （デフォルト）または HTTP
+
+
+
+
+
+== 例
+
+「 smis disks 」コマンドとその省略形の出力は次のとおりです。
+
+[listing]
+----
+smis disks
+ONTAP_DiskExtent.CreationClassName="ONTAP_DiskExtent",DeviceID="0c.00.3",SystemCreationClassName="ONTAP_StorageSystem",SystemName="ONTAP:0135027815"
+ONTAP_DiskExtent.CreationClassName="ONTAP_DiskExtent",DeviceID="0c.00.5",SystemCreationClassName="ONTAP_StorageSystem",SystemName="ONTAP:0135027815"
+ONTAP_DiskExtent.CreationClassName="ONTAP_DiskExtent",DeviceID="0c.00.7",SystemCreationClassName="ONTAP_StorageSystem",SystemName="ONTAP:0135027815"
+ONTAP_DiskExtent.CreationClassName="ONTAP_DiskExtent",DeviceID="0c.00.6",SystemCreationClassName="ONTAP_StorageSystem",SystemName="ONTAP:0135027815"
+ONTAP_DiskExtent.CreationClassName="ONTAP_DiskExtent",DeviceID="0c.00.1",SystemCreationClassName="ONTAP_StorageSystem",SystemName="ONTAP:0135027815"
+ONTAP_DiskExtent.CreationClassName="ONTAP_DiskExtent",DeviceID="0c.00.8",SystemCreationClassName="ONTAP_StorageSystem",SystemName="ONTAP:0135027815"
+----

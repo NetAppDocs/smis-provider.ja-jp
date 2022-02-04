@@ -1,0 +1,905 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blocks>
+  <block id="035209d5aa4411b244c45d329ab7709c" category="summary">アラート、ファイルシステムクォータ、およびライフサイクルの通知は、デフォルトでは無効になっています。これらの通知を有効にするには、環境変数 PEGASUS_DISABLE_DISASIうち を false に設定します。</block>
+  <block id="0c3f164f1b784b68c85112aee98dcfe7" category="doc">SMI-S プロバイダで通知を有効にします</block>
+  <block id="1e8acbda82c541bb421787ed83b44b61" category="paragraph">アラート、ファイルシステムクォータ、およびライフサイクルの通知は、デフォルトでは無効になっています。これらの表示を有効にするには ' 環境変数 PEGASUS_DISABLE_DEIGEMENT を 'false' に設定します</block>
+  <block id="135b308ed83c53f1516b7c754566d1c4" category="section-title">作業を開始する前に</block>
+  <block id="994bc0ff42c205594c4814030a17efe0" category="list-text">Administrator としてのログインクレデンシャルが必要です。</block>
+  <block id="26773937c2e2d4c88812921132664b11" category="list-text">ホストシステムに Administrator としてログインしている必要があります。</block>
+  <block id="bbe48fb854ea022537208eeeff822f91" category="section-title">このタスクについて</block>
+  <block id="2c490b3eac6005d8eb9fbc14dbe36f9c" category="paragraph">「 PEGASUS_DISABLE_DEISMそれら 」が「 false 」に設定されている場合、 NetApp SMI-S Provider で Alert （「 ONTAP_AlertIndication 」）、 FileSystem Quota （「 ONTAP_FSQuotaIndication 」）、および Lifecycle インジケータが有効になります。</block>
+  <block id="f3a29486bed19a90f2da6d007818b427" category="section-title">手順</block>
+  <block id="56b362d7bdbaa18e1b3561d819b06f58" category="list-text">NetApp SMI-S Provider にアクセスします。</block>
+  <block id="ccf6fa61cfac4827cab18b713647f22c" category="list-text">「 PEGASUS_DISABLE_DELITES 」環境変数を「 false 」に設定します。</block>
+  <block id="303b50921b53d3609d0e06a97d955426" category="list-text">CIM サーバを再起動します。</block>
+  <block id="127244f141478553012a969bb50d8169" category="paragraph">`*SMIS cimserver restart*`</block>
+  <block id="4ca8f8dc1b36b9c411697fcb2f505c44" category="summary">トレースするコンポーネントの指定、トレースメッセージの書き込み先のターゲット、トレースのレベル、トレースファイルの場所など、 SMI-S プロバイダによるトレースファイルの管理方法を設定できます。</block>
+  <block id="ff33a03ec388f99378211d1528ffde50" category="doc">トレースを管理します</block>
+  <block id="2f46f994932279267adf63af53ef8631" category="summary">NetApp SMI-S プロバイダで発生した問題。</block>
+  <block id="a276b571413c6c0fe3cdc0eb1cca1726" category="doc">localhost に接続できません： 5989</block>
+  <block id="2dd9a9fa1ac0d7911deb623eb2417bf4" category="list-text">* メッセージ *</block>
+  <block id="827b9bc4b32550f8d2723db104129cfc" category="paragraph">'localhost に接続できません :5989接続に失敗しました。localhost に接続しようとしています :5989`</block>
+  <block id="f14c276c07197ebef1394a5a219087a1" category="list-text">* 概要 *</block>
+  <block id="f0387aea6f47f0a81ccd8cd4a09d5f2b" category="paragraph">このメッセージは、 HTTPS 接続が無効になっているか、 HTTPS ポートが 5989 に設定されていない場合、またはプロバイダが停止してハング状態のままになっている場合に表示されます。</block>
+  <block id="9bcbf7a68cf7f81d5bf448a2e12ab26a" category="list-text">* 是正措置 *</block>
+  <block id="01ee3cc9148ee09987b7b4f7702f7588" category="paragraph">「 enableHttpsConnection 」と「 https ポート」の値が正しいことを確認します。</block>
+  <block id="3e929c060e464a0e6307f7e53081f70a" category="paragraph">「 cimconfig -g enableHttpsConnection 」と入力します</block>
+  <block id="e4a8d153bf5febb975e968932ffcc085" category="paragraph">「 cimconfig -g https ポート」を参照してください</block>
+  <block id="61c8a62a6bea3fc3f3efa8e10430c1e4" category="paragraph">enableHttpsConnection が「 true 」に設定されていない場合は、次のコマンドを入力します。</block>
+  <block id="87975c2d3b51afd3b76c0ef66be0fd89" category="paragraph">「 cimconfig -s enableHttpsConnection -p</block>
+  <block id="78af1ec33901fcba23650f6cdf8fa047" category="paragraph">「 SMIS cimserver restart 」というメッセージが表示されます</block>
+  <block id="39886d4eb2e3e0df0226ae521aff498d" category="paragraph">「 https ポート」が 5989 に設定されていない場合は、次のコマンドを入力します。</block>
+  <block id="a844ae38553a46283a09852e419c1e3b" category="paragraph">「 cimconfig -s https/Port = 5989-p 」と入力します</block>
+  <block id="8ba2aeabfaeefcb034351a0847a41488" category="paragraph">プロバイダが作業を停止してハング状態のままになっている場合は、タスクマネージャを開いてプロセスを終了し、プロバイダを再起動します。</block>
+  <block id="e14a9944fe8690b0f4a896ee4dd1b1bc" category="summary">NetApp SMI-S Provider は、 Data ONTAP 8.3.2 および ONTAP 9 以降を実行するクラスタプラットフォームをサポートします。</block>
+  <block id="6ac98480cf75c6dae666143ef19e1b44" category="doc">サポートされるクラスタ・プラットフォーム</block>
+  <block id="62861fc78ada9051faca6fd4990e1665" category="paragraph">NetApp SMI-S Provider でストレージボリューム（ LUN ）のクローンを作成するには、ストレージシステムに FlexClone ライセンスをインストールしておく必要があります。</block>
+  <block id="39a815a66b6abb4cbca8976fc7695c9e" category="paragraph">NetApp SMI-S Provider は、次のプラットフォームをサポートします。</block>
+  <block id="6b2c2280811e36eb16c24d5aa7a083b0" category="list-text">FAS シリーズ・システム</block>
+  <block id="e5c7df601f61f29bd5487de4001b15d8" category="list-text">V シリーズストレージシステム</block>
+  <block id="483fa710d6223ec73718131f768d782a" category="doc">HostAgentAccessDenied （ ID ： 26263 ）</block>
+  <block id="4c2a8fe7eaf24721cc7a9f0175115bd4" category="section-title">メッセージ</block>
+  <block id="607e31cb929ef6a163ec4dbf21bfdbee" category="paragraph">'Storage provider_SMIS_provider_machine_for user_name failed from _SCVMM __ （ machine ） _ with error code HostAgentAccessDenied （ストレージプロバイダの登録 _SMIS_provider_machine_for user_name で失敗しました。）ストレージ検出に使用する有効なプロバイダ、ポート、およびユーザクレデンシャルを指定してください。ID:2626263`</block>
+  <block id="b5a7adde1af5c87d7fd797b6245c2a39" category="section-title">説明</block>
+  <block id="1e1e7d06673c88d70b37bc5092141ba6" category="paragraph">このメッセージは、ユーザーが SCVMM で SMI-S プロバイダに接続するよう指定されていて、 SMIS 信頼ストアの一部ではない場合に表示されます。</block>
+  <block id="21cfb63a3f6a7a3d0031a76216b98271" category="paragraph">SCVMM と SMI-S Provider 間の通信を有効にするには、有効な CIM ユーザー（ローカル管理者ユーザーまたはローカル管理者グループのドメインユーザー）を、「 CIMUser 」コマンドを使用して SMIS 信頼ストアに追加する必要があります。</block>
+  <block id="57b854162d6caadf0053934ab77436cd" category="section-title">対処方法</block>
+  <block id="161701d31e909a77707f021b655fa91a" category="paragraph">「 CIMUser 」コマンドを使用して、ローカル管理者ユーザ（ SMI-S Provider マシン上）を CIM サーバデータベースに追加します。「 CIMUser -a -u admin user 」その後、 NetApp SMI-S プロバイダを SCVMM に追加する際に、その管理ユーザを使用する必要があります。</block>
+  <block id="a12ab6105e92354ffa8bc9958ebd1630" category="paragraph">ドメインコントローラがドメインユーザの認証に時間がかかりすぎる場合は、 SMI-S プロバイダマシンでローカル管理者ユーザを使用する必要があります。</block>
+  <block id="bb97fad3a386d6d7da3985a0b72f83e2" category="paragraph">エラーが解消されない場合は、 SMI-S プロバイダで認証を無効にできます。</block>
+  <block id="180678484046c8a3ab98f0203e6e9339" category="summary">smis initiators コマンドは、ストレージシステムのファイバチャネルと iSCSI ポートの情報を表示します。</block>
+  <block id="16ff291e6d6d13f763ca86e4e8eb8ba4" category="doc">SMIS イニシエータ</block>
+  <block id="1587d4e99e358031eaea1724b454fbaa" category="paragraph">「 smis initiators 」コマンドは、ストレージ・システムのファイバ・チャネルおよび iSCSI ポート情報を表示します。</block>
+  <block id="92e9d6227d5534e7afc27a11179c808e" category="section-title">構文</block>
+  <block id="156f23c674849579c407d5cecbca0755" category="paragraph">「 [-t ｛ * http * | * https * ｝ ] 」</block>
+  <block id="ce5bf551379459c1c61d2a204061c455" category="section-title">場所</block>
+  <block id="cd6755b2c9f54bad96cb3bc8b5a98590" category="paragraph">C ： \Program Files （ x86 ） \NetApp\SMIS\Pegasus\bin`</block>
+  <block id="916e2ff82dbb18426a464d80b54d1291" category="section-title">権限レベル</block>
+  <block id="59ce60cbfbc99e9cb8dc6496fa7b9c6f" category="paragraph">有効なユーザ名とパスワードを持つユーザ</block>
+  <block id="3225a10b07f1580f10dee4abc3779e6c" category="section-title">パラメータ</block>
+  <block id="7bd03536986773d36c70ec1b56ba369b" category="list-text">'*[-t { http|http}]*`</block>
+  <block id="cf5409b8ffde932c63f101760e4f30c1" category="paragraph">使用するプロトコル： HTTPS （デフォルト）または HTTP</block>
+  <block id="0a52730597fb4ffa01fc117d9e71e3a9" category="section-title">例</block>
+  <block id="676405883234ee0a42883953471df3fa" category="paragraph">「 smis initiators 」コマンドとその省略形の出力は、次のようになります。</block>
+  <block id="3e24f09af977e3a1af1e1cc6f13f637c" category="doc">ランタイムライブラリの問題</block>
+  <block id="9ff702207c5c34d0a659bd2093b21d08" category="list-text">* 問題 *</block>
+  <block id="dc1ea37bf28d57aab9a40d7069475d46" category="paragraph">ランタイムライブラリの問題が発生しています。</block>
+  <block id="8f0d9a411b41d0b986920c85c2535cd2" category="paragraph">www.microsoft.com から Microsoft Visual C { pp } 2010 再頒布可能パッケージ (x86) をインストールします。</block>
+  <block id="b63859616bf4963acbb60c0cabb4528f" category="summary">SMI-S プロバイダは、具体的なジョブを作成することで、非同期操作の進行状況を追跡します。具体的なジョブの有効期間をデフォルトの 60 分（ 3600 秒）から 86400 秒（ 24 時間）まで延長できます。</block>
+  <block id="ea3d70e9595d4ee05b280a184ac5c0d0" category="doc">具体的なジョブの有効期間の値を指定します</block>
+  <block id="623fa90bf914edcce9c18224c813f24b" category="paragraph">SMI-S プロバイダは、 _ コンクリート job_ を作成することで、非同期操作の進行状況を追跡します。具体的なジョブの有効期間をデフォルトの 60 分（ 3600 秒）から 86400 秒（ 24 時間）まで延長できます。</block>
+  <block id="48c7c41b72e1d678923ce3571aa65b2d" category="section-title">ステップ</block>
+  <block id="34b088d8aaeb78497d2307819db65f09" category="list-text">新しいライフタイム値（秒単位）を使用して 'job_lifetime_SEC' という名前のシステムまたはユーザー環境変数を作成します</block>
+  <block id="aad463b23b363623e052a9e7fa57eb28" category="paragraph">環境変数の作成については、 Windows のマニュアルを参照してください。</block>
+  <block id="4f7eb33e0173b575543f5ee3f5f22d4c" category="summary">SLP サービスは WBEM サービスをブロードキャストします。SLP サービスが有効になっている場合、クライアントアプリケーションは CIMOM サーバーを検出できます。また 'slp.conf ファイルを使用して SLP 構成設定を指定することもできます</block>
+  <block id="a4e7df51fcc906ed686e7249a8c9dbf6" category="doc">SLP を管理します</block>
+  <block id="65032cd61cc49eeb6b42b865ec92f41a" category="paragraph">SLP サービスは WBEM サービスをブロードキャストします。SLP サービスが有効になっている場合、クライアントアプリケーションは CIMOM サーバーを検出できます。SLP 構成設定は 'slp.conf ファイルを使用して指定することもできます</block>
+  <block id="52e2b316a698c2d06e88f1a6b5cd1321" category="paragraph">SLP サービスがまだ有効になっていない場合は 'SMIS slpd start コマンドを使用して SLP サービスを開始できますSLP サービスを停止するには 'SMIS slpd stop コマンドを使用します</block>
+  <block id="a7387d599b27b31a0efcb181897773ea" category="summary">デフォルトでは、 SMI-S プロバイダに対して認証が有効になっています。認証によってシステムでエラーが発生した場合は、必要に応じて無効にすることができます。認証を無効にしたあとで再度有効にする場合は、再度有効にすることができます。</block>
+  <block id="3bdc3404174f074f29da198dfe0c3458" category="doc">NetApp SMI-S プロバイダの認証を有効または無効にします</block>
+  <block id="e52a780420ec86f52f5ede036dc0863b" category="list-text">Administrator としてログインしている必要があります。</block>
+  <block id="273604a153d57c4352780e584d9492ba" category="list-text">System Center Virtual Machine Manager （ SCVMM ）を含むすべてのクライアントは、 CIMUser と cimpassword を使用してプロバイダに接続する必要があります。</block>
+  <block id="96069ac79fff99505f55b19d291dc1a5" category="list-text">SMI-S プロバイダの認証を設定します。</block>
+  <block id="004bf6c9a40003140292e97330236c53" category="cell">アクション</block>
+  <block id="ee97be03cb04119af45014d815621ce1" category="cell">コマンドを実行します</block>
+  <block id="d41d8cd98f00b204e9800998ecf8427e" category="doc"></block>
+  <block id="26cc88432e85743edadd4fb6124388c5" category="paragraph">* 以前無効にした場合は認証を有効にします。 *</block>
+  <block id="c0b1f07637b1f3d1efbbe5b0b5b5931f" category="paragraph">`*cimconfig -p -s enableAuthentication=true*`</block>
+  <block id="6369b05ecce0b23d441c6ad55c3c7107" category="paragraph">* 認証を無効にします *</block>
+  <block id="b37f8506075e54bd0ae03877d2850cd1" category="paragraph">`*cimconfig -p -s enableAuthentication=false*`</block>
+  <block id="c880addc662009ce18b1b48f14772dae" category="paragraph">CIMOM は Windows 認証を使用しません。</block>
+  <block id="ac11777a55a2c2d51a742766d5985b84" category="list-text">NetApp SMI-S プロバイダを再起動します。</block>
+  <block id="b886cf1c3a6918153903f50d9cd8b0c0" category="summary">SMI-S プロバイダは、 SMI-S v1.7 に準拠するプロファイルとサブプロファイルを使用します。SMI-S v1.7 の詳細については、 SNIA ：テクノロジ標準とソフトウェアに関するページを参照してください。</block>
+  <block id="ee4bd44ef670d8bf5a572249fcb21352" category="doc">SMI-S プロファイル</block>
+  <block id="31275bcc2d5db0fe6bf063d9eb9bee90" category="summary">slp.conf 構成ファイルには ' サービスロケーションプロトコルデーモン (slpd) サーバーを管理するための追加オプションが用意されています</block>
+  <block id="2b8ebb70af929508181247896882c9bd" category="doc">slp.conf ファイル管理</block>
+  <block id="835376d40913a770b6afbedee870d08d" category="paragraph">'slp.conf 構成ファイルには ' サービスロケーションプロトコルデーモン (slpd) サーバーを管理するための追加オプションがあります</block>
+  <block id="d09e7ed0d3d5bcf9b4d891eb75068566" category="paragraph">C ： \Program Files （ x86 ） \NetApp\SMIS\Pegasus\cfg`</block>
+  <block id="c27013a5a91be7a7f811990b4c345c0c" category="paragraph">'slp.conf 構成ファイルを使用すると ' ホストが SLP 要求をリッスンするインタフェースの数と ' ホストがマルチキャストに使用する IP アドレスの数を変更できます</block>
+  <block id="8a89bc88abd7f83c0aa84b1d5d0d605d" category="paragraph">テキストエディタを使用して 'slp.conf を開きます</block>
+  <block id="a49a968397d3eea3b27de92643158cbc" category="list-text">*'interfaces`*</block>
+  <block id="e14a37b48112f37a804ec03c140c064a" category="paragraph">ホストが SLP 要求をリスンできる IP アドレスの最大数を指定します。</block>
+  <block id="8423702607bab52f36dd74e369cc82b7" category="list-text">*'multicast`*</block>
+  <block id="46d96f3ede6f7349de4d8b75869e8e02" category="paragraph">ホストがマルチキャストに使用できる IP アドレスの最大数を指定します。マルチホームシステムで SLP マルチキャストトラフィック用のインターフェイスを設定する場合、このパラメータを使用します。</block>
+  <block id="403f2c456f1a4a103a84452b3b49b561" category="list-text">*BroadcastOnly`*</block>
+  <block id="30c27cffa11c90b50aca6aadb75ca1bd" category="paragraph">SLP 経由でメッセージを送信するときに、マルチキャストオプションを使用する代わりに、ブロードキャストオプションを強制的に使用します。</block>
+  <block id="4394c1c9677b993b84d961f7bb18bf5f" category="list-text">*'securityEnabled`*</block>
+  <block id="3dfb3bf4c92bfb4c88b522eeda68f2ee" category="paragraph">受信した URL および属性リストのセキュリティをイネーブルにします。</block>
+  <block id="f1481b88ec73ef72260ea756192ce7d8" category="paragraph">次に 'slp.conf 構成ファイルの省略例を示します</block>
+  <block id="2d1e9e9f04a42d01a160053c1a2e23b3" category="doc">デフォルト以外のファイアウォールでは、例外として手動でポートを追加する必要があります</block>
+  <block id="d72daabf8627a25a9288cb90a2cd5716" category="paragraph">デフォルトの Windows ファイアウォール以外のファイアウォールを使用している場合は、次の問題が発生する可能性があります。</block>
+  <block id="15af186fb800e41ac88aadacefe052d3" category="list-text">SMI-S プロバイダは、削除された SMI-S クライアントと通信できません。</block>
+  <block id="bedbf316c4e9c42cb19e2e057e09844a" category="list-text">SMI-S クライアントが SMI-S プロバイダから通知を受信できません。</block>
+  <block id="3bef6104c92bf17bdfdf66c9a257bbfc" category="list-text">* 原因 *</block>
+  <block id="ed484e3a89e7fe3bb50364a4369a35a6" category="paragraph">この問題は、例外として必要なポートを手動で追加しないで、デフォルトの Windows ファイアウォール以外のファイアウォールを使用している場合に発生します。</block>
+  <block id="852512112e45567ec54871b9e051498c" category="paragraph">ファイアウォールに例外としてポート 427 、 5988 、および 5989 を追加します。</block>
+  <block id="d75bbf95db11e5456ff088adc74cf683" category="summary">SMIS Namespaces コマンドは、 CIMOM の登録済みネームスペースを一覧表示します。</block>
+  <block id="493501184a8d3a037d64ec48d949f535" category="doc">SMIS ネームスペース</block>
+  <block id="1467d24f125021abfcc1130828b1ade9" category="paragraph">「 smis Namespaces 」コマンドは、 CIMOM の登録済みネームスペースをリストします。</block>
+  <block id="4f069805909c8ccacabb7c24b45deb05" category="list-text">Windows ： C ： \Program Files （ x86 ） \NetApp\SMIS\Pegasus\bin`</block>
+  <block id="f3ccba9faf98a36122387d46ef40de77" category="paragraph">「 smis Namespaces 」コマンドとその省略形の出力：</block>
+  <block id="6e1e06b9c119062f2ede1998cc7b9468" category="summary">SMI-S プロバイダを初めて使用する場合は、事前構成を検証する必要があります。</block>
+  <block id="10060a4df357cacb148a72137b446457" category="doc">事前設定の検証</block>
+  <block id="29944d7af445a05d44714ef748be90ac" category="paragraph">SMI-S プロバイダを使用する前に、次のタスクを実行します。</block>
+  <block id="b856d55ad330a5df7fa9ba7e17ff436c" category="list-text">NetApp SMI-S プロバイダから、 CIM サーバが起動していることを確認します。</block>
+  <block id="979599cef27365d55cce847bb7cdb1cf" category="list-text">CIM サーバーユーザーを追加します。</block>
+  <block id="99c567f7cf0aab2dcea271bea1f6658f" category="list-text">SMI-S プロバイダ用に少なくとも 1 つのストレージシステムを追加して、ストレージシステムの管理を確認します。</block>
+  <block id="10cd97be66aefff3103667d3f8ac3c6f" category="list-text">* オプション： * CIMOM の自己署名証明書を生成します。</block>
+  <block id="6270237a9076186973431ea76de9f106" category="paragraph">デフォルトでは、 SMI-S プロバイダに対して認証が有効になっています。</block>
+  <block id="f7531e8856965a9e9423683a715b9a00" category="paragraph">この検証が完了すると、 NetApp SMI-S プロバイダを使用してストレージシステムの管理を開始できます。</block>
+  <block id="75689bc80badc11e91de5ed6dc4cb19f" category="doc">問題特殊文字を含むパスワードの入力</block>
+  <block id="afcc8cf3e739ed38537061abd7b4b2ee" category="paragraph">英語版のオペレーティングシステムでは、特殊文字を含むパスワードを「 SMIS 」コマンドと一緒に使用しても、 Windows 環境では機能しません。この問題は、英語以外のオペレーティングシステムではテストされていません。</block>
+  <block id="88f8f973bf3ba54f3d05c0b8d01247c0" category="paragraph">Windows では、次の文字とスペースは特殊文字とみなされ、パスワードを引用符で囲まないと原因パスワードの入力は失敗します。</block>
+  <block id="9ac98bbf4f8ec840aa64d2034f1e5e3a" category="paragraph">,&amp;'&lt;&gt; ； |= ｛ キャレット ｝ "</block>
+  <block id="18cecf738083c90194a2e37fde9866b9" category="paragraph">パスワードにスペースまたは特殊文字が含まれている場合は、「 SMIS 」コマンドで使用するときに、二重引用符（ "" ）で囲みます。引用符（ " ）は特殊文字であり、パスワードには使用しないでください。</block>
+  <block id="8b5bff5c198642f24c6523cc9d279890" category="section-title">特殊文字を使用したパスワードの発行</block>
+  <block id="dd5e79a97efb4f2ad3d7d60c6014519d" category="paragraph">「 SMIS add 1.2.3.4 Administrator 」の「 pass word 」</block>
+  <block id="649cbaa5aee6f0411518757a4f958cae" category="paragraph">「 SMIS add 1.2.3.4 Administrator 」「 pass &amp; word 」</block>
+  <block id="27c5899c7f7c11410721efccbf3a8f48" category="summary">ストレージシステムの管理や CIM オブジェクトマネージャに関する情報の表示には、 SMIS コマンドを使用できます。</block>
+  <block id="36368c8058877b609a51ba50239f980e" category="doc">SMI-S プロバイダコマンド</block>
+  <block id="337c6d03c71e412eabb31031c965b155" category="paragraph">「 SMIS 」コマンドを使用して、ストレージシステムを管理したり、 CIM オブジェクトマネージャに関する情報を表示したりできます。</block>
+  <block id="7ed05529165de8dd21dd5335d6583157" category="paragraph">ヘルプは '-sis コマンドで '-help' オプションを使用して利用できます</block>
+  <block id="289ef019924b7013900809be97f4d115" category="list-text">*SMIS --help`*</block>
+  <block id="d495f1ffa8481764d22093a114f61296" category="paragraph">コマンドの概要を表示します。</block>
+  <block id="05feeefaeda5694102081bacc2705690" category="list-text">*SMIS --help` の例 *</block>
+  <block id="5b6431d35a9c3d0995ce988f0b570b34" category="paragraph">使用例を表示します。</block>
+  <block id="d2b8ae3b0159d7c9e176b2a9f01c43a5" category="list-text">*SMIS --help_subcommand _ `*</block>
+  <block id="302a77012450f9d81c51deeec5a10fd5" category="paragraph">指定したサブコマンドのヘルプを表示します。</block>
+  <block id="2e0328b56b7df525664960879f95f5d1" category="paragraph">SMIS ツールのデフォルトのタイムアウト値は 180 秒です。</block>
+  <block id="15edb1059f99e2228e68e3675566c5dd" category="summary">これらのオプションは slptool コマンドで使用できます。</block>
+  <block id="782cf12ad9621d4dbedc43983800f6e7" category="doc">slptool</block>
+  <block id="d0d353e5cf2fcbacba08bc1c92a12307" category="paragraph">これらのオプションは 'slptool' コマンドで使用できます</block>
+  <block id="4842f8fa99c29d1241eea4652830125e" category="paragraph">slptool[options] _subcommand _</block>
+  <block id="eb569f08830457ab3c7049a3b391c4b6" category="paragraph">管理者（ Windows ）</block>
+  <block id="dae8ace18bdcbcc6ae5aece263e14fe8" category="section-title">オプション（ Options ）</block>
+  <block id="c8d42e70f0c04701557a2f55998b89c4" category="list-text">* -i *</block>
+  <block id="ba5f3a961b76734c0de9fadefea37630" category="paragraph">1 つ以上のインターフェイスを指定します。</block>
+  <block id="19bdfe66b2e730fdec9300e2aab67acd" category="list-text">* -l *</block>
+  <block id="0e5e3c6017ad094538f03467f046aae2" category="paragraph">言語タグを指定します。</block>
+  <block id="4e94e09878d0d8b8c202138d2e5ee71d" category="list-text">* -s *</block>
+  <block id="bdf7f3055a02bb504553d4a142bdab6e" category="paragraph">スコープのリストを指定します（カンマで区切ります）。</block>
+  <block id="a54c2c1c20d7ee39ebf2b69ccef598be" category="list-text">* -u *</block>
+  <block id="3409d1fd2b59a21419fcf39d2c4ed451" category="paragraph">インターフェイスを 1 つ指定します。</block>
+  <block id="5d1a2e253b3e1015078e73b9612048ff" category="list-text">* -v *</block>
+  <block id="bffde628bf79cfe9c51d3916acaf8a9d" category="paragraph">slptool' および OpenSLP のバージョンを表示します</block>
+  <block id="9b33f1a516dd355a272be3f15b6e0bd6" category="summary">smis addsecure コマンドを使用すると、 HTTPS 接続を使用するストレージシステムを構成に追加して、デバイスの管理と監視を行うことができます。必要でないかぎり、 SMIS add ではなく SMIS addsecure を使用する必要があります。</block>
+  <block id="3d8405e7c1d5f02ba446d1a50e9f20d1" category="doc">SMIS addsecure</block>
+  <block id="7982281010af1e5d6aae114f5b025693" category="paragraph">「 SMIS addsecure 」コマンドを使用すると、 HTTPS 接続を備えたストレージシステムを構成に追加して、デバイスの管理と監視を行うことができます。必要でない限り、「 SMIS add 」ではなく「 SMIS addsecure 」を使用する必要があります。</block>
+  <block id="23449bcc34f3e21c05e26cd130624d11" category="paragraph">「 SMIS addsecure 」</block>
+  <block id="3dfb26dbcdb47dafbe49b2b0fd66a2a2" category="paragraph">`_storage_sys storage_sys_user_`+`[-t { * http * | * https * }]`</block>
+  <block id="af625fdeacba296380d450557c4b2893" category="paragraph">米国以外の言語を使用するオペレーティングシステム英語では 'addsecure' コマンドは使用できません</block>
+  <block id="2d96be9b2363a30b3a05f05eaa92f13f" category="list-text">'*_storage_sys_*'</block>
+  <block id="10fe7c8109501e37d414ef63bb9cb32e" category="paragraph">追加するストレージシステムの名前または IP アドレス</block>
+  <block id="120eb40bdca64cb45bb214fc1a160f30" category="paragraph">IP アドレスを指定する場合は、 IPv4 または IPv6 を使用できます。圧縮された IPv6 アドレスと完全な IPv6 アドレスの両方がサポートされていますたとえば '1001:0002:0000:0000:0003:0004' または '1001:2:3:4' です</block>
+  <block id="4a99e32179670d244ad470fbf4f5b921" category="list-text">'*_storage_sys_user_*'</block>
+  <block id="032a1eeda63d365ea5e8310a70caaafd" category="paragraph">追加するストレージシステムを管理する管理者のユーザ名</block>
+  <block id="127e24c4124d253ca995aea7f8f6c8d2" category="list-text">'*_storage_sys_pwd_*</block>
+  <block id="86107286d99ae2ea068920c9348ed0e2" category="paragraph">オプション：追加するストレージシステムを管理する管理者のパスワード</block>
+  <block id="b6409054275b25ac4a2a18cd9da3b34b" category="paragraph">セキュリティ上の理由から、このパラメータは使用しないことを推奨します。このパラメータは、自動化および下位互換性のためだけに提供されています。</block>
+  <block id="c12c5aa52b7c2cd66b46b90196265ef8" category="section-title">ストレージシステム - エージェントとエージェント - クライアントのプロトコル</block>
+  <block id="aa65b8c8fa31c5c3baff46c6fcb37f72" category="paragraph">「 smis add 」コマンドと「 smis addsecure 」コマンドは、ストレージシステムとプロバイダの間で使用されるプロトコルを決定します。「 [-t { * http * | * https * }] 」パラメータは、プロバイダーとクライアントの間で使用されるプロトコルを決定します。</block>
+  <block id="8ad73dfc4c57d7019c1491a7584b3e1d" category="paragraph">「 SMIS addsecure 」コマンドと「 [-t ｛ * https * ｝ ] 」パラメータは SSL 暗号化を使用して接続しますが、暗号化されていないトラフィックは許可されません。「 smis add 」コマンドと「 [-t ｛ * http * ｝ ] 」パラメータは SSL 暗号化を使用せずに接続され、暗号化されていないトラフィックは許可されます。</block>
+  <block id="8fcf8b2db24000917ad33d28cbe83309" category="paragraph">SSL で暗号化された接続を無効にする前に、環境のセキュリティ上の要件を確認してください。</block>
+  <block id="cf383d582978ebcce1c9ccb44e977fbf" category="paragraph">IPv4 を使用して、 IP アドレス 10.32.1.4 over HTTPS のストレージシステムを追加します。</block>
+  <block id="f6a7f54d7c484a28262cd0daf880ef10" category="paragraph">ストレージシステムが追加されたことを示す確認メッセージが表示されます。エラーが発生した場合は、エラーメッセージが表示されます。</block>
+  <block id="e26b9b1c6faf12ff6d58c8270f6e49ae" category="paragraph">IPv6 over HTTPS を使用してストレージシステムを追加します。</block>
+  <block id="0cff628aebe5a638bdcbe3cc4bd8a03a" category="paragraph">英語以外のシステムで、 IP アドレスが 10.32.1.4 の HTTPS を使用してストレージシステムを追加する：</block>
+  <block id="e38d94f7236a9cd1aa0f08ef175b7ae8" category="summary">NetApp SMI-S プロバイダをインストールする前に、 Windows ホストがハードウェアの最小要件を満たしていることを確認する必要があります。</block>
+  <block id="47dee50ad0138b8f5ca70e40e86e6c04" category="doc">ハードウェア要件</block>
+  <block id="3c02a379965ab0dfcd77b1c484450433" category="cell">ハードウェア</block>
+  <block id="5a2ebfb8baa378cfcfcba58bbb1380c2" category="cell">要件</block>
+  <block id="4789f23283b3a61f858b641a1bef19a3" category="paragraph">メモリ</block>
+  <block id="7d4da39aca0b1169b071f2ece726e556" category="list-text">4GB の RAM （最小）</block>
+  <block id="ada14ec0a3b00b29e7277c85d56c4c7f" category="list-text">8GB の RAM （推奨）</block>
+  <block id="1a293e95d688041d801d7d1b909552e0" category="paragraph">ディスクスペース</block>
+  <block id="0be26e07039553a01cfe68a859c33da7" category="list-text">1GB （最小）</block>
+  <block id="379e19dfc4d216d9c5bdeca782d70bdb" category="list-text">4GB （推奨）</block>
+  <block id="e4b6c8b6dd56698332d99eab0c90a8b8" category="paragraph">ロギングとトレースを有効にするには、ログファイルとトレースファイルのローテーション設定に応じて、最大 1GB の追加ディスクスペースが必要です。</block>
+  <block id="b88815f1d93e640a9cdb707e48bc455e" category="paragraph">インストール用に 100MB の一時ディスクスペースが必要です。</block>
+  <block id="2b55387dd066c5bac646ac61543d152d" category="paragraph">CPU</block>
+  <block id="63408377049cbbaa1bc998e2029a1bc3" category="list-text">デュアルコア 2.0 GHz 以上</block>
+  <block id="220470fc2859d320a88f1acb91fd5bcf" category="list-text">クアッドコア 2.0 GHz （推奨）</block>
+  <block id="d4bf895ddfa9ebbc5c3915e4cbd3583e" category="summary">slptool finaldattrs コマンドは、ネットワーク上で実行される WBEM 属性を検出します。</block>
+  <block id="3fc3c27aeb289e637225a3268d7ae21d" category="doc">slptool finaldtrs</block>
+  <block id="61362266f14322b3344151c0503f45dd" category="paragraph">slptool finaldattrs コマンドは ' ネットワーク上で実行される WBEM 属性を検出します</block>
+  <block id="0172466b88a10651a0bc826057b3e072" category="paragraph">slptool findattrs_service_`</block>
+  <block id="f6bc858e3262647738db6ac68ccd76ed" category="list-text">'*_SERVICE_*'</block>
+  <block id="3a97942f85eafc36eb848eea69fc7304" category="paragraph">サービスタイプを指定します。</block>
+  <block id="44f79575ca42f3951f78c8d876c9b0c1" category="paragraph">slptool finaldattrs' コマンドとその省略された出力 :</block>
+  <block id="b71369c2ed824034280dcb480153b41a" category="summary">トラブルシューティングのための情報を収集するには、トレースを有効にしておくことが重要ですただし、トレースを有効にするとパフォーマンスに影響する可能性があるため、トレースが必要な項目とトレースを有効にする必要がある期間を慎重に検討してください。</block>
+  <block id="53af5324cc8ef40b65085e6267c7de4e" category="doc">トレース設定を指定しています</block>
+  <block id="214b2ac7f49d473e4ea319a71f712e51" category="list-text">必要に応じて、さまざまなトレース設定を指定します。</block>
+  <block id="f1da07ca6432396ea2971c8f6398fc30" category="paragraph">トレースするコンポーネントを指定します</block>
+  <block id="849f8dae21d2b62a8dfa5d45d8ccc2c0" category="paragraph">`*cimconfig -s traceComponents=_components_-p *`</block>
+  <block id="d582392eadc397a588b31a2f38cc8b46" category="paragraph">トレース機能を指定します</block>
+  <block id="55740e969f74c0b03b2a7da365274ef5" category="paragraph">`*cimconfig -s traceFacility=_facility_-p *`</block>
+  <block id="4775231bef508af32ec6486ac135bd52" category="paragraph">トレースファイルの場所を指定します</block>
+  <block id="5e08cdbde654caf3bd2f2a44804504f0" category="paragraph">'*cimconfig -s traceFilePath = _path_name _-p *`</block>
+  <block id="2400ec1d446b474fb9789a8fb4e85990" category="paragraph">トレースレベルを指定します</block>
+  <block id="e314fdf016e34edd80f4c12690e6ef42" category="paragraph">`*cimconfig -s TraceLevel=_level_-p *`</block>
+  <block id="473ab4388e8df55d75c3b31f2ec1ef00" category="summary">受信した SMI-S コマンドはすべて監査ログファイルに記録されます。監査担当者は、 WBEM クライアントの動作とプロバイダの使用状況を追跡できます。これらの着信コマンドのロギングをイネーブルまたはディセーブルにするには、ダイナミックコンフィギュレーションプロパティを設定します。</block>
+  <block id="0129ab79a515722f48b24df8938bed7f" category="doc">SMI-S コマンドの監査ログを有効または無効にします</block>
+  <block id="285029cea7cf6db90d61ed15fdfbcb4d" category="paragraph">監査ログデータは、 CIM サーバのアクセス、アクティビティ、および設定変更の記録を提供できます。監査ファイルの内容には、発行したコマンド、コマンドの発行元、コマンドの発行時刻などが含まれます。</block>
+  <block id="d69a4eb5ea05d141fe9e8d1a929e983a" category="paragraph">動的構成プロパティー enableAuditLog は ' 実行時に監査ログを有効または無効にしますデフォルトでは、 enableAuditLog は true に設定されています。</block>
+  <block id="3a1c45941ab5d753a927b9fcf7e597d8" category="paragraph">一般的には、監査ログを有効なままにします。</block>
+  <block id="e2bcb9268b8957b2c5eba66b5eb8f90a" category="paragraph">監査ログファイル（「 cimserver_auditlog 」）は、 Pegasus ログディレクトリ（「 C ： \Program Files （ x86 ） \NetApp\SMIS\Pegasus\logs 」）に格納されます。</block>
+  <block id="3cd4ca28842e0a47bcadc6562454f097" category="paragraph">監査ログファイルの最大サイズは 10MB です。上限に達すると ' ファイル名は cimserver_auditlog.0' に変更され ' 新しい監査ログ情報を収集するために新しい 'cimserver auditlog ファイルが作成されます</block>
+  <block id="afea46fce2cf62caf4a83255652fe519" category="paragraph">NetApp SMI-S Provider は 'cimserver_auditlog.0'~`cimserver_auditlog.5' という 6 つの最新の監査ログファイルを保持します</block>
+  <block id="29c5eb80d8d4774289d69253a8df1a2f" category="list-text">実行時に SMI-S コマンドの監査ログを設定します。</block>
+  <block id="9928b3502fa328f5816ec89397731f30" category="paragraph">* SMI-S 監査ログを有効にします *</block>
+  <block id="79ac7012d3f9251ff1fd9e56306e1b37" category="paragraph">*cimconfig -s enableauditit=true*`</block>
+  <block id="0aeb9f4ab3a6152506a2c906fafe7412" category="paragraph">* SMI-S 監査ログを無効にします *</block>
+  <block id="3434f57b0eae0c97485e9a92c949bab6" category="paragraph">*cimconfig -s enableauditit=false*`</block>
+  <block id="8b8f7a3fe80ec6809a6d7650b0c7c24d" category="summary">SMI-S プロバイダを使用して、 CIM サーバの起動、停止、再起動、および状態の確認を行うことができます。</block>
+  <block id="43f62f4fcd25e84fe3c71ae26b3895e8" category="doc">CIM サーバを管理します</block>
+  <block id="55c56e656fc1262386c75014fc91126a" category="list-text">次のいずれかの操作を実行します。</block>
+  <block id="0f68b904e33d9ac04605aecc958bcf52" category="cell">追加情報</block>
+  <block id="e7f5bbb3cb7dc49bcf9ed09a2435962b" category="paragraph">CIM サーバを起動します</block>
+  <block id="5d722f7333fadffef8f0041288f4cf16" category="paragraph">*SMIS cimserver start*</block>
+  <block id="ef00631749cee8b26ab2ea7b9d141dc5" category="paragraph">コマンドを入力すると、 3 分ごとにステータスメッセージが表示されます。CIM サーバへの接続に失敗した場合、さらに 5 回試行してサーバへの接続を試みます。</block>
+  <block id="4fcf80c62f9d0bd2a896099093b4fdd4" category="paragraph">CIM サーバを停止します</block>
+  <block id="52a8b399a084de299d36d25c33d2d385" category="paragraph">`*SMIS cimserver stop*`</block>
+  <block id="d4cd0dabcf4caa22ad92fab40844c786" category="paragraph">該当なし</block>
+  <block id="11b0836ed815207757dccb62e2b8583f" category="paragraph">CIM サーバを再起動します</block>
+  <block id="b1f04ce13ca7549919bf754db3d289d0" category="paragraph">CIM サーバのステータスを表示します</block>
+  <block id="d7742d75613ee225270c8eb9150e81b8" category="paragraph">`*SMIS cimserver status*`</block>
+  <block id="cdc5bec35b6b527de3bb89d808a6b920" category="doc">サーバからの応答がありません</block>
+  <block id="7b3163c824f7a65178f51c1d770a6dcf" category="paragraph">照会時にサーバが応答しません。</block>
+  <block id="b0f666288ecdd5fb35524a7351e9770b" category="paragraph">この問題は、 CIMOM リポジトリにストレージシステムが追加されていない場合に発生します。</block>
+  <block id="cfbe94ce24390f967f038c2a8a4f3eb9" category="paragraph">次のコマンドを入力して、ストレージシステムが追加されたことを確認します。</block>
+  <block id="4a3fca40fa5a1c3b4515f86bb09c53e3" category="paragraph">「 SMIS list 」</block>
+  <block id="c71b0ed70c00ba663f567339f428950f" category="paragraph">ストレージシステムが表示されない場合は、次のコマンドを入力してストレージシステムを追加します。</block>
+  <block id="e13e3bccf278bd5d68b7b6d9a515143c" category="paragraph">`sis add_storage_sys storage_sys_user storage_ssys_pwd_`</block>
+  <block id="9ac41c88ece6b96843a1b79c4d90e485" category="summary">SMI-S プロバイダを設定する前に、 CIMOM リポジトリに少なくとも 1 つのストレージシステムを追加して、ストレージシステムが正しく動作していることを確認する必要があります。</block>
+  <block id="bd53ec5cd43766d7fb689c1a791c5cf4" category="doc">ストレージシステムが正しく動作していることを確認します</block>
+  <block id="704fb07605281ded06af349fa2c6a42e" category="list-text">SMI-S プロバイダにアクセスしておく必要があります。</block>
+  <block id="178a83ef87ae379b593fe5d535c2408d" category="list-text">CIMOM リポジトリに少なくとも 1 つのストレージシステムを追加します。</block>
+  <block id="13f4b66abe59fdd7c2ae2f2cc038140e" category="cell">ストレージシステムを追加する対象</block>
+  <block id="aad95273f4e1ccb563059e89127b7019" category="cell">入力するコマンド</block>
+  <block id="44c460b31e2379511ec9316d2f7dae1f" category="paragraph">プロバイダとストレージシステム間の HTTP 接続</block>
+  <block id="50c7a9afe0967760d10de128338cc183" category="paragraph">`*SMIS add_storage_sys storage_sys_user_*`</block>
+  <block id="21e085eda3a6ce6d2ee15663cd7a6e15" category="paragraph">プロバイダとストレージシステムの間の HTTPS 接続</block>
+  <block id="bee1cab1cf6efe6528bd95ea0052cb3e" category="paragraph">`*SMIS addsecure_storage_sys storage_sys_user_*`</block>
+  <block id="f26914cdcb94f2fe1b7c417cf626e088" category="paragraph">コマンドは、プロバイダがキャッシュを更新して応答するまで最大 15 分待機します。</block>
+  <block id="ab917ed1621e00b0ef3b3b92e8263840" category="list-text">次のコマンドの出力を確認します。</block>
+  <block id="7c95a1437ab1b741ae454d68a17469a2" category="cell">コマンド</block>
+  <block id="c6e117c59a31d82cacc4fe50361a2535" category="cell">確認項目</block>
+  <block id="f7529153df2f5d15ed8b4487207eee8f" category="paragraph">項目数は、管理対象のストレージシステムの数と一致します。</block>
+  <block id="58357c37cc78c70c07e8c5863f03916e" category="paragraph">「 SMIS ディスク」</block>
+  <block id="80ee4c619fb95a9a45de8aba9471b13e" category="paragraph">ディスク数がすべてのストレージシステムのディスクの総数と一致している。</block>
+  <block id="98100d818063c0b408a160edd4ada15c" category="paragraph">「 SMIS LUN 」</block>
+  <block id="3df0dcf43356ca981e055ea44ce890bb" category="paragraph">LUN の数がすべてのストレージシステム上の LUN の総数と一致している。</block>
+  <block id="7364533b754121bf41370be42b4bb25b" category="paragraph">「 SMIS プール」</block>
+  <block id="9d3252d8eb7b2dda525b61eaa4b4b280" category="paragraph">ONTAP_ConcretePools の数は、すべてのストレージシステム上のアグリゲートの合計数と同じです。</block>
+  <block id="72191377bb33379ad51587a7a17190c6" category="paragraph">「 SMIS VOLUMES 」</block>
+  <block id="692fc4e2c1fc79807c8600f51a03ed82" category="paragraph">ボリュームの数が、すべてのストレージシステム上のボリュームの総数と一致している。</block>
+  <block id="ecbbc7fd5d4edead7344ce7d3e700f9d" category="summary">ストレージシステムを検証する前に、 CIM サーバの使用を許可された CIM ユーザを追加する必要があります。</block>
+  <block id="02f7d5953ada54fa94eba6972733b55b" category="doc">CIM サーバーユーザーを追加します</block>
+  <block id="aed9b77a9a67fc43c87c9ca0c42c9428" category="list-text">ローカルユーザアカウントを作成します。</block>
+  <block id="3ca235b5f2673c57408f7e128d006783" category="list-text">管理者グループにユーザを追加します。</block>
+  <block id="7b43cd03e1de1085a4fc8332e21b48da" category="paragraph">詳細については、 _System documentation を参照してください。</block>
+  <block id="86f2d37730c5ca8c974df95b4ae767a1" category="list-text">CIM サーバーユーザーを追加します。</block>
+  <block id="b05c53b2d5c68261a900383863bdb0b4" category="paragraph">`*CIMUser-A-u_user_name_*`</block>
+  <block id="992f99e76d782026d10813b89cf90cdc" category="paragraph">たとえば、「 Chris 」という名前の CIM サーバユーザを追加するには、次のように入力します。</block>
+  <block id="c506910979386a24184c6dbf0c3e93da" category="paragraph">「 * CIMUser-A-u Chris * 」のように表示されます</block>
+  <block id="dcca715816190ebf9dcab8ec1989cd39" category="list-text">プロンプトが表示されたら、パスワードを入力してもう一度入力します。</block>
+  <block id="24293140a3816d75c19d74064899984b" category="summary">NetApp SMI-S Provider 5.2.5 では、ストレージシステムの管理と監視、ストレージシステムの LUN とボリュームの管理、 CIMOM 設定、および CIM サーバのユーザを実行できます。</block>
+  <block id="72f7ffffe5d6a7aaa530f33b20be146d" category="doc">NetApp SMI-S Provider の概要</block>
+  <block id="c79b9638e429df89a219f67e64877677" category="paragraph">NetApp SMI-S プロバイダは、 ONTAP ソフトウェアを実行するプラットフォームを検出して管理するコマンドベースのインターフェイスです。SMI-S プロバイダは、 Web-based Enterprise Management （ WBEM ）プロトコルを使用して、ストレージ要素の管理、監視、レポートを実行します。</block>
+  <block id="a316d32069744858b73bc2472339bb1d" category="paragraph">NetApp SMI-S プロバイダは、次の 2 つの組織によって標準化されたスキーマを使用します。</block>
+  <block id="ffb373b0246b03d37058c9917311f9ba" category="inline-link">Distributed Management Task Force （ DMTF ；分散管理タスクフォース）</block>
+  <block id="3196a1e76b7eb51b7ff2baa784e99b4f" category="list-text"><block ref="3196a1e76b7eb51b7ff2baa784e99b4f" category="inline-link-rx"></block></block>
+  <block id="b3973a38d43f2f1fe906a50cc9911f34" category="inline-link">Storage Networking Industry Association （ SNIA ）</block>
+  <block id="6406ef7be2956ab22d718f61a164ac48" category="list-text"><block ref="6406ef7be2956ab22d718f61a164ac48" category="inline-link-rx"></block></block>
+  <block id="6409b577d21cd98c3caae687888555d6" category="paragraph">SMI-S プロバイダは、複数の管理オブジェクトモデル、プロトコル、およびトランスポートの使用を、ストレージネットワーク内のすべてのコンポーネントに対する単一のオブジェクト指向モデルに置き換えます。</block>
+  <block id="060f57a6a9e42af240800090a97dbbc2" category="summary">NetApp SMI-S プロバイダを導入する前に、サポートされているオペレーティングシステムとプラットフォームがあり、必要なライセンスがあり、ホストが最小要件を満たしていることを確認する必要があります。</block>
+  <block id="27677c533249219197c5933410713055" category="doc">導入を準備</block>
+  <block id="6aa0506cbda045baaac42a33adf154bc" category="doc">警告 26130</block>
+  <block id="43314f297d1319987ae0a70ecfd97c2a" category="paragraph">' 警告 (26130) ストレージ・プールは ' ホスト・グループ内のどのホストもストレージ・アレイにアクセスできないホスト・グループに割り当てられています</block>
+  <block id="7730b695d01e614f5ca99b68c96b377e" category="paragraph">このエラーは、ストレージ容量を割り当て、ホストグループ内のホストにアレイへのアクセスを許可した場合に発生します。この警告が表示された場合、仮想マシンをストレージシステムに配置することはできません。</block>
+  <block id="4937a7033ec39bd8589c2df73c921a89" category="list-text">各ホスト・マシンで ' 各ストレージ・システムの IP アドレスを iSCSI イニシエータ・アプリケーションに追加します</block>
+  <block id="7d36242dbaa9912fc085b5ff7c002458" category="list-text">必要に応じて、各ストレージシステムで、ホストマシンごとに、対応するホストマシンから適切な iSCSI ノード名でリンクされた一意の igroup を 1 つ作成します。</block>
+  <block id="f4a55e7cbbe39eb8f955afd704ea726a" category="list-text">Data ONTAP に接続されている各ホストマシンで、 MPIO アプリケーションを開き、次のハードウェア ID を追加します。</block>
+  <block id="25c100de8cdfff7216dbf6a699030071" category="list-text">clustered Data ONTAP の場合は、「 * NetApp LUN C-Mode * 」と入力します。</block>
+  <block id="ffd73db9cb7d1dec7d0b41031a0865f5" category="list-text">ホストマシンをリブートします。</block>
+  <block id="96ee3206e5a288b7c11d4de582d14ec9" category="list-text">プロバイダを削除します。</block>
+  <block id="0bc3df559d8caef1f69d55ee3c5b77e1" category="list-text">ストレージプールを再度設定します。</block>
+  <block id="66a3289f96876f734ca77db9ba9f9495" category="summary">smis slpd コマンドは 'SLP デーモンを開始または停止します</block>
+  <block id="c602cda1d95d79b42121b73cb7b8e14f" category="doc">SMIS slpd</block>
+  <block id="10a6036c2ece582c0c5dbea89b90e059" category="paragraph">'SMIS slpd' コマンドは 'SLP デーモンを開始または停止します</block>
+  <block id="d7ffbe6aa82f17f6c494b8a2c5abdaec" category="paragraph">「 SMIS slpd 」と入力します</block>
+  <block id="e4648605cc721eb86095a823e23484a6" category="paragraph">'{*start*|*stop*}`</block>
+  <block id="c62f38414344f92700e5e28c2e01987f" category="paragraph">SLP デーモンを開始します。</block>
+  <block id="ab95c496c880e8dee57a3717606a9348" category="paragraph">SLP デーモンを停止します。</block>
+  <block id="cd8b1d5e9b71ac8ad5a91871792b628e" category="summary">SMI-S プロバイダは必要に応じてアンインストールできます。たとえば、既存のインストールのバージョンによっては、最新バージョンをインストールする前に既存の SMI-S Provider のインストールをアンインストールする必要があります。</block>
+  <block id="cb47c060d13b844bbad88867706d53e9" category="doc">Windows ホストから NetApp SMI-S Provider をアンインストールします</block>
+  <block id="761c55faa74d365f19b35d0246718c76" category="paragraph">SMI-S Provider をアンインストールしてクリーン再インストールを行う場合は、 CIM サーバからすべてのコンテンツを手動で削除する必要があります。</block>
+  <block id="738fec68f2c0323ebece5138b2290be2" category="paragraph">クリーン再インストールが不要な場合、 SMI-S プロバイダはアンインストール後も構成ファイル、ユーザファイル、およびその他のデータベースファイルを保持します。</block>
+  <block id="7e2a994657c3cb1b74140df49210abda" category="list-text">Administrator としてログインします。</block>
+  <block id="4de0a229b09daf73d106e4499b5eab63" category="list-text">Windows のプログラムの追加と削除ユーティリティを使用して、 Windows ホストから NetApp SMI-S Provider をアンインストールします。</block>
+  <block id="1cedcb17c92a3535c2610261b466714a" category="summary">SMI-S キャッシュの更新間隔、 ONTAPI のタイムアウト、メッセージサービスキューあたりの最大スレッド数など、 SMI-S プロバイダの詳細設定を管理できます。</block>
+  <block id="64dcf446a7778f30264ca7a94586a6e1" category="doc">SMI-S プロバイダの詳細設定を管理します</block>
+  <block id="42c81e79f364b151f80c02c552b5850d" category="summary">SMI-S プロバイダを使用してストレージシステムを管理および監視するには、 SMI-S プロバイダソフトウェアをインストールし、事前構成を検証する必要があります。</block>
+  <block id="ab3ccb0be518e752d20f706d36d252c9" category="doc">導入のワークフロー</block>
+  <block id="04c2ee750a71bee087a7164fa9418c8b" category="image-alt">SMI s プロバイダのワークフロー</block>
+  <block id="11db62ef1b82524e398ad3812618f7ea" category="doc">NetApp SMI-S プロバイダの起動に時間がかかります</block>
+  <block id="a3519a79e1fa4e9109ec373b28d1609d" category="paragraph">すでに管理中のストレージシステムを使用している Windows システムでは、「 SMIS cimserver 」コマンドを使用して NetApp SMI-S Provider を起動した場合、プロバイダのローカルキャッシュが読み込まれるまでコマンドは返されません。キャッシュが読み込まれるまで最大 15 分待機し、 NetApp SMI-S プロバイダを使用することはできません。</block>
+  <block id="f9ac0617143317e28bbf839b5d2db80a" category="paragraph">NetApp SMI-S Provider の起動には 'SMIS cimserver コマンドを使用することをお勧めします</block>
+  <block id="6c3b97a71e1400ae3b3467be3cac370f" category="summary">トレースが有効になっている場合、トレースファイルの最大サイズはデフォルトで 100MB です。環境変数 PEGASUS_TRACE_FILE_size を設定することにより、最大トレース・ファイル・サイズを増減できます。トレースファイルのサイズの値は 10~2GB です。</block>
+  <block id="9f1963dfe2dc39ab67d177a1091ce4fd" category="doc">トレースファイルのサイズを指定してください</block>
+  <block id="7de0f9996cd3a1414618bcd879f4ad6a" category="paragraph">トレースが有効になっている場合、トレースファイルの最大サイズはデフォルトで 100MB です。環境変数 PEGASUS_TRACE_FILE_size を設定することにより ' 最大トレース・ファイル・サイズを増減できますトレースファイルのサイズの値は 10~2GB です。</block>
+  <block id="ab2e0ea406258cacfcd0b914a05e1f05" category="list-text">「 PEGASUS_TRACE_FILE_size 」という名前のシステム環境変数またはユーザー環境変数を、新しいトレース・ファイル・サイズ（バイト単位）で作成します。</block>
+  <block id="b4832e1f800ff884553b38f2524e32dd" category="paragraph">環境変数の作成の詳細については '_windows documentation _ を参照してください</block>
+  <block id="d6bea59fb7c3e2297074e152f32b36f6" category="doc">要求されたサービスを完了するための十分なシステムリソースがありません</block>
+  <block id="1b2080b95253a31b0613cac1d0668d19" category="paragraph">「要求されたサービスを完了するには、システムリソースが不足しています</block>
+  <block id="cacae407bef798b0ffb4a0aaf4589632" category="paragraph">このメッセージは、 SCVMM で 1 つのファイル共有に多数の VM をプロビジョニングすると、接続あたりの同じユーザセッション数が上限に達した場合に表示されます。</block>
+  <block id="0fcdaa0a55ef934e3b57b5a56bf3ad77" category="paragraph">SCVMM は、 Hyper-V ホストごとに 1 つの TCP 接続を作成します。各接続は、 Hyper-V ホストのコンピュータ名（ computer$ ）と SCVMM 「 Run As account 」という 2 つのユーザーによる多数のセッションを作成します。コンピュータ $ とのセッションの数は、その Hyper-V ホストに導入されている仮想ハードディスクの数と同じです。</block>
+  <block id="944631318e78936297a14bd8d2370d37" category="paragraph">デフォルト値の ［ 接続ごとの最大同一ユーザーセッション数 ］ は 50 です。この制限により、 SCVMM を使用した大規模な VM 導入がブロックされます。この問題は、 Hyper-V ホストあたり 50 台を超える VM を導入する場合に使用します。</block>
+  <block id="186e5f3f14e60a14d11887c54d58b891" category="paragraph">CIFS プロトコルと同じ接続の最大セッション数を制御するカウンタを増やします。たとえば、次のコマンドは、同じ接続の最大ユーザセッション数をデフォルトの 50 から 100 に変更します。</block>
+  <block id="09f22fe040ed35c7bad3a8c149131588" category="paragraph">`* SVM::***&gt;cifs op modify -max-Same -user-sessions-per-connection 100*`</block>
+  <block id="e65f5d35820fbe9f192146e7ff748f73" category="summary">SMI-S プロバイダを使用して、 CIM サーバの使用を許可された CIM ユーザを追加および削除できます。また、現在のすべての CIM ユーザーを一覧表示し、パスワードを変更することもできます。</block>
+  <block id="f51fe4d0964c954ad5985711bf99725b" category="doc">CIM サーバーユーザーを管理します</block>
+  <block id="fd80aa72b01980a364a235774524abe7" category="paragraph">コマンドを入力したあと、プロンプトが表示されたらパスワードを入力し直します。</block>
+  <block id="633f8729597919152468792a57812e5b" category="paragraph">CIM サーバの使用を許可されている現在のユーザをリストします</block>
+  <block id="b3975567b3a00145d083012b3ebd6862" category="paragraph">「 * CIMUser-l * 」</block>
+  <block id="d83ea15db4245c8ec9d005939d2c44fd" category="paragraph">CIM サーバーユーザーのパスワードを変更します</block>
+  <block id="6882933cb2e39e9a9c51bf4e291f7fe0" category="paragraph">`*CIMUser-m-u_user_name_*`</block>
+  <block id="d0d3da0bfe81cf41faa253bed53f77bf" category="paragraph">コマンドを入力したら、と入力し、プロンプトが表示されたら新しいパスワードと古いパスワードをもう一度入力します。</block>
+  <block id="fe23c5d73b81ce01111fcebd092a273b" category="paragraph">CIM サーバーの使用が許可されていない CIM サーバーユーザーを削除します</block>
+  <block id="7835aa7d3bbc0bcc39ce2fd1e83071c4" category="paragraph">`*CIMUser-r -u ユーザー名 _*`</block>
+  <block id="a3d25add89b8980f0ab7eb839ce0c21c" category="summary">デフォルトでは、 SMI-S プロバイダはストレージシステムから 5 分（ 300 秒）ごとに情報を自動的に取得します。自動キャッシュ更新間隔（ cache_refresh_SEC 環境変数）は、 300 ～ 86400 秒（ 24 時間）の値に設定できます。</block>
+  <block id="cb133ba4694b5daaf3efb667d2e4f11e" category="doc">SMI-S プロバイダの自動キャッシュ更新間隔を指定します</block>
+  <block id="59ebdf80b065afdee9fe6b7b1dd2163a" category="paragraph">デフォルトでは、 SMI-S プロバイダはストレージシステムから 5 分（ 300 秒）ごとに情報を自動的に取得します。自動キャッシュ更新間隔（「 cache_refresh_SEC 」環境変数）は、 300 ～ 86400 秒（ 24 時間）の値に設定できます。</block>
+  <block id="6c233061bc3fcebe40737b3922df01fc" category="paragraph">ストレージ・システムの状態をいつでも手動で更新する場合は 'SMIS refresh コマンドを使用できます</block>
+  <block id="52d24ea635523b1c941f31f4a8c111e2" category="list-text">新しい更新間隔の値（秒単位）を使用して 'cache_refresh_SEC' という名前のシステムまたはユーザ環境変数を作成します</block>
+  <block id="24eff5a139d4097bd815d006e9a0d9ff" category="summary">SMI-S プロバイダによるログファイルとトレースファイルの管理方法を設定できます。たとえば、ログに記録するメッセージのレベルやログの保存先ディレクトリを指定できます。また、トレースするコンポーネント、トレースメッセージの書き込み先となるターゲット、トレースのレベル、トレースファイルの場所も指定します。</block>
+  <block id="9e0aba46893674ba3cb911499d0aa445" category="doc">ロギングとトレースを管理します</block>
+  <block id="2e0159cabf1d9d05d9cd06544df6da2c" category="doc">NetApp SMI-S Provider をアンインストールします</block>
+  <block id="ce12ed3777878dc751489d09e13cb3e8" category="summary">NetApp SMI-S Provider で問題が発生した場合は、表示されるエラーメッセージを使用してトラブルシューティングを行います。</block>
+  <block id="ce7b7453e7d182fcfcfa37f70a3827c2" category="doc">SMI-S プロバイダのトラブルシューティングを行います</block>
+  <block id="1c8b1ceffcc2e5c41818948735527a7f" category="summary">cimconfig コマンドを使用すると、 CIMOM 設定を管理できます。cimconfig コマンドを入力するか、 NetApp SMI-S Provider 設定値の環境変数を作成したら、 SMIS cimserver restart コマンドを使用して CIM サーバを再起動する必要があります。</block>
+  <block id="95cdbdc16fcdaafb435475409dea8c94" category="doc">cimconfig</block>
+  <block id="8f2ee1d8bcd811b5741f3d753e03018b" category="paragraph">cimconfig コマンドを使用すると、 CIMOM の設定を管理できます。「 cimconfig 」コマンドを入力するか、 NetApp SMI-S Provider 設定値の環境変数を作成したら、「 SMIS cimserver restart 」コマンドを使用して CIM サーバを再起動する必要があります。</block>
+  <block id="ef64b539714bc207f3683e87baca5652" category="paragraph">「 cimconfig_options_` 」</block>
+  <block id="b00916f5307aa32dbca536f03d14c7ff" category="list-text">* -c *</block>
+  <block id="1c31447f2eb1c48c57a46f3a61518e99" category="paragraph">コンフィギュレーション設定環境を現在の CIMOM 設定にすることを指定します。</block>
+  <block id="3596befb239babb43d61b0d1d6e13246" category="list-text">* -d *</block>
+  <block id="fa40973fd93c512d13a6a1b6da4f489f" category="paragraph">コンフィギュレーション設定環境をデフォルトの CIMOM コンフィギュレーションに指定します。</block>
+  <block id="0b780b7e828595da22483355654404e0" category="list-text">*-g *</block>
+  <block id="e691af7c4ee7d01230cf805d206758ef" category="paragraph">指定した設定プロパティの値を取得します。</block>
+  <block id="72bf4945e9f5ad48e98b8a86e61be5ec" category="list-text">*-h 、 --help*</block>
+  <block id="e3cfaac0d3377c6c896832368910130b" category="paragraph">「 cimconfig 」コマンドのヘルプを表示します。</block>
+  <block id="df12ebb64d9b76df31938810dd27a569" category="paragraph">すべての CIMOM 設定プロパティを一覧表示します。</block>
+  <block id="045736a4d72d21b72d7778e61d9fd110" category="list-text">* -p *</block>
+  <block id="177603cfb13c45d563d1bc16904f084e" category="paragraph">CIM サーバの次回起動時に設定を適用することを指定します。</block>
+  <block id="33ffba2cd5bc02af414ee632e22fadf2" category="paragraph">指定した設定プロパティ値を設定します。</block>
+  <block id="95b4c5d9e5ef6af33824e05b7ea2e5be" category="paragraph">コンフィギュレーションプロパティをデフォルト値にリセットします。</block>
+  <block id="28acac94ac9a552a494172af4f078a18" category="list-text">*-- バージョン *</block>
+  <block id="188c6e396a6269f7d0955f2cb23fc967" category="paragraph">CIM サーバのバージョンを表示します。</block>
+  <block id="14717f61d23f11c85970c509d3ce68de" category="paragraph">ログファイルの最大サイズを 15000 KB に変更します。</block>
+  <block id="f8c2df449febf0b15707a09fd604e537" category="summary">SMIS licensed コマンドは、ストレージシステムにライセンスされている機能をリストします。</block>
+  <block id="78a2498ace60e14c1d0b09368a648f49" category="doc">SMIS ライセンス</block>
+  <block id="b7176b7af7596fbcc148db69f476bd3d" category="paragraph">「 SMIS licensed 」コマンドは、ストレージ・システムのライセンス機能を一覧表示します。</block>
+  <block id="fd3c7c36ef880bba3bf94c0d0c419a93" category="paragraph">「 SMIS licensed 」コマンドとその省略された出力は次のとおりです。</block>
+  <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="summary">著作権に関する声明、商標、特許などにアクセスできます。</block>
+  <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">法的通知</block>
+  <block id="6016a2b341113bf496b719905398ecd2" category="section-title">著作権</block>
+  <block id="de6edae22bc37b97b38a15c7f8af62e2" category="paragraph"><block ref="de6edae22bc37b97b38a15c7f8af62e2" category="inline-link-rx"></block></block>
+  <block id="126a02652da6de02962cf1b654fd6376" category="section-title">商標</block>
+  <block id="c4ce4761e466527d26b3e3d5ed1006fd" category="paragraph">NetApp 、 NetApp のロゴ、および NetApp の商標ページに記載されているマークは、 NetApp, Inc. の商標です。その他の会社名および製品名は、それぞれの所有者の商標である場合があります。</block>
+  <block id="a93bc0a57623c2facaa010825c808507" category="paragraph"><block ref="a93bc0a57623c2facaa010825c808507" category="inline-link-rx"></block></block>
+  <block id="be89498d2f8a22ce47c02ba9795fe2af" category="section-title">特許</block>
+  <block id="d0b19d36be2c5f16e9aef46c8a452d3d" category="paragraph">ネットアップが所有する特許の最新リストは、次のサイトで入手できます。</block>
+  <block id="547ea2e305891e64d8e744949b0aca2c" category="paragraph"><block ref="547ea2e305891e64d8e744949b0aca2c" category="inline-link-rx"></block></block>
+  <block id="56c34c6410dd45c5cec44149ad0ce037" category="section-title">プライバシーポリシー</block>
+  <block id="50921fca0d376fca62102a5e608994e2" category="paragraph"><block ref="50921fca0d376fca62102a5e608994e2" category="inline-link-rx"></block></block>
+  <block id="24efa7ee4511563b16144f39706d594f" category="section-title">注意</block>
+  <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">通知ファイルには、ネットアップソフトウェアで使用されるサードパーティの著作権およびライセンスに関する情報が記載されています。</block>
+  <block id="3b82af97dcafa172aa23387cf791feca" category="inline-link">NetApp SMIS プロバイダ向けの通知です</block>
+  <block id="398bd28759c5235bdb5a9e5aa7c50e35" category="paragraph"><block ref="398bd28759c5235bdb5a9e5aa7c50e35" category="inline-link-rx"></block></block>
+  <block id="c3cb8bf1ed7183e77f46d5e7e662b2c1" category="summary">ネットアップストレージシステムを検出して管理するコマンドベースのインターフェイスである NetApp SMI-S Provider のインストール方法と管理方法について説明します。</block>
+  <block id="fd508117c0fd3f123e7353306ca51e6a" category="doc">NetApp SMIS - プロバイダドキュメント</block>
+  <block id="80ba3f83a7dec42d3f0c2b9511a26a28" category="paragraph">NetApp SMIS - プロバイダ情報ライブラリへようこそ。ここでは、 NetApp ストレージシステムを検出および管理するコマンドベースのインターフェイスである NetApp SMI-S プロバイダソフトウェアのインストール方法と管理方法を記載したドキュメントを参照できます。</block>
+  <block id="9d2169c1c2855b78a7aeaa4f42d27dc7" category="inline-link">ネットアップサポートサイト</block>
+  <block id="8aa9082c24819042404b817138276501" category="paragraph">以前のリリースの NetApp SMIS-Provider のドキュメントは、で入手できます<block ref="64d8ed7ea495c5a62b427fad32607c3d" category="inline-link-rx"></block>。</block>
+  <block id="5df91904e284b02eadf3bef23d5a41d4" category="summary">デフォルトでは、 SSL 認証は CIM サーバに対して有効になっています。SMI-S プロバイダのインストール中に、 CIM サーバの自己署名証明書が Pegasus ディレクトリにインストールされます。独自の自己署名証明書を生成し、デフォルトの証明書ではなく、独自の証明書を使用できます。</block>
+  <block id="706bd7f5dc0fd11f32957fcfe95a1d86" category="doc">CIM サーバの自己署名証明書を生成します</block>
+  <block id="ddf96c0ef94c04177aac4c565af47742" category="paragraph">デフォルトでは、 SSL 認証は CIM サーバに対して有効になっています。SMI-S プロバイダのインストール中に、 CIM サーバの自己署名証明書が「 Pegasus 」ディレクトリにインストールされます。独自の自己署名証明書を生成し、デフォルトの証明書ではなく、独自の証明書を使用できます。</block>
+  <block id="ce1605c578adffb355881da427936cf6" category="list-text">秘密鍵を生成します。</block>
+  <block id="ee01244ad0458fc0bceca3ca21a19bcf" category="paragraph">'*openssl genrsa -out cimom.key 2048*</block>
+  <block id="d1cc3793bab6382471940558e1237709" category="list-text">証明書要求を生成します。</block>
+  <block id="ba777a1ebf7a5d9ce1cca956ee4926bb" category="paragraph">「 *openssl req -new-key cimom.key -out CIMOM.CSR* 」と入力します</block>
+  <block id="854ca9ad8b9606a4ced8f8f325760049" category="list-text">プロンプトが表示されたら、証明書要求の情報を入力します。</block>
+  <block id="07fcc01ed277fcbb9f299bc089599ef6" category="list-text">自己署名証明書を生成します。</block>
+  <block id="408e6c1ad2bfdc436dcaf7eca6bff555" category="paragraph">「 *openssl x509 -in CIMOM.CSR-out CIMOM.cert-req -signkey cimom.key -days 1095 *」 のように入力します</block>
+  <block id="e20a939355820d858108eeabb6d3c69a" category="paragraph">証明書の有効日数を指定できます。</block>
+  <block id="cdad05d7e587588dab5f4295a9f45d9a" category="list-text">「 CIMOM.KEY 」と「 CIMOM.cert` 」ファイルを「 Pegasus 」ディレクトリ（ Windows ： C ： \Program Files （ x86 ） \NetApp\SMIS\Pegasus ）にコピーします。</block>
+  <block id="8eea62084ca7e541d918e823422bd82e" category="section-title">結果</block>
+  <block id="5e22e2207ecdd0a04ad8b25271bfdc17" category="paragraph">証明書の日付範囲は現在の日付から始まり、指定した日数だけ実行されます。</block>
+  <block id="0736d5e8d4330a3c6b848d8060b08979" category="summary">SMIS CIMOM コマンドは、 CIM オブジェクトマネージャについて説明します。</block>
+  <block id="010b8a6f4de24501fdfcdd9022d7bed3" category="doc">シモムとう</block>
+  <block id="fba396a24b568c4db4fb55d41b66afc3" category="paragraph">「 SMIS CIMOM 」コマンドは、 CIM オブジェクトマネージャについて説明します。</block>
+  <block id="958eb208a0881863ee089c6cd7dd4755" category="paragraph">SMIS CIMOM [-t ｛ * http * | * https * ｝ ]</block>
+  <block id="5bac2206531e3a846f26add59d5a7c54" category="paragraph">「 SMIS CIMOM 」コマンドとその出力は次のとおりです。</block>
+  <block id="fe419fa3a5c24e1ad318d60e15e01d31" category="summary">SMIS CRP コマンドは、 NetApp SMI-S プロバイダでサポートされる CIM 登録プロファイルについて、 NetApp SMI-S プロバイダのプロファイルも含めて説明します。</block>
+  <block id="3511331323e2467f659c7701860dfcce" category="doc">SMIS CRP</block>
+  <block id="dfc5700a5f8a123c6cb251019e112215" category="paragraph">「 SMIS CRP 」コマンドは、 NetApp SMI-S Provider プロファイルを含む NetApp SMI-S Provider でサポートされる CIM 登録プロファイルについて説明します。</block>
+  <block id="d6c91fd45a3f72b697c88257bcd8a911" category="paragraph">'SMIS CRP' コマンドとその出力：</block>
+  <block id="c95a373760253d51b1cf803ea80f5ddf" category="summary">NetApp SMI-S プロバイダを使用するには、必要なライセンスが必要です。</block>
+  <block id="085f5df3ea322139c5a71aed9fd908cd" category="doc">必要なライセンス</block>
+  <block id="69b6c0623415c79e8aa2a026499ac1b6" category="paragraph">NetApp SMI-S プロバイダには次のライセンスが必要です。</block>
+  <block id="db23482f99b63c4ef9cf1643a9ae9106" category="list-text">ストレージ・システムで LUN を作成するには、 FCP 、 iSCSI のいずれか、または両方のライセンスが必要です。</block>
+  <block id="65c1894015ea81f45bb83087acb7b218" category="list-text">サポート対象の ONTAP ストレージシステムでファイル共有を作成するには、 CIFS ライセンスが必要です。</block>
+  <block id="8c9c3d3838f74f32786ae4b71a80bd0a" category="list-text">サポート対象のバージョンの ONTAP を実行しているクラスタストレージシステムで LUN クローンを作成するには、 FlexClone ライセンスが必要です。</block>
+  <block id="d5669bc7c911b2b3c8f75b894a919008" category="doc">クローン処理や Snapshot 処理は実行できません</block>
+  <block id="9cbc1225817bd939d40c0d42c4c6415d" category="paragraph">LUN クローン・スプリット処理がボリューム内で実行されている間は ' クローン / Snapshot 処理は実行できませんしばらく待ってからもう一度試してください</block>
+  <block id="db024fb93861c1136e5beea60c5e05ac" category="paragraph">このエラーは、 LUN クローンスプリット中に Snapshot 処理を実行しようとした場合に発生します。LUN クローンスプリットがバックグラウンドで実行されている場合、 LUN をスプリットするボリュームで Snapshot 処理を実行することはできません。</block>
+  <block id="4cf5c508c533fc55ad0aa127819488aa" category="paragraph">LUN がスプリットされたあとに Snapshot 処理を実行します。</block>
+  <block id="aeedef3ee0a5af62ec32d9683a92b534" category="doc">SCVMM の再スキャン処理で SMI-S プロバイダの特定または通信に失敗しました</block>
+  <block id="9a2320278c975e09624eeb12c0ed80dd" category="paragraph">まれに、 SCVMM が SMI-S プロバイダを特定できないことがあります。</block>
+  <block id="7cad355a706b81e0e0fa33d6480aa45f" category="paragraph">この問題は、セキュリティインフラが新しい GPO で更新されている場合に発生することがあります。SMI-S プロバイダホストの再起動後に有効になると、 SCVMM ホストは SMI-S プロバイダまたはホストを信頼しない場合があります。</block>
+  <block id="4cd0860930e09cd27dfcee8471ac354b" category="list-text">SMI-S Provider をアンインストールしてから、もう一度インストールします。</block>
+  <block id="f77f4c33944f06bd53375ca2dde35154" category="list-text">SMI-S プロバイダ用の SCVMM で再スキャン操作を実行します。</block>
+  <block id="6d9deec510a9dbd5670d2464c1902c8a" category="summary">cimconfig コマンドを使用すると、 HTTP および HTTPS の有効化と無効化、 HTTP および HTTPS ポート番号の変更など、 CIMOM 設定を構成できます。</block>
+  <block id="6a38d5667ddfdd47d4e489f85f431cd1" category="doc">CIMOM コマンド</block>
+  <block id="3dce8828c67441b48d9742719e386d00" category="paragraph">「 cimconfig 」コマンドを使用して、 HTTP および HTTPS のイネーブル化とディセーブル化、 HTTP および HTTPS ポート番号の変更などの CIMOM 設定を行うことができます。</block>
+  <block id="9184b8f3aad09d0dfd024d22eb2c70e4" category="doc">ストレージプール（ボリューム）の管理対象スペースの合計が正しくありません</block>
+  <block id="cef45fe00693880d7c9e967f4584427a" category="paragraph">FilerView などの別のストレージ管理ツールを使用している場合、ストレージプール（ボリューム）の管理対象スペースの合計サイズが、 SMI-S プロバイダから返されるサイズと異なることがあります。</block>
+  <block id="956ed70b442d136dd2a48113d0e2fa43" category="paragraph">SMI-S プロバイダから返されるサイズには WAFL リザーブと Snapshot リザーブが含まれ、 FilerView やその他のツールでは使用可能なスペースのみが表示されて WAFL リザーブと Snapshot リザーブは含まれないため、この不一致が発生します。</block>
+  <block id="027c004b3be4f739c5a453592337c7da" category="paragraph">これは想定される動作であり、対処方法はありません。</block>
+  <block id="90ea26a5dffb6c8ff46feb3c93850548" category="summary">デフォルトでは、 SMI-S Provider はメッセージサービスキューごとに 80 スレッドを許可します。最大スレッド値は 1 ～ 5000 で指定できます。最大スレッド数を増やすと、 SMI-S Provider マシンのパフォーマンスに影響を与える可能性があるため、この値を増やす必要があるかどうかを慎重に検討してください。</block>
+  <block id="d55eae07e248eb9322a596dd90d407c2" category="doc">メッセージサービスキューあたりの最大スレッド数を指定します</block>
+  <block id="6592a678a898e48d050a94c96e27ebe0" category="paragraph">デフォルトでは、 SMI-S Provider はメッセージサービスキューごとに 80 スレッドを許可します。最大スレッド値は 1 ～ 5000 で指定できます。最大スレッド数を増やすと、 SMI-S Provider マシンのパフォーマンスに影響を与える可能性があるため、この値を増やす必要があるかどうかを慎重に検討してください。</block>
+  <block id="2193868d521a35a0a4589af5ed55c943" category="paragraph">トレース・ファイルに「不十分なリソース」出力の行が多数表示されている場合は、スレッド数を 500 ずつ増やす必要があります。</block>
+  <block id="eb193834564df8c3b7bc536be0693bbe" category="paragraph">スレッドの最大数を 20 未満に設定した場合は、「 * cimcli -n root/ONTAP Niall * 」コマンドを使用してプロバイダが応答しなくなり、トレースファイルに「 Insufficient threadpool 」メッセージが返されます。この場合は、スレッド数を 500 ずつ増やす必要があります。その後、プロバイダを再起動してください。</block>
+  <block id="a7e26385d9486e52af1a9bc2ff989ea4" category="list-text">新しい最大スレッド値を使用して 'PEGASUS_MAX_THLANS_PER_SVC_QUEUE という名前のシステムまたはユーザー環境変数を作成します</block>
+  <block id="1867e4a765d502c76e2b022504c37d92" category="doc">接続が拒否されました</block>
+  <block id="920b035c5ab2970e46128a7f6cc797c7" category="paragraph">「接続が拒否されました」</block>
+  <block id="57347b2e0c66cf6ffb2c25aac5a87de9" category="paragraph">CIM サーバが起動していません。</block>
+  <block id="bd70cb560e9ec26601210f1e704aeb59" category="paragraph">NetApp SMI-S Provider をインストールしたディレクトリ内の bin ディレクトリに移動し、次のコマンドを入力して、 CIM サーバが起動していることを確認します。</block>
+  <block id="1c69ee2e288e61e1354a1d861818c578" category="paragraph">「 SMIS cimserver status 」</block>
+  <block id="f1b3104927a39ddfe1ceaf661f5f4d7d" category="paragraph">CIM サーバが実行されていない場合は、次のコマンドを入力します。</block>
+  <block id="155f23a4622d9e88b8c1a5c1526d3e64" category="paragraph">「 SMIS cimserver start 」</block>
+  <block id="db348a1845bc8863a15226d1296f5943" category="summary">NetApp SMI-S Provider を使用すると、ストレージシステムの管理と監視、および LUN とストレージシステムのボリュームの管理が簡単になります。</block>
+  <block id="a6a30f6fc1ea5086f1f6a22630def76e" category="doc">NetApp SMI-S プロバイダの使用</block>
+  <block id="df0ce33f18f070a6ddb1ef19fb303e98" category="paragraph">NetApp SMI-S Provider を使用して、 System Center 2016 - Virtual Machine Manager または System Center 2016 - Virtual Machine Manager を使用してストレージコントローラを管理できます。</block>
+  <block id="11bc05d561d9d50782c6c96be8f925a3" category="summary">slptool コマンドを使用して、 WBEM サービスに関する情報を表示できます。</block>
+  <block id="f367b7dd9d33500bed829af817d25418" category="doc">SLP コマンド</block>
+  <block id="44875d713d6680857ff840765882108e" category="paragraph">「 slptool」 コマンドを使用して、 WBEM サービスに関する情報を表示できます。</block>
+  <block id="36bc4391121621ccbd43a1d20890bbfb" category="summary">NetApp SMI-S プロバイダソフトウェアをインストールして、 Data ONTAP を実行するストレージシステムを管理できます。デフォルトでは、 NetApp SMI-S プロバイダソフトウェアは C ： \Program Files （ x86 ） \NetApp\SMIS\Pegasus ディレクトリにインストールされます。</block>
+  <block id="b7ceff6488201ada2adc1183d4779baa" category="doc">Windows ホストに NetApp SMI-S Provider をインストールします</block>
+  <block id="346ed59a2eefbd3567dc9ec78ac266ca" category="paragraph">NetApp SMI-S プロバイダソフトウェアをインストールして、 Data ONTAP を実行するストレージシステムを管理できます。デフォルトでは、 NetApp SMI-S Provider ソフトウェアは「 C ： \Program Files （ x86 ） \NetApp\SMIS\Pegasus 」ディレクトリにインストールされます。</block>
+  <block id="e9c2e2fe706f7cb451b683459ed09ff9" category="paragraph">次のクレデンシャルとソフトウェアが必要です。</block>
+  <block id="b08dc0dbe07b37cce50f2429165603b4" category="list-text">Windows 管理者アカウントのログインクレデンシャル</block>
+  <block id="99b057df2c522b2a7b89ebfdd2f864f4" category="list-text">NetApp SMI-S プロバイダソフトウェアパッケージ</block>
+  <block id="7b32869ae0948e84609377dc61f066f5" category="paragraph">インストールプロセスの結果、ホストの再起動後も自動的に開始される自動サービスとして、 CIMOM サービス（ Service Control Manager では「 NetApp SMI-S Provider 」という名前）および SLP デーモン（ Service Control Manager では「 Service Location Protocol 」という名前）が実行されます。</block>
+  <block id="919ab370119d447ad299b22fa2119901" category="paragraph">このインストール手順には、新規インストールが反映されます。</block>
+  <block id="042d82ccad1ac2c11a524e73165165b9" category="list-text">NetApp SMI-S Provider ソフトウェアパッケージ（「 ssmisprovider -- _version_number _.msi 」）が格納されているディレクトリに移動し、パッケージ名をダブルクリックします。</block>
+  <block id="d4dc98bad1971071a05d9ff3f05d06f5" category="list-text">セットアップウィザードの手順に従います。</block>
+  <block id="28db71e92fe511a4f3a1c7ed3aa46bf5" category="paragraph">NetApp SMI-S Provider は、インストールプロセスの終了に向けて自動的に開始されます。</block>
+  <block id="1eea025a2f056d31c6125d173c58f586" category="summary">smis class コマンドは、指定されたクラスまたはすべてのクラスに関する情報をリストします。</block>
+  <block id="41baa3319f8fe6190c1bd12ca98cef92" category="doc">SMIS クラス</block>
+  <block id="a0a3d55677c45b15e04f3e3060b58b90" category="paragraph">「 smis class 」コマンドは、指定されたクラスまたはすべてのクラスに関する情報をリストします。</block>
+  <block id="3599706a1331cd991db06e8979ec894e" category="paragraph">「 SMIS クラス」</block>
+  <block id="4d73a1c8df04167c17eeda931e5fe34d" category="paragraph">`_name_space_{* Niall*|{* e*|*ni*|*gi*|*gc*}_class_name_}[-t ｛ * http * |*https*}]</block>
+  <block id="0103a4ca85a3fb03c5a96dac8edad2e2" category="list-text">'*_name_space_*'</block>
+  <block id="13e56ff4fe92971b0b42a20723ca7e10" category="paragraph">CIMOM がサポートするネームスペース</block>
+  <block id="e05ae9668c4f501686eefa33d6cf0d85" category="list-text">* ニオール *</block>
+  <block id="f90964c06de0551bddeba08d6e3c85a7" category="paragraph">すべてのインスタンス名を列挙します</block>
+  <block id="b50b3c25f8403e6743fe7e576ca163f1" category="list-text">* EI *</block>
+  <block id="b8271965d1aa3474bb36063b64ce97e0" category="paragraph">クラスのインスタンスを列挙します</block>
+  <block id="7c6c312ef61d70abe32852f2d8e0a6a2" category="list-text">* ni *</block>
+  <block id="79ee3dc4aa6b8eca399d7cfff9a0de77" category="paragraph">クラスのインスタンス名を列挙します</block>
+  <block id="544d04037d81be7bbc6be2aba7e3f864" category="list-text">* gi *</block>
+  <block id="133c9efda171df31e1a560c213a257dd" category="paragraph">クラスのインスタンスを取得します</block>
+  <block id="0e51f67d4920274b0fe227413b69ac26" category="list-text">* gc*</block>
+  <block id="3a7d7cfb4c1735fede1565b1a84d12aa" category="paragraph">クラス名のクラスを取得します</block>
+  <block id="d10e609c9f10971c9ad9a9e63ddc2439" category="list-text">'*_class_name_*'</block>
+  <block id="655546f65ee5fb9186411efa5747bec4" category="paragraph">情報を表示するクラスの名前</block>
+  <block id="c807c0fac735539610e5b517945b000e" category="paragraph">「 smis class 」コマンドとその省略された出力は次のとおりです。</block>
+  <block id="ef23db5e5a3a16df609d1db8b2ff882c" category="summary">SLP .conf 構成ファイルを編集して ' サービスロケーションプロトコルデーモン (slpd) サービスを管理できます</block>
+  <block id="e1cd17773638b5c6ba6a33ec0efa8bed" category="doc">SLP 設定オプションを指定します</block>
+  <block id="c520045e753333a3e19361a8bcc5accb" category="paragraph">SLP .conf 構成ファイルを編集して ' サービスロケーションプロトコルデーモン (slpd) サービスを管理できます</block>
+  <block id="44f8fbce4489a6c5b317b3f8b2f2121a" category="summary">SMI-S Provider をインストールする前に、 Windows ホストでサポートされるオペレーティングシステムが実行されていることを確認する必要があります。</block>
+  <block id="8a83ea3699cafca0e6d30e8c5ffb9259" category="doc">サポートされているオペレーティングシステムのバージョン</block>
+  <block id="696c660ff8d9323e55146a6dbd4e4088" category="cell">オペレーティングシステム</block>
+  <block id="2e5d14f7919ff3c6138e7845aec4f915" category="cell">サポートされるバージョン</block>
+  <block id="f592a2e060abc83e0626259e25824b4e" category="cell">必要なクライアントソフトウェア</block>
+  <block id="aea23489ce3aa9b6406ebb28e0cda430" category="paragraph">Windows の場合</block>
+  <block id="74dd40aa9a6635d79204e610e8324c38" category="list-text">Microsoft Windows Server 2016</block>
+  <block id="1ee2c5253c485a81cfff8c8e3e23a23f" category="list-text">Microsoft Windows Server 2019</block>
+  <block id="89ff2866e74db001ea07e0b7fdde9ac5" category="paragraph">Microsoft Visual C ｛ pp ｝ 2010 ランタイムライブラリは、 SMI-S Provider のインストール時に自動的にインストールされます。ランタイムライブラリに関連する潜在的な問題を回避するには、 Microsoft Visual C {pp} 2010 再頒布可能パッケージ (x86) をインストールする必要があります。次の場所から入手します。<block ref="b7a41ff45868862feefaef480db2df7e" category="inline-link-rx"></block></block>
+  <block id="dc917e4fa1217c63d38aa1b4aacbe7ba" category="section-title">SCVMM 2016 UR 2.1 の要件</block>
+  <block id="13601f1842a061432974c3d2a9141b74" category="paragraph">NetApp SMI-S Provider 5.2.4 以降で NetApp ファイルサーバを管理するには、 System Center Virtual Machine Manager （ SCVMM ） 2016 Update Rollup （ UR ） 2.1 が必要です。</block>
+  <block id="10d506f406f3b135deaa62f78cfd5476" category="paragraph">この UR を行わない場合、 SCVMM 2016 は、 NetApp File Server の既存のファイル共有の「 Total Capacity 」オプションと「 Available Capacity 」オプションの値を「 * 0 GB * 」として表示します。</block>
+  <block id="05dbd63393cf525e41d034d5de449c98" category="paragraph">SMI-S プロバイダを実行するには、プロバイダホストマシンが次の仕様を満たしている必要があります。</block>
+  <block id="fd72eadfdaeb4e69b5477af765434a93" category="list-text">プロバイダのホストマシンを Hyper-V ノードのホストに使用することはできません。</block>
+  <block id="b74c30689c8afa829d128cf3e62d6817" category="list-text">SCVMM は、プロバイダのホストマシン上で実行しないでください。</block>
+  <block id="b821588d84782d0b1d55c19cfdb5b9b4" category="list-text">プロバイダのホストマシンは、メモリを大量に消費する他のプログラムを実行しないでください。</block>
+  <block id="e7a61d9bf7f995d12bec06e5dc826433" category="list-text">プロバイダのホストマシンでは、他のベンダーの SMI-S プロバイダを実行しないでください。</block>
+  <block id="9e6a91e446af633c638f982317104862" category="paragraph">サポートされるハイパーバイザーは次のとおりです。</block>
+  <block id="aac0de225be44800bd6bac76c5eb4a63" category="list-text">Microsoft Windows Server 2016 Hyper-V</block>
+  <block id="be90425df543f66a8660032f3bec11ea" category="list-text">VMware ESX 5.0</block>
+  <block id="ced23abf6261326792853710d17c1e64" category="list-text">VMware ESX 5.1</block>
+  <block id="1c34588d8157e46be3e3ed89163e2d36" category="list-text">VMware ESX 5.5 の場合</block>
+  <block id="c3b86f2f3b5685e4fd42669ba402e8d2" category="list-text">VMware ESX 6.0</block>
+  <block id="98b75b1855a58db6fc5fc919ae7581df" category="summary">smis version コマンドを使用すると、 NetApp SMI-S Provider のバージョンが表示されます。</block>
+  <block id="c2c12b46946042a5bfafc346500e9c6b" category="doc">SMIS バージョン</block>
+  <block id="96f117305cce12a9a31c4596adf8ab21" category="paragraph">「 smis version 」コマンドは、 NetApp SMI-S Provider のバージョンを表示します。</block>
+  <block id="e230a22a7483625764443d5c5092c438" category="paragraph">「 SMIS バージョン」</block>
+  <block id="ae4e335dc900c8ff8a6d3fdb715fd988" category="paragraph">「 SMIS version 」コマンドとその出力は次のとおりです。</block>
+  <block id="80ebd8dee32968bebb7d5a51679db8f5" category="doc">Windows で SMI-S プロバイダがクラッシュします</block>
+  <block id="342fd6c29fdd9dd514e7fd4690cbc90d" category="paragraph">Windows で SMI-S プロバイダがクラッシュします。</block>
+  <block id="0a2c3bdd5983f50c1522b87fa95d6fef" category="paragraph">この問題はさまざまな理由で発生し、クラッシュ時に生成されるファイルに記録されます。</block>
+  <block id="d49bf7e76461d91a9a1388d385c1a69f" category="paragraph">プロバイダを再起動し、次の情報をテクニカルサポートに送信して詳しい分析を依頼してください。</block>
+  <block id="10d1916e04da5c4fe60b5810d0316af6" category="list-text">「 C ： \Program Files （ x86 ） \NetApp\SMIS\Pegasus\Pegasus\logs 」ディレクトリからダンプファイルを作成します</block>
+  <block id="6071cace65e5d652f39bce9199d4447d" category="list-text">C ： \Program Files （ x86 ） \NetApp\SMIS\Pegasus\Pegasus\logs ディレクトリのログファイルです</block>
+  <block id="9f07400d8d3b856c5d45db70d4c187e4" category="list-text">「 C ： \Program Files （ x86 ） \NetApp\SMIS\Pegasus\Pegasus\traces 」ディレクトリのファイルをトレースします</block>
+  <block id="c591b8621288fd3a42bf9fc261c5cb47" category="paragraph">トレースファイルには、次のようなメッセージも表示されます。</block>
+  <block id="ba4c6b5dc5d2d22d4113efc5fd6db700" category="paragraph">`23-May -2013 20:46:36.874 Info cimserver:createMiniDump:SMI-S Agent がクラッシュし、ダンプファイルを生成しようとしています</block>
+  <block id="ca5d7f0d97eb2429c595e8fc571625c0" category="paragraph">「 2013 年 5 月 23 日 20 時 46 分 37 秒 14 Info cimserver ： createMiniDump ：プロセスを C ： \Program Files （ x86 ） \NetApp\SMIS\Pegasus\logs\SMI-S Agent -8be55da -2011_05_23-20_46_36.dmp 」にダンプしました</block>
+  <block id="cf02a49a7c0c924dc2fbcbe6d9a21d40" category="list-text">「 C:\Program Files (x86)\NetApp\SMIS\Pegasus\Pegasus` 」ディレクトリにある「 version.txt 」と「 cimserver_current.conf 」ファイル</block>
+  <block id="35671582279b0a1d59acf722bbd8bdf6" category="doc">ネットワークパスが見つかりません</block>
+  <block id="720e5e50ac2535c888ad67280e6a1be2" category="paragraph">「ネットワークパスが見つかりません」</block>
+  <block id="178d8aae262f8d9ddc44d48c4e4c6d08" category="paragraph">このメッセージは DNS 問題を反映したものであり、ホストが DNS サーバにレコードを持たない場合に SMB 共有への VM の導入時に生成されます。</block>
+  <block id="2b7eb82612c80702139b0208e1335e20" category="paragraph">通常、ドメイン内に新しいホストが設定されている場合、ドメイン DNS サーバは、 24 時間以内にホストレコードを自動的に更新します。ただし、この更新が自動的に行われるとは限りません。</block>
+  <block id="5f67fee45257fdf425111301595cefd7" category="list-text">ドメイン管理者の場合は、 DNS ホストレコードを手動で更新します。</block>
+  <block id="3da95846f2c2e8688baa4512b1bf8227" category="list-text">ドメイン管理者でない場合は、ホストファイル (C:\Windows\System32\drivers\etc\hosts) を更新します。</block>
+  <block id="cd1d6fce4cd9d7a94e7850303787e1e8" category="paragraph">ホストファイルにファイル拡張子 (`.txt') がありません</block>
+  <block id="f4136acb3cb5d0efffc517c067ddfd6c" category="summary">トレースするコンポーネント、トレースターゲット、トレースのレベルを指定できます。デフォルトのトレースファイルの名前と場所を使用しない場合は、必要に応じてトレースファイルの名前と場所を変更できます。</block>
+  <block id="c56ac5615b54a034084151ae64ce2648" category="doc">設定値をトレースします</block>
+  <block id="177643ab3b04ebf5d0c59fd7d5ce1e52" category="paragraph">次のトレース設定を構成できます。</block>
+  <block id="ca31708947b7a9d9d3e205034380e659" category="list-text">* トレースコンポーネント *</block>
+  <block id="dd8d96da95aeda2ea76e411b375aa419" category="paragraph">トレースするコンポーネントを指定します。デフォルトでは、すべてのコンポーネントがトレースされます。</block>
+  <block id="18a9761aec25dba515ae85f826ba45be" category="list-text">* トレーサファシリティ *</block>
+  <block id="c0ed662a462e53ee3dc5e9a3f59072fa" category="paragraph">トレースメッセージの書き込み先のターゲットを指定します。</block>
+  <block id="0b27918290ff5323bea1e3b78a9cf04e" category="list-text">ファイル。</block>
+  <block id="91b59054872fd819c6f8a005a9507a52" category="paragraph">トレースメッセージが traceFilePath 構成オプションで指定されたファイルに書き込まれるように指定するデフォルト値です。</block>
+  <block id="ce0be71e33226e4c1db2bcea5959f16b" category="list-text">ログ</block>
+  <block id="99f369be41de16f4b1457018698a0e87" category="paragraph">トレースメッセージが cimserver_standard ログファイルに書き込まれるように指定します。</block>
+  <block id="dc47307dece74cd322e998a57978a883" category="list-text">* ならい FilePath *</block>
+  <block id="eca98d7b844a9964bf8aa81d75cf8c39" category="paragraph">トレースファイルの場所を指定します。デフォルトでは ' トレースはファイル名は cimserver.trc' で 'traces ディレクトリにあります</block>
+  <block id="65b3bdf4bded79705083dd0a5e442bec" category="list-text">* トレースレベル *</block>
+  <block id="2678809354815b115b9512e885316712" category="paragraph">トレースのレベルを指定します。デフォルトでは、トレースは無効になっています。</block>
+  <block id="412d3edf40f0c308f135062e22bad182" category="cell">トレースレベル</block>
+  <block id="c1645ee98e4d773b5771954889751442" category="cell">トレースメッセージが書き込まれました</block>
+  <block id="cfcd208495d565ef66e7dff9f98764da" category="paragraph">0</block>
+  <block id="f032b99bdb9615b56db1f4c47adcc7dc" category="paragraph">トレースは無効になっています。</block>
+  <block id="c4ca4238a0b923820dcc509a6f75849b" category="paragraph">1.</block>
+  <block id="d431b26f03a69fefba310058f556e828" category="paragraph">重大なメッセージおよびログ・メッセージです。</block>
+  <block id="c81e728d9d4c2f636f067f89cc14862c" category="paragraph">2.</block>
+  <block id="15570c8bdd6b5da683835309706ca4fe" category="paragraph">基本的なフロートレースメッセージ（低データ詳細）</block>
+  <block id="eccbc87e4b5ce2fe28308fd9f2a7baf3" category="paragraph">3.</block>
+  <block id="ee70015bab4c58cf0f3881a21b665ff8" category="paragraph">機能間ロジックフロー（中程度のデータ詳細）</block>
+  <block id="a87ff679a2f3e71d9181a67b7542122c" category="paragraph">4.</block>
+  <block id="252a5d2c10241ca715834e346795020e" category="paragraph">データの詳細度が高い</block>
+  <block id="e4da3b7fbbce2345d7772b0674a318d5" category="paragraph">5.</block>
+  <block id="3760243c0ec28bcb0e1a0c201dd5d0db" category="paragraph">高データ詳細 + メソッドの開始と終了</block>
+  <block id="f7f67a4b989755c831e2703c64ac314b" category="summary">このコマンドを実行すると、ストレージシステムのディスク情報が表示されます。SMIS ディスクは、 Data ONTAP 7-Mode コントローラで使用する場合にのみ機能します。</block>
+  <block id="001e1f541b1e42bd39ea2ea40c19ea63" category="doc">SMIS ディスク</block>
+  <block id="d21c1931b01f62c3b9c02c100019a202" category="paragraph">「 smis disks 」コマンドを使用すると、ストレージ・システムのディスク情報が表示されます。「 SMIS disks 」は、 Data ONTAP 7-Mode コントローラで使用する場合にのみ機能します。</block>
+  <block id="1ac1bc188887b49a916919759fa511f6" category="paragraph">「 smis disks 」コマンドとその省略形の出力は次のとおりです。</block>
+  <block id="e805a7074bd5f3f2f6002db7b0f11fd5" category="summary">smis LUNs コマンドは、ストレージシステムの LUN 情報を表示します。</block>
+  <block id="ecb4091a0d7fe12a01800c4c519c074d" category="doc">SMIS LUN の場合</block>
+  <block id="1b955e277f0738f3bdd0b7a18e1a7ecd" category="paragraph">「 smis LUNs 」コマンドは、ストレージ・システムの LUN 情報を表示します。</block>
+  <block id="d1a0d4852e62844a3ab6d7da1573e44b" category="paragraph">'SMIS LUN' コマンドとその省略形の出力：</block>
+  <block id="7e58f3c32490291520a1a61221da598d" category="doc">ストレージシステムが返す： ONTAP 要素がない</block>
+  <block id="6e2039d962c6e75488fd40f9c951c19a" category="paragraph">'filer return: 応答に ONTAP 要素がありません</block>
+  <block id="e229a1324a21093601dc13ac94ed1e4b" category="paragraph">このメッセージは、 ONTAPI API がタイムアウトした場合に表示されます。ONTAPI API のデフォルトのタイムアウトは 60 秒ですが、状況によってはこの時間が短すぎることがあります。</block>
+  <block id="520c461e0dad01779322190a189497d5" category="paragraph">ONTAPI API のタイムアウトを 60 秒より大きい値に変更するには、環境変数「 ONTAPI_ timeout_SEC 」を設定し、 SMI-S プロバイダを再起動します。</block>
+  <block id="4dd620f035497b4c26fd3db7a737531e" category="summary">SMI-S プロバイダは、ストレージシステムに対する ONTAP API （ ONTAPI ）呼び出しを実行します。デフォルトでは、 ONTAPI タイムアウトは 300 秒です。タイムアウトは 60 ～ 300 秒の値に設定できます。</block>
+  <block id="2968f0fa1a0d4ef15b62ef7173cea84f" category="doc">ONTAPI タイムアウト値を指定します</block>
+  <block id="c23ac41b72372a7f3c20cb975800351a" category="list-text">新しいタイムアウト値（秒単位）を使用して 'ONTAPI_ TIMEOUT_SEC' という名前のシステムまたはユーザ環境変数を作成します</block>
+  <block id="fb44665cf49d63acda1cdb213857d17b" category="doc">デフォルト以外の HTTP または HTTPS ポートを使用してストレージシステムを追加することはできません</block>
+  <block id="a1324d13680ad51ed3e3b999a3eca7f8" category="paragraph">デフォルト以外のポートに HTTP または HTTPS を実行するストレージシステムを追加することはできません。</block>
+  <block id="23757d70053ecf2d608bdbac79c40aea" category="paragraph">デフォルトでは、 NetApp SMI-S Provider は、 HTTP 経由のストレージシステムとの通信にポート 80 、 HTTPS 経由の通信にポート 443 を使用します。</block>
+  <block id="89e405c285e86048a6f405ef514df892" category="paragraph">HTTP トラフィックに 80 以外のポートを使用するストレージ・システム、または HTTPS トラフィックにポート 443 を使用するストレージ・システムを追加するには、次のコマンドを使用します。</block>
+  <block id="faebd45231096c3ebde760d214e010d6" category="paragraph">「 cimcli ci -n root/ONTAP_FilerData hostname = _storage_sys_IP_address_port = _NON_default_port_username=_storage_sys_user_password=_storage_sys_pwd_comMechanism=HTTP -u _agent_user_user_--llocalhost ： 5989-pwd</block>
+  <block id="dab3f43fc6e9009edb6f8d30d88f536d" category="paragraph">「 -u 」、「 -p 」、「 -l 」、および「 -s 」はオプションのパラメータです。</block>
+  <block id="4c2f5b5cc7006ed56789fcfec26a070b" category="section-title">HTTP トラフィックにポート 8000 を使用するストレージシステムを追加します</block>
+  <block id="5224d2dafede32800eae18bf750c83eb" category="paragraph">「 cimcli ci -n root/ONTAP ONTAP_FilerData hostname = 10.60.167.12 port = 8000 username = root password = Netapp1 ！comMechanism = HTTP -u root -p Netapp1 ！-l localhost:5989-s-- タイムアウト 180`</block>
+  <block id="7355cc449407ca50aff22e50da5ca918" category="summary">smis config show コマンドは、現在の CIM サーバの設定情報をリスト表示します。</block>
+  <block id="7e83e52e854ff8058176500bc4ad34d0" category="doc">SMIS config show のコマンドです</block>
+  <block id="2648540719848b041df79e729eb23829" category="paragraph">「 smis config show 」コマンドは、現在の CIM サーバの設定情報を一覧表示します。</block>
+  <block id="7ebbcaa199bd513217c822dd7063d75b" category="paragraph">「 SMIS config show 」</block>
+  <block id="64c64b170c567596739e79f28df4a5e8" category="paragraph">「 smis config show 」とその出力は次のとおりです。</block>
+  <block id="e3ce7c8c3021c118f3dfe9d75afa6298" category="summary">NetApp SMI-S Provider は、ストレージシステムの管理と監視を可能にする 3 つのコンポーネントで構成されます。 CIMOM 、プロバイダオブジェクト、リポジトリです。</block>
+  <block id="e6282555dbe26beec21e6f94534905cb" category="doc">NetApp SMI-S プロバイダのコンポーネント</block>
+  <block id="8512ff4c63fa0cb1d46797308e63207a" category="list-text">* CIMOM *</block>
+  <block id="c53e4b32a007cea3eaa5f9d5a584715c" category="paragraph">これは NetApp SMI-S プロバイダの基盤です。CIMOM は、各アプリケーション要求を収集、検証、および認証してから、アプリケーションに応答します。各要求を処理するために適切なプロバイダを呼び出すことで、各要求のコンジットとなります。</block>
+  <block id="8a40db527a57c944b52c2561d0af6e10" category="list-text">* プロバイダオブジェクト *</block>
+  <block id="986f0ce9f55be91d5e813f0f836d88d8" category="paragraph">ホストが SMI-S プロバイダへのコマンドまたはクエリを発行すると、 CIMOM は共有ライブラリオブジェクトをロードし、そのオブジェクトを呼び出して要求を処理し、結果の情報をホストに返します。</block>
+  <block id="2c96e436c5e94803429d2f4e4d88dbbe" category="paragraph">Windows ホストでは、 DLL オブジェクトを使用します。</block>
+  <block id="fc40b7fff3f4b2fa5c40de69bea91ed4" category="list-text">* リポジトリ *</block>
+  <block id="827530584f2cab62a19560ffb2b26ad2" category="paragraph">CIMOM は、リポジトリにフラットファイルデータベースを使用します。CIM レベルで必要な永続的データを格納します。</block>
+  <block id="46e0d6cd9511768516cffae18f3cb5bc" category="summary">デフォルトでは、すべてのシステムメッセージがログに記録されます。また、デフォルトでは、システムメッセージログは NetApp SMI-S Provider がインストールされているディレクトリの logs ディレクトリにあります。CIM サーバログに書き込まれるシステムメッセージの場所とレベルを変更できます。たとえば、指定したディレクトリにログを保存し、致命的なシステムメッセージのみを CIM サーバログに書き込むように設定できます。</block>
+  <block id="2a6456b036bc8393c319f1d0851d9f9e" category="doc">ログ設定を構成します</block>
+  <block id="d634faa051c67370dd5de1d5ef4225c4" category="paragraph">デフォルトでは、すべてのシステムメッセージがログに記録されます。また、デフォルトでは、システム・メッセージ・ログは NetApp SMI-S Provider がインストールされているディレクトリの「 logs 」ディレクトリに配置されます。CIM サーバログに書き込まれるシステムメッセージの場所とレベルを変更できます。たとえば、指定したディレクトリにログを保存し、致命的なシステムメッセージのみを CIM サーバログに書き込むように設定できます。</block>
+  <block id="b92c67c0f4c56bc1e4db299b1e051b4b" category="paragraph">システムメッセージロギングレベルを変更します</block>
+  <block id="c4afd30587ca8f49404c77204b2d133f" category="paragraph">'*cimconfig -s logLevel=_new_log_level_-p *</block>
+  <block id="c38aefb099fb15d8787010ba78216358" category="paragraph">たとえば ' ログ・レベルを "`informing" に変更する場合は '+`*cimconfig -s logLevel=informion-p *` コマンドを入力します</block>
+  <block id="0bab75a61937b38c1a7acc2ff1841e00" category="paragraph">システム・メッセージ・ログ・ディレクトリを変更します</block>
+  <block id="651259a98991e0b35e4f51aa4d4a4319" category="paragraph">`*cimconfig -s logdir=new_log_directory-p *`_new_log_directory_`s にスペースが含まれている場合は ' 引用符 (`_new log directory_") で囲む必要があります</block>
+  <block id="6f37785193648cc0fab41c9b222a7a2f" category="paragraph">たとえば ' ログ・ディレクトリを "serverLogs" に変更する場合は ' 次のコマンドを入力します</block>
+  <block id="882d7437047d18007764dd5615ed4aba" category="paragraph">`*cimconfig -s logdir=serverLogs-p *`</block>
+  <block id="591f96ef7fe1cdb42aa58f385466c717" category="summary">NetApp SMI-S Provider 5.2.6 ソフトウェアの機能、制限事項、および既知の問題に関する情報を提供します。</block>
+  <block id="655d7e9f201053f0e25987d7ca92a6fc" category="doc">NetApp SMIS - プロバイダリリースノート</block>
+  <block id="296afb93a730015ccf0a911acd6efec5" category="paragraph">。<block ref="f447ffc7c64f700d57e2b9647508055d" category="inline-link-rx"></block> 新機能、アップグレードに関する注意事項、解決済みの問題、既知の制限事項、および既知の問題について説明する。リリースノートにアクセスするには、ネットアップサポートサイトにサインオンする必要があります。</block>
+  <block id="58c8d351ba9d95afd9752aa88bf6e0f7" category="doc">SCVMM で SMB 共有のサイズが 0 に縮小されます</block>
+  <block id="d19b0ea77723113b53c5f3b5bcfc71cb" category="paragraph">System Center Virtual Machine Manager （ SCVMM ）では、新規または既存の SMB 3.0 共有サイズが 0 になることがあります。</block>
+  <block id="286cd1d6f9ece4f567a343b0e19efe60" category="paragraph">この問題は Data ONTAP 、大量の I/O 、新規または既存の SMB 3.0 共有サイズが SCVMM に 0 までず、クォータの再初期化に時間がかかる場合に発生します。そのため、新規または既存の SMB 3.0 共有では新しい VM をプロビジョニングできません。</block>
+  <block id="cc5ade6a333e0665a7013fb0305400d6" category="list-text">クォータをオフにします。</block>
+  <block id="448805fdc8b90fe55f76dbffe9cd446f" category="list-text">SMB 共有をホストする各ボリュームに、タイプが「 tree 」のデフォルトクォータルールを 1 つ追加します。</block>
+  <block id="4d2cce1528ba318942044838d5da6b76" category="list-text">デフォルトのクォータルールを追加したボリュームのクォータをオンにして、 SMI-S プロバイダを再起動します。</block>
+  <block id="3deb3409d8a2d7ecc43a7b6cde93dd79" category="summary">SMIS pools コマンドは、ストレージシステムのストレージプールをリストします。</block>
+  <block id="9f0928f5c491149e0d68d561ecf558bc" category="doc">SMIS プール</block>
+  <block id="e55ce96d304db611d57e6232a6ce3daa" category="paragraph">「 smis pools 」コマンドは、ストレージ・システムのストレージ・プールをリストします。</block>
+  <block id="f226424578973a3c629f8591092096b5" category="paragraph">「 SMIS プール」コマンドとその省略形の出力：</block>
+  <block id="ed67849ee15b777c5b7b016e5e4edb51" category="summary">slptool findsrvs コマンドは、ネットワーク上で実行されている WBEM サービスを検出します。</block>
+  <block id="c1a36cc2047b34255648f6b817e6b410" category="doc">slptool findsrvs</block>
+  <block id="bc02f9666a54c5705e9d339c88ac2f1d" category="paragraph">slptool findsrvs' コマンドは ' ネットワーク上で実行されている WBEM サービスを検出します</block>
+  <block id="e82b24b843a7ce5035507ad1d1431751" category="paragraph">slptool findsrvs_service_`</block>
+  <block id="2d790894df6a0ea67608206684cfd014" category="paragraph">slptool findsrvs` コマンドとその出力 :</block>
+  <block id="44fc5eb40e0278cb133788f5469fbeec" category="summary">NetApp SMI-S プロバイダコマンドを使用して、 CIMOM リポジトリでストレージシステムの追加、削除、一覧表示を行うことができます。また、ストレージシステムについて、 NFS および CIFS エクスポートおよびエクスポートされた LUN をリストすることもできます。</block>
+  <block id="09b43df06bca0a261e4635991d6c8575" category="doc">ストレージシステムを管理</block>
+  <block id="daa8304b1e5a9998369fb0061bbc76ab" category="paragraph">ONTAP の場合、クラスタの IP アドレスではなく SVM の管理 IP アドレスを指定する必要があり、 vsadmin ユーザのクレデンシャルを指定する必要があります。SMI-S プロバイダは、クラスタ IP アドレスまたはノード管理 IP アドレスをサポートしません。また、ノード管理またはノード SVM もサポートしません。</block>
+  <block id="ba6ecff2eef9a730af73909b60860b22" category="paragraph">SMI-S プロバイダに管理 LIF を追加するときは、管理 LIF のデータプロトコルの値を「 none 」に設定する必要があります。</block>
+  <block id="54f5714f71cdb7caea1dc20456fc6738" category="paragraph">プロバイダとストレージシステムの間に HTTP 接続されたストレージシステムを追加します</block>
+  <block id="89ccad88ba064cc88cf2ab134997a5dc" category="paragraph">プロバイダとストレージシステムの間に HTTPS 接続されたストレージシステムを追加する</block>
+  <block id="1055041e911f7f81e1160cad7d6df87a" category="paragraph">ストレージシステムの NFS および CIFS エクスポートを一覧表示します</block>
+  <block id="0b6849eeabb5662b0910994843c568dd" category="paragraph">'*SMIS exports *</block>
+  <block id="6adf97f83acf6453d4a6a4b1070f3754" category="paragraph">なし</block>
+  <block id="0a2006cacb27cbdbeb32987483a1a84d" category="paragraph">CIMOM リポジトリのストレージシステムを一覧表示します</block>
+  <block id="6880c6a422f6270812bc038fa51514c5" category="paragraph">*SMIS リスト *`</block>
+  <block id="12461db74e50f15fc71fe964e70c1c99" category="paragraph">このコマンドを実行すると、ストレージシステムを追加または削除する前に、 CIMOM リポジトリ内のストレージシステムを検証できます。</block>
+  <block id="c6d5949ed7adf68861b2ceb4687571bf" category="paragraph">ストレージシステムのエクスポート済み LUN をリストします</block>
+  <block id="18b578423744ef72802c13af961042a9" category="paragraph">`*SMIS LUN*`</block>
+  <block id="ca50f0102029c7874cbb4ed0b7e7eb50" category="paragraph">CIMOM リポジトリからストレージシステムを削除します</block>
+  <block id="d657fd401bd6ebe4d06082361f65af09" category="paragraph">`*SMIS DELETE_storage_sys_*`</block>
+  <block id="822ff5cd301b3a58d645b47d8a73841f" category="paragraph">ストレージシステムの管理が不要になった場合は、 CIMOM リポジトリからストレージシステムを削除できます。</block>
+  <block id="534b0391ec7ed02248d1f853510cf018" category="paragraph">SMI-S プロバイダは CIMOM リポジトリ内のすべてのストレージシステムから情報を収集するため、最適なパフォーマンスを維持するには、未使用のストレージシステムをリポジトリから削除する必要があります。</block>
+  <block id="61aee31a29e1845c59f60239e23fed18" category="paragraph">現在の CIM サーバ設定情報をリストします</block>
+  <block id="1a808d992fed9941455493ad0022017d" category="paragraph">*SMIS config show *`</block>
+  <block id="0ab763755587d142352bf7691e4791e4" category="paragraph">ストレージシステムの FC および iSCSI ポート情報をリストします</block>
+  <block id="96754da91a2648d4efd11d34e86a4b7e" category="paragraph">*SMIS イニシエータ *`</block>
+  <block id="9a0da4fee3a57e231afbe9aa492ab02f" category="paragraph">ストレージシステムのストレージプールを一覧表示します</block>
+  <block id="dade3a1676c438edc6bc2f2ae34d5bba" category="paragraph">'*SMIS プール *</block>
+  <block id="0ee29e1d52006a0075140e7aa5ae9ceb" category="paragraph">ストレージ・システムのトラディショナル・ボリュームとフレキシブル・ボリュームを一覧表示します</block>
+  <block id="4e5aaa43ceec1507a8708c8e88e4c214" category="paragraph">`*SMIS VOLUMES *`</block>
+  <block id="cae8cb812f6ca7ff0b4fffd3fee9e6ac" category="summary">CIMUser コマンドを使用して、 CIM サーバユーザの追加、削除、一覧表示、およびパスワードの管理を行うことができます。</block>
+  <block id="b5bbdbd9dee3d1247c9c2eb9b98ef095" category="doc">CIM ユーザーコマンド</block>
+  <block id="fbff7af17f480cbd21f54875668b8a27" category="paragraph">「 CIMUser 」コマンドを使用して、 CIM サーバユーザの追加、削除、一覧表示、およびパスワードの管理を行うことができます。</block>
+  <block id="9280dd1549bc07bba9817582d2b6288f" category="doc">localhost に接続できません： 5988</block>
+  <block id="24f18f75923b26cdb12b920517712556" category="paragraph">'localhost に接続できません :5988接続に失敗しました。localhost に接続しようとしています :5988`</block>
+  <block id="acd465815840c7454befc06f12a142b7" category="paragraph">このメッセージは、 HTTPS 接続が無効になっているか、 HTTPS ポートが 5988 に設定されていない場合、またはプロバイダが動作を停止してハング状態のままになっている場合に表示されます。</block>
+  <block id="58d08e1d82d361b99536cfa44f149071" category="paragraph">「 cimconfig -g enableHttpConnection 」と入力します</block>
+  <block id="cbd7f81531872331c59ceea7cf0e317f" category="paragraph">cimconfig -g httpPort</block>
+  <block id="ce213e75a7f75f712f4be7e16112d770" category="paragraph">enableHttpConnection または enableHttpsConnection が 'true' に設定されていない場合は ' 次のコマンドを入力します</block>
+  <block id="009569960b50be05ba080ec543734b9e" category="paragraph">「 cimconfig -s enableHttpConnection -p 」を入力します</block>
+  <block id="85a868f1991485654cbd5a04da48a9b3" category="paragraph">httpPort が 5988 に設定されていない場合は、次のコマンドを入力します。</block>
+  <block id="d4e81f1c3845585320720d915738b5e1" category="paragraph">cimconfig -s httpPort=5988 -p</block>
+  <block id="cca585701df6f93e0f1325f6f499e5f5" category="summary">smis cimserver コマンドは、 CIM サーバの起動、停止、再起動、またはステータスの取得を行います。</block>
+  <block id="539dd095e3626609596c19bb68975d4b" category="doc">SMIS cimserver</block>
+  <block id="63ce1cdf8f985b7dac88e1164a97a0b7" category="paragraph">「 smis cimserver 」コマンドは、 CIM サーバの起動、停止、再起動、またはステータスの取得を行います。</block>
+  <block id="5a5e2ea5a2afb6a0676da3eebd28949f" category="paragraph">「 SMIS cimserver 」と入力します</block>
+  <block id="170363bebc0d578ed9e2e3f36b801efd" category="paragraph">'{*start*|*stop*|*restart*|*status*}`</block>
+  <block id="c1c6041919f05fc514a14999b56de47c" category="list-text">* スタート *</block>
+  <block id="90f4ddc942b1044393e89f486cd3a453" category="paragraph">CIM サーバを起動します。</block>
+  <block id="32c782efd785a5f2274071338f7345dd" category="list-text">* 停止 *</block>
+  <block id="b9c33a774f7af05771c2ccb241a4b340" category="paragraph">CIM サーバを停止します。</block>
+  <block id="3a78eb520041f9ba7469ccbe33fb92a6" category="list-text">* 再起動 *</block>
+  <block id="2404e95dd016724f713868519e1ef7ce" category="paragraph">CIM サーバを再起動します。</block>
+  <block id="ca405589dcd974768e24cc65b8a0eb5f" category="list-text">* ステータス *</block>
+  <block id="e3e3ed21d218d78f0b06fa5e0fad5c74" category="paragraph">CIM サーバのステータスを取得します。</block>
+  <block id="dbbcf46b590e39b73cffaf7b7db5fa9a" category="summary">NetApp SMI-S プロバイダは Windows ホストにインストールできます。ただし、以前のバージョンにリバートまたはダウングレードすることはできません。</block>
+  <block id="f212745ed87111d0afe9888395028611" category="doc">NetApp SMI-S Provider をインストールします</block>
+  <block id="f82d8520c4ff1fabe883e81ff945126f" category="summary">SMIS exports コマンドは、ストレージシステムの Network Attached Storage （ NAS ；ネットワーク接続ストレージ）エクスポートを表示します。</block>
+  <block id="0e9399f4b71116079d9243ed16264d69" category="doc">SMIS エクスポート</block>
+  <block id="141339cbccc89afa9496752732fa16d1" category="paragraph">「 SMIS exports 」コマンドは、ストレージシステムの NAS （ Network Attached Storage ）エクスポートを表示します。</block>
+  <block id="dfca38e26098a8c39e2f08466a92c941" category="paragraph">SMIS は '[-t ｛ * http * | * https * ｝ ] をエクスポートします</block>
+  <block id="c903d8f52838546de2a64817a9f29020" category="paragraph">「 SMIS exports 」コマンドとその出力：</block>
+  <block id="84d19bb0bac8dc1170a89ce09efbcc16" category="summary">ログに記録されるメッセージのタイプを指定できます（たとえば、致命的なシステムメッセージのみを記録する場合）。</block>
+  <block id="d7fe94a97701791841b519021d6eb8b7" category="doc">ログレベル</block>
+  <block id="516f888b3f6d9fd9b210883c0298e11e" category="paragraph">ロギングレベルは、次のいずれかに設定できます。</block>
+  <block id="d276f73244d895db812ec23e2685caca" category="list-text">* トレース *</block>
+  <block id="ad5ddf6d9cf8190347986bf098d3c215" category="paragraph">トレースメッセージを cimserver_standard ログに保存します。</block>
+  <block id="b36f044cf79f9ec0bbefe2c840fcbbe7" category="list-text">* 情報 *</block>
+  <block id="4e81926677a1b0cb964215701fccaec7" category="paragraph">すべてのシステムメッセージ（情報、警告、重大、および致命的）をログに記録します。</block>
+  <block id="c1ee2a5bb3aaa6a978640bbafe313fb7" category="list-text">* 警告 *</block>
+  <block id="4da7c4dccb8c85cfed2d1e994a8fc6af" category="paragraph">警告、重大、および致命的なシステムメッセージをログに記録します。</block>
+  <block id="1e9b7964a8845d69fe33ed3d223a3670" category="list-text">* 重度 *</block>
+  <block id="f387191bc275b97c2237486aacf692ab" category="paragraph">重大で致命的なシステムメッセージをログに記録します</block>
+  <block id="98d0f8524669b090e9dab037437a4f95" category="list-text">* 致命的 *</block>
+  <block id="32c22d2c31069b202fd8280ee7a064ea" category="paragraph">致命的なシステムメッセージのみをログに記録します。</block>
+  <block id="37735049e65188a885df4388c67153a4" category="summary">ホスト上のクライアントアプリケーションが SLP （ HTTP 経由の CIM-XML エンコーディング）を使用して CIMOM サーバーを検出すると、クライアントは CIMOM に共有オブジェクト（ CIM 言語でモデル化されたオブジェクト）を照会します。CIMOM は共有オブジェクトをロードし、デバイス固有の API を使用して要求された情報をストレージシステムに照会します。</block>
+  <block id="9016abb1e0944872fd232fd72ca5bc80" category="doc">NetApp SMI-S プロバイダとホストの相互通信方法</block>
+  <block id="14f75c43461428b4df3f6d3980b25d02" category="paragraph">次の図は、 SMI-S プロバイダがクエリまたはコマンドを受信したときに、 NetApp SMI-S プロバイダが WBEM 管理クライアントと通信する方法を示しています。</block>
+  <block id="707facb1331bad235d191a85d3686ab2" category="image-alt">SMI のエージェントとホストの対話</block>
+  <block id="cacc10f2bbbb96e6d2a0d9b4aef02b69" category="summary">トレースが有効になっている場合、デフォルトで 7 つのトレースファイルが保存されます。さらにトレースファイルを保存する必要がある場合は、環境変数 PEGASUS_TRACE_FILE_NUM を設定して、保存するトレースファイルの最大数を増やすことができます。保存されるトレースファイルの最大数を増やす場合は、トレースファイルを保存するための十分なスペースがハードドライブに確保されていることを確認する必要があります。</block>
+  <block id="28b9df3d45d41cf4deb33c545836d2a7" category="doc">保存するトレースファイルの数を指定します</block>
+  <block id="03ef8ba810aaf28989881c22a0a0d0b4" category="paragraph">トレースが有効になっている場合、デフォルトで 7 つのトレースファイルが保存されます。さらにトレースファイルを保存する必要がある場合は ' 環境変数 PEGASUS_TRACE_FILE_NUM を設定して ' 保存するトレースファイルの最大数を増やすことができます保存されるトレースファイルの最大数を増やす場合は、トレースファイルを保存するための十分なスペースがハードドライブに確保されていることを確認する必要があります。</block>
+  <block id="cbef04286048616acf9addb6a24f4812" category="paragraph">トレースが有効になっている場合 ' トレース情報は 'cimserver.trc' ファイルに書き込まれますトレースファイルはローテーションされます。「 cimserver.trc 」が最大トレース・ファイル・サイズに達すると、その内容は「 cimserver.trc._n_` ファイル」に移動します。デフォルトでは 'n' は 0 ～ 5 の値ですさらにトレース・ファイルを保存する必要がある場合は '_n_' の値を増やします</block>
+  <block id="c471bf926d3a641ea8147672e9dd849f" category="list-text">保存された新しいトレースファイル数を指定して '`PEGASUS_TRACE_FILE_NUM] という名前のシステムまたはユーザー環境変数を作成します</block>
+  <block id="f39d1a39fc0a0e5513a2c05bd34a0f7e" category="summary">デフォルトでは、 SMI-S Provider は 60 分（ 3 、 600 秒）ごとにストレージシステムから情報を自動的に取得します。SMIS refresh コマンドを使用すると、特定のストレージシステムを手動で更新できます。</block>
+  <block id="7503a9cf231b36274482a1a1cb7865aa" category="doc">SMIS 更新</block>
+  <block id="5d97149f962e031041e77009bc0a4e59" category="paragraph">デフォルトでは、 SMI-S Provider は 60 分（ 3 、 600 秒）ごとにストレージシステムから情報を自動的に取得します。特定のストレージ・システムを手動で更新するには 'SMIS refresh コマンドを使用します</block>
+  <block id="9a615249527c86774ee60394f1de01ef" category="paragraph">「 SMISE_RESIST_SYSTEM_IP_` 」と入力します</block>
+  <block id="4f83d07fa2f72d87eb94f8decfc3feb6" category="list-text">'*_storage_system_IP_*'</block>
+  <block id="78e5b58b72164e4963a654d0c6d9ddae" category="paragraph">特定のストレージ・システムを更新します。</block>
+  <block id="b4f1fdb71abf5ae7ab189aabe2cc6068" category="paragraph">「 smis refresh 」コマンドとその出力は次のとおりです。</block>
+  <block id="c7e3ba666a2f84cc0cf01f10a8dd110d" category="summary">NetApp SMI-S プロバイダは、 HTTPS と Service Location Protocol （ SLP ）上で CIM - XML エンコーディングを使用します。</block>
+  <block id="5f679677ad933bf6dbfb7a4ea7cbe348" category="doc">NetApp SMI-S プロバイダプロトコル</block>
+  <block id="8c41eec09b97759e1f05ced5c48f938d" category="list-text">* HTTPS 経由の CIM-XML エンコーディング *</block>
+  <block id="671231622b5198a3c9cab2694fb3db1f" category="paragraph">Web-based Enterprise Management （ WBEM ）対応の管理クライアントと CIMOM サーバの間で情報を交換するプロトコル。HTTPS 経由の CIM-XML エンコーディングでは、ペイロードとして CIM プロトコルを使用し、転送に HTTPS を使用します。HTTP もサポートされています。</block>
+  <block id="809f9effc42a2255e739eac5634eb1f7" category="list-text">* SLP *</block>
+  <block id="17c0a045d5a0558e3dcdadc5941a7ecb" category="paragraph">LAN 内で WBEM サービスを検出する検出プロトコル。</block>
+  <block id="1484fccf8d24a7bab66c738879eeadcc" category="summary">SMI-S プロバイダを使用する場合は、 CIM サーバーへのアクセスを制御するためにユーザーに割り当てることができるさまざまなタイプのユーザーが存在します。</block>
+  <block id="641d6548d34af78dcc255faad011c29d" category="doc">CIM ユーザーのタイプと関連する操作</block>
+  <block id="6ed2645b4c43488812455affa1c466b3" category="paragraph">このリリース以降、ドメインユーザは SMI-S プロバイダのユーザデータベースおよびその他の設定を、ローカル管理者グループのドメインユーザとして変更できます。</block>
+  <block id="ad783d2f4a2eb67767aaf7a10faf1c8b" category="paragraph">次の表に、 CIM サーバのサポートされているユーザと、各タイプで実行できる操作を示します。</block>
+  <block id="1335f6b6c0aef682a48880c2170a7b41" category="cell">ユーザのタイプ</block>
+  <block id="456d0deba6a86c9585590550c797502d" category="cell">処理</block>
+  <block id="d5b0bbcde4af8bf8600fb80e53cf57eb" category="paragraph">Administrators グループのドメイン管理者</block>
+  <block id="7295dd4b89381e8f7a3983c3db4a5450" category="paragraph">SMI-S Provider の構成とユーザー管理には 'cimconfig' コマンドと CIMUser' コマンドを使用します例：</block>
+  <block id="76089b277d7c4637af557c363316ed6c" category="list-text">SMI-S プロバイダの信頼ストアに対してユーザを追加または削除します。</block>
+  <block id="befb009797d0d6459c03cb3c572a650c" category="list-text">ログレベルとトレースの設定を有効化、無効化、または変更します。</block>
+  <block id="28b3fd7b22a3433ee086df4989550e35" category="list-text">SMI-S Provider で認証エンジンを有効または無効にします。</block>
+  <block id="356d3eb9e42345f0df80e3a290016e44" category="paragraph">ストレージの管理と検証には 'SMIS` コマンドと 'cimcli` コマンドを使用します例：</block>
+  <block id="b8ca31c01cc1a6d0446db847d321d69c" category="list-text">SMI-S プロバイダのリポジトリ、データベース、またはキャッシュに対してストレージコントローラまたは SVM を追加または削除します。</block>
+  <block id="9eebce0fe03ad70a0bd38b7bf717aa4c" category="list-text">SMI-S プロバイダキャッシュのストレージコントローラまたは SVM を更新します。</block>
+  <block id="c7d2575a0531ec33051a023bfcb528cf" category="list-text">ストレージコントローラまたは SVM の管理を確認</block>
+  <block id="121aa0de0e266ad9a4f71cea2ba24acf" category="paragraph">SCVMM の検出操作。 SCVMM GUI を使用します。</block>
+  <block id="1bb62e6dbd0bcfe63e855c7bb68036cc" category="paragraph">ローカル管理者グループのドメインユーザ</block>
+  <block id="4bdbe6703036d4c9363434dad6b08903" category="paragraph">ローカル管理者グループのローカルユーザ</block>
+  <block id="2e09e7802834c77d27ce8920437facd6" category="paragraph">ビルトインドメイン管理者ユーザ</block>
+  <block id="90bebd40a6b0aeac280c5fadbedc23a5" category="paragraph">ビルトインローカル管理者ユーザ</block>
+  <block id="737b21fcc807855c6e50bf70f766a2a0" category="paragraph">Users グループのドメインユーザ</block>
+  <block id="6d45eff2b4537ef85ec9601c26eedfd0" category="paragraph">Users グループのローカルユーザ</block>
+  <block id="471dfba4af2601f46dd9de136cc68c1e" category="paragraph">Windows ホスト上に SMI-S プロバイダがあり ' いずれかの "Administrator" ユーザー名を変更した場合は ' システムからログアウトしてから再度ログインする必要がありますこの間、 SMI-S Windows サービスは認証を継承します。そのため、管理者がログアウトして再度ログインするまで、クレデンシャルに対する変更は認識されません。</block>
+  <block id="7db03bcd1252d3fa4d71f3f8e29b2598" category="summary">SMIS CRSP コマンドは、 NetApp SMI-S プロバイダによってサポートされる CIM 登録サブプロファイルについて、 NetApp SMI-S プロバイダのサブプロファイルも含めて説明します。</block>
+  <block id="b5bb2f5a9485d0416f2f19fb6737effd" category="doc">SMIS CRSP</block>
+  <block id="db8f341d1b161950274e0d2006fee127" category="paragraph">「 SMIS CRSP」 コマンドは、 NetApp SMI-S Provider サブプロファイルを含む NetApp SMI-S Provider でサポートされる CIM 登録サブプロファイルについて説明します。</block>
+  <block id="1d8e4598ce16f8b7b28609e34b9e7847" category="paragraph">'SMIS CRSP' コマンドとその省略形の出力：</block>
+  <block id="ab5f12da21733b0c908a54fc6c8afeab" category="summary">NetApp SMI-S Provider をインストールしたら、 SMI-S プロバイダへのアクセス後に CIM サーバが自動的に起動していることを確認する必要があります。</block>
+  <block id="26578636423c50e0cbadb8e4def77602" category="doc">CIM サーバのステータスを確認します</block>
+  <block id="8dd21edf6c559186c42e2f5ef8509060" category="list-text">実行可能ファイルが格納されているディレクトリに移動して NetApp SMI-S プロバイダにアクセスします。</block>
+  <block id="7fc17decf9554a362d80ff8052528439" category="cell">使用するポート</block>
+  <block id="9792a4eebc59c44369f1f98f9d27237a" category="cell">操作</block>
+  <block id="9f402a26d9bfb7dca9aac07fc73ebc0d" category="paragraph">コマンドプロンプト（管理者特権を持つ）</block>
+  <block id="50c032414fa21328d8fdb4023722b56c" category="paragraph">「 C ： \Program Files （ x86 ） \NetApp\SMIS\Pegasus\bin` 」に移動します</block>
+  <block id="caf73c044721486cfa86f1634881d532" category="paragraph">* 「スタート」 * &gt; 「プログラム」 * メニュー</block>
+  <block id="5cbd8aecf01f5364affe082b2eef475a" category="paragraph">NetApp SMI-S Provider * を右クリックし、「管理者として実行」を選択します。</block>
+  <block id="c4a83ee5991dce0b4555c474d32679c5" category="list-text">CIM サーバのステータスを表示します。</block>
+  <block id="3ad2edd8ea9cf578e52754d637befd85" category="paragraph">CIM サーバが起動している場合は、次のメッセージが表示されます。</block>
+  <block id="cd0961a3af19616ad066d6455a90f4f9" category="paragraph">NetApp SMI-S Provider は実行されています</block>
+  <block id="928c1baab03e0230f3715e3de77b083f" category="summary">このリリースの新機能</block>
+  <block id="bd94701c8c3439968ac328f6961957c3" category="list-text">SMI-S Provider 5.2.5 にはアップグレードパスがありません。</block>
+  <block id="c55ff83f0b706c2e4f6784a3eea0d431" category="list-text">SMI-S Provider 5.2.5 を新規インストールとして導入する必要があります。</block>
+  <block id="4dcc4ed93f208d25fc9635019b96fb17" category="paragraph">* Windows ユーザの場合： *</block>
+  <block id="3073a5fe9dd6b21d2236fe4d631b4b80" category="list-text">このリリースは、 Windows Server 2012 または System Center Virtual Machine Manager （ SCVMM ） 2012 には対応していません。</block>
+  <block id="0ccb5ab6332965b00555d89124eca6f4" category="list-text">SMI-S プロバイダ 5.2.5 は、 Windows Server 2016 、 Windows Server 2019 、 SCVMM 2016 、 SCVMM 2019 をサポートします。</block>
+  <block id="475d549be2964d0228a25ed173ba7b08" category="summary">NetApp SMI-S Provider をインストールする前に、ネットアップサポートサイトからソフトウェアパッケージをダウンロードする必要があります。</block>
+  <block id="f2efbfa9469f6b1841c97b04674b1de4" category="doc">NetApp SMI-S プロバイダソフトウェアパッケージをダウンロードします</block>
+  <block id="09ea0908fbfc4cde85bf416e35dc55c8" category="inline-link">ネットアップサポート</block>
+  <block id="e94fec40412aa1b4fcd813ed2df33d2b" category="paragraph">からネットアップサポートサイトのアカウントを作成しておく必要があります<block ref="eb2c61027d5e6c8b35692c1e74187026" category="inline-link-rx"></block>。</block>
+  <block id="3216e7de5d3f564ce249ad07b5cb6fbd" category="list-text">ネットアップサポートサイトの「 * Downloads * &gt; * Software * 」ページにアクセスします。</block>
+  <block id="fddaf38eab11f354a96b9bcf234fd609" category="list-text">SMI-S プロバイダ ( 以前の Data ONTAP SMI-S エージェント ) を探して、 Windows オペレーティングシステムを選択し、 * Go!* をクリックします。</block>
+  <block id="0b680d2d590fdfd0519ad3a20f11a7cb" category="list-text">ダウンロードするバージョンを選択するには、 * View &amp; Download * をクリックします。</block>
+  <block id="e4d1a86ba6339b10a2f0742efd1a8880" category="list-text">「 * ソフトウェアのダウンロード * 」セクションで、「 * 続行 * 」をクリックします。</block>
+  <block id="cc82620cbb43c7f8476563c901f49e8b" category="list-text">エンドユーザライセンス契約を読んで同意します。</block>
+  <block id="f202f2d520c5b69c8a949f516b8f9faf" category="list-text">ソフトウェアパッケージファイルを選択し、目的の場所に保存します。</block>
+  <block id="5bd3f03785e49f0f092f2bf6dbe62ea2" category="doc">共有ライブラリのロード中にエラーが発生する可能性があります</block>
+  <block id="051be6f17b1853fd1a87bd720d73057b" category="list-text">* メッセージ *</block>
+  <block id="38ef4b7ecaa487ef2bde97774ea59f55" category="paragraph">共有ライブラリのロード中にエラーが発生しました : libssl.so 1.0.0: 共有オブジェクトファイルを開くことができません : そのようなファイルまたはディレクトリはありません</block>
+  <block id="8b11f32a54f16340f5c60cee225aad48" category="paragraph">「 SMIS cimserver 」ステータスは、 cimserver が正常に実行されていることを示しますが、それ以外のすべての「 /usr/NetApp/sism/Pegasus/bin/CIM 」コマンドは、さまざまなエラーメッセージを表示します。</block>
+  <block id="792bce0a2470411b2f4a407fe625d8dc" category="paragraph">たとえば、「 cimserver 」を実行したときに「 cimserver not running 」というメッセージが表示されたり、「 /usr/NetApp/sism/Pegasus/bin/cimcli ： symbol lookup error:/usr/NetApp/sSMIS/Pegasus/bin/cimcli ： undefined symbol ： _ZNegasusesmegasutes16Stringcimctimnctimoles16Stringcfusr 」というメッセージが出力される場合があります。これらの例はすべてを網羅しているわけではありません。</block>
+  <block id="d244e47c8474d383d7a5d714e98cb1bf" category="paragraph">このメッセージ（および同様のメッセージ）は 'LD_LIBRARY_PATH' 環境がインストールディレクトリに設定されていない場合に発生します</block>
+  <block id="5ae7ad3dc9474323c80b449e3123ec91" category="paragraph">次のいずれかのコマンドを入力して 'LD_LIBRARY_PATH' 環境変数をインストールディレクトリに設定します</block>
+  <block id="ca58ccb134c33eb9f401d3d5c3cc6d5d" category="paragraph">'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/netapp/SMIS/Pegasus/lib`</block>
+  <block id="0f98c6be5bd8d1cf4b80b32c02a49dc9" category="paragraph">setsetenv LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/NetApp/sism/Pegasus/lib`</block>
+  <block id="55843a00fdaf57b905dd3ba051deb6d5" category="summary">管理対象ストレージシステムを追加したら、 NetApp SMI-S プロバイダ内の重要な論理オブジェクトと物理オブジェクトがすべて表示されることを確認する必要があります。</block>
+  <block id="493f5a2c964a2ae41d8b304e4124f7b5" category="doc">重要なオブジェクトの表示を確認します</block>
+  <block id="29539de2349a0b046366e6908d8fa691" category="paragraph">「 SMIS 」コマンドを使用すると、 NetApp SMI-S Provider CIMOM リポジトリにあるオブジェクトを表示できます。たとえば 'SMIS list を使用して追加されたストレージ・システムを表示し 'SMIS LUN' を使用して LUN 情報を表示します</block>
+  <block id="ff534e215c49794ee3d0d5e05049dcd4" category="summary">Windows でファイル共有（ CIFS 共有）を使用する場合は、ファイル共有を作成するボリュームが NTFS 専用ボリュームである必要があります。</block>
+  <block id="67b404f9c9cd4ad8132819e162fa0801" category="doc">Windows でファイル共有を使用するための要件</block>
+  <block id="224259077c913ae9e3aafcc643cf3e85" category="paragraph">Windows でファイル共有を作成して使用する場合は、ファイル共有を作成するボリュームを NTFS 専用ボリュームにする必要があります。これは、ファイル共有にアクセスするクレデンシャルに問題が生じないようにするためです。</block>
+  <block id="d22643507b9ae556d3eb1f90adc143e7" category="paragraph">System Center 2016 Virtual Machine Manager （ SCVMM ）からは、 NTFS 専用ボリュームで作成されたファイル共有にのみ仮想マシン（ VM ）を作成できます。mixed 形式と UNIX 形式のボリュームはサポートされません。</block>
+  <block id="7ce49ed6789cc13128b60ca9dde1cddc" category="section-title">CIFS 共有と SCVMM に使用するボリュームの作成</block>
+  <block id="c0be971f28173e3439500ec62e8960fe" category="paragraph">CIFS 共有と System Center Virtual Machine Manager （ SCVMM ）に使用するボリュームを作成する場合は、そのボリュームの NTFS タイプが設定されている必要があります。NTFS を使用してボリュームを作成するには、次のコマンドを入力します。 `_vol create -vserver &lt;vserver_name&gt; -volume &lt;volume_name&gt; -aggregate &lt;aggr_name&gt; -size &lt;volume_size&gt; -security-style ntfs_`</block>
+  <block id="5e2b9472b02f4f2b851fb3977ff17b84" category="summary">LUN クローンを作成するには、 SMI-S プロバイダ用の FlexClone ライセンスが必要です。</block>
+  <block id="df08bacfdfa0f59296d2b2a817363f77" category="doc">SMI-S プロバイダで使用されるクローンテクノロジ</block>
+  <block id="510d66d307c0496d6ba81658c7a5b619" category="paragraph">SMI-S プロバイダは、 FlexClone テクノロジのみを使用してそのストレージシステム上に LUN クローンを作成します。FlexClone ライセンスがない場合、 SMI-S Provider は LUN クローンテクノロジを使用してクローンを生成しません。次のエラーメッセージが表示されます。</block>
+  <block id="d1da6127cf9130c3e6cbddab213daefb" category="paragraph">ストレージ・システムで FlexClone ライセンスが有効になっていません</block>
+  <block id="ddd332cc6425680fe389737022cab8af" category="paragraph">LUN クローンテクノロジを使用して作成された LUN クローンがあり、 Data ONTAP のバージョンが 7.3.1 以降にアップグレードされた場合、 SMI-S プロバイダを使用してこれらのクローンをスプリットすることはできません。ストレージシステム管理者が管理する必要があります。</block>
+  <block id="6b0fd0a659080ed97cfc94fb21d6fc96" category="summary">SMI-S プロバイダを使用して、 HTTP 接続と HTTPS 接続の有効化と無効化、 HTTP ポートと HTTPS ポート番号の変更など、 CIMOM の設定を管理できます。デフォルトでは、 HTTP 接続が有効になっているため、クライアントは SSL 暗号化を使用せずに CIM サーバに接続できます。</block>
+  <block id="16d818bdfd52f3614e92671e0206fa1b" category="doc">CIMOM 設定を管理します</block>
+  <block id="7d6b3d18bec2ce6be3374ea0a9815106" category="paragraph">CIM サーバとの間で暗号化されたトラフィックが必要な環境の場合は、まず HTTP 接続を無効にしてから、 CIM サーバの HTTPS 接続が有効になっていることを確認する必要があります。</block>
+  <block id="b307ea9422b5dae5cf2fd6ec3ea015d5" category="paragraph">HTTP 接続を有効にします</block>
+  <block id="3b6593154fba535b06482c0db1cc8054" category="paragraph">`*cimconfig -s enableHttpConnection=TRUE -p *`</block>
+  <block id="895d8d369254f940a4ddaf2468995697" category="paragraph">HTTP 接続を無効にします</block>
+  <block id="70b1caebdb7847b1009459e31d55fb48" category="paragraph">`*cimconfig -s enableHttpConnection=false-p*`</block>
+  <block id="17d5471eeaa6165fa51a91e11a966cce" category="paragraph">HTTPS 接続を有効にします</block>
+  <block id="5536aaa29736c81d197b42aace111279" category="paragraph">*cimconfig -s enableHttpsConnection=true-p *`</block>
+  <block id="f77bdc0e1e1bf0471dfe0f770eb6626d" category="paragraph">HTTPS 接続を無効にします</block>
+  <block id="0b3ee0d6b6e9221d924f8aece81f97b0" category="paragraph">*cimconfig -s enableHttpsConnection=false-p *`</block>
+  <block id="a2b94489ad6b32120a328eec86854d63" category="paragraph">HTTP ポート番号を変更します</block>
+  <block id="40f5296c4e2d5bd8a49e9f4572b53dce" category="paragraph">`*cimconfig -s httpPort=_new_port_number_-p *`</block>
+  <block id="829a8aee66a41170874965d9e691c04e" category="paragraph">デフォルトでは、 HTTP ポート番号は 5988 です。たとえば、 5555 に変更する場合は、次のコマンドを入力します。</block>
+  <block id="5048fd5a308e67e37d331e393f3eee8c" category="paragraph">`*cimconfig -s httpPort=5555 -p *`</block>
+  <block id="06a0613012b6debabc4eabfde639529d" category="paragraph">HTTPS ポート番号を変更します</block>
+  <block id="03604fdc09e6487a20bbfc88a271734f" category="paragraph">'*cimconfig -s https ポート =_new_port_number_-p *</block>
+  <block id="90898c193396dd9a264c9451c9d788d8" category="paragraph">デフォルトでは、 HTTP ポート番号は 5989 です。たとえば、 5556 に変更する場合は、次のコマンドを入力します。</block>
+  <block id="86bb67cb5a15d1e42ce1716ea8249d24" category="paragraph">'*cimconfig -s https ポート =5556 -p *</block>
+  <block id="18ee0f99deeb67b9b7a6ef5a3679a09d" category="summary">CIMUser オプションを使用して、 CIM サーバーユーザーの追加、削除、変更、一覧表示を行うことができます。</block>
+  <block id="b07eb8a32f2cf3bb81c70d37e7d0aaba" category="doc">CIMUser</block>
+  <block id="a98644a52e80c4640e56c2623f13054c" category="paragraph">「 CIMUser 」オプションを使用して、 CIM サーバユーザの追加、削除、変更、および一覧表示を行うことができます。</block>
+  <block id="9552caf388402734ab598332ecd8156b" category="paragraph">「 CIMUser_options_` 」</block>
+  <block id="53c04e8ac52d6bd33683c9dbf79535ac" category="list-text">*-a *</block>
+  <block id="88553736fbb741bf0629274dee170888" category="paragraph">CIM ユーザーを追加します。</block>
+  <block id="df226aab2a5f4773107a98185d4df812" category="paragraph">「 CIMUser 」コマンドのヘルプを表示します。</block>
+  <block id="c58450c085069315fdcdc932127ea1da" category="paragraph">CIM ユーザーを一覧表示します。</block>
+  <block id="366b7d52fe189c2f2a9685595e258d52" category="list-text">* -m *</block>
+  <block id="f11218e14da099365f5c4d12ed55d147" category="paragraph">CIM ユーザーのパスワードを変更します。パスワードの文字数は 4~32 文字です。</block>
+  <block id="74aa310e918089bd2b7b43ef52918065" category="list-text">* -n *</block>
+  <block id="b4868d506c4565aeff541aa867e6a9dc" category="paragraph">指定したユーザの新しいパスワードを作成します。パスワードの文字数は 4~32 文字です。</block>
+  <block id="eef69bfef1d377d2939407214f8e0670" category="list-text">* -r *</block>
+  <block id="5e2eee8218b8e5df74d6942632a9f6d5" category="paragraph">指定した CIM ユーザーを削除します。</block>
+  <block id="94dee2df9c611ec270bccaa83239df08" category="paragraph">CIM ユーザー名を指定します。</block>
+  <block id="9b7ed744183c5809967cae82003fd53b" category="list-text">* - w *</block>
+  <block id="819a823f6306b9bc4da7b85ec4faacc1" category="paragraph">指定したユーザのパスワードを指定します。</block>
+  <block id="16aba3c6b0ae11e31224bc8fb95fe52f" category="paragraph">パスワード 1 を使用して、 Sydney という名前の CIM ユーザーを作成します。</block>
+  <block id="f4c8242274a5433176fc6575733f6559" category="summary">smis volumes コマンドは、ストレージシステムのトラディショナルボリュームとフレキシブルボリュームをリスト表示します。</block>
+  <block id="0f44b667bbfb5498165b4f0f5ca52339" category="doc">SMIS ボリューム</block>
+  <block id="b78d25f27659bc706823fea082d9eb72" category="paragraph">「 smis volumes 」コマンドは、ストレージ・システムのトラディショナル・ボリュームとフレキシブル・ボリュームを一覧表示します。</block>
+  <block id="30789a6a7e76c03ee51006ffbbdd390c" category="paragraph">clustered Data ONTAP の場合は、「 SMIS volumes 」コマンドではなく、「 SMIS pools 」コマンドを使用する必要があります。</block>
+  <block id="0f2d51f976100876529d8e039c4b9c36" category="paragraph">「 SMIS VOLUMES 」コマンドとその省略形の出力は、次のようになります。</block>
+  <block id="3e3944372596c51dc61c2fe5a9f8063d" category="summary">smis list コマンドは、追加されたストレージシステムを表示します。</block>
+  <block id="83d793b4ffc76972ddb8695c302c33bf" category="doc">SMIS リスト</block>
+  <block id="a8ae413db4c3acedc05683a8bc1b559b" category="paragraph">「 smis list 」コマンドは、追加されたストレージ・システムを表示します。</block>
+  <block id="dbf1cd6747595ed9cb8894d9eed535a6" category="paragraph">「 smis list 」コマンドとその出力は次のとおりです。</block>
+  <block id="7379ebb6b8630c14b864b4d46e315c94" category="doc">アクセスが拒否されました</block>
+  <block id="3330b82e78f9fa2566cd61f87d85e1eb" category="paragraph">「アクセスは拒否されました。</block>
+  <block id="acc86bed5a3cbee4c10612afddcbd9b8" category="paragraph">このメッセージは、次の 2 つの状況で発生します。</block>
+  <block id="524e454803a7d0bafc27c9f8070d4590" category="list-text">[ スタート ] メニューのショートカットから SMI-S プロバイダにアクセスするときに管理者としてログインしていない場合</block>
+  <block id="88b9251d27bb29763aadf0feaa033d3c" category="list-text">SMI-S プロバイダディレクトリが「 C ： \Program Files （ x86 ） \NetApp\SMIS\Pegasus\bin` を指していない場合</block>
+  <block id="de1eea833bb1fa644c57d5d047cc5af7" category="paragraph">状況に対応するアクションを完了します。</block>
+  <block id="162b410b000aa710281fb5f8adedc818" category="list-text">管理者レベルの権限でログインし、 [ スタート ] メニューから SMI-S プロバイダを再度開くか、右クリックして [ 管理者として実行 ] を選択します。</block>
+  <block id="8dbf896c4a2bdf9598521ada5abaae3d" category="list-text">管理者レベルの権限でログインし、ディレクトリを「 C ： \Program Files （ x86 ） \NetApp\SMIS\Pegasus\bin` 」に手動で変更します。</block>
+  <block id="80feca2aef5bfe7af61ecef2104515dc" category="summary">NetApp SMI-S プロバイダで管理するシステムの最大数を把握しておくと、そのパフォーマンス機能を理解しやすくなります。</block>
+  <block id="8df995b0877455c8e157e1650dc377d4" category="doc">NetApp SMI-S プロバイダによるサイジングとパフォーマンス</block>
+  <block id="98bc8ee199ee6b2e16fe0a72065bc977" category="paragraph">* サイジング *</block>
+  <block id="7b5949a309ff956607ccd7a05549a643" category="paragraph">NetApp SMI-S プロバイダは、 clustered Data ONTAP で次の数のオブジェクトを管理できます。</block>
+  <block id="be3aa891f1e256500ac418272b5eba57" category="list-text">Storage Virtual Machine （ SVM ） × 100 （適応なし）</block>
+  <block id="6d566731c48802fe3821e33a4c29bfb3" category="list-text">10 個の Storage Virtual Machine （適応あり）</block>
+  <block id="5e21a9906ddd54cf24a9de122b49eeb1" category="list-text">1 、 500 個の LUN （ FlexVol ボリュームあたり）</block>
+  <block id="aa8573942cd1ed77a581b629e3ba2237" category="list-text">CIFS ファイル共有 × 200 （ FlexVol あたり）</block>
+  <block id="ee001510f4b124ecdffc864a0edba76b" category="paragraph">FlexVol に qtree とボリュームの両方が含まれている場合、 qtree はディレクトリとして表示されます。ボリュームを削除する際に誤って qtree を削除しないように注意してください。</block>
+  <block id="b398798c87974373edd5b73dfab3f17f" category="paragraph">* パフォーマンスに関する注意 *</block>
+  <block id="9e610f9507134287d0d568bdb80b8571" category="paragraph">5,000 個の FlexVol ボリュームまたは 30 万個の Snapshot コピーを使用する構成では ' 次のような cimcli コマンドを使用してパフォーマンス上の問題が発生することがあります</block>
+  <block id="85a8c1b8c7516ef09e21236cc0d93c18" category="list-text">「 cimcli EI ONTAP_Snapshot-n root/ontap 」というエラーが表示されます</block>
+  <block id="7d32bfbdae2be0b0adf753b53b3e22b2" category="list-text">「 cimcli EI ONTAP_SnapshotBasedOnFlexVol-n root/ontap 」というエラーが表示されます</block>
+  <block id="007a98733bd428042445fb37fbf65c12" category="list-text">「 cimcli EI ONTAP_StorageVolumeStats -n root/ontap 」というエラーが表示されます</block>
+  <block id="855fc18e477e5e46b721d02214086805" category="paragraph">IMT には、サイジングとパフォーマンスに関する最新情報が記載されています。</block>
+  <block id="614714555eebe379fefeaf79263f3919" category="summary">smis add コマンドは、 HTTP 接続を使用してストレージシステムを構成に追加し、デバイスの管理と監視を可能にします。必要でないかぎり、 SMIS add ではなく SMIS addsecure を使用する必要があります。</block>
+  <block id="8645387467d22d196cc56c467878c801" category="doc">SMIS が追加します</block>
+  <block id="0cccb7d63e81e909a5116d63ff5fad22" category="paragraph">「 smis add 」コマンドは、 HTTP 接続を使用してストレージ・システムを構成に追加し、デバイスの管理および監視を可能にします。必要でない限り、「 SMIS add 」ではなく「 SMIS addsecure 」を使用する必要があります。</block>
+  <block id="4c32ad2d0f781d8300c3c0ace5573542" category="paragraph">「 SMIS add 」</block>
+  <block id="fd4584b3f82c019d620b7a6fcda2d3ba" category="paragraph">`_storage_sys storage_sys_user_`+`[-t { * http * | * https * }]`</block>
+  <block id="f3a819b7972171226d19607a440c063b" category="paragraph">米国以外の言語を使用するオペレーティングシステム英語では 'add' コマンドは使用できません</block>
+  <block id="edc907a1885716130a1f3549ae6717ff" category="paragraph">IP アドレスを指定する場合は、 IPv4 または IPv6 を使用できます。圧縮された IPv6 アドレスと完全な IPv6 アドレスの両方がサポートされています。たとえば、 *1001:0002:0000:0000:0003:0003:0004*' または *1001:2:3:4*' です。</block>
+  <block id="4a9485793f5d4b5d5d14e45c388d9ed8" category="paragraph">IPv4 を使用して、 IP アドレス 10.32.1.4 over HTTP でストレージシステムを追加します。</block>
+  <block id="81b3dca7aa8cd7cc37f0ac28818db216" category="paragraph">IPv6 over HTTP を使用してストレージシステムを追加します。</block>
+  <block id="a1487ab3029c50caa0f2e79e20ab56df" category="paragraph">英語以外のシステムで HTTP 経由の IP アドレスが 10.32.1.4 のストレージシステムを追加します。</block>
+  <block id="583c4d073cc3317c5b46f6634c9d3aa5" category="summary">smis delete コマンドは、ストレージシステムを削除します。</block>
+  <block id="4626aae750bda7d774fce094fd95bfa9" category="doc">SMIS DELETE</block>
+  <block id="04ee2ab63171bb9c6e32e8c20ad19aa0" category="paragraph">「 smis delete 」コマンドは、ストレージ・システムを削除します。</block>
+  <block id="35d73d5c8283c2ca26c11f2557e37117" category="paragraph">「 SMIS DELETE 」</block>
+  <block id="4030de93f608cf4bf29f0f3cce172cd3" category="paragraph">`_storage_sys_`</block>
+  <block id="94356b1930203a1c97fd0c20651e6079" category="paragraph">追加するストレージシステムの名前または IP アドレス</block>
+  <block id="e7fd075d5a29ee2639c769e84ed366d6" category="paragraph">mgt-1 というラベルのストレージシステムを削除します。</block>
+  <block id="bb0064a365e0e5fa58dc065c696055f2" category="paragraph">`*SMIS DELETE mgt-1 *`</block>
+  <block id="bb290eb2165b820851730c836c287af8" category="paragraph">エラーメッセージが表示されない場合は、ストレージシステムが削除されています。</block>
+  <block id="111bb0fad8beadbe3d12694d63ed1d33" category="sidebar">NetApp SMI-S プロバイダのドキュメント</block>
+  <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="sidebar">リリースノート</block>
+  <block id="f16f70c449d9f0048b9a3659fcb12389" category="sidebar">トレース設定を指定します</block>
+</blocks>

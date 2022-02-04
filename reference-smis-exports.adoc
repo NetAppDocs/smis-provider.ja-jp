@@ -1,0 +1,56 @@
+---
+permalink: reference-smis-exports.html 
+sidebar: sidebar 
+keywords: smis exports, command display, network attached storage 
+summary: SMIS exports コマンドは、ストレージシステムの Network Attached Storage （ NAS ；ネットワーク接続ストレージ）エクスポートを表示します。 
+---
+= SMIS エクスポート
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「 SMIS exports 」コマンドは、ストレージシステムの NAS （ Network Attached Storage ）エクスポートを表示します。
+
+
+
+== 構文
+
+SMIS は '[-t ｛ * http * | * https * ｝ ] をエクスポートします
+
+
+
+== 場所
+
+C ： \Program Files （ x86 ） \NetApp\SMIS\Pegasus\bin`
+
+
+
+== 権限レベル
+
+有効なユーザ名とパスワードを持つユーザ
+
+
+
+== パラメータ
+
+* '*[-t { http|http}]*`
++
+使用するプロトコル： HTTPS （デフォルト）または HTTP
+
+
+
+
+
+== 例
+
+「 SMIS exports 」コマンドとその出力：
+
+[listing]
+----
+smis exports
+ONTAP_LogicalFile.CreationClassName="ONTAP_LogicalFile",CSCreationClassName="ONTAP_StorageSystem",CSName="ONTAP:68f6b3c0-923a-11e2-a856-123478563412",FSCreationClassName="ONTAP_LocalFS",FSName="/vol/NAS_vol/TestCFS0528",Name="/vol/NAS_vol/TestCFS0528"
+ONTAP_Qtree.CreationClassName="ONTAP_Qtree",CSCreationClassName="ONTAP_StorageSystem",CSName="ONTAP:68f6b3c0-923a-11e2-a856-123478563412",FSCreationClassName="ONTAP_LocalFS",FSName="nilesh_vserver_rootvol",Id="nilesh_vserver_rootvol:0",Name=""
+ONTAP_Qtree.CreationClassName="ONTAP_Qtree",CSCreationClassName="ONTAP_StorageSystem",CSName="ONTAP:68f6b3c0-923a-11e2-a856-123478563412",FSCreationClassName="ONTAP_LocalFS",FSName="NAS_vol",Id="NAS_vol:0",Name=""
+ONTAP_Qtree.CreationClassName="ONTAP_Qtree",CSCreationClassName="ONTAP_StorageSystem",CSName="ONTAP:68f6b3c0-923a-11e2-a856-123478563412",FSCreationClassName="ONTAP_LocalFS",FSName="NAS_vol",Id="NAS_vol:1",Name=""
+----

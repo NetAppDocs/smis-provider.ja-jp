@@ -1,0 +1,15 @@
+---
+permalink: concept-deployment-workflow.html 
+sidebar: sidebar 
+keywords: manage, monitor, storage, systems, smis-provider, software, validate, preliminary, configuration 
+summary: SMI-S プロバイダを使用してストレージシステムを管理および監視するには、 SMI-S プロバイダソフトウェアをインストールし、事前構成を検証する必要があります。 
+---
+= 導入のワークフロー
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+SMI-S プロバイダを使用してストレージシステムを管理および監視するには、 SMI-S プロバイダソフトウェアをインストールし、事前構成を検証する必要があります。
+
+image::../media/smi_s_provider_workflow.gif[SMI s プロバイダのワークフロー]

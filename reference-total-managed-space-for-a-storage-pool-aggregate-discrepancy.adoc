@@ -1,0 +1,24 @@
+---
+permalink: reference-total-managed-space-for-a-storage-pool-aggregate-discrepancy.html 
+sidebar: sidebar 
+keywords: troubleshooting, issue, encounter 
+summary: NetApp SMI-S プロバイダで発生した問題。 
+---
+= ストレージプール（ボリューム）の管理対象スペースの合計が正しくありません
+:icons: font
+:imagesdir: ./media/
+
+
+* * 問題 *
++
+FilerView などの別のストレージ管理ツールを使用している場合、ストレージプール（ボリューム）の管理対象スペースの合計サイズが、 SMI-S プロバイダから返されるサイズと異なることがあります。
+
+* * 原因 *
++
+SMI-S プロバイダから返されるサイズには WAFL リザーブと Snapshot リザーブが含まれ、 FilerView やその他のツールでは使用可能なスペースのみが表示されて WAFL リザーブと Snapshot リザーブは含まれないため、この不一致が発生します。
+
+* * 是正措置 *
++
+これは想定される動作であり、対処方法はありません。
+
+

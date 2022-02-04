@@ -1,0 +1,27 @@
+---
+permalink: reference-smb-share-size-dropping-to-0-in-scvmm.html 
+sidebar: sidebar 
+keywords: troubleshooting, issue, encounter 
+summary: NetApp SMI-S プロバイダで発生した問題。 
+---
+= SCVMM で SMB 共有のサイズが 0 に縮小されます
+:icons: font
+:imagesdir: ./media/
+
+
+* * 問題 *
++
+System Center Virtual Machine Manager （ SCVMM ）では、新規または既存の SMB 3.0 共有サイズが 0 になることがあります。
+
+* * 原因 *
++
+この問題は Data ONTAP 、大量の I/O 、新規または既存の SMB 3.0 共有サイズが SCVMM に 0 までず、クォータの再初期化に時間がかかる場合に発生します。そのため、新規または既存の SMB 3.0 共有では新しい VM をプロビジョニングできません。
+
+* * 是正措置 *
++
+.. クォータをオフにします。
+.. SMB 共有をホストする各ボリュームに、タイプが「 tree 」のデフォルトクォータルールを 1 つ追加します。
+.. デフォルトのクォータルールを追加したボリュームのクォータをオンにして、 SMI-S プロバイダを再起動します。
+
+
+

@@ -1,0 +1,91 @@
+---
+permalink: task-verify-that-the-storage-system-is-working-correctly.html 
+sidebar: sidebar 
+keywords: smi-s provider, configure, least storage, cimom repository storage, working, correctly 
+summary: SMI-S プロバイダを設定する前に、 CIMOM リポジトリに少なくとも 1 つのストレージシステムを追加して、ストレージシステムが正しく動作していることを確認する必要があります。 
+---
+= ストレージシステムが正しく動作していることを確認します
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+SMI-S プロバイダを設定する前に、 CIMOM リポジトリに少なくとも 1 つのストレージシステムを追加して、ストレージシステムが正しく動作していることを確認する必要があります。
+
+
+
+== 作業を開始する前に
+
+* Administrator としてログインしている必要があります。
+* SMI-S プロバイダにアクセスしておく必要があります。
+
+
+
+
+== 手順
+
+. CIMOM リポジトリに少なくとも 1 つのストレージシステムを追加します。
++
+[cols="2*"]
+|===
+| ストレージシステムを追加する対象 | 入力するコマンド 
+
+
+ a| 
+プロバイダとストレージシステム間の HTTP 接続
+ a| 
+`*SMIS add_storage_sys storage_sys_user_*`
+
+
+
+ a| 
+プロバイダとストレージシステムの間の HTTPS 接続
+ a| 
+`*SMIS addsecure_storage_sys storage_sys_user_*`
+
+|===
++
+コマンドは、プロバイダがキャッシュを更新して応答するまで最大 15 分待機します。
+
+. 次のコマンドの出力を確認します。
++
+[cols="2*"]
+|===
+| コマンド | 確認項目 
+
+
+ a| 
+「 SMIS list 」
+ a| 
+項目数は、管理対象のストレージシステムの数と一致します。
+
+
+
+ a| 
+「 SMIS ディスク」
+ a| 
+ディスク数がすべてのストレージシステムのディスクの総数と一致している。
+
+
+
+ a| 
+「 SMIS LUN 」
+ a| 
+LUN の数がすべてのストレージシステム上の LUN の総数と一致している。
+
+
+
+ a| 
+「 SMIS プール」
+ a| 
+ONTAP_ConcretePools の数は、すべてのストレージシステム上のアグリゲートの合計数と同じです。
+
+
+
+ a| 
+「 SMIS VOLUMES 」
+ a| 
+ボリュームの数が、すべてのストレージシステム上のボリュームの総数と一致している。
+
+|===
+

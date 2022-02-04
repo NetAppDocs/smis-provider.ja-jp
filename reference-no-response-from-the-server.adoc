@@ -1,0 +1,33 @@
+---
+permalink: reference-no-response-from-the-server.html 
+sidebar: sidebar 
+keywords: troubleshooting, issue, encounter 
+summary: NetApp SMI-S プロバイダで発生した問題。 
+---
+= サーバからの応答がありません
+:icons: font
+:imagesdir: ./media/
+
+
+* * 問題 *
++
+照会時にサーバが応答しません。
+
+* * 原因 *
++
+この問題は、 CIMOM リポジトリにストレージシステムが追加されていない場合に発生します。
+
+* * 是正措置 *
++
+次のコマンドを入力して、ストレージシステムが追加されたことを確認します。
+
++
+「 SMIS list 」
+
++
+ストレージシステムが表示されない場合は、次のコマンドを入力してストレージシステムを追加します。
+
++
+`sis add_storage_sys storage_sys_user storage_ssys_pwd_`
+
+

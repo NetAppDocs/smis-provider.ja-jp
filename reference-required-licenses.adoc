@@ -1,0 +1,20 @@
+---
+permalink: reference-required-licenses.html 
+sidebar: sidebar 
+keywords: smi-s provider, required, license 
+summary: NetApp SMI-S プロバイダを使用するには、必要なライセンスが必要です。 
+---
+= 必要なライセンス
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp SMI-S プロバイダを使用するには、必要なライセンスが必要です。
+
+NetApp SMI-S プロバイダには次のライセンスが必要です。
+
+* ストレージ・システムで LUN を作成するには、 FCP 、 iSCSI のいずれか、または両方のライセンスが必要です。
+* サポート対象の ONTAP ストレージシステムでファイル共有を作成するには、 CIFS ライセンスが必要です。
+* サポート対象のバージョンの ONTAP を実行しているクラスタストレージシステムで LUN クローンを作成するには、 FlexClone ライセンスが必要です。
+

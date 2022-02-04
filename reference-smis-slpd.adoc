@@ -1,0 +1,52 @@
+---
+permalink: reference-smis-slpd.html 
+sidebar: sidebar 
+keywords: smis slpd, command, start, stop, slp daemon 
+summary: 'smis slpd コマンドは "SLP デーモンを開始または停止します' 
+---
+= SMIS slpd
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'SMIS slpd' コマンドは 'SLP デーモンを開始または停止します
+
+
+
+== 構文
+
+「 SMIS slpd 」と入力します
+
+'{*start*|*stop*}`
+
+
+
+== 場所
+
+C ： \Program Files （ x86 ） \NetApp\SMIS\Pegasus\bin`
+
+
+
+== 権限レベル
+
+管理者（ Windows ）
+
+
+
+== 例
+
+SLP デーモンを開始します。
+
+[listing]
+----
+smis slpd start
+SLPD started.
+----
+SLP デーモンを停止します。
+
+[listing]
+----
+smis slpd stop
+SLPD (15564) was successfully stopped.
+----

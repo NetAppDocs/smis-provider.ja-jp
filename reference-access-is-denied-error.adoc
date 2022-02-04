@@ -1,0 +1,34 @@
+---
+permalink: reference-access-is-denied-error.html 
+sidebar: sidebar 
+keywords: troubleshooting, issue, encounter 
+summary: NetApp SMI-S プロバイダで発生した問題。 
+---
+= アクセスが拒否されました
+:icons: font
+:imagesdir: ./media/
+
+
+* * メッセージ *
++
+「アクセスは拒否されました。
+
+* * 概要 *
++
+このメッセージは、次の 2 つの状況で発生します。
+
++
+** [ スタート ] メニューのショートカットから SMI-S プロバイダにアクセスするときに管理者としてログインしていない場合
+** SMI-S プロバイダディレクトリが「 C ： \Program Files （ x86 ） \NetApp\SMIS\Pegasus\bin` を指していない場合
+
+
+* * 是正措置 *
++
+状況に対応するアクションを完了します。
+
++
+** 管理者レベルの権限でログインし、 [ スタート ] メニューから SMI-S プロバイダを再度開くか、右クリックして [ 管理者として実行 ] を選択します。
+** 管理者レベルの権限でログインし、ディレクトリを「 C ： \Program Files （ x86 ） \NetApp\SMIS\Pegasus\bin` 」に手動で変更します。
+
+
+

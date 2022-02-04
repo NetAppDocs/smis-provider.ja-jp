@@ -1,0 +1,59 @@
+---
+permalink: reference-smis-delete.html 
+sidebar: sidebar 
+keywords: smis debate, command, storage system 
+summary: smis delete コマンドは、ストレージシステムを削除します。 
+---
+= SMIS DELETE
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「 smis delete 」コマンドは、ストレージ・システムを削除します。
+
+
+
+== 構文
+
+「 SMIS DELETE 」
+
+`_storage_sys_`
+
+「 [-t ｛ * http * | * https * ｝ ] 」
+
+
+
+== 場所
+
+C ： \Program Files （ x86 ） \NetApp\SMIS\Pegasus\bin`
+
+
+
+== 権限レベル
+
+管理者（ Windows ）
+
+
+
+== パラメータ
+
+* '*_storage_sys_*'
++
+追加するストレージシステムの名前または IP アドレス
+
+* '*[-t { http|http}]*`
++
+使用するプロトコル： HTTPS （デフォルト）または HTTP
+
+
+
+
+
+== 例
+
+mgt-1 というラベルのストレージシステムを削除します。
+
+`*SMIS DELETE mgt-1 *`
+
+エラーメッセージが表示されない場合は、ストレージシステムが削除されています。

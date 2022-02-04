@@ -1,0 +1,34 @@
+---
+permalink: reference-possible-errors-when-loading-shared-libraries.html 
+sidebar: sidebar 
+keywords: troubleshooting, issue, encounter 
+summary: NetApp SMI-S プロバイダで発生した問題。 
+---
+= 共有ライブラリのロード中にエラーが発生する可能性があります
+:icons: font
+:imagesdir: ./media/
+
+
+* * メッセージ *
++
+共有ライブラリのロード中にエラーが発生しました : libssl.so 1.0.0: 共有オブジェクトファイルを開くことができません : そのようなファイルまたはディレクトリはありません
+
++
+「 SMIS cimserver 」ステータスは、 cimserver が正常に実行されていることを示しますが、それ以外のすべての「 /usr/NetApp/sism/Pegasus/bin/CIM 」コマンドは、さまざまなエラーメッセージを表示します。
+
++
+たとえば、「 cimserver 」を実行したときに「 cimserver not running 」というメッセージが表示されたり、「 /usr/NetApp/sism/Pegasus/bin/cimcli ： symbol lookup error:/usr/NetApp/sSMIS/Pegasus/bin/cimcli ： undefined symbol ： _ZNegasusesmegasutes16Stringcimctimnctimoles16Stringcfusr 」というメッセージが出力される場合があります。これらの例はすべてを網羅しているわけではありません。
+
+* * 概要 *
++
+このメッセージ（および同様のメッセージ）は 'LD_LIBRARY_PATH' 環境がインストールディレクトリに設定されていない場合に発生します
+
+* * 是正措置 *
++
+次のいずれかのコマンドを入力して 'LD_LIBRARY_PATH' 環境変数をインストールディレクトリに設定します
+
+
+
+'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/netapp/SMIS/Pegasus/lib`
+
+setsetenv LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/NetApp/sism/Pegasus/lib`

@@ -1,0 +1,85 @@
+---
+permalink: reference-cimuser-command-options.html 
+sidebar: sidebar 
+keywords: cimuser, options, add, remove, modify, list, cim server 
+summary: CIMUser オプションを使用して、 CIM サーバーユーザーの追加、削除、変更、一覧表示を行うことができます。 
+---
+= CIMUser
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「 CIMUser 」オプションを使用して、 CIM サーバユーザの追加、削除、変更、および一覧表示を行うことができます。
+
+
+
+== 構文
+
+「 CIMUser_options_` 」
+
+
+
+== 場所
+
+C ： \Program Files （ x86 ） \NetApp\SMIS\Pegasus\bin`
+
+
+
+== 権限レベル
+
+管理者（ Windows ）
+
+
+
+== オプション（ Options ）
+
+* *-a *
++
+CIM ユーザーを追加します。
+
+* *-h 、 --help*
++
+「 CIMUser 」コマンドのヘルプを表示します。
+
+* * -l *
++
+CIM ユーザーを一覧表示します。
+
+* * -m *
++
+CIM ユーザーのパスワードを変更します。パスワードの文字数は 4~32 文字です。
+
+* * -n *
++
+指定したユーザの新しいパスワードを作成します。パスワードの文字数は 4~32 文字です。
+
+* * -r *
++
+指定した CIM ユーザーを削除します。
+
+* * -u *
++
+CIM ユーザー名を指定します。
+
+* *-- バージョン *
++
+CIM サーバのバージョンを表示します。
+
+* * - w *
++
+指定したユーザのパスワードを指定します。
+
+
+
+
+
+== 例
+
+パスワード 1 を使用して、 Sydney という名前の CIM ユーザーを作成します。
+
+[listing]
+----
+cimuser -a -u sydney -w password1
+User added successfully.
+----

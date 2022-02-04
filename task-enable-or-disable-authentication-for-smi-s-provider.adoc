@@ -1,0 +1,56 @@
+---
+permalink: task-enable-or-disable-authentication-for-smi-s-provider.html 
+sidebar: sidebar 
+keywords: smi-s provider, authentication, enable, errors, system, disable 
+summary: デフォルトでは、 SMI-S プロバイダに対して認証が有効になっています。認証によってシステムでエラーが発生した場合は、必要に応じて無効にすることができます。認証を無効にしたあとで再度有効にする場合は、再度有効にすることができます。 
+---
+= NetApp SMI-S プロバイダの認証を有効または無効にします
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+デフォルトでは、 SMI-S プロバイダに対して認証が有効になっています。認証によってシステムでエラーが発生した場合は、必要に応じて無効にすることができます。認証を無効にしたあとで再度有効にする場合は、再度有効にすることができます。
+
+
+
+== 作業を開始する前に
+
+* Administrator としてのログインクレデンシャルが必要です。
+* Administrator としてログインしている必要があります。
+* System Center Virtual Machine Manager （ SCVMM ）を含むすべてのクライアントは、 CIMUser と cimpassword を使用してプロバイダに接続する必要があります。
+
+
+
+
+== 手順
+
+. NetApp SMI-S Provider にアクセスします。
+. SMI-S プロバイダの認証を設定します。
++
+[cols="2*"]
+|===
+| アクション | コマンドを実行します 
+
+
+ a| 
+* 以前無効にした場合は認証を有効にします。 *
+ a| 
+`*cimconfig -p -s enableAuthentication=true*`
+
+
+
+ a| 
+* 認証を無効にします *
+ a| 
+`*cimconfig -p -s enableAuthentication=false*`
+
+|===
++
+CIMOM は Windows 認証を使用しません。
+
+. NetApp SMI-S プロバイダを再起動します。
++
+`*SMIS cimserver restart*`
+
+

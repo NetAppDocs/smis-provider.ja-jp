@@ -1,0 +1,64 @@
+---
+permalink: task-enable-or-disable-audit-log-for-smi-s-commands.html 
+sidebar: sidebar 
+keywords: incoming smi-s command, record, log files, auditor, wbem client 
+summary: 受信した SMI-S コマンドはすべて監査ログファイルに記録されます。監査担当者は、 WBEM クライアントの動作とプロバイダの使用状況を追跡できます。これらの着信コマンドのロギングをイネーブルまたはディセーブルにするには、ダイナミックコンフィギュレーションプロパティを設定します。 
+---
+= SMI-S コマンドの監査ログを有効または無効にします
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+受信した SMI-S コマンドはすべて監査ログファイルに記録されます。監査担当者は、 WBEM クライアントの動作とプロバイダの使用状況を追跡できます。これらの着信コマンドのロギングをイネーブルまたはディセーブルにするには、ダイナミックコンフィギュレーションプロパティを設定します。
+
+
+
+== 作業を開始する前に
+
+* Administrator としてのログインクレデンシャルが必要です。
+* ホストシステムに Administrator としてログインしている必要があります。
+
+
+
+
+== このタスクについて
+
+監査ログデータは、 CIM サーバのアクセス、アクティビティ、および設定変更の記録を提供できます。監査ファイルの内容には、発行したコマンド、コマンドの発行元、コマンドの発行時刻などが含まれます。
+
+動的構成プロパティー enableAuditLog は ' 実行時に監査ログを有効または無効にしますデフォルトでは、 enableAuditLog は true に設定されています。
+
+一般的には、監査ログを有効なままにします。
+
+監査ログファイル（「 cimserver_auditlog 」）は、 Pegasus ログディレクトリ（「 C ： \Program Files （ x86 ） \NetApp\SMIS\Pegasus\logs 」）に格納されます。
+
+監査ログファイルの最大サイズは 10MB です。上限に達すると ' ファイル名は cimserver_auditlog.0' に変更され ' 新しい監査ログ情報を収集するために新しい 'cimserver auditlog ファイルが作成されます
+
+NetApp SMI-S Provider は 'cimserver_auditlog.0'~`cimserver_auditlog.5' という 6 つの最新の監査ログファイルを保持します
+
+
+
+== 手順
+
+. NetApp SMI-S Provider にアクセスします。
+. 実行時に SMI-S コマンドの監査ログを設定します。
++
+[cols="2*"]
+|===
+| アクション | コマンドを実行します 
+
+
+ a| 
+* SMI-S 監査ログを有効にします *
+ a| 
+*cimconfig -s enableauditit=true*`
+
+
+
+ a| 
+* SMI-S 監査ログを無効にします *
+ a| 
+*cimconfig -s enableauditit=false*`
+
+|===
+

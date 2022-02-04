@@ -1,0 +1,112 @@
+---
+permalink: reference-smis-addsecure.html 
+sidebar: sidebar 
+keywords: smis, addsecure, command, https connection configuration, manage, monitor 
+summary: smis addsecure コマンドを使用すると、 HTTPS 接続を使用するストレージシステムを構成に追加して、デバイスの管理と監視を行うことができます。必要でないかぎり、 SMIS add ではなく SMIS addsecure を使用する必要があります。 
+---
+= SMIS addsecure
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「 SMIS addsecure 」コマンドを使用すると、 HTTPS 接続を備えたストレージシステムを構成に追加して、デバイスの管理と監視を行うことができます。必要でない限り、「 SMIS add 」ではなく「 SMIS addsecure 」を使用する必要があります。
+
+
+
+== 構文
+
+「 SMIS addsecure 」
+
+`_storage_sys storage_sys_user_`+`[-t { * http * | * https * }]`
+
+[NOTE]
+====
+米国以外の言語を使用するオペレーティングシステム英語では 'addsecure' コマンドは使用できません
+
+====
+
+
+== 場所
+
+C ： \Program Files （ x86 ） \NetApp\SMIS\Pegasus\bin`
+
+
+
+== 権限レベル
+
+管理者（ Windows ）
+
+
+
+== パラメータ
+
+* '*_storage_sys_*'
++
+追加するストレージシステムの名前または IP アドレス
+
++
+IP アドレスを指定する場合は、 IPv4 または IPv6 を使用できます。圧縮された IPv6 アドレスと完全な IPv6 アドレスの両方がサポートされていますたとえば '1001:0002:0000:0000:0003:0004' または '1001:2:3:4' です
+
+* '*_storage_sys_user_*'
++
+追加するストレージシステムを管理する管理者のユーザ名
+
+* '*_storage_sys_pwd_*
++
+オプション：追加するストレージシステムを管理する管理者のパスワード
+
++
+セキュリティ上の理由から、このパラメータは使用しないことを推奨します。このパラメータは、自動化および下位互換性のためだけに提供されています。
+
+* '*[-t { http|http}]*`
++
+使用するプロトコル： HTTPS （デフォルト）または HTTP
+
+
+
+
+
+== ストレージシステム - エージェントとエージェント - クライアントのプロトコル
+
+「 smis add 」コマンドと「 smis addsecure 」コマンドは、ストレージシステムとプロバイダの間で使用されるプロトコルを決定します。「 [-t { * http * | * https * }] 」パラメータは、プロバイダーとクライアントの間で使用されるプロトコルを決定します。
+
+「 SMIS addsecure 」コマンドと「 [-t ｛ * https * ｝ ] 」パラメータは SSL 暗号化を使用して接続しますが、暗号化されていないトラフィックは許可されません。「 smis add 」コマンドと「 [-t ｛ * http * ｝ ] 」パラメータは SSL 暗号化を使用せずに接続され、暗号化されていないトラフィックは許可されます。
+
+SSL で暗号化された接続を無効にする前に、環境のセキュリティ上の要件を確認してください。
+
+
+
+== 例
+
+IPv4 を使用して、 IP アドレス 10.32.1.4 over HTTPS のストレージシステムを追加します。
+
+[listing]
+----
+smis addsecure 10.32.1.4 user2 password2
+----
+ストレージシステムが追加されたことを示す確認メッセージが表示されます。エラーが発生した場合は、エラーメッセージが表示されます。
+
+
+
+== 例
+
+IPv6 over HTTPS を使用してストレージシステムを追加します。
+
+[listing]
+----
+smis addsecure 1001:0002:0000:0000:0000:0000:0003:0004 user2 password2
+smis addsecure 1001:2::3:4 user2 password2
+----
+ストレージシステムが追加されたことを示す確認メッセージが表示されます。エラーが発生した場合は、エラーメッセージが表示されます。
+
+
+
+== 例
+
+英語以外のシステムで、 IP アドレスが 10.32.1.4 の HTTPS を使用してストレージシステムを追加する：
+
+[listing]
+----
+cimcli -n root/ontap ci ontap_filerdata hostname="10.32.1.4" username="vsadmin" password="PasSw0Rd" port=443 comMechanism="HTTPS" --timeout 180
+----

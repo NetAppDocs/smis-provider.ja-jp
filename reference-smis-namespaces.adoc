@@ -1,0 +1,59 @@
+---
+permalink: reference-smis-namespaces.html 
+sidebar: sidebar 
+keywords: smis namespace, command, list, registered, namespace, cimom 
+summary: SMIS Namespaces コマンドは、 CIMOM の登録済みネームスペースを一覧表示します。 
+---
+= SMIS ネームスペース
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「 smis Namespaces 」コマンドは、 CIMOM の登録済みネームスペースをリストします。
+
+
+
+== 構文
+
+SMIS ネームスペース
+
+「 [-t ｛ * http * | * https * ｝ ] 」
+
+
+
+== 場所
+
+C ： \Program Files （ x86 ） \NetApp\SMIS\Pegasus\bin`
+
+* Windows ： C ： \Program Files （ x86 ） \NetApp\SMIS\Pegasus\bin`
+
+
+
+
+== 権限レベル
+
+有効なユーザ名とパスワードを持つユーザ
+
+
+
+== パラメータ
+
+* '*[-t { http|http}]*`
++
+使用するプロトコル： HTTPS （デフォルト）または HTTP
+
+
+
+
+
+== 例
+
+「 smis Namespaces 」コマンドとその省略形の出力：
+
+[listing]
+----
+smis namespaces
+interop
+root/ontap
+----

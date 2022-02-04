@@ -1,0 +1,102 @@
+---
+permalink: task-manage-cimom-configuration-settings.html 
+sidebar: sidebar 
+keywords: smi-s provider, to manage, cimom configuration, enable, disable, http, https, port numbers 
+summary: SMI-S プロバイダを使用して、 HTTP 接続と HTTPS 接続の有効化と無効化、 HTTP ポートと HTTPS ポート番号の変更など、 CIMOM の設定を管理できます。デフォルトでは、 HTTP 接続が有効になっているため、クライアントは SSL 暗号化を使用せずに CIM サーバに接続できます。 
+---
+= CIMOM 設定を管理します
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+SMI-S プロバイダを使用して、 HTTP 接続と HTTPS 接続の有効化と無効化、 HTTP ポートと HTTPS ポート番号の変更など、 CIMOM の設定を管理できます。デフォルトでは、 HTTP 接続が有効になっているため、クライアントは SSL 暗号化を使用せずに CIM サーバに接続できます。
+
+
+
+== 作業を開始する前に
+
+* Administrator としてのログインクレデンシャルが必要です。
+* ホストシステムに Administrator としてログインしている必要があります。
+
+
+
+
+== このタスクについて
+
+CIM サーバとの間で暗号化されたトラフィックが必要な環境の場合は、まず HTTP 接続を無効にしてから、 CIM サーバの HTTPS 接続が有効になっていることを確認する必要があります。
+
+
+
+== 手順
+
+. NetApp SMI-S Provider にアクセスします。
+. 次のいずれかの操作を実行します。
++
+[cols="3*"]
+|===
+| アクション | コマンドを実行します | 追加情報 
+
+
+ a| 
+HTTP 接続を有効にします
+ a| 
+`*cimconfig -s enableHttpConnection=TRUE -p *`
+ a| 
+該当なし
+
+
+
+ a| 
+HTTP 接続を無効にします
+ a| 
+`*cimconfig -s enableHttpConnection=false-p*`
+ a| 
+該当なし
+
+
+
+ a| 
+HTTPS 接続を有効にします
+ a| 
+*cimconfig -s enableHttpsConnection=true-p *`
+ a| 
+該当なし
+
+
+
+ a| 
+HTTPS 接続を無効にします
+ a| 
+*cimconfig -s enableHttpsConnection=false-p *`
+ a| 
+該当なし
+
+
+
+ a| 
+HTTP ポート番号を変更します
+ a| 
+`*cimconfig -s httpPort=_new_port_number_-p *`
+ a| 
+デフォルトでは、 HTTP ポート番号は 5988 です。たとえば、 5555 に変更する場合は、次のコマンドを入力します。
+
+`*cimconfig -s httpPort=5555 -p *`
+
+
+
+ a| 
+HTTPS ポート番号を変更します
+ a| 
+'*cimconfig -s https ポート =_new_port_number_-p *
+ a| 
+デフォルトでは、 HTTP ポート番号は 5989 です。たとえば、 5556 に変更する場合は、次のコマンドを入力します。
+
+'*cimconfig -s https ポート =5556 -p *
+
+|===
+. CIM サーバを再起動します。
++
+`*SMIS cimserver restart*`
+
+

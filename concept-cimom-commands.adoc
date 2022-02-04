@@ -1,0 +1,13 @@
+---
+permalink: concept-cimom-commands.html 
+sidebar: sidebar 
+keywords: cimconfig, command, configure, cimom, settings, enable, disable, http, https, port numbers 
+summary: cimconfig コマンドを使用すると、 HTTP および HTTPS の有効化と無効化、 HTTP および HTTPS ポート番号の変更など、 CIMOM 設定を構成できます。 
+---
+= CIMOM コマンド
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「 cimconfig 」コマンドを使用して、 HTTP および HTTPS のイネーブル化とディセーブル化、 HTTP および HTTPS ポート番号の変更などの CIMOM 設定を行うことができます。

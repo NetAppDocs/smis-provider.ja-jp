@@ -1,0 +1,50 @@
+---
+permalink: task-generate-a-self-signed-certificate-for-the-cim-server-windows.html 
+sidebar: sidebar 
+keywords: ssl authentication, enable, cim server, installation, self-signed certificate 
+summary: デフォルトでは、 SSL 認証は CIM サーバに対して有効になっています。SMI-S プロバイダのインストール中に、 CIM サーバの自己署名証明書が Pegasus ディレクトリにインストールされます。独自の自己署名証明書を生成し、デフォルトの証明書ではなく、独自の証明書を使用できます。 
+---
+= CIM サーバの自己署名証明書を生成します
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+デフォルトでは、 SSL 認証は CIM サーバに対して有効になっています。SMI-S プロバイダのインストール中に、 CIM サーバの自己署名証明書が「 Pegasus 」ディレクトリにインストールされます。独自の自己署名証明書を生成し、デフォルトの証明書ではなく、独自の証明書を使用できます。
+
+
+
+== 作業を開始する前に
+
+* Administrator としてログインしている必要があります。
+* SMI-S プロバイダにアクセスしておく必要があります。
+
+
+
+
+== 手順
+
+. 秘密鍵を生成します。
++
+'*openssl genrsa -out cimom.key 2048*
+
+. 証明書要求を生成します。
++
+「 *openssl req -new-key cimom.key -out CIMOM.CSR* 」と入力します
+
+. プロンプトが表示されたら、証明書要求の情報を入力します。
+. 自己署名証明書を生成します。
++
+「 *openssl x509 -in CIMOM.CSR-out CIMOM.cert-req -signkey cimom.key -days 1095 *」 のように入力します
+
++
+証明書の有効日数を指定できます。
+
+. 「 CIMOM.KEY 」と「 CIMOM.cert` 」ファイルを「 Pegasus 」ディレクトリ（ Windows ： C ： \Program Files （ x86 ） \NetApp\SMIS\Pegasus ）にコピーします。
+
+
+
+
+== 結果
+
+証明書の日付範囲は現在の日付から始まり、指定した日数だけ実行されます。

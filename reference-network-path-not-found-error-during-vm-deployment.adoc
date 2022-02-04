@@ -1,0 +1,32 @@
+---
+permalink: reference-network-path-not-found-error-during-vm-deployment.html 
+sidebar: sidebar 
+keywords: troubleshooting, issue, encounter 
+summary: NetApp SMI-S プロバイダで発生した問題。 
+---
+= ネットワークパスが見つかりません
+:icons: font
+:imagesdir: ./media/
+
+
+* * メッセージ *
++
+「ネットワークパスが見つかりません」
+
+* * 概要 *
++
+このメッセージは DNS 問題を反映したものであり、ホストが DNS サーバにレコードを持たない場合に SMB 共有への VM の導入時に生成されます。
+
++
+通常、ドメイン内に新しいホストが設定されている場合、ドメイン DNS サーバは、 24 時間以内にホストレコードを自動的に更新します。ただし、この更新が自動的に行われるとは限りません。
+
+* * 是正措置 *
++
+** ドメイン管理者の場合は、 DNS ホストレコードを手動で更新します。
+** ドメイン管理者でない場合は、ホストファイル (C:\Windows\System32\drivers\etc\hosts) を更新します。
++
+ホストファイルにファイル拡張子 (`.txt') がありません
+
+
+
+

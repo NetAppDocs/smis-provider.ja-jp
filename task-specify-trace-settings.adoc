@@ -1,0 +1,66 @@
+---
+permalink: task-specify-trace-settings.html 
+sidebar: sidebar 
+keywords: trace, enable, important, gathering, information, troubleshooting, performance, impact 
+summary: トラブルシューティングのための情報を収集するには、トレースを有効にしておくことが重要ですただし、トレースを有効にするとパフォーマンスに影響する可能性があるため、トレースが必要な項目とトレースを有効にする必要がある期間を慎重に検討してください。 
+---
+= トレース設定を指定しています
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+トラブルシューティングのための情報を収集するには、トレースを有効にしておくことが重要ですただし、トレースを有効にするとパフォーマンスに影響する可能性があるため、トレースが必要な項目とトレースを有効にする必要がある期間を慎重に検討してください。
+
+
+
+== 作業を開始する前に
+
+* Administrator としてのログインクレデンシャルが必要です。
+* ホストシステムに Administrator としてログインしている必要があります。
+
+
+
+
+== 手順
+
+. NetApp SMI-S Provider にアクセスします。
+. 必要に応じて、さまざまなトレース設定を指定します。
++
+[cols="2*"]
+|===
+| アクション | コマンドを実行します 
+
+
+ a| 
+トレースするコンポーネントを指定します
+ a| 
+`*cimconfig -s traceComponents=_components_-p *`
+
+
+
+ a| 
+トレース機能を指定します
+ a| 
+`*cimconfig -s traceFacility=_facility_-p *`
+
+
+
+ a| 
+トレースファイルの場所を指定します
+ a| 
+'*cimconfig -s traceFilePath = _path_name _-p *`
+
+
+
+ a| 
+トレースレベルを指定します
+ a| 
+`*cimconfig -s TraceLevel=_level_-p *`
+
+|===
+. CIM サーバを再起動します。
++
+`*SMIS cimserver restart*`
+
+

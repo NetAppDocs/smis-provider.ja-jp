@@ -1,0 +1,13 @@
+---
+permalink: concept-manage-logging-and-tracing.html 
+sidebar: sidebar 
+keywords: configure, smis-provider, trace files, specify, levels, message logging, component, trace, file location 
+summary: SMI-S プロバイダによるログファイルとトレースファイルの管理方法を設定できます。たとえば、ログに記録するメッセージのレベルやログの保存先ディレクトリを指定できます。また、トレースするコンポーネント、トレースメッセージの書き込み先となるターゲット、トレースのレベル、トレースファイルの場所も指定します。 
+---
+= ロギングとトレースを管理します
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+SMI-S プロバイダによるログファイルとトレースファイルの管理方法を設定できます。たとえば、ログに記録するメッセージのレベルやログの保存先ディレクトリを指定できます。また、トレースするコンポーネント、トレースメッセージの書き込み先となるターゲット、トレースのレベル、トレースファイルの場所も指定します。

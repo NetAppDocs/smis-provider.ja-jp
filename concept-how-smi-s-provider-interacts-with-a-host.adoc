@@ -1,0 +1,17 @@
+---
+permalink: concept-how-smi-s-provider-interacts-with-a-host.html 
+sidebar: sidebar 
+keywords: client, application, discover, cimom server, shared objects, device specific api 
+summary: ホスト上のクライアントアプリケーションが SLP （ HTTP 経由の CIM-XML エンコーディング）を使用して CIMOM サーバーを検出すると、クライアントは CIMOM に共有オブジェクト（ CIM 言語でモデル化されたオブジェクト）を照会します。CIMOM は共有オブジェクトをロードし、デバイス固有の API を使用して要求された情報をストレージシステムに照会します。 
+---
+= NetApp SMI-S プロバイダとホストの相互通信方法
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+ホスト上のクライアントアプリケーションが SLP （ HTTP 経由の CIM-XML エンコーディング）を使用して CIMOM サーバーを検出すると、クライアントは CIMOM に共有オブジェクト（ CIM 言語でモデル化されたオブジェクト）を照会します。CIMOM は共有オブジェクトをロードし、デバイス固有の API を使用して要求された情報をストレージシステムに照会します。
+
+次の図は、 SMI-S プロバイダがクエリまたはコマンドを受信したときに、 NetApp SMI-S プロバイダが WBEM 管理クライアントと通信する方法を示しています。
+
+image::../media/smi_s_agent_and_host_interaction.gif[SMI のエージェントとホストの対話]

@@ -1,0 +1,55 @@
+---
+permalink: reference-smis-list.html 
+sidebar: sidebar 
+keywords: smis list, command, display, storage, add 
+summary: smis list コマンドは、追加されたストレージシステムを表示します。 
+---
+= SMIS リスト
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「 smis list 」コマンドは、追加されたストレージ・システムを表示します。
+
+
+
+== 構文
+
+SMIS リスト
+
+「 [-t ｛ * http * | * https * ｝ ] 」
+
+
+
+== 場所
+
+C ： \Program Files （ x86 ） \NetApp\SMIS\Pegasus\bin`
+
+
+
+== 権限レベル
+
+有効なユーザ名とパスワードを持つユーザ
+
+
+
+== パラメータ
+
+* '*[-t { http|http}]*`
++
+使用するプロトコル： HTTPS （デフォルト）または HTTP
+
+
+
+
+
+== 例
+
+「 smis list 」コマンドとその出力は次のとおりです。
+
+[listing]
+----
+smis list
+ONTAP_FilerData.hostName="10.16.180.122",port=80
+----

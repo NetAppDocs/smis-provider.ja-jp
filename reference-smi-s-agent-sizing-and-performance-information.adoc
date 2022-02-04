@@ -1,0 +1,36 @@
+---
+permalink: reference-smi-s-agent-sizing-and-performance-information.html 
+sidebar: sidebar 
+keywords: maximum, systems, netapp smi-s provider, help, understand, performance, capability 
+summary: NetApp SMI-S プロバイダで管理するシステムの最大数を把握しておくと、そのパフォーマンス機能を理解しやすくなります。 
+---
+= NetApp SMI-S プロバイダによるサイジングとパフォーマンス
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp SMI-S プロバイダで管理するシステムの最大数を把握しておくと、そのパフォーマンス機能を理解しやすくなります。
+
+* サイジング *
+
+NetApp SMI-S プロバイダは、 clustered Data ONTAP で次の数のオブジェクトを管理できます。
+
+* Storage Virtual Machine （ SVM ） × 100 （適応なし）
+* 10 個の Storage Virtual Machine （適応あり）
+* 1 、 500 個の LUN （ FlexVol ボリュームあたり）
+* CIFS ファイル共有 × 200 （ FlexVol あたり）
+
+
+FlexVol に qtree とボリュームの両方が含まれている場合、 qtree はディレクトリとして表示されます。ボリュームを削除する際に誤って qtree を削除しないように注意してください。
+
+* パフォーマンスに関する注意 *
+
+5,000 個の FlexVol ボリュームまたは 30 万個の Snapshot コピーを使用する構成では ' 次のような cimcli コマンドを使用してパフォーマンス上の問題が発生することがあります
+
+* 「 cimcli EI ONTAP_Snapshot-n root/ontap 」というエラーが表示されます
+* 「 cimcli EI ONTAP_SnapshotBasedOnFlexVol-n root/ontap 」というエラーが表示されます
+* 「 cimcli EI ONTAP_StorageVolumeStats -n root/ontap 」というエラーが表示されます
+
+
+IMT には、サイジングとパフォーマンスに関する最新情報が記載されています。

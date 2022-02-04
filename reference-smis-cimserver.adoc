@@ -1,0 +1,55 @@
+---
+permalink: reference-smis-cimserver.html 
+sidebar: sidebar 
+keywords: smis cimserver, command, start, stop, restart, cim server 
+summary: smis cimserver コマンドは、 CIM サーバの起動、停止、再起動、またはステータスの取得を行います。 
+---
+= SMIS cimserver
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「 smis cimserver 」コマンドは、 CIM サーバの起動、停止、再起動、またはステータスの取得を行います。
+
+
+
+== 構文
+
+「 SMIS cimserver 」と入力します
+
+'{*start*|*stop*|*restart*|*status*}`
+
+
+
+== 場所
+
+C ： \Program Files （ x86 ） \NetApp\SMIS\Pegasus\bin`
+
+
+
+== 権限レベル
+
+管理者（ Windows ）
+
+
+
+== パラメータ
+
+* * スタート *
++
+CIM サーバを起動します。
+
+* * 停止 *
++
+CIM サーバを停止します。
+
+* * 再起動 *
++
+CIM サーバを再起動します。
+
+* * ステータス *
++
+CIM サーバのステータスを取得します。
+
+

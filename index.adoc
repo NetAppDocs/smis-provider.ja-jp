@@ -1,0 +1,14 @@
+---
+permalink: index.html 
+sidebar: sidebar 
+keywords: netapp smis-provider, documentation, installation, command based interface, netapp storage system 
+summary: ネットアップストレージシステムを検出して管理するコマンドベースのインターフェイスである NetApp SMI-S Provider のインストール方法と管理方法について説明します。 
+---
+= NetApp SMIS - プロバイダドキュメント
+:icons: font
+:imagesdir: ./media/
+
+
+NetApp SMIS - プロバイダ情報ライブラリへようこそ。ここでは、 NetApp ストレージシステムを検出および管理するコマンドベースのインターフェイスである NetApp SMI-S プロバイダソフトウェアのインストール方法と管理方法を記載したドキュメントを参照できます。
+
+以前のリリースの NetApp SMIS-Provider のドキュメントは、で入手できます https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62215["ネットアップサポートサイト"]。

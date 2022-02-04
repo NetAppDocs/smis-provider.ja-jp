@@ -1,0 +1,13 @@
+---
+permalink: concept-specify-slp-configuration-options.html 
+sidebar: sidebar 
+keywords: editing, slp.conf, configuration, file, manage, service location protocol daemon, service 
+summary: 'SLP .conf 構成ファイルを編集して " サービスロケーションプロトコルデーモン (slpd) サービスを管理できます' 
+---
+= SLP 設定オプションを指定します
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+SLP .conf 構成ファイルを編集して ' サービスロケーションプロトコルデーモン (slpd) サービスを管理できます

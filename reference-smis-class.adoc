@@ -1,0 +1,92 @@
+---
+permalink: reference-smis-class.html 
+sidebar: sidebar 
+keywords: smis class, command, lists, information, 
+summary: smis class コマンドは、指定されたクラスまたはすべてのクラスに関する情報をリストします。 
+---
+= SMIS クラス
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「 smis class 」コマンドは、指定されたクラスまたはすべてのクラスに関する情報をリストします。
+
+
+
+== 構文
+
+「 SMIS クラス」
+
+`_name_space_{* Niall*|{* e*|*ni*|*gi*|*gc*}_class_name_}[-t ｛ * http * |*https*}]
+
+
+
+== 場所
+
+C ： \Program Files （ x86 ） \NetApp\SMIS\Pegasus\bin`
+
+
+
+== 権限レベル
+
+有効なユーザ名とパスワードを持つユーザ
+
+
+
+== パラメータ
+
+* '*_name_space_*'
++
+CIMOM がサポートするネームスペース
+
+* * ニオール *
++
+すべてのインスタンス名を列挙します
+
+* * EI *
++
+クラスのインスタンスを列挙します
+
+* * ni *
++
+クラスのインスタンス名を列挙します
+
+* * gi *
++
+クラスのインスタンスを取得します
+
+* * gc*
++
+クラス名のクラスを取得します
+
+* '*_class_name_*'
++
+情報を表示するクラスの名前
+
+* '*[-t { http|http}]*`
++
+使用するプロトコル： HTTPS （デフォルト）または HTTP
+
+
+
+
+
+== 例
+
+「 smis class 」コマンドとその省略された出力は次のとおりです。
+
+[listing]
+----
+smis class root/ontap gi CIM_StorageVolume
+1:
+ONTAP_StorageVolume.CreationClassName="ONTAP_StorageVolume",DeviceID="P3LfGJdC-mN5",SystemCreationClassName="ONTAP_StorageSystem",SystemName="ONTAP:0135027815"
+2:
+ONTAP_StorageVolume.CreationClassName="ONTAP_StorageVolume",DeviceID="P3LfGJcmzpHt",SystemCreationClassName="ONTAP_StorageSystem",SystemName="ONTAP:0135027815"
+3:
+ONTAP_StorageVolume.CreationClassName="ONTAP_StorageVolume",DeviceID="P3LfGJc30t26",SystemCreationClassName="ONTAP_StorageSystem",SystemName="ONTAP:0135027815"
+4:
+ONTAP_StorageVolume.CreationClassName="ONTAP_StorageVolume",DeviceID="P3LfGJcSgbiT",SystemCreationClassName="ONTAP_StorageSystem",SystemName="ONTAP:0135027815"
+5:
+ONTAP_StorageVolume.CreationClassName="ONTAP_StorageVolume",DeviceID="P3LfGJcSgrA9",SystemCreationClassName="ONTAP_StorageSystem",SystemName="ONTAP:0135027815"
+----

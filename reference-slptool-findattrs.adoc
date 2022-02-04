@@ -1,0 +1,53 @@
+---
+permalink: reference-slptool-findattrs.html 
+sidebar: sidebar 
+keywords: slptool, findattrs, command, wbem attributes, run, network 
+summary: slptool finaldattrs コマンドは、ネットワーク上で実行される WBEM 属性を検出します。 
+---
+= slptool finaldtrs
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+slptool finaldattrs コマンドは ' ネットワーク上で実行される WBEM 属性を検出します
+
+
+
+== 構文
+
+slptool findattrs_service_`
+
+
+
+== 場所
+
+C ： \Program Files （ x86 ） \NetApp\SMIS\Pegasus\bin`
+
+
+
+== 権限レベル
+
+有効なユーザ名とパスワードを持つユーザ
+
+
+
+== パラメータ
+
+* '*_SERVICE_*'
++
+サービスタイプを指定します。
+
+
+
+
+
+== 例
+
+slptool finaldattrs' コマンドとその省略された出力 :
+
+[listing]
+----
+slptool findattrs service:wbem
+(template-url-syntax=http://10.229.90.227:5988),(service-id=PG:10-229-90-227),(service-hi-name=Pegasus),(service-hi-description=Pegasus CIM Server Version 2.12.0),(template-type=wbem),(template-version=1.0),(template-description=This template describes the attributes used for advertising Pegasus CIM Servers.),(InteropSchemaNamespace=interop),(FunctionalProfilesSupported=Basic Read,Basic Write,Schema Manipulation,Instance Manipulation,Association Traversal,Qualifier Declaration,Indications),(MultipleOperationsSupported=TRUE),(AuthenticationMechanismsSupported=Basic),(AuthenticationMechanismDescriptions=Basic),(CommunicationMechanism=CIM-XML),(ProtocolVersion=1.0),(Namespace=root/PG_Internal,interop,root/ontap,root),(RegisteredProfilesSupported=SNIA:Server,SNIA:Array,SNIA:NAS Head,SNIA:Software,SNIA:Profile Registration,SNIA:SCNAS,SNIA:Storage Virtualizer,SNIA:Indication)
+----

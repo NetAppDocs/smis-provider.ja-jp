@@ -1,0 +1,23 @@
+---
+permalink: concept-requirement-for-using-fileshares-in-windows.html 
+sidebar: sidebar 
+keywords: netApp smis-s provider, fileshare, ntfs-only volume 
+summary: Windows でファイル共有（ CIFS 共有）を使用する場合は、ファイル共有を作成するボリュームが NTFS 専用ボリュームである必要があります。 
+---
+= Windows でファイル共有を使用するための要件
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Windows でファイル共有（ CIFS 共有）を使用する場合は、ファイル共有を作成するボリュームが NTFS 専用ボリュームである必要があります。
+
+Windows でファイル共有を作成して使用する場合は、ファイル共有を作成するボリュームを NTFS 専用ボリュームにする必要があります。これは、ファイル共有にアクセスするクレデンシャルに問題が生じないようにするためです。
+
+System Center 2016 Virtual Machine Manager （ SCVMM ）からは、 NTFS 専用ボリュームで作成されたファイル共有にのみ仮想マシン（ VM ）を作成できます。mixed 形式と UNIX 形式のボリュームはサポートされません。
+
+
+
+== CIFS 共有と SCVMM に使用するボリュームの作成
+
+CIFS 共有と System Center Virtual Machine Manager （ SCVMM ）に使用するボリュームを作成する場合は、そのボリュームの NTFS タイプが設定されている必要があります。NTFS を使用してボリュームを作成するには、次のコマンドを入力します。 `_vol create -vserver <vserver_name> -volume <volume_name> -aggregate <aggr_name> -size <volume_size> -security-style ntfs_`

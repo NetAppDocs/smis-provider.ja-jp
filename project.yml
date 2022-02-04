@@ -1,0 +1,241 @@
+---
+settings:
+  name: NetApp SMI-S Provider
+  internal:
+    pdf_enabled: true
+  prod:
+    pdf_enabled: true
+    harmony_enabled: false
+  langs: ja-jp,us-en,zh-cn,ko-kr
+sidebar:
+  entries:
+  - title: NetApp SMI-S プロバイダのドキュメント
+    url: "/index.html"
+  - title: リリースノート
+    url: "/releasenotes.html"
+  - title: NetApp SMI-S Provider の概要
+    url: "/concept-data-ontap-smi-s-agent-overview.html"
+    entries:
+    - title: このリリースの新機能
+      url: "/reference-new-in-this-release-smis.html"
+    - title: NetApp SMI-S プロバイダの使用
+      url: "/reference-uses-of-data-ontap-smi-s-agent.html"
+    - title: NetApp SMI-S プロバイダによるサイジングとパフォーマンス
+      url: "/reference-smi-s-agent-sizing-and-performance-information.html"
+    - title: NetApp SMI-S プロバイダのコンポーネント
+      url: "/reference-data-ontap-smi-s-agent-components.html"
+    - title: NetApp SMI-S プロバイダプロトコル
+      url: "/reference-data-ontap-smi-s-agent-protocols.html"
+    - title: NetApp SMI-S プロバイダとホストの相互通信方法
+      url: "/concept-how-smi-s-provider-interacts-with-a-host.html"
+    - title: SMI-S プロファイル
+      url: "/concept-smi-s-profiles.html"
+  - title: 導入のワークフロー
+    url: "/concept-deployment-workflow.html"
+  - title: 導入を準備
+    url: "/concept-prepare-for-deployment.html"
+    entries:
+    - title: サポートされているオペレーティングシステムのバージョン
+      url: "/reference-supported-operating-systems.html"
+    - title: ハードウェア要件
+      url: "/reference-hardware-requirements.html"
+    - title: 必要なライセンス
+      url: "/reference-required-licenses.html"
+    - title: サポートされるクラスタ・プラットフォーム
+      url: "/reference-supported-platforms.html"
+    - title: NetApp SMI-S プロバイダソフトウェアパッケージをダウンロードします
+      url: "/task-download-smi-s-provider.html"
+  - title: NetApp SMI-S Provider をインストールします
+    url: "/concept-install-and-uninstall-ontap-smi-s-agent.html"
+    entries:
+    - title: Windows ホストに NetApp SMI-S Provider をインストールします
+      url: "/task-install-smi-s-agent-on-a-windows-host.html"
+  - title: NetApp SMI-S Provider をアンインストールします
+    url: "/concept-uninstall-smi-s-provider.html"
+    entries:
+    - title: Windows ホストから NetApp SMI-S Provider をアンインストールします
+      url: "/task-uninstall-smi-s-agent-from-a-windows-host.html"
+  - title: 事前設定の検証
+    url: "/concept-preconfiguration-task-overview.html"
+    entries:
+    - title: CIM サーバのステータスを確認します
+      url: "/task-verify-the-cim-server-status.html"
+    - title: CIM サーバーユーザーを追加します
+      url: "/task-add-cim-server-users.html"
+    - title: ストレージシステムが正しく動作していることを確認します
+      url: "/task-verify-that-the-storage-system-is-working-correctly.html"
+    - title: CIM サーバの自己署名証明書を生成します
+      url: "/task-generate-a-self-signed-certificate-for-the-cim-server-windows.html"
+  - title: CIM サーバを管理します
+    url: "/task-manage-the-cim-server.html"
+  - title: ストレージシステムを管理
+    url: "/task-manage-storage-systems.html"
+  - title: CIM サーバーユーザーを管理します
+    url: "/task-manage-cim-server-users.html"
+    entries:
+    - title: CIM ユーザーのタイプと関連する操作
+      url: "/reference-types-of-cim-users-and-associated-operations.html"
+  - title: CIMOM 設定を管理します
+    url: "/task-manage-cimom-configuration-settings.html"
+  - title: ロギングとトレースを管理します
+    url: "/concept-manage-logging-and-tracing.html"
+    entries:
+    - title: ログ設定を構成します
+      url: "/task-configure-log-settings.html"
+      entries:
+      - title: ログレベル
+        url: "/reference-logging-levels.html"
+    - title: トレースを管理します
+      url: "/concept-manage-tracing.html"
+      entries:
+      - title: トレース設定を指定します
+        url: "/task-specify-trace-settings.html"
+        entries:
+        - title: 設定値をトレースします
+          url: "/reference-trace-setting-values.html"
+      - title: トレースファイルのサイズを指定してください
+        url: "/task-specify-trace-file-size.html"
+      - title: 保存するトレースファイルの数を指定します
+        url: "/task-specify-the-number-of-trace-files-saved.html"
+    - title: SMI-S コマンドの監査ログを有効または無効にします
+      url: "/task-enable-or-disable-audit-log-for-smi-s-commands.html"
+  - title: SMI-S プロバイダの詳細設定を管理します
+    url: "/concept-manage-smi-s-agent-advanced-settings.html"
+    entries:
+    - title: SMI-S プロバイダの自動キャッシュ更新間隔を指定します
+      url: "/task-specify-the-smi-s-agent-cache-refresh-interval.html"
+    - title: 具体的なジョブの有効期間の値を指定します
+      url: "/task-specify-the-concrete-job-lifetime-value.html"
+    - title: ONTAPI タイムアウト値を指定します
+      url: "/task-specify-the-ontapi-timeout-value.html"
+    - title: メッセージサービスキューあたりの最大スレッド数を指定します
+      url: "/task-specify-the-maximum-number-of-threads-per-message-service-queue.html"
+    - title: NetApp SMI-S プロバイダの認証を有効または無効にします
+      url: "/task-enable-or-disable-authentication-for-smi-s-provider.html"
+    - title: SMI-S プロバイダで通知を有効にします
+      url: "/task-enable-indications-in-smi-s-agent.html"
+  - title: SLP を管理します
+    url: "/concept-manage-slp.html"
+    entries:
+    - title: SLP 設定オプションを指定します
+      url: "/concept-specify-slp-configuration-options.html"
+      entries:
+      - title: slp.conf ファイル管理
+        url: "/reference-editing-the-slp-conf-file.html"
+  - title: CIMOM コマンド
+    url: "/concept-cimom-commands.html"
+    entries:
+    - title: cimconfig
+      url: "/reference-cimconfig-command-options.html"
+  - title: CIM ユーザーコマンド
+    url: "/concept-cim-user-commands.html"
+    entries:
+    - title: CIMUser
+      url: "/reference-cimuser-command-options.html"
+  - title: SMI-S プロバイダコマンド
+    url: "/concept-smi-s-provider-commands.html"
+    entries:
+    - title: SMIS が追加します
+      url: "/reference-smis-add.html"
+    - title: SMIS addsecure
+      url: "/reference-smis-addsecure.html"
+    - title: シモムとう
+      url: "/reference-smis-cimom.html"
+    - title: SMIS cimserver
+      url: "/reference-smis-cimserver.html"
+    - title: SMIS クラス
+      url: "/reference-smis-class.html"
+    - title: SMIS config show のコマンドです
+      url: "/reference-smis-config-show.html"
+    - title: SMIS CRP
+      url: "/reference-smis-crp.html"
+    - title: SMIS CRSP
+      url: "/reference-smis-crsp.html"
+    - title: SMIS DELETE
+      url: "/reference-smis-delete.html"
+    - title: SMIS ディスク
+      url: "/reference-smis-disks.html"
+    - title: SMIS エクスポート
+      url: "/reference-smis-exports.html"
+    - title: SMIS イニシエータ
+      url: "/reference-smis-initiators.html"
+    - title: SMIS ライセンス
+      url: "/reference-smis-licensed.html"
+    - title: SMIS リスト
+      url: "/reference-smis-list.html"
+    - title: SMIS LUN の場合
+      url: "/reference-smis-luns.html"
+    - title: SMIS ネームスペース
+      url: "/reference-smis-namespaces.html"
+    - title: SMIS プール
+      url: "/reference-smis-pools.html"
+    - title: SMIS 更新
+      url: "/reference-smis-refresh.html"
+    - title: SMIS slpd
+      url: "/reference-smis-slpd.html"
+    - title: SMIS バージョン
+      url: "/reference-smis-version.html"
+    - title: SMIS ボリューム
+      url: "/reference-smis-volumes.html"
+  - title: SLP コマンド
+    url: "/concept-slp-commands.html"
+    entries:
+    - title: slptool
+      url: "/reference-slptool-command-options.html"
+    - title: slptool finaldtrs
+      url: "/reference-slptool-findattrs.html"
+    - title: slptool findsrvs
+      url: "/reference-slptool-findsrvs.html"
+  - title: SMI-S プロバイダのトラブルシューティングを行います
+    url: "/concept-troubleshoot-smi-s-agent.html"
+    entries:
+    - title: アクセスが拒否されました
+      url: "/reference-access-is-denied-error.html"
+    - title: 共有ライブラリのロード中にエラーが発生する可能性があります
+      url: "/reference-possible-errors-when-loading-shared-libraries.html"
+    - title: 接続が拒否されました
+      url: "/reference-connection-refused-error.html"
+    - title: ストレージシステムが返す： ONTAP 要素がない
+      url: "/reference-no-ontap-element-in-response-error.html"
+    - title: クローン処理や Snapshot 処理は実行できません
+      url: "/reference-clone-snapshot-operations-are-not-allowed.html"
+    - title: 警告 26130
+      url: "/reference-warning-26130.html"
+    - title: HostAgentAccessDenied （ ID ： 26263 ）
+      url: "/reference-hostagentaccessdenied-error-id-26263.html"
+    - title: localhost に接続できません： 5988
+      url: "/reference-cannot-connect-to-localhost-5988-error.html"
+    - title: localhost に接続できません： 5989
+      url: "/reference-cannot-connect-to-localhost-5989-error.html"
+    - title: Windows で SMI-S プロバイダがクラッシュします
+      url: "/reference-handling-smi-s-agent-crashes-in-windows.html"
+    - title: 問題特殊文字を含むパスワードの入力
+      url: "/reference-entering-passwords-containing-special-characters.html"
+    - title: SMI-S プロバイダで使用されるクローンテクノロジ
+      url: "/concept-clone-technology-used-in-smi-s-agent-4-0.html"
+    - title: 重要なオブジェクトの表示を確認します
+      url: "/concept-confirm-visibility-of-important-objects.html"
+    - title: Windows でファイル共有を使用するための要件
+      url: "/concept-requirement-for-using-fileshares-in-windows.html"
+    - title: デフォルト以外のファイアウォールでは、例外として手動でポートを追加する必要があります
+      url: "/reference-non-default-firewalls-must-have-ports-manually-added-as-exceptions.html"
+    - title: デフォルト以外の HTTP または HTTPS ポートを使用してストレージシステムを追加することはできません
+      url: "/reference-cannot-add-a-storage-system-using-a-nondefault-http-or-https-port.html"
+    - title: サーバからの応答がありません
+      url: "/reference-no-response-from-the-server.html"
+    - title: ランタイムライブラリの問題
+      url: "/reference-runtime-library-issues.html"
+    - title: NetApp SMI-S プロバイダの起動に時間がかかります
+      url: "/reference-smi-s-agent-takes-a-long-time-to-start.html"
+    - title: ストレージプール（ボリューム）の管理対象スペースの合計が正しくありません
+      url: "/reference-total-managed-space-for-a-storage-pool-aggregate-discrepancy.html"
+    - title: ネットワークパスが見つかりません
+      url: "/reference-network-path-not-found-error-during-vm-deployment.html"
+    - title: 要求されたサービスを完了するための十分なシステムリソースがありません
+      url: "/reference-vm-provisioning-in-scvmm-fails-with-insufficient-system-resources-error.html"
+    - title: SCVMM で SMB 共有のサイズが 0 に縮小されます
+      url: "/reference-smb-share-size-dropping-to-0-in-scvmm.html"
+    - title: SCVMM の再スキャン処理で SMI-S プロバイダの特定または通信に失敗しました
+      url: "/reference-scvmm-rescan-operation-failed-to-locate-or-communicate-with-smi-s-provider.html"
+  - title: 法的通知
+    url: "/reference-legal-notices.html"

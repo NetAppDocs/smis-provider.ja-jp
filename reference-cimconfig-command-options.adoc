@@ -1,0 +1,86 @@
+---
+permalink: reference-cimconfig-command-options.html 
+sidebar: sidebar 
+keywords: cimconfig, command, cimom configuration, settings, variable, mis cimserver restart command 
+summary: cimconfig コマンドを使用すると、 CIMOM 設定を管理できます。cimconfig コマンドを入力するか、 NetApp SMI-S Provider 設定値の環境変数を作成したら、 SMIS cimserver restart コマンドを使用して CIM サーバを再起動する必要があります。 
+---
+= cimconfig
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+cimconfig コマンドを使用すると、 CIMOM の設定を管理できます。「 cimconfig 」コマンドを入力するか、 NetApp SMI-S Provider 設定値の環境変数を作成したら、「 SMIS cimserver restart 」コマンドを使用して CIM サーバを再起動する必要があります。
+
+
+
+== 構文
+
+「 cimconfig_options_` 」
+
+
+
+== 場所
+
+C ： \Program Files （ x86 ） \NetApp\SMIS\Pegasus\bin`
+
+
+
+== 権限レベル
+
+管理者（ Windows ）
+
+
+
+== オプション（ Options ）
+
+* * -c *
++
+コンフィギュレーション設定環境を現在の CIMOM 設定にすることを指定します。
+
+* * -d *
++
+コンフィギュレーション設定環境をデフォルトの CIMOM コンフィギュレーションに指定します。
+
+* *-g *
++
+指定した設定プロパティの値を取得します。
+
+* *-h 、 --help*
++
+「 cimconfig 」コマンドのヘルプを表示します。
+
+* * -l *
++
+すべての CIMOM 設定プロパティを一覧表示します。
+
+* * -p *
++
+CIM サーバの次回起動時に設定を適用することを指定します。
+
+* * -s *
++
+指定した設定プロパティ値を設定します。
+
+* * -u *
++
+コンフィギュレーションプロパティをデフォルト値にリセットします。
+
+* *-- バージョン *
++
+CIM サーバのバージョンを表示します。
+
+
+
+
+
+== 例
+
+ログファイルの最大サイズを 15000 KB に変更します。
+
+[listing]
+----
+cimconfig -s maxLogFileSizeKBytes=15000
+Current value for the property maxLogFileSizeKBytes is set to "15000" in CIMServer.
+smis cimserver restart
+----

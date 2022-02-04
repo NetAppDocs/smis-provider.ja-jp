@@ -1,0 +1,70 @@
+---
+permalink: task-manage-the-cim-server.html 
+sidebar: sidebar 
+keywords: smi-s provider, start, stop, cim server, review, status 
+summary: SMI-S プロバイダを使用して、 CIM サーバの起動、停止、再起動、および状態の確認を行うことができます。 
+---
+= CIM サーバを管理します
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+SMI-S プロバイダを使用して、 CIM サーバの起動、停止、再起動、および状態の確認を行うことができます。
+
+
+
+== 作業を開始する前に
+
+* Administrator としてのログインクレデンシャルが必要です。
+* ホストシステムに Administrator としてログインしている必要があります。
+
+
+
+
+== 手順
+
+. NetApp SMI-S Provider にアクセスします。
+. 次のいずれかの操作を実行します。
++
+[cols="3*"]
+|===
+| アクション | コマンドを実行します | 追加情報 
+
+
+ a| 
+CIM サーバを起動します
+ a| 
+*SMIS cimserver start*
+ a| 
+コマンドを入力すると、 3 分ごとにステータスメッセージが表示されます。CIM サーバへの接続に失敗した場合、さらに 5 回試行してサーバへの接続を試みます。
+
+
+
+ a| 
+CIM サーバを停止します
+ a| 
+`*SMIS cimserver stop*`
+ a| 
+該当なし
+
+
+
+ a| 
+CIM サーバを再起動します
+ a| 
+`*SMIS cimserver restart*`
+ a| 
+該当なし
+
+
+
+ a| 
+CIM サーバのステータスを表示します
+ a| 
+`*SMIS cimserver status*`
+ a| 
+該当なし
+
+|===
+

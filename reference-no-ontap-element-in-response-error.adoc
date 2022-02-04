@@ -1,0 +1,24 @@
+---
+permalink: reference-no-ontap-element-in-response-error.html 
+sidebar: sidebar 
+keywords: troubleshooting, issue, encounter 
+summary: NetApp SMI-S プロバイダで発生した問題。 
+---
+= ストレージシステムが返す： ONTAP 要素がない
+:icons: font
+:imagesdir: ./media/
+
+
+* * メッセージ *
++
+'filer return: 応答に ONTAP 要素がありません
+
+* * 概要 *
++
+このメッセージは、 ONTAPI API がタイムアウトした場合に表示されます。ONTAPI API のデフォルトのタイムアウトは 60 秒ですが、状況によってはこの時間が短すぎることがあります。
+
+* * 是正措置 *
++
+ONTAPI API のタイムアウトを 60 秒より大きい値に変更するには、環境変数「 ONTAPI_ timeout_SEC 」を設定し、 SMI-S プロバイダを再起動します。
+
+

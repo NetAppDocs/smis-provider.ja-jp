@@ -1,0 +1,49 @@
+---
+permalink: reference-hardware-requirements.html 
+sidebar: sidebar 
+keywords: smi-s provider, smi-s agent 
+summary: NetApp SMI-S プロバイダをインストールする前に、 Windows ホストがハードウェアの最小要件を満たしていることを確認する必要があります。 
+---
+= ハードウェア要件
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp SMI-S プロバイダをインストールする前に、 Windows ホストがハードウェアの最小要件を満たしていることを確認する必要があります。
+
+[cols="2*"]
+|===
+| ハードウェア | 要件 
+
+
+ a| 
+メモリ
+ a| 
+* 4GB の RAM （最小）
+* 8GB の RAM （推奨）
+
+
+
+
+ a| 
+ディスクスペース
+ a| 
+* 1GB （最小）
+* 4GB （推奨）
+
+
+ロギングとトレースを有効にするには、ログファイルとトレースファイルのローテーション設定に応じて、最大 1GB の追加ディスクスペースが必要です。
+
+インストール用に 100MB の一時ディスクスペースが必要です。
+
+
+
+ a| 
+CPU
+ a| 
+* デュアルコア 2.0 GHz 以上
+* クアッドコア 2.0 GHz （推奨）
+
+
+|===

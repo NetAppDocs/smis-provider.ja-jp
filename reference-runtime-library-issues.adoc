@@ -1,0 +1,21 @@
+---
+permalink: reference-runtime-library-issues.html 
+sidebar: sidebar 
+keywords: troubleshooting, issue, encounter 
+summary: NetApp SMI-S プロバイダで発生した問題。 
+---
+= ランタイムライブラリの問題
+:icons: font
+:imagesdir: ./media/
+:pp: &#43;&#43;
+
+
+* * 問題 *
++
+ランタイムライブラリの問題が発生しています。
+
+* * 是正措置 *
++
+www.microsoft.com から Microsoft Visual C { pp } 2010 再頒布可能パッケージ (x86) をインストールします。
+
+

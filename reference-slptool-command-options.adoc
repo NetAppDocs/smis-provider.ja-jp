@@ -1,0 +1,57 @@
+---
+permalink: reference-slptool-command-options.html 
+sidebar: sidebar 
+keywords: slptool, command 
+summary: これらのオプションは slptool コマンドで使用できます。 
+---
+= slptool
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+これらのオプションは 'slptool' コマンドで使用できます
+
+
+
+== 構文
+
+slptool[options] _subcommand _
+
+
+
+== 場所
+
+C ： \Program Files （ x86 ） \NetApp\SMIS\Pegasus\bin`
+
+
+
+== 権限レベル
+
+管理者（ Windows ）
+
+
+
+== オプション（ Options ）
+
+* * -i *
++
+1 つ以上のインターフェイスを指定します。
+
+* * -l *
++
+言語タグを指定します。
+
+* * -s *
++
+スコープのリストを指定します（カンマで区切ります）。
+
+* * -u *
++
+インターフェイスを 1 つ指定します。
+
+* * -v *
++
+slptool' および OpenSLP のバージョンを表示します
+
+

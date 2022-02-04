@@ -1,0 +1,57 @@
+---
+permalink: reference-cannot-connect-to-localhost-5988-error.html 
+sidebar: sidebar 
+keywords: troubleshooting, issue, encounter 
+summary: NetApp SMI-S プロバイダで発生した問題。 
+---
+= localhost に接続できません： 5988
+:icons: font
+:imagesdir: ./media/
+
+
+* * メッセージ *
++
+'localhost に接続できません :5988接続に失敗しました。localhost に接続しようとしています :5988`
+
+* * 概要 *
++
+このメッセージは、 HTTPS 接続が無効になっているか、 HTTPS ポートが 5988 に設定されていない場合、またはプロバイダが動作を停止してハング状態のままになっている場合に表示されます。
+
+* * 是正措置 *
++
+「 enableHttpsConnection 」と「 https ポート」の値が正しいことを確認します。
+
++
+「 cimconfig -g enableHttpConnection 」と入力します
+
++
+「 cimconfig -g enableHttpsConnection 」と入力します
+
++
+cimconfig -g httpPort
+
++
+「 cimconfig -g https ポート」を参照してください
+
++
+enableHttpConnection または enableHttpsConnection が 'true' に設定されていない場合は ' 次のコマンドを入力します
+
++
+「 cimconfig -s enableHttpConnection -p 」を入力します
+
++
+「 SMIS cimserver restart 」というメッセージが表示されます
+
++
+httpPort が 5988 に設定されていない場合は、次のコマンドを入力します。
+
++
+cimconfig -s httpPort=5988 -p
+
++
+「 SMIS cimserver restart 」というメッセージが表示されます
+
++
+プロバイダが作業を停止してハング状態のままになっている場合は、タスクマネージャを開いてプロセスを終了し、プロバイダを再起動します。
+
+

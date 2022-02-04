@@ -1,0 +1,31 @@
+---
+permalink: task-specify-the-concrete-job-lifetime-value.html 
+sidebar: sidebar 
+keywords: smi-s provider, asynchronous, operation, concrete job, increase, lifetime, 60 minutes, 24 hours 
+summary: SMI-S プロバイダは、具体的なジョブを作成することで、非同期操作の進行状況を追跡します。具体的なジョブの有効期間をデフォルトの 60 分（ 3600 秒）から 86400 秒（ 24 時間）まで延長できます。 
+---
+= 具体的なジョブの有効期間の値を指定します
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+SMI-S プロバイダは、 _ コンクリート job_ を作成することで、非同期操作の進行状況を追跡します。具体的なジョブの有効期間をデフォルトの 60 分（ 3600 秒）から 86400 秒（ 24 時間）まで延長できます。
+
+
+
+== 作業を開始する前に
+
+* Administrator としてのログインクレデンシャルが必要です。
+* ホストシステムに Administrator としてログインしている必要があります。
+
+
+
+
+== ステップ
+
+. 新しいライフタイム値（秒単位）を使用して 'job_lifetime_SEC' という名前のシステムまたはユーザー環境変数を作成します
++
+環境変数の作成については、 Windows のマニュアルを参照してください。
+
+

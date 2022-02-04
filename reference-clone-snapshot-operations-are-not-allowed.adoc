@@ -1,0 +1,24 @@
+---
+permalink: reference-clone-snapshot-operations-are-not-allowed.html 
+sidebar: sidebar 
+keywords: troubleshooting, issue, encounter 
+summary: NetApp SMI-S プロバイダで発生した問題。 
+---
+= クローン処理や Snapshot 処理は実行できません
+:icons: font
+:imagesdir: ./media/
+
+
+* * メッセージ *
++
+LUN クローン・スプリット処理がボリューム内で実行されている間は ' クローン / Snapshot 処理は実行できませんしばらく待ってからもう一度試してください
+
+* * 概要 *
++
+このエラーは、 LUN クローンスプリット中に Snapshot 処理を実行しようとした場合に発生します。LUN クローンスプリットがバックグラウンドで実行されている場合、 LUN をスプリットするボリュームで Snapshot 処理を実行することはできません。
+
+* * 是正措置 *
++
+LUN がスプリットされたあとに Snapshot 処理を実行します。
+
+

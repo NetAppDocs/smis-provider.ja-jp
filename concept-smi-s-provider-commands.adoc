@@ -1,0 +1,31 @@
+---
+permalink: concept-smi-s-provider-commands.html 
+sidebar: sidebar 
+keywords: smis, commands, manage, storage, system, display, cim object manager 
+summary: ストレージシステムの管理や CIM オブジェクトマネージャに関する情報の表示には、 SMIS コマンドを使用できます。 
+---
+= SMI-S プロバイダコマンド
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「 SMIS 」コマンドを使用して、ストレージシステムを管理したり、 CIM オブジェクトマネージャに関する情報を表示したりできます。
+
+ヘルプは '-sis コマンドで '-help' オプションを使用して利用できます
+
+* *SMIS --help`*
++
+コマンドの概要を表示します。
+
+* *SMIS --help` の例 *
++
+使用例を表示します。
+
+* *SMIS --help_subcommand _ `*
++
+指定したサブコマンドのヘルプを表示します。
+
+
+
+SMIS ツールのデフォルトのタイムアウト値は 180 秒です。

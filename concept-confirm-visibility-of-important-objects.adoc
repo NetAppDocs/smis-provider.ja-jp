@@ -1,0 +1,15 @@
+---
+permalink: concept-confirm-visibility-of-important-objects.html 
+sidebar: sidebar 
+keywords: manage, storage, system, confirm, important, logic, physical, object, netapp smis-s provider 
+summary: 管理対象ストレージシステムを追加したら、 NetApp SMI-S プロバイダ内の重要な論理オブジェクトと物理オブジェクトがすべて表示されることを確認する必要があります。 
+---
+= 重要なオブジェクトの表示を確認します
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+管理対象ストレージシステムを追加したら、 NetApp SMI-S プロバイダ内の重要な論理オブジェクトと物理オブジェクトがすべて表示されることを確認する必要があります。
+
+「 SMIS 」コマンドを使用すると、 NetApp SMI-S Provider CIMOM リポジトリにあるオブジェクトを表示できます。たとえば 'SMIS list を使用して追加されたストレージ・システムを表示し 'SMIS LUN' を使用して LUN 情報を表示します

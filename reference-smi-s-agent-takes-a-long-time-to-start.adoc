@@ -1,0 +1,19 @@
+---
+permalink: reference-smi-s-agent-takes-a-long-time-to-start.html 
+sidebar: sidebar 
+keywords: netapp smi-s provider 
+summary: NetApp SMI-S プロバイダで発生した問題。 
+---
+= NetApp SMI-S プロバイダの起動に時間がかかります
+:icons: font
+:imagesdir: ./media/
+
+
+* * 概要 *
++
+すでに管理中のストレージシステムを使用している Windows システムでは、「 SMIS cimserver 」コマンドを使用して NetApp SMI-S Provider を起動した場合、プロバイダのローカルキャッシュが読み込まれるまでコマンドは返されません。キャッシュが読み込まれるまで最大 15 分待機し、 NetApp SMI-S プロバイダを使用することはできません。
+
++
+NetApp SMI-S Provider の起動には 'SMIS cimserver コマンドを使用することをお勧めします
+
+

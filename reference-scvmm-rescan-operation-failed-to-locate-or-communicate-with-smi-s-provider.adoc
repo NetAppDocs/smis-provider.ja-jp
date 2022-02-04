@@ -1,0 +1,26 @@
+---
+permalink: reference-scvmm-rescan-operation-failed-to-locate-or-communicate-with-smi-s-provider.html 
+sidebar: sidebar 
+keywords: troubleshooting, issue, encounter 
+summary: NetApp SMI-S プロバイダで発生した問題。 
+---
+= SCVMM の再スキャン処理で SMI-S プロバイダの特定または通信に失敗しました
+:icons: font
+:imagesdir: ./media/
+
+
+* * 問題 *
++
+まれに、 SCVMM が SMI-S プロバイダを特定できないことがあります。
+
+* * 原因 *
++
+この問題は、セキュリティインフラが新しい GPO で更新されている場合に発生することがあります。SMI-S プロバイダホストの再起動後に有効になると、 SCVMM ホストは SMI-S プロバイダまたはホストを信頼しない場合があります。
+
+* * 是正措置 *
++
+.. SMI-S Provider をアンインストールしてから、もう一度インストールします。
+.. SMI-S プロバイダ用の SCVMM で再スキャン操作を実行します。
+
+
+

@@ -1,0 +1,40 @@
+---
+permalink: reference-handling-smi-s-agent-crashes-in-windows.html 
+sidebar: sidebar 
+keywords: troubleshooting, issue, encounter 
+summary: NetApp SMI-S プロバイダで発生した問題。 
+---
+= Windows で SMI-S プロバイダがクラッシュします
+:icons: font
+:imagesdir: ./media/
+
+
+* * 問題 *
++
+Windows で SMI-S プロバイダがクラッシュします。
+
+* * 原因 *
++
+この問題はさまざまな理由で発生し、クラッシュ時に生成されるファイルに記録されます。
+
+* * 是正措置 *
++
+プロバイダを再起動し、次の情報をテクニカルサポートに送信して詳しい分析を依頼してください。
+
++
+** 「 C ： \Program Files （ x86 ） \NetApp\SMIS\Pegasus\Pegasus\logs 」ディレクトリからダンプファイルを作成します
+** C ： \Program Files （ x86 ） \NetApp\SMIS\Pegasus\Pegasus\logs ディレクトリのログファイルです
+** 「 C ： \Program Files （ x86 ） \NetApp\SMIS\Pegasus\Pegasus\traces 」ディレクトリのファイルをトレースします
++
+トレースファイルには、次のようなメッセージも表示されます。
+
++
+`23-May -2013 20:46:36.874 Info cimserver:createMiniDump:SMI-S Agent がクラッシュし、ダンプファイルを生成しようとしています
+
++
+「 2013 年 5 月 23 日 20 時 46 分 37 秒 14 Info cimserver ： createMiniDump ：プロセスを C ： \Program Files （ x86 ） \NetApp\SMIS\Pegasus\logs\SMI-S Agent -8be55da -2011_05_23-20_46_36.dmp 」にダンプしました
+
+** 「 C:\Program Files (x86)\NetApp\SMIS\Pegasus\Pegasus` 」ディレクトリにある「 version.txt 」と「 cimserver_current.conf 」ファイル
+
+
+

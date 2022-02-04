@@ -1,0 +1,25 @@
+---
+permalink: concept-preconfiguration-task-overview.html 
+sidebar: sidebar 
+keywords: smis-provider, first time, validate, preliminary, configuration 
+summary: SMI-S プロバイダを初めて使用する場合は、事前構成を検証する必要があります。 
+---
+= 事前設定の検証
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+SMI-S プロバイダを初めて使用する場合は、事前構成を検証する必要があります。
+
+SMI-S プロバイダを使用する前に、次のタスクを実行します。
+
+. NetApp SMI-S プロバイダから、 CIM サーバが起動していることを確認します。
+. CIM サーバーユーザーを追加します。
+. SMI-S プロバイダ用に少なくとも 1 つのストレージシステムを追加して、ストレージシステムの管理を確認します。
+. * オプション： * CIMOM の自己署名証明書を生成します。
+
+
+デフォルトでは、 SMI-S プロバイダに対して認証が有効になっています。
+
+この検証が完了すると、 NetApp SMI-S プロバイダを使用してストレージシステムの管理を開始できます。

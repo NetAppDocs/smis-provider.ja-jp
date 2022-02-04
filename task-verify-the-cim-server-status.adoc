@@ -1,0 +1,56 @@
+---
+permalink: task-verify-the-cim-server-status.html 
+sidebar: sidebar 
+keywords: install, netapp smi-s provider, verify, cim server, automatic, access 
+summary: NetApp SMI-S Provider をインストールしたら、 SMI-S プロバイダへのアクセス後に CIM サーバが自動的に起動していることを確認する必要があります。 
+---
+= CIM サーバのステータスを確認します
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp SMI-S Provider をインストールしたら、 SMI-S プロバイダへのアクセス後に CIM サーバが自動的に起動していることを確認する必要があります。
+
+
+
+== 作業を開始する前に
+
+Administrator としてのログインクレデンシャルが必要です。
+
+
+
+== 手順
+
+. Administrator としてログインします。
+. 実行可能ファイルが格納されているディレクトリに移動して NetApp SMI-S プロバイダにアクセスします。
++
+[cols="2*"]
+|===
+| 使用するポート | 操作 
+
+
+ a| 
+コマンドプロンプト（管理者特権を持つ）
+ a| 
+「 C ： \Program Files （ x86 ） \NetApp\SMIS\Pegasus\bin` 」に移動します
+
+
+
+ a| 
+* 「スタート」 * > 「プログラム」 * メニュー
+ a| 
+NetApp SMI-S Provider * を右クリックし、「管理者として実行」を選択します。
+
+|===
+. CIM サーバのステータスを表示します。
++
+`*SMIS cimserver status*`
+
++
+CIM サーバが起動している場合は、次のメッセージが表示されます。
+
++
+NetApp SMI-S Provider は実行されています
+
+

@@ -1,0 +1,36 @@
+---
+permalink: task-specify-trace-file-size.html 
+sidebar: sidebar 
+keywords: trace, enable, trace, file, size, environment, variable, 10 mb 
+summary: トレースが有効になっている場合、トレースファイルの最大サイズはデフォルトで 100MB です。環境変数 PEGASUS_TRACE_FILE_size を設定することにより、最大トレース・ファイル・サイズを増減できます。トレースファイルのサイズの値は 10~2GB です。 
+---
+= トレースファイルのサイズを指定してください
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+トレースが有効になっている場合、トレースファイルの最大サイズはデフォルトで 100MB です。環境変数 PEGASUS_TRACE_FILE_size を設定することにより ' 最大トレース・ファイル・サイズを増減できますトレースファイルのサイズの値は 10~2GB です。
+
+
+
+== 作業を開始する前に
+
+* Administrator としてのログインクレデンシャルが必要です。
+* ホストシステムに Administrator としてログインしている必要があります。
+
+
+
+
+== 手順
+
+. NetApp SMI-S Provider にアクセスします。
+. 「 PEGASUS_TRACE_FILE_size 」という名前のシステム環境変数またはユーザー環境変数を、新しいトレース・ファイル・サイズ（バイト単位）で作成します。
++
+環境変数の作成の詳細については '_windows documentation _ を参照してください
+
+. CIM サーバを再起動します。
++
+`*SMIS cimserver restart*`
+
+

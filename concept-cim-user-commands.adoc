@@ -1,0 +1,13 @@
+---
+permalink: concept-cim-user-commands.html 
+sidebar: sidebar 
+keywords: cimuser, command, add, delete, list, cim server, manage, password 
+summary: CIMUser コマンドを使用して、 CIM サーバユーザの追加、削除、一覧表示、およびパスワードの管理を行うことができます。 
+---
+= CIM ユーザーコマンド
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「 CIMUser 」コマンドを使用して、 CIM サーバユーザの追加、削除、一覧表示、およびパスワードの管理を行うことができます。

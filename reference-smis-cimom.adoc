@@ -1,0 +1,55 @@
+---
+permalink: reference-smis-cimom.html 
+sidebar: sidebar 
+keywords: smis cimon, command, cim object manager 
+summary: SMIS CIMOM コマンドは、 CIM オブジェクトマネージャについて説明します。 
+---
+= シモムとう
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「 SMIS CIMOM 」コマンドは、 CIM オブジェクトマネージャについて説明します。
+
+
+
+== 構文
+
+SMIS CIMOM [-t ｛ * http * | * https * ｝ ]
+
+
+
+== 場所
+
+C ： \Program Files （ x86 ） \NetApp\SMIS\Pegasus\bin`
+
+
+
+== 権限レベル
+
+有効なユーザ名とパスワードを持つユーザ
+
+
+
+== パラメータ
+
+* '*[-t { http|http}]*`
++
+使用するプロトコル： HTTPS （デフォルト）または HTTP
+
+
+
+
+
+== 例
+
+「 SMIS CIMOM 」コマンドとその出力は次のとおりです。
+
+[listing]
+----
+smis cimom
+PG_ObjectManager.CreationClassName="PG_ObjectManager",
+Name="PG:1297121114307-10-229-89-243",
+SystemCreationClassName="PG_ComputerSystem",SystemName="10.1.2.3"
+----

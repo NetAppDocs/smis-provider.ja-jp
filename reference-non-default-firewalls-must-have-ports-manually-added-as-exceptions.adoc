@@ -1,0 +1,29 @@
+---
+permalink: reference-non-default-firewalls-must-have-ports-manually-added-as-exceptions.html 
+sidebar: sidebar 
+keywords: troubleshooting, issue, encounter 
+summary: NetApp SMI-S プロバイダで発生した問題。 
+---
+= デフォルト以外のファイアウォールでは、例外として手動でポートを追加する必要があります
+:icons: font
+:imagesdir: ./media/
+
+
+* * 問題 *
++
+デフォルトの Windows ファイアウォール以外のファイアウォールを使用している場合は、次の問題が発生する可能性があります。
+
++
+** SMI-S プロバイダは、削除された SMI-S クライアントと通信できません。
+** SMI-S クライアントが SMI-S プロバイダから通知を受信できません。
+
+
+* * 原因 *
++
+この問題は、例外として必要なポートを手動で追加しないで、デフォルトの Windows ファイアウォール以外のファイアウォールを使用している場合に発生します。
+
+* * 是正措置 *
++
+ファイアウォールに例外としてポート 427 、 5988 、および 5989 を追加します。
+
+

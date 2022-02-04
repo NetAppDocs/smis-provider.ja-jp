@@ -1,0 +1,13 @@
+---
+permalink: concept-slp-commands.html 
+sidebar: sidebar 
+keywords: slptool, command, display information, wbem services 
+summary: slptool コマンドを使用して、 WBEM サービスに関する情報を表示できます。 
+---
+= SLP コマンド
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「 slptool」 コマンドを使用して、 WBEM サービスに関する情報を表示できます。

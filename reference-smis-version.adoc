@@ -1,0 +1,55 @@
+---
+permalink: reference-smis-version.html 
+sidebar: sidebar 
+keywords: smis version, command, display, netapp smi-s provider 
+summary: smis version コマンドを使用すると、 NetApp SMI-S Provider のバージョンが表示されます。 
+---
+= SMIS バージョン
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「 smis version 」コマンドは、 NetApp SMI-S Provider のバージョンを表示します。
+
+
+
+== 構文
+
+「 SMIS バージョン」
+
+「 [-t ｛ * http * | * https * ｝ ] 」
+
+
+
+== 場所
+
+C ： \Program Files （ x86 ） \NetApp\SMIS\Pegasus\bin`
+
+
+
+== 権限レベル
+
+有効なユーザ名とパスワードを持つユーザ
+
+
+
+== パラメータ
+
+* '*[-t { http|http}]*`
++
+使用するプロトコル： HTTPS （デフォルト）または HTTP
+
+
+
+
+
+== 例
+
+「 SMIS version 」コマンドとその出力は次のとおりです。
+
+[listing]
+----
+smis version
+ONTAP_SMIAgentSoftware.InstanceID="ONTAP5.2.2"
+----
