@@ -1,7 +1,7 @@
 ---
 permalink: concept-manage-tracing.html 
 sidebar: sidebar 
-keywords: configure, smis-provider, trace, files, components, trace, write, trace, file location 
+keywords: configure, smi-s provider, trace, files, components, trace, write, trace, file location 
 summary: トレースするコンポーネントの指定、トレースメッセージの書き込み先のターゲット、トレースのレベル、トレースファイルの場所など、 SMI-S プロバイダによるトレースファイルの管理方法を設定できます。 
 ---
 = トレースを管理します

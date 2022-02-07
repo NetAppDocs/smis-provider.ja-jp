@@ -1,7 +1,7 @@
 ---
 permalink: concept-smi-s-profiles.html 
 sidebar: sidebar 
-keywords: smis-provider, profile, subprofile, comply, smis-s v1.7 
+keywords: smi-s provider, profile, subprofile, comply, smis-s v1.7 
 summary: SMI-S プロバイダは、 SMI-S v1.7 に準拠するプロファイルとサブプロファイルを使用します。SMI-S v1.7 の詳細については、 SNIA ：テクノロジ標準とソフトウェアに関するページを参照してください。 
 ---
 = SMI-S プロファイル

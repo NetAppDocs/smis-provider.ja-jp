@@ -384,24 +384,15 @@
   <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="summary">著作権に関する声明、商標、特許などにアクセスできます。</block>
   <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">法的通知</block>
   <block id="6016a2b341113bf496b719905398ecd2" category="section-title">著作権</block>
-  <block id="de6edae22bc37b97b38a15c7f8af62e2" category="paragraph"><block ref="de6edae22bc37b97b38a15c7f8af62e2" category="inline-link-rx"></block></block>
   <block id="126a02652da6de02962cf1b654fd6376" category="section-title">商標</block>
   <block id="c4ce4761e466527d26b3e3d5ed1006fd" category="paragraph">NetApp 、 NetApp のロゴ、および NetApp の商標ページに記載されているマークは、 NetApp, Inc. の商標です。その他の会社名および製品名は、それぞれの所有者の商標である場合があります。</block>
-  <block id="a93bc0a57623c2facaa010825c808507" category="paragraph"><block ref="a93bc0a57623c2facaa010825c808507" category="inline-link-rx"></block></block>
   <block id="be89498d2f8a22ce47c02ba9795fe2af" category="section-title">特許</block>
   <block id="d0b19d36be2c5f16e9aef46c8a452d3d" category="paragraph">ネットアップが所有する特許の最新リストは、次のサイトで入手できます。</block>
-  <block id="547ea2e305891e64d8e744949b0aca2c" category="paragraph"><block ref="547ea2e305891e64d8e744949b0aca2c" category="inline-link-rx"></block></block>
   <block id="56c34c6410dd45c5cec44149ad0ce037" category="section-title">プライバシーポリシー</block>
-  <block id="50921fca0d376fca62102a5e608994e2" category="paragraph"><block ref="50921fca0d376fca62102a5e608994e2" category="inline-link-rx"></block></block>
   <block id="24efa7ee4511563b16144f39706d594f" category="section-title">注意</block>
   <block id="9b73989307c1975dfa4d5e1581e4afe8" category="paragraph">通知ファイルには、ネットアップソフトウェアで使用されるサードパーティの著作権およびライセンスに関する情報が記載されています。</block>
-  <block id="3b82af97dcafa172aa23387cf791feca" category="inline-link">NetApp SMIS プロバイダ向けの通知です</block>
-  <block id="398bd28759c5235bdb5a9e5aa7c50e35" category="paragraph"><block ref="398bd28759c5235bdb5a9e5aa7c50e35" category="inline-link-rx"></block></block>
   <block id="c3cb8bf1ed7183e77f46d5e7e662b2c1" category="summary">ネットアップストレージシステムを検出して管理するコマンドベースのインターフェイスである NetApp SMI-S Provider のインストール方法と管理方法について説明します。</block>
-  <block id="fd508117c0fd3f123e7353306ca51e6a" category="doc">NetApp SMIS - プロバイダドキュメント</block>
-  <block id="80ba3f83a7dec42d3f0c2b9511a26a28" category="paragraph">NetApp SMIS - プロバイダ情報ライブラリへようこそ。ここでは、 NetApp ストレージシステムを検出および管理するコマンドベースのインターフェイスである NetApp SMI-S プロバイダソフトウェアのインストール方法と管理方法を記載したドキュメントを参照できます。</block>
   <block id="9d2169c1c2855b78a7aeaa4f42d27dc7" category="inline-link">ネットアップサポートサイト</block>
-  <block id="8aa9082c24819042404b817138276501" category="paragraph">以前のリリースの NetApp SMIS-Provider のドキュメントは、で入手できます<block ref="64d8ed7ea495c5a62b427fad32607c3d" category="inline-link-rx"></block>。</block>
   <block id="5df91904e284b02eadf3bef23d5a41d4" category="summary">デフォルトでは、 SSL 認証は CIM サーバに対して有効になっています。SMI-S プロバイダのインストール中に、 CIM サーバの自己署名証明書が Pegasus ディレクトリにインストールされます。独自の自己署名証明書を生成し、デフォルトの証明書ではなく、独自の証明書を使用できます。</block>
   <block id="706bd7f5dc0fd11f32957fcfe95a1d86" category="doc">CIM サーバの自己署名証明書を生成します</block>
   <block id="ddf96c0ef94c04177aac4c565af47742" category="paragraph">デフォルトでは、 SSL 認証は CIM サーバに対して有効になっています。SMI-S プロバイダのインストール中に、 CIM サーバの自己署名証明書が「 Pegasus 」ディレクトリにインストールされます。独自の自己署名証明書を生成し、デフォルトの証明書ではなく、独自の証明書を使用できます。</block>
@@ -623,8 +614,6 @@
   <block id="6f37785193648cc0fab41c9b222a7a2f" category="paragraph">たとえば ' ログ・ディレクトリを "serverLogs" に変更する場合は ' 次のコマンドを入力します</block>
   <block id="882d7437047d18007764dd5615ed4aba" category="paragraph">`*cimconfig -s logdir=serverLogs-p *`</block>
   <block id="591f96ef7fe1cdb42aa58f385466c717" category="summary">NetApp SMI-S Provider 5.2.6 ソフトウェアの機能、制限事項、および既知の問題に関する情報を提供します。</block>
-  <block id="655d7e9f201053f0e25987d7ca92a6fc" category="doc">NetApp SMIS - プロバイダリリースノート</block>
-  <block id="296afb93a730015ccf0a911acd6efec5" category="paragraph">。<block ref="f447ffc7c64f700d57e2b9647508055d" category="inline-link-rx"></block> 新機能、アップグレードに関する注意事項、解決済みの問題、既知の制限事項、および既知の問題について説明する。リリースノートにアクセスするには、ネットアップサポートサイトにサインオンする必要があります。</block>
   <block id="58c8d351ba9d95afd9752aa88bf6e0f7" category="doc">SCVMM で SMB 共有のサイズが 0 に縮小されます</block>
   <block id="d19b0ea77723113b53c5f3b5bcfc71cb" category="paragraph">System Center Virtual Machine Manager （ SCVMM ）では、新規または既存の SMB 3.0 共有サイズが 0 になることがあります。</block>
   <block id="286cd1d6f9ece4f567a343b0e19efe60" category="paragraph">この問題は Data ONTAP 、大量の I/O 、新規または既存の SMB 3.0 共有サイズが SCVMM に 0 までず、クォータの再初期化に時間がかかる場合に発生します。そのため、新規または既存の SMB 3.0 共有では新しい VM をプロビジョニングできません。</block>
@@ -902,4 +891,15 @@
   <block id="111bb0fad8beadbe3d12694d63ed1d33" category="sidebar">NetApp SMI-S プロバイダのドキュメント</block>
   <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="sidebar">リリースノート</block>
   <block id="f16f70c449d9f0048b9a3659fcb12389" category="sidebar">トレース設定を指定します</block>
+  <block id="09e95b77ffe81fe465a83ba99efad5c8" category="paragraph"><block ref="09e95b77ffe81fe465a83ba99efad5c8" category="inline-link-rx"></block></block>
+  <block id="7aa531e9acfe2b98e34d2c92fe9846ff" category="paragraph"><block ref="7aa531e9acfe2b98e34d2c92fe9846ff" category="inline-link-rx"></block></block>
+  <block id="d7f1fbcf9ce4e42f705add574d262b2c" category="paragraph"><block ref="d7f1fbcf9ce4e42f705add574d262b2c" category="inline-link-rx"></block></block>
+  <block id="fc248f74f5e36542f7f5627b8610e9a3" category="paragraph"><block ref="fc248f74f5e36542f7f5627b8610e9a3" category="inline-link-rx"></block></block>
+  <block id="e746749730e661dd557a1c067c4dbe7d" category="inline-link">NetApp SMI-S プロバイダに関する通知</block>
+  <block id="de70f78d604c1f59e6de2a196d7084c8" category="paragraph"><block ref="de70f78d604c1f59e6de2a196d7084c8" category="inline-link-rx"></block></block>
+  <block id="b51493aaf7964eeecd1d7dfd7e847d13" category="doc">NetApp SMI-S プロバイダのドキュメント</block>
+  <block id="3222e2c38626bc2823512833cc493f15" category="paragraph">NetApp SMI-S プロバイダ情報ライブラリへようこそ。ここでは、 NetApp ストレージシステムを検出して管理するコマンドベースのインターフェイスである NetApp SMI-S Provider ソフトウェアのインストール方法と管理方法を記載したドキュメントを参照できます。</block>
+  <block id="1456d67be31dd1251336fefc3219f261" category="paragraph">以前のリリースの NetApp SMI-S プロバイダのドキュメントは、にあります<block ref="c1cc34bfdb0a4a31c8960c236e9f731a" category="inline-link-rx"></block>。</block>
+  <block id="336d68bc1f4a7a4dd4d6826a8c11877e" category="doc">NetApp SMI-S プロバイダリリースノート</block>
+  <block id="6e3b9e20f7f45cc7004fb8412900830e" category="paragraph">。<block ref="b5aeaaea80149eaf6be32e7995332412" category="inline-link-rx"></block> 新機能、アップグレードに関する注意事項、解決済みの問題、既知の制限事項、および既知の問題について説明する。</block>
 </blocks>

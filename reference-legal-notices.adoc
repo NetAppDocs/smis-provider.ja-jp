@@ -43,4 +43,4 @@ https://www.netapp.com/us/legal/privacypolicy/index.aspx[]
 
 通知ファイルには、ネットアップソフトウェアで使用されるサードパーティの著作権およびライセンスに関する情報が記載されています。
 
-https://library.netapp.com/ecm/ecm_download_file/ECMLP2864831["NetApp SMIS プロバイダ向けの通知です"]
+https://library.netapp.com/ecm/ecm_download_file/ECMLP2864831["NetApp SMI-S プロバイダに関する通知"^]

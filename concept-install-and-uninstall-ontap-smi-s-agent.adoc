@@ -1,7 +1,7 @@
 ---
 permalink: concept-install-and-uninstall-ontap-smi-s-agent.html 
 sidebar: sidebar 
-keywords: netapp, smis-provider, windows host, downgrade, earlier 
+keywords: netapp, smi-s provider, windows host, downgrade, earlier 
 summary: NetApp SMI-S プロバイダは Windows ホストにインストールできます。ただし、以前のバージョンにリバートまたはダウングレードすることはできません。 
 ---
 = NetApp SMI-S Provider をインストールします

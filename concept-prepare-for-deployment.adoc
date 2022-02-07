@@ -1,7 +1,7 @@
 ---
 permalink: concept-prepare-for-deployment.html 
 sidebar: sidebar 
-keywords: netapp, smis-provider, verify, supported, operating system, platform, licenses, minimum, requirements 
+keywords: netapp, smi-s provider, verify, supported, operating system, platform, licenses, minimum, requirements 
 summary: NetApp SMI-S プロバイダを導入する前に、サポートされているオペレーティングシステムとプラットフォームがあり、必要なライセンスがあり、ホストが最小要件を満たしていることを確認する必要があります。 
 ---
 = 導入を準備
