@@ -12,16 +12,9 @@ summary: NetApp SMI-S Provider をインストールしたら、 SMI-S プロバ
 [role="lead"]
 NetApp SMI-S Provider をインストールしたら、 SMI-S プロバイダへのアクセス後に CIM サーバが自動的に起動していることを確認する必要があります。
 
-
-
-== 作業を開始する前に
-
 Administrator としてのログインクレデンシャルが必要です。
 
-
-
-== 手順
-
+.手順
 . Administrator としてログインします。
 . 実行可能ファイルが格納されているディレクトリに移動して NetApp SMI-S プロバイダにアクセスします。
 +

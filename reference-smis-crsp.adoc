@@ -12,39 +12,20 @@ summary: SMIS CRSP コマンドは、 NetApp SMI-S プロバイダによって�
 [role="lead"]
 「 SMIS CRSP」 コマンドは、 NetApp SMI-S Provider サブプロファイルを含む NetApp SMI-S Provider でサポートされる CIM 登録サブプロファイルについて説明します。
 
-
-
-== 構文
-
 SMIS CRSP
 
 「 [-t ｛ * http * | * https * ｝ ] 」
 
-
-
-== 場所
-
 C ： \Program Files （ x86 ） \NetApp\SMIS\Pegasus\bin`
-
-
-
-== 権限レベル
 
 有効なユーザ名とパスワードを持つユーザ
 
-
-
-== パラメータ
-
+.パラメータ
 * '*[-t { http|http}]*`
 +
 使用するプロトコル： HTTPS （デフォルト）または HTTP
 
 
-
-
-
-== 例
 
 'SMIS CRSP' コマンドとその省略形の出力：
 

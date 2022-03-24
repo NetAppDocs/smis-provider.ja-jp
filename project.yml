@@ -14,8 +14,9 @@ sidebar:
   - title: リリースノート
     url: "/releasenotes.html"
   - title: NetApp SMI-S Provider の概要
-    url: "/concept-data-ontap-smi-s-agent-overview.html"
     entries:
+    - title: 概要
+      url: "/concept-overview.html"
     - title: このリリースの新機能
       url: "/reference-new-in-this-release-smis.html"
     - title: NetApp SMI-S プロバイダの使用
@@ -33,8 +34,9 @@ sidebar:
   - title: 導入のワークフロー
     url: "/concept-deployment-workflow.html"
   - title: 導入を準備
-    url: "/concept-prepare-for-deployment.html"
     entries:
+    - title: 概要
+      url: "/concept-prepare-for-deployment-overview.html"
     - title: サポートされているオペレーティングシステムのバージョン
       url: "/reference-supported-operating-systems.html"
     - title: ハードウェア要件
@@ -46,18 +48,17 @@ sidebar:
     - title: NetApp SMI-S プロバイダソフトウェアパッケージをダウンロードします
       url: "/task-download-smi-s-provider.html"
   - title: NetApp SMI-S Provider をインストールします
-    url: "/concept-install-and-uninstall-ontap-smi-s-agent.html"
     entries:
     - title: Windows ホストに NetApp SMI-S Provider をインストールします
       url: "/task-install-smi-s-agent-on-a-windows-host.html"
   - title: NetApp SMI-S Provider をアンインストールします
-    url: "/concept-uninstall-smi-s-provider.html"
     entries:
     - title: Windows ホストから NetApp SMI-S Provider をアンインストールします
       url: "/task-uninstall-smi-s-agent-from-a-windows-host.html"
   - title: 事前設定の検証
-    url: "/concept-preconfiguration-task-overview.html"
     entries:
+    - title: 概要
+      url: "/concept-preconfiguration-task-overview.html"
     - title: CIM サーバのステータスを確認します
       url: "/task-verify-the-cim-server-status.html"
     - title: CIM サーバーユーザーを追加します
@@ -71,15 +72,17 @@ sidebar:
   - title: ストレージシステムを管理
     url: "/task-manage-storage-systems.html"
   - title: CIM サーバーユーザーを管理します
-    url: "/task-manage-cim-server-users.html"
     entries:
+    - title: 概要
+      url: "/task-manage-cim-server-users-overview.html"
     - title: CIM ユーザーのタイプと関連する操作
       url: "/reference-types-of-cim-users-and-associated-operations.html"
   - title: CIMOM 設定を管理します
     url: "/task-manage-cimom-configuration-settings.html"
   - title: ロギングとトレースを管理します
-    url: "/concept-manage-logging-and-tracing.html"
     entries:
+    - title: 概要
+      url: "/concept-manage-logging-and-tracing-overview.html"
     - title: ログ設定を構成します
       url: "/task-configure-log-settings.html"
       entries:
@@ -100,8 +103,9 @@ sidebar:
     - title: SMI-S コマンドの監査ログを有効または無効にします
       url: "/task-enable-or-disable-audit-log-for-smi-s-commands.html"
   - title: SMI-S プロバイダの詳細設定を管理します
-    url: "/concept-manage-smi-s-agent-advanced-settings.html"
     entries:
+    - title: 概要
+      url: "/concept-manage-smi-s-agent-advanced-settings-overview.html"
     - title: SMI-S プロバイダの自動キャッシュ更新間隔を指定します
       url: "/task-specify-the-smi-s-agent-cache-refresh-interval.html"
     - title: 具体的なジョブの有効期間の値を指定します
@@ -115,26 +119,26 @@ sidebar:
     - title: SMI-S プロバイダで通知を有効にします
       url: "/task-enable-indications-in-smi-s-agent.html"
   - title: SLP を管理します
-    url: "/concept-manage-slp.html"
     entries:
+    - title: 概要
+      url: "/concept-manage-slp-overview.html"
     - title: SLP 設定オプションを指定します
       url: "/concept-specify-slp-configuration-options.html"
       entries:
       - title: slp.conf ファイル管理
         url: "/reference-editing-the-slp-conf-file.html"
   - title: CIMOM コマンド
-    url: "/concept-cimom-commands.html"
     entries:
     - title: cimconfig
       url: "/reference-cimconfig-command-options.html"
   - title: CIM ユーザーコマンド
-    url: "/concept-cim-user-commands.html"
     entries:
     - title: CIMUser
       url: "/reference-cimuser-command-options.html"
   - title: SMI-S プロバイダコマンド
-    url: "/concept-smi-s-provider-commands.html"
     entries:
+    - title: 概要
+      url: "/concept-smi-s-provider-commands-overview.html"
     - title: SMIS が追加します
       url: "/reference-smis-add.html"
     - title: SMIS addsecure
@@ -178,7 +182,6 @@ sidebar:
     - title: SMIS ボリューム
       url: "/reference-smis-volumes.html"
   - title: SLP コマンド
-    url: "/concept-slp-commands.html"
     entries:
     - title: slptool
       url: "/reference-slptool-command-options.html"
@@ -187,8 +190,9 @@ sidebar:
     - title: slptool findsrvs
       url: "/reference-slptool-findsrvs.html"
   - title: SMI-S プロバイダのトラブルシューティングを行います
-    url: "/concept-troubleshoot-smi-s-agent.html"
     entries:
+    - title: 概要
+      url: "/concept-troubleshoot-smi-s-agent-overview.html"
     - title: アクセスが拒否されました
       url: "/reference-access-is-denied-error.html"
     - title: 共有ライブラリのロード中にエラーが発生する可能性があります

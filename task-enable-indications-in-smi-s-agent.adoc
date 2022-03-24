@@ -12,24 +12,14 @@ summary: アラート、ファイルシステムクォータ、およびライ�
 [role="lead"]
 アラート、ファイルシステムクォータ、およびライフサイクルの通知は、デフォルトでは無効になっています。これらの表示を有効にするには ' 環境変数 PEGASUS_DISABLE_DEIGEMENT を 'false' に設定します
 
-
-
-== 作業を開始する前に
-
+.作業を開始する前に
 * Administrator としてのログインクレデンシャルが必要です。
 * ホストシステムに Administrator としてログインしている必要があります。
 
 
-
-
-== このタスクについて
-
 「 PEGASUS_DISABLE_DEISMそれら 」が「 false 」に設定されている場合、 NetApp SMI-S Provider で Alert （「 ONTAP_AlertIndication 」）、 FileSystem Quota （「 ONTAP_FSQuotaIndication 」）、および Lifecycle インジケータが有効になります。
 
-
-
-== 手順
-
+.手順
 . NetApp SMI-S Provider にアクセスします。
 . 「 PEGASUS_DISABLE_DELITES 」環境変数を「 false 」に設定します。
 . CIM サーバを再起動します。

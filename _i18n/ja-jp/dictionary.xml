@@ -6,7 +6,6 @@
   <block id="135b308ed83c53f1516b7c754566d1c4" category="section-title">作業を開始する前に</block>
   <block id="994bc0ff42c205594c4814030a17efe0" category="list-text">Administrator としてのログインクレデンシャルが必要です。</block>
   <block id="26773937c2e2d4c88812921132664b11" category="list-text">ホストシステムに Administrator としてログインしている必要があります。</block>
-  <block id="bbe48fb854ea022537208eeeff822f91" category="section-title">このタスクについて</block>
   <block id="2c490b3eac6005d8eb9fbc14dbe36f9c" category="paragraph">「 PEGASUS_DISABLE_DEISMそれら 」が「 false 」に設定されている場合、 NetApp SMI-S Provider で Alert （「 ONTAP_AlertIndication 」）、 FileSystem Quota （「 ONTAP_FSQuotaIndication 」）、および Lifecycle インジケータが有効になります。</block>
   <block id="f3a29486bed19a90f2da6d007818b427" category="section-title">手順</block>
   <block id="56b362d7bdbaa18e1b3561d819b06f58" category="list-text">NetApp SMI-S Provider にアクセスします。</block>
@@ -50,16 +49,12 @@
   <block id="180678484046c8a3ab98f0203e6e9339" category="summary">smis initiators コマンドは、ストレージシステムのファイバチャネルと iSCSI ポートの情報を表示します。</block>
   <block id="16ff291e6d6d13f763ca86e4e8eb8ba4" category="doc">SMIS イニシエータ</block>
   <block id="1587d4e99e358031eaea1724b454fbaa" category="paragraph">「 smis initiators 」コマンドは、ストレージ・システムのファイバ・チャネルおよび iSCSI ポート情報を表示します。</block>
-  <block id="92e9d6227d5534e7afc27a11179c808e" category="section-title">構文</block>
   <block id="156f23c674849579c407d5cecbca0755" category="paragraph">「 [-t ｛ * http * | * https * ｝ ] 」</block>
-  <block id="ce5bf551379459c1c61d2a204061c455" category="section-title">場所</block>
   <block id="cd6755b2c9f54bad96cb3bc8b5a98590" category="paragraph">C ： \Program Files （ x86 ） \NetApp\SMIS\Pegasus\bin`</block>
-  <block id="916e2ff82dbb18426a464d80b54d1291" category="section-title">権限レベル</block>
   <block id="59ce60cbfbc99e9cb8dc6496fa7b9c6f" category="paragraph">有効なユーザ名とパスワードを持つユーザ</block>
   <block id="3225a10b07f1580f10dee4abc3779e6c" category="section-title">パラメータ</block>
   <block id="7bd03536986773d36c70ec1b56ba369b" category="list-text">'*[-t { http|http}]*`</block>
   <block id="cf5409b8ffde932c63f101760e4f30c1" category="paragraph">使用するプロトコル： HTTPS （デフォルト）または HTTP</block>
-  <block id="0a52730597fb4ffa01fc117d9e71e3a9" category="section-title">例</block>
   <block id="676405883234ee0a42883953471df3fa" category="paragraph">「 smis initiators 」コマンドとその省略形の出力は、次のようになります。</block>
   <block id="3e24f09af977e3a1af1e1cc6f13f637c" category="doc">ランタイムライブラリの問題</block>
   <block id="9ff702207c5c34d0a659bd2093b21d08" category="list-text">* 問題 *</block>
@@ -148,7 +143,6 @@
   <block id="2e0328b56b7df525664960879f95f5d1" category="paragraph">SMIS ツールのデフォルトのタイムアウト値は 180 秒です。</block>
   <block id="15edb1059f99e2228e68e3675566c5dd" category="summary">これらのオプションは slptool コマンドで使用できます。</block>
   <block id="782cf12ad9621d4dbedc43983800f6e7" category="doc">slptool</block>
-  <block id="d0d353e5cf2fcbacba08bc1c92a12307" category="paragraph">これらのオプションは 'slptool' コマンドで使用できます</block>
   <block id="4842f8fa99c29d1241eea4652830125e" category="paragraph">slptool[options] _subcommand _</block>
   <block id="eb569f08830457ab3c7049a3b391c4b6" category="paragraph">管理者（ Windows ）</block>
   <block id="dae8ace18bdcbcc6ae5aece263e14fe8" category="section-title">オプション（ Options ）</block>
@@ -359,7 +353,6 @@
   <block id="ce7b7453e7d182fcfcfa37f70a3827c2" category="doc">SMI-S プロバイダのトラブルシューティングを行います</block>
   <block id="1c8b1ceffcc2e5c41818948735527a7f" category="summary">cimconfig コマンドを使用すると、 CIMOM 設定を管理できます。cimconfig コマンドを入力するか、 NetApp SMI-S Provider 設定値の環境変数を作成したら、 SMIS cimserver restart コマンドを使用して CIM サーバを再起動する必要があります。</block>
   <block id="95cdbdc16fcdaafb435475409dea8c94" category="doc">cimconfig</block>
-  <block id="8f2ee1d8bcd811b5741f3d753e03018b" category="paragraph">cimconfig コマンドを使用すると、 CIMOM の設定を管理できます。「 cimconfig 」コマンドを入力するか、 NetApp SMI-S Provider 設定値の環境変数を作成したら、「 SMIS cimserver restart 」コマンドを使用して CIM サーバを再起動する必要があります。</block>
   <block id="ef64b539714bc207f3683e87baca5652" category="paragraph">「 cimconfig_options_` 」</block>
   <block id="b00916f5307aa32dbca536f03d14c7ff" category="list-text">* -c *</block>
   <block id="1c31447f2eb1c48c57a46f3a61518e99" category="paragraph">コンフィギュレーション設定環境を現在の CIMOM 設定にすることを指定します。</block>
@@ -431,9 +424,7 @@
   <block id="7cad355a706b81e0e0fa33d6480aa45f" category="paragraph">この問題は、セキュリティインフラが新しい GPO で更新されている場合に発生することがあります。SMI-S プロバイダホストの再起動後に有効になると、 SCVMM ホストは SMI-S プロバイダまたはホストを信頼しない場合があります。</block>
   <block id="4cd0860930e09cd27dfcee8471ac354b" category="list-text">SMI-S Provider をアンインストールしてから、もう一度インストールします。</block>
   <block id="f77f4c33944f06bd53375ca2dde35154" category="list-text">SMI-S プロバイダ用の SCVMM で再スキャン操作を実行します。</block>
-  <block id="6d9deec510a9dbd5670d2464c1902c8a" category="summary">cimconfig コマンドを使用すると、 HTTP および HTTPS の有効化と無効化、 HTTP および HTTPS ポート番号の変更など、 CIMOM 設定を構成できます。</block>
   <block id="6a38d5667ddfdd47d4e489f85f431cd1" category="doc">CIMOM コマンド</block>
-  <block id="3dce8828c67441b48d9742719e386d00" category="paragraph">「 cimconfig 」コマンドを使用して、 HTTP および HTTPS のイネーブル化とディセーブル化、 HTTP および HTTPS ポート番号の変更などの CIMOM 設定を行うことができます。</block>
   <block id="9184b8f3aad09d0dfd024d22eb2c70e4" category="doc">ストレージプール（ボリューム）の管理対象スペースの合計が正しくありません</block>
   <block id="cef45fe00693880d7c9e967f4584427a" category="paragraph">FilerView などの別のストレージ管理ツールを使用している場合、ストレージプール（ボリューム）の管理対象スペースの合計サイズが、 SMI-S プロバイダから返されるサイズと異なることがあります。</block>
   <block id="956ed70b442d136dd2a48113d0e2fa43" category="paragraph">SMI-S プロバイダから返されるサイズには WAFL リザーブと Snapshot リザーブが含まれ、 FilerView やその他のツールでは使用可能なスペースのみが表示されて WAFL リザーブと Snapshot リザーブは含まれないため、この不一致が発生します。</block>
@@ -454,12 +445,10 @@
   <block id="db348a1845bc8863a15226d1296f5943" category="summary">NetApp SMI-S Provider を使用すると、ストレージシステムの管理と監視、および LUN とストレージシステムのボリュームの管理が簡単になります。</block>
   <block id="a6a30f6fc1ea5086f1f6a22630def76e" category="doc">NetApp SMI-S プロバイダの使用</block>
   <block id="df0ce33f18f070a6ddb1ef19fb303e98" category="paragraph">NetApp SMI-S Provider を使用して、 System Center 2016 - Virtual Machine Manager または System Center 2016 - Virtual Machine Manager を使用してストレージコントローラを管理できます。</block>
-  <block id="11bc05d561d9d50782c6c96be8f925a3" category="summary">slptool コマンドを使用して、 WBEM サービスに関する情報を表示できます。</block>
   <block id="f367b7dd9d33500bed829af817d25418" category="doc">SLP コマンド</block>
   <block id="44875d713d6680857ff840765882108e" category="paragraph">「 slptool」 コマンドを使用して、 WBEM サービスに関する情報を表示できます。</block>
   <block id="36bc4391121621ccbd43a1d20890bbfb" category="summary">NetApp SMI-S プロバイダソフトウェアをインストールして、 Data ONTAP を実行するストレージシステムを管理できます。デフォルトでは、 NetApp SMI-S プロバイダソフトウェアは C ： \Program Files （ x86 ） \NetApp\SMIS\Pegasus ディレクトリにインストールされます。</block>
   <block id="b7ceff6488201ada2adc1183d4779baa" category="doc">Windows ホストに NetApp SMI-S Provider をインストールします</block>
-  <block id="346ed59a2eefbd3567dc9ec78ac266ca" category="paragraph">NetApp SMI-S プロバイダソフトウェアをインストールして、 Data ONTAP を実行するストレージシステムを管理できます。デフォルトでは、 NetApp SMI-S Provider ソフトウェアは「 C ： \Program Files （ x86 ） \NetApp\SMIS\Pegasus 」ディレクトリにインストールされます。</block>
   <block id="e9c2e2fe706f7cb451b683459ed09ff9" category="paragraph">次のクレデンシャルとソフトウェアが必要です。</block>
   <block id="b08dc0dbe07b37cce50f2429165603b4" category="list-text">Windows 管理者アカウントのログインクレデンシャル</block>
   <block id="99b057df2c522b2a7b89ebfdd2f864f4" category="list-text">NetApp SMI-S プロバイダソフトウェアパッケージ</block>
@@ -680,7 +669,6 @@
   <block id="2404e95dd016724f713868519e1ef7ce" category="paragraph">CIM サーバを再起動します。</block>
   <block id="ca405589dcd974768e24cc65b8a0eb5f" category="list-text">* ステータス *</block>
   <block id="e3e3ed21d218d78f0b06fa5e0fad5c74" category="paragraph">CIM サーバのステータスを取得します。</block>
-  <block id="dbbcf46b590e39b73cffaf7b7db5fa9a" category="summary">NetApp SMI-S プロバイダは Windows ホストにインストールできます。ただし、以前のバージョンにリバートまたはダウングレードすることはできません。</block>
   <block id="f212745ed87111d0afe9888395028611" category="doc">NetApp SMI-S Provider をインストールします</block>
   <block id="f82d8520c4ff1fabe883e81ff945126f" category="summary">SMIS exports コマンドは、ストレージシステムの Network Attached Storage （ NAS ；ネットワーク接続ストレージ）エクスポートを表示します。</block>
   <block id="0e9399f4b71116079d9243ed16264d69" category="doc">SMIS エクスポート</block>
@@ -821,7 +809,6 @@
   <block id="86bb67cb5a15d1e42ce1716ea8249d24" category="paragraph">'*cimconfig -s https ポート =5556 -p *</block>
   <block id="18ee0f99deeb67b9b7a6ef5a3679a09d" category="summary">CIMUser オプションを使用して、 CIM サーバーユーザーの追加、削除、変更、一覧表示を行うことができます。</block>
   <block id="b07eb8a32f2cf3bb81c70d37e7d0aaba" category="doc">CIMUser</block>
-  <block id="a98644a52e80c4640e56c2623f13054c" category="paragraph">「 CIMUser 」オプションを使用して、 CIM サーバユーザの追加、削除、変更、および一覧表示を行うことができます。</block>
   <block id="9552caf388402734ab598332ecd8156b" category="paragraph">「 CIMUser_options_` 」</block>
   <block id="53c04e8ac52d6bd33683c9dbf79535ac" category="list-text">*-a *</block>
   <block id="88553736fbb741bf0629274dee170888" category="paragraph">CIM ユーザーを追加します。</block>
@@ -902,4 +889,8 @@
   <block id="1456d67be31dd1251336fefc3219f261" category="paragraph">以前のリリースの NetApp SMI-S プロバイダのドキュメントは、にあります<block ref="c1cc34bfdb0a4a31c8960c236e9f731a" category="inline-link-rx"></block>。</block>
   <block id="336d68bc1f4a7a4dd4d6826a8c11877e" category="doc">NetApp SMI-S プロバイダリリースノート</block>
   <block id="6e3b9e20f7f45cc7004fb8412900830e" category="paragraph">。<block ref="b5aeaaea80149eaf6be32e7995332412" category="inline-link-rx"></block> 新機能、アップグレードに関する注意事項、解決済みの問題、既知の制限事項、および既知の問題について説明する。</block>
+  <block id="3b878279a04dc47d60932cb294d96259" category="doc">概要</block>
+  <block id="7944dd24fa0a41aefb89e769af345698" category="paragraph">「 cimconfig 」コマンドを使用して、 HTTP および HTTPS のイネーブル化とディセーブル化、 HTTP および HTTPS ポート番号の変更などの CIMOM 設定を行うことができます。「 cimconfig 」コマンドを入力するか、 NetApp SMI-S Provider 設定値の環境変数を作成したら、「 SMIS cimserver restart 」コマンドを使用して CIM サーバを再起動する必要があります。</block>
+  <block id="5a70b73b0330c1b99f99d9417a0348a0" category="paragraph">「 CIMUser 」コマンドを使用して、 CIM サーバユーザの追加、削除、変更、一覧表示、およびパスワードの管理を行うことができます。</block>
+  <block id="b7c334318e075f9c3e093acfe23e8a85" category="paragraph">NetApp SMI-S プロバイダソフトウェアをインストールして、 Data ONTAP を実行するストレージシステムを管理できます。ただし、以前のバージョンにリバートまたはダウングレードすることはできません。デフォルトでは、 NetApp SMI-S Provider ソフトウェアは「 C ： \Program Files （ x86 ） \NetApp\SMIS\Pegasus 」ディレクトリにインストールされます。</block>
 </blocks>

@@ -1,10 +1,10 @@
 ---
-permalink: task-manage-cim-server-users.html 
+permalink: task-manage-cim-server-users-overview.html 
 sidebar: sidebar 
 keywords: smi-s provider, add, remove, remove, cim users, authorized, cim server, cim user, password, modify 
 summary: SMI-S プロバイダを使用して、 CIM サーバの使用を許可された CIM ユーザを追加および削除できます。また、現在のすべての CIM ユーザーを一覧表示し、パスワードを変更することもできます。 
 ---
-= CIM サーバーユーザーを管理します
+= 概要
 :icons: font
 :imagesdir: ./media/
 
@@ -12,18 +12,12 @@ summary: SMI-S プロバイダを使用して、 CIM サーバの使用を許可
 [role="lead"]
 SMI-S プロバイダを使用して、 CIM サーバの使用を許可された CIM ユーザを追加および削除できます。また、現在のすべての CIM ユーザーを一覧表示し、パスワードを変更することもできます。
 
-
-
-== 作業を開始する前に
-
+.作業を開始する前に
 * Administrator としてのログインクレデンシャルが必要です。
 * ホストシステムに Administrator としてログインしている必要があります。
 
 
-
-
-== 手順
-
+.手順
 . NetApp SMI-S Provider にアクセスします。
 . ローカルユーザアカウントを作成します。
 . 管理者グループにユーザを追加します。

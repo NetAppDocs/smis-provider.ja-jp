@@ -12,16 +12,9 @@ summary: NetApp SMI-S Provider をインストールする前に、ネットア�
 [role="lead"]
 NetApp SMI-S Provider をインストールする前に、ネットアップサポートサイトからソフトウェアパッケージをダウンロードする必要があります。
 
-
-
-== 作業を開始する前に
-
 からネットアップサポートサイトのアカウントを作成しておく必要があります https://mysupport.netapp.com/site/global/dashboard["ネットアップサポート"]。
 
-
-
-== 手順
-
+.手順
 . ネットアップサポートサイトの「 * Downloads * > * Software * 」ページにアクセスします。
 . SMI-S プロバイダ ( 以前の Data ONTAP SMI-S エージェント ) を探して、 Windows オペレーティングシステムを選択し、 * Go!* をクリックします。
 . ダウンロードするバージョンを選択するには、 * View & Download * をクリックします。

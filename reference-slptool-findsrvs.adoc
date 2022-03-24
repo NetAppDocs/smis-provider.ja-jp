@@ -12,37 +12,18 @@ summary: slptool findsrvs コマンドは、ネットワーク上で実行され
 [role="lead"]
 slptool findsrvs' コマンドは ' ネットワーク上で実行されている WBEM サービスを検出します
 
-
-
-== 構文
-
 slptool findsrvs_service_`
-
-
-
-== 場所
 
 C ： \Program Files （ x86 ） \NetApp\SMIS\Pegasus\bin`
 
-
-
-== 権限レベル
-
 有効なユーザ名とパスワードを持つユーザ
 
-
-
-== パラメータ
-
+.パラメータ
 * '*_SERVICE_*'
 +
 サービスタイプを指定します。
 
 
-
-
-
-== 例
 
 slptool findsrvs` コマンドとその出力 :
 
