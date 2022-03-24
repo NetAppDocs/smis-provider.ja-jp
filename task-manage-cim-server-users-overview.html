@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head class="at-element-marker">
-  <title>SMI-S プロバイダの詳細設定を管理します</title>
+  <title>概要</title>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
   <meta http-equiv="language" content="en">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:title" content="SMI-S プロバイダの詳細設定を管理します" />
+  <meta property="og:title" content="概要" />
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://docs.netapp.com/ja-jp/smis-provider/concept-manage-smi-s-agent-advanced-settings.html" />
-	<meta property="og:description" content="SMI-S キャッシュの更新間隔、 ONTAPI のタイムアウト、メッセージサービスキューあたりの最大スレッド数など、 SMI-S プロバイダの詳細設定を管理できます。" />
+	<meta property="og:url" content="https://docs.netapp.com/ja-jp/smis-provider/task-manage-cim-server-users-overview.html" />
+	<meta property="og:description" content="SMI-S プロバイダを使用して、 CIM サーバの使用を許可された CIM ユーザを追加および削除できます。また、現在のすべての CIM ユーザーを一覧表示し、パスワードを変更することもできます。" />
   <meta property="og:image" content="https://docs.netapp.com/ja-jp/smis-provider/images/logo-tophat-social.png" />
   <meta property="og:image:alt" content="NetApp Logo" />
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
-  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="SMI-S キャッシュの更新間隔、 ONTAPI のタイムアウト、メッセージサービスキューあたりの最大スレッド数など、 SMI-S プロバイダの詳細設定を管理できます。">
-  <meta name="keywords" content=" manage, advance, smi-s provider, smis-s cache, refresh, interval, ontapi, timeout, thread, service, queue"><!-- Icons -->
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="SMI-S プロバイダを使用して、 CIM サーバの使用を許可された CIM ユーザを追加および削除できます。また、現在のすべての CIM ユーザーを一覧表示し、パスワードを変更することもできます。">
+  <meta name="keywords" content=" smi-s provider, add, remove, remove, cim users, authorized, cim server, cim user, password, modify"><!-- Icons -->
   <link rel="icon" href="/ja-jp/smis-provider/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
@@ -148,8 +148,8 @@
   <div class="page-nav-toolbar">
     <div id="version-dropdown"></div>
     <div class="page-nav-contribute"  >
-      <a target="_blank" href="https://github.com/NetAppDocs/smis-provider/issues/new?body=Page%3A%20[SMI-S プロバイダの詳細設定を管理します](https://docs.netapp.com/ja-jp/smis-provider/concept-manage-smi-s-agent-advanced-settings.html)" class="page-nav-contribute-link" role="button"><img src="/ja-jp/smis-provider/images/discuss-sm.svg" class="github-icon" />ドキュメントの変更をリクエスト</a>
-      <a target="_blank" href="https://github.com/NetAppDocs/smis-provider/blob/main/concept-manage-smi-s-agent-advanced-settings.adoc" class="page-nav-contribute-link" role="button"><img src="/ja-jp/smis-provider/images/edit-sm.svg" class="github-icon" />GitHub で編集</a>
+      <a target="_blank" href="https://github.com/NetAppDocs/smis-provider/issues/new?body=Page%3A%20[概要](https://docs.netapp.com/ja-jp/smis-provider/task-manage-cim-server-users-overview.html)" class="page-nav-contribute-link" role="button"><img src="/ja-jp/smis-provider/images/discuss-sm.svg" class="github-icon" />ドキュメントの変更をリクエスト</a>
+      <a target="_blank" href="https://github.com/NetAppDocs/smis-provider/blob/main/task-manage-cim-server-users-overview.adoc" class="page-nav-contribute-link" role="button"><img src="/ja-jp/smis-provider/images/edit-sm.svg" class="github-icon" />GitHub で編集</a>
       <a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/ja-jp/smis-provider/images/article-sm.svg" class="github-icon" />寄稿者向けガイド</a>
     </div>
     <div class="page-nav-container">
@@ -272,13 +272,13 @@
           <ul class="n-menu__list">
             <li class="n-menu__list-column">
               <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ja-jp/smis-provider/concept-manage-smi-s-agent-advanced-settings.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
+                  <a href="https://docs.netapp.com/ja-jp/smis-provider/task-manage-cim-server-users-overview.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
                 </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/us-en/smis-provider/concept-manage-smi-s-agent-advanced-settings.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
+                  <a href="https://docs.netapp.com/us-en/smis-provider/task-manage-cim-server-users-overview.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
                 </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-cn/smis-provider/concept-manage-smi-s-agent-advanced-settings.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
+                  <a href="https://docs.netapp.com/zh-cn/smis-provider/task-manage-cim-server-users-overview.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
                 </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ko-kr/smis-provider/concept-manage-smi-s-agent-advanced-settings.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
+                  <a href="https://docs.netapp.com/ko-kr/smis-provider/task-manage-cim-server-users-overview.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
                 </li></ul>
             </li>
           </ul>
@@ -367,6 +367,8 @@
 
 
 
+
+
           
         </li>
       </ul>
@@ -390,6 +392,8 @@
             導入を準備
           </a>
           
+
+
 
 
 
@@ -479,6 +483,8 @@
 
 
 
+
+
           
         </li>
       </ul>
@@ -504,6 +510,17 @@
             CIM サーバーユーザーを管理します
           </a>
           
+    <ul class="subfolders" style="display:none;"><li class="active pdf-hide">
+  <a target="_blank" href="/ja-jp/smis-provider/pdfs/pages/task-manage-cim-server-users-overview.pdf" >
+    <img src="/ja-jp/smis-provider/images/pdf.png" width="16" height="16"/>
+    PDF of this page
+  </a>
+</li>
+
+</ul>
+  
+
+
 
 
 
@@ -530,6 +547,8 @@
             ロギングとトレースを管理します
           </a>
           
+
+
 
     
       <ul class="subfolders" style="display:none;">
@@ -641,13 +660,6 @@
 
 
 
-          
-            <li class="active pdf-hide">
-  <a target="_blank" href="/ja-jp/smis-provider/pdfs/pages/concept-manage-smi-s-agent-advanced-settings.pdf" >
-    <img src="/ja-jp/smis-provider/images/pdf.png" width="16" height="16"/>
-    PDF of this page
-  </a>
-</li>
 
 
           
@@ -671,6 +683,8 @@
             SLP を管理します
           </a>
           
+
+
 
     
       <ul class="subfolders" style="display:none;">
@@ -765,6 +779,8 @@
             SMI-S プロバイダコマンド
           </a>
           
+
+
 
 
 
@@ -906,6 +922,8 @@
 
 
 
+
+
           
         </li>
       </ul>
@@ -957,10 +975,12 @@
         NetApp SMI-S プロバイダのドキュメント
       </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/smis-provider/releasenotes.html">
         リリースノート
-      </a></li><li class="subfolders "><a href="/ja-jp/smis-provider/concept-data-ontap-smi-s-agent-overview.html">
+      </a></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> NetApp SMI-S Provider の概要</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/smis-provider/reference-new-in-this-release-smis.html">
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/smis-provider/concept-overview.html">
+        概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/smis-provider/reference-new-in-this-release-smis.html">
         このリリースの新機能
       </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/smis-provider/reference-uses-of-data-ontap-smi-s-agent.html">
         NetApp SMI-S プロバイダの使用
@@ -976,10 +996,12 @@
         SMI-S プロファイル
       </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/smis-provider/concept-deployment-workflow.html">
         導入のワークフロー
-      </a></li><li class="subfolders "><a href="/ja-jp/smis-provider/concept-prepare-for-deployment.html">
+      </a></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> 導入を準備</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/smis-provider/reference-supported-operating-systems.html">
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/smis-provider/concept-prepare-for-deployment-overview.html">
+        概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/smis-provider/reference-supported-operating-systems.html">
         サポートされているオペレーティングシステムのバージョン
       </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/smis-provider/reference-hardware-requirements.html">
         ハードウェア要件
@@ -989,20 +1011,22 @@
         サポートされるクラスタ・プラットフォーム
       </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/smis-provider/task-download-smi-s-provider.html">
         NetApp SMI-S プロバイダソフトウェアパッケージをダウンロードします
-      </a></li></ul></li><li class="subfolders "><a href="/ja-jp/smis-provider/concept-install-and-uninstall-ontap-smi-s-agent.html">
+      </a></li></ul></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> NetApp SMI-S Provider をインストールします</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/smis-provider/task-install-smi-s-agent-on-a-windows-host.html">
         Windows ホストに NetApp SMI-S Provider をインストールします
-      </a></li></ul></li><li class="subfolders "><a href="/ja-jp/smis-provider/concept-uninstall-smi-s-provider.html">
+      </a></li></ul></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> NetApp SMI-S Provider をアンインストールします</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/smis-provider/task-uninstall-smi-s-agent-from-a-windows-host.html">
         Windows ホストから NetApp SMI-S Provider をアンインストールします
-      </a></li></ul></li><li class="subfolders "><a href="/ja-jp/smis-provider/concept-preconfiguration-task-overview.html">
+      </a></li></ul></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> 事前設定の検証</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/smis-provider/task-verify-the-cim-server-status.html">
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/smis-provider/concept-preconfiguration-task-overview.html">
+        概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/smis-provider/task-verify-the-cim-server-status.html">
         CIM サーバのステータスを確認します
       </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/smis-provider/task-add-cim-server-users.html">
         CIM サーバーユーザーを追加します
@@ -1014,17 +1038,21 @@
         CIM サーバを管理します
       </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/smis-provider/task-manage-storage-systems.html">
         ストレージシステムを管理
-      </a></li><li class="subfolders "><a href="/ja-jp/smis-provider/task-manage-cim-server-users.html">
+      </a></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> CIM サーバーユーザーを管理します</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/smis-provider/reference-types-of-cim-users-and-associated-operations.html">
+      <ul><li class="  active "><a class="na-navbar-padding" href="/ja-jp/smis-provider/task-manage-cim-server-users-overview.html">
+        概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/smis-provider/reference-types-of-cim-users-and-associated-operations.html">
         CIM ユーザーのタイプと関連する操作
       </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/smis-provider/task-manage-cimom-configuration-settings.html">
         CIMOM 設定を管理します
-      </a></li><li class="subfolders "><a href="/ja-jp/smis-provider/concept-manage-logging-and-tracing.html">
+      </a></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> ロギングとトレースを管理します</div>
       </a>
-      <ul><li class="subfolders "><a href="/ja-jp/smis-provider/task-configure-log-settings.html">
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/smis-provider/concept-manage-logging-and-tracing-overview.html">
+        概要
+      </a></li><li class="subfolders "><a href="/ja-jp/smis-provider/task-configure-log-settings.html">
         <div class="na-navbar-padding"> ログ設定を構成します</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/smis-provider/reference-logging-levels.html">
@@ -1043,10 +1071,12 @@
         保存するトレースファイルの数を指定します
       </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/smis-provider/task-enable-or-disable-audit-log-for-smi-s-commands.html">
         SMI-S コマンドの監査ログを有効または無効にします
-      </a></li></ul></li><li class="subfolders  active "><a href="/ja-jp/smis-provider/concept-manage-smi-s-agent-advanced-settings.html">
+      </a></li></ul></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> SMI-S プロバイダの詳細設定を管理します</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/smis-provider/task-specify-the-smi-s-agent-cache-refresh-interval.html">
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/smis-provider/concept-manage-smi-s-agent-advanced-settings-overview.html">
+        概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/smis-provider/task-specify-the-smi-s-agent-cache-refresh-interval.html">
         SMI-S プロバイダの自動キャッシュ更新間隔を指定します
       </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/smis-provider/task-specify-the-concrete-job-lifetime-value.html">
         具体的なジョブの有効期間の値を指定します
@@ -1058,28 +1088,32 @@
         NetApp SMI-S プロバイダの認証を有効または無効にします
       </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/smis-provider/task-enable-indications-in-smi-s-agent.html">
         SMI-S プロバイダで通知を有効にします
-      </a></li></ul></li><li class="subfolders "><a href="/ja-jp/smis-provider/concept-manage-slp.html">
+      </a></li></ul></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> SLP を管理します</div>
       </a>
-      <ul><li class="subfolders "><a href="/ja-jp/smis-provider/concept-specify-slp-configuration-options.html">
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/smis-provider/concept-manage-slp-overview.html">
+        概要
+      </a></li><li class="subfolders "><a href="/ja-jp/smis-provider/concept-specify-slp-configuration-options.html">
         <div class="na-navbar-padding"> SLP 設定オプションを指定します</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/smis-provider/reference-editing-the-slp-conf-file.html">
         slp.conf ファイル管理
-      </a></li></ul></li></ul></li><li class="subfolders "><a href="/ja-jp/smis-provider/concept-cimom-commands.html">
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> CIMOM コマンド</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/smis-provider/reference-cimconfig-command-options.html">
         cimconfig
-      </a></li></ul></li><li class="subfolders "><a href="/ja-jp/smis-provider/concept-cim-user-commands.html">
+      </a></li></ul></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> CIM ユーザーコマンド</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/smis-provider/reference-cimuser-command-options.html">
         CIMUser
-      </a></li></ul></li><li class="subfolders "><a href="/ja-jp/smis-provider/concept-smi-s-provider-commands.html">
+      </a></li></ul></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> SMI-S プロバイダコマンド</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/smis-provider/reference-smis-add.html">
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/smis-provider/concept-smi-s-provider-commands-overview.html">
+        概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/smis-provider/reference-smis-add.html">
         SMIS が追加します
       </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/smis-provider/reference-smis-addsecure.html">
         SMIS addsecure
@@ -1121,7 +1155,7 @@
         SMIS バージョン
       </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/smis-provider/reference-smis-volumes.html">
         SMIS ボリューム
-      </a></li></ul></li><li class="subfolders "><a href="/ja-jp/smis-provider/concept-slp-commands.html">
+      </a></li></ul></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> SLP コマンド</div>
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/smis-provider/reference-slptool-command-options.html">
@@ -1130,10 +1164,12 @@
         slptool finaldtrs
       </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/smis-provider/reference-slptool-findsrvs.html">
         slptool findsrvs
-      </a></li></ul></li><li class="subfolders "><a href="/ja-jp/smis-provider/concept-troubleshoot-smi-s-agent.html">
+      </a></li></ul></li><li class="subfolders "><a href="#">
         <div class="na-navbar-padding"> SMI-S プロバイダのトラブルシューティングを行います</div>
       </a>
-      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/smis-provider/reference-access-is-denied-error.html">
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/smis-provider/concept-troubleshoot-smi-s-agent-overview.html">
+        概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/smis-provider/reference-access-is-denied-error.html">
         アクセスが拒否されました
       </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/smis-provider/reference-possible-errors-when-loading-shared-libraries.html">
         共有ライブラリのロード中にエラーが発生する可能性があります
@@ -1236,14 +1272,14 @@
     </div>
   </span>
 </div><div class="n-doc__component-detail-heading-wrap">
-  <h1 class="n-doc__component-detail-heading">SMI-S プロバイダの詳細設定を管理します</h1>
+  <h1 class="n-doc__component-detail-heading">概要</h1>
 </div>
 
 
 <p class="page-details">
   
     
-    <time datetime="2022-02-07 14:21:55 +0000">02/07/2022</time>
+    <time datetime="2022-03-24 21:55:51 +0000">03/24/2022</time>
     
   
 
@@ -1251,7 +1287,98 @@
 </p>
 
 <div class="paragraph lead">
-<p>SMI-S キャッシュの更新間隔、 ONTAPI のタイムアウト、メッセージサービスキューあたりの最大スレッド数など、 SMI-S プロバイダの詳細設定を管理できます。</p>
+<p>SMI-S プロバイダを使用して、 CIM サーバの使用を許可された CIM ユーザを追加および削除できます。また、現在のすべての CIM ユーザーを一覧表示し、パスワードを変更することもできます。</p>
+</div>
+<div class="ulist">
+<div class="title">作業を開始する前に</div>
+<ul>
+<li>
+<p>Administrator としてのログインクレデンシャルが必要です。</p>
+</li>
+<li>
+<p>ホストシステムに Administrator としてログインしている必要があります。</p>
+</li>
+</ul>
+</div>
+<div class="olist arabic">
+<div class="title">手順</div>
+<ol class="arabic">
+<li>
+<p>NetApp SMI-S Provider にアクセスします。</p>
+</li>
+<li>
+<p>ローカルユーザアカウントを作成します。</p>
+</li>
+<li>
+<p>管理者グループにユーザを追加します。</p>
+<div class="paragraph">
+<p>詳細については、 _System documentation を参照してください。</p>
+</div>
+</li>
+<li>
+<p>次のいずれかの操作を実行します。</p>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">アクション</th>
+<th class="tableblock halign-left valign-top">コマンドを実行します</th>
+<th class="tableblock halign-left valign-top">追加情報</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>CIM サーバーユーザーを追加します</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code><strong>CIMUser-A-u_user_name_</strong></code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>コマンドを入力したあと、プロンプトが表示されたらパスワードを入力し直します。</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>CIM サーバの使用を許可されている現在のユーザをリストします</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>「 * CIMUser-l * 」</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>該当なし</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>CIM サーバーユーザーのパスワードを変更します</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code><strong>CIMUser-m-u_user_name_</strong></code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>コマンドを入力したら、と入力し、プロンプトが表示されたら新しいパスワードと古いパスワードをもう一度入力します。</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>CIM サーバーの使用が許可されていない CIM サーバーユーザーを削除します</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code><strong>CIMUser-r -u ユーザー名 _</strong></code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>該当なし</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
 </div>
 
     </article>
