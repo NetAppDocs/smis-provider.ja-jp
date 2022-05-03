@@ -5,6 +5,7 @@ keywords: maximum, systems, netapp smi-s provider, help, understand, performance
 summary: NetApp SMI-S プロバイダで管理するシステムの最大数を把握しておくと、そのパフォーマンス機能を理解しやすくなります。 
 ---
 = NetApp SMI-S プロバイダによるサイジングとパフォーマンス
+:allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 

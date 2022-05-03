@@ -5,6 +5,7 @@ keywords: smi-s provider, asynchronous, operation, concrete job, increase, lifet
 summary: SMI-S プロバイダは、具体的なジョブを作成することで、非同期操作の進行状況を追跡します。具体的なジョブの有効期間をデフォルトの 60 分（ 3600 秒）から 86400 秒（ 24 時間）まで延長できます。 
 ---
 = 具体的なジョブの有効期間の値を指定します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 

@@ -5,6 +5,7 @@ keywords: netapp smi-s provider, manage, monitor, storage systems, lun
 summary: NetApp SMI-S Provider を使用すると、ストレージシステムの管理と監視、および LUN とストレージシステムのボリュームの管理が簡単になります。 
 ---
 = NetApp SMI-S プロバイダの使用
+:allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 

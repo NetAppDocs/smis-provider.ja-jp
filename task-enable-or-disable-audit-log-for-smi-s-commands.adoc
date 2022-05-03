@@ -5,6 +5,7 @@ keywords: incoming smi-s command, record, log files, auditor, wbem client
 summary: 受信した SMI-S コマンドはすべて監査ログファイルに記録されます。監査担当者は、 WBEM クライアントの動作とプロバイダの使用状況を追跡できます。これらの着信コマンドのロギングをイネーブルまたはディセーブルにするには、ダイナミックコンフィギュレーションプロパティを設定します。 
 ---
 = SMI-S コマンドの監査ログを有効または無効にします
+:allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 

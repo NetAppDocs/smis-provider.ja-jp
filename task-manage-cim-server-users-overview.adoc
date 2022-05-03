@@ -5,6 +5,7 @@ keywords: smi-s provider, add, remove, remove, cim users, authorized, cim server
 summary: SMI-S プロバイダを使用して、 CIM サーバの使用を許可された CIM ユーザを追加および削除できます。また、現在のすべての CIM ユーザーを一覧表示し、パスワードを変更することもできます。 
 ---
 = 概要
+:allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 

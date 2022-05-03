@@ -5,6 +5,7 @@ keywords: smis addsecure, smis add, storage system, http connection, configurati
 summary: smis add コマンドは、 HTTP 接続を使用してストレージシステムを構成に追加し、デバイスの管理と監視を可能にします。必要でないかぎり、 SMIS add ではなく SMIS addsecure を使用する必要があります。 
 ---
 = SMIS が追加します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 

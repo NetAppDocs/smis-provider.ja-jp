@@ -5,6 +5,7 @@ keywords: netapp smi-s provider
 summary: NetApp SMI-S プロバイダで発生した問題。 
 ---
 = NetApp SMI-S プロバイダの起動に時間がかかります
+:allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 

@@ -5,6 +5,7 @@ keywords: manage, storage, system, confirm, important, logic, physical, object, 
 summary: 管理対象ストレージシステムを追加したら、 NetApp SMI-S プロバイダ内の重要な論理オブジェクトと物理オブジェクトがすべて表示されることを確認する必要があります。 
 ---
 = 重要なオブジェクトの表示を確認します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 

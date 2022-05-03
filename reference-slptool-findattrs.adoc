@@ -5,6 +5,7 @@ keywords: slptool, findattrs, command, wbem attributes, run, network
 summary: slptool finaldattrs コマンドは、ネットワーク上で実行される WBEM 属性を検出します。 
 ---
 = slptool finaldtrs
+:allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 

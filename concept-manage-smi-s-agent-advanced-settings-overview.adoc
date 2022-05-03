@@ -5,6 +5,7 @@ keywords: manage, advance, smi-s provider, smis-s cache, refresh, interval, onta
 summary: SMI-S キャッシュの更新間隔、 ONTAPI のタイムアウト、メッセージサービスキューあたりの最大スレッド数など、 SMI-S プロバイダの詳細設定を管理できます。 
 ---
 = 概要
+:allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 

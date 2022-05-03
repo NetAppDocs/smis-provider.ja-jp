@@ -5,6 +5,7 @@ keywords: smi-s provider, automatic, information, storage systems
 summary: デフォルトでは、 SMI-S Provider は 60 分（ 3 、 600 秒）ごとにストレージシステムから情報を自動的に取得します。SMIS refresh コマンドを使用すると、特定のストレージシステムを手動で更新できます。 
 ---
 = SMIS 更新
+:allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 

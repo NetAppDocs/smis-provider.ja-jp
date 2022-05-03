@@ -5,6 +5,7 @@ keywords: trace, enable, trace, file, size, environment, variable, 10 mb
 summary: トレースが有効になっている場合、トレースファイルの最大サイズはデフォルトで 100MB です。環境変数 PEGASUS_TRACE_FILE_size を設定することにより、最大トレース・ファイル・サイズを増減できます。トレースファイルのサイズの値は 10~2GB です。 
 ---
 = トレースファイルのサイズを指定してください
+:allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 

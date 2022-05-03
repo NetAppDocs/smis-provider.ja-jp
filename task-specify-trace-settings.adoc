@@ -5,6 +5,7 @@ keywords: trace, enable, important, gathering, information, troubleshooting, per
 summary: トラブルシューティングのための情報を収集するには、トレースを有効にしておくことが重要ですただし、トレースを有効にするとパフォーマンスに影響する可能性があるため、トレースが必要な項目とトレースを有効にする必要がある期間を慎重に検討してください。 
 ---
 = トレース設定を指定しています
+:allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 

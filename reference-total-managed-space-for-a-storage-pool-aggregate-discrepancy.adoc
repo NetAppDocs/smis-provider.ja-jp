@@ -5,6 +5,7 @@ keywords: troubleshooting, issue, encounter
 summary: NetApp SMI-S プロバイダで発生した問題。 
 ---
 = ストレージプール（ボリューム）の管理対象スペースの合計が正しくありません
+:allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 

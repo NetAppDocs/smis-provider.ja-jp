@@ -5,6 +5,7 @@ keywords: smi-s provider, commands, add, delete, list, storage, systems, cimom r
 summary: NetApp SMI-S プロバイダコマンドを使用して、 CIMOM リポジトリでストレージシステムの追加、削除、一覧表示を行うことができます。また、ストレージシステムについて、 NFS および CIFS エクスポートおよびエクスポートされた LUN をリストすることもできます。 
 ---
 = ストレージシステムを管理
+:allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 

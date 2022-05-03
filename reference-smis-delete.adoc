@@ -5,6 +5,7 @@ keywords: smis debate, command, storage system
 summary: smis delete コマンドは、ストレージシステムを削除します。 
 ---
 = SMIS DELETE
+:allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 

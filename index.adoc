@@ -5,6 +5,7 @@ keywords: netapp smi-s provider, documentation, installation, command based inte
 summary: ネットアップストレージシステムを検出して管理するコマンドベースのインターフェイスである NetApp SMI-S Provider のインストール方法と管理方法について説明します。 
 ---
 = NetApp SMI-S プロバイダのドキュメント
+:allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 

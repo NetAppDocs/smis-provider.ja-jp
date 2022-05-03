@@ -5,6 +5,7 @@ keywords: smi-s provider, various types, control, access
 summary: SMI-S プロバイダを使用する場合は、 CIM サーバーへのアクセスを制御するためにユーザーに割り当てることができるさまざまなタイプのユーザーが存在します。 
 ---
 = CIM ユーザーのタイプと関連する操作
+:allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 

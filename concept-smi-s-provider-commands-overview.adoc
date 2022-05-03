@@ -5,6 +5,7 @@ keywords: smis, commands, manage, storage, system, display, cim object manager
 summary: ストレージシステムの管理や CIM オブジェクトマネージャに関する情報の表示には、 SMIS コマンドを使用できます。 
 ---
 = 概要
+:allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 

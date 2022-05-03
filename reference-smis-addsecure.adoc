@@ -5,6 +5,7 @@ keywords: smis, addsecure, command, https connection configuration, manage, moni
 summary: smis addsecure コマンドを使用すると、 HTTPS 接続を使用するストレージシステムを構成に追加して、デバイスの管理と監視を行うことができます。必要でないかぎり、 SMIS add ではなく SMIS addsecure を使用する必要があります。 
 ---
 = SMIS addsecure
+:allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 

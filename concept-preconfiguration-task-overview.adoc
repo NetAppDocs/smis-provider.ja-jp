@@ -5,6 +5,7 @@ keywords: smi-s provider, first time, validate, preliminary, configuration
 summary: SMI-S プロバイダを初めて使用する場合は、事前構成を検証する必要があります。 
 ---
 = 概要
+:allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 

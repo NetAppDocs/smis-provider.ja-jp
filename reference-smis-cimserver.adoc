@@ -5,6 +5,7 @@ keywords: smis cimserver, command, start, stop, restart, cim server
 summary: smis cimserver コマンドは、 CIM サーバの起動、停止、再起動、またはステータスの取得を行います。 
 ---
 = SMIS cimserver
+:allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 

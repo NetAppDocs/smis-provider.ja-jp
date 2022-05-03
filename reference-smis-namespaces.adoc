@@ -5,6 +5,7 @@ keywords: smis namespace, command, list, registered, namespace, cimom
 summary: SMIS Namespaces コマンドは、 CIMOM の登録済みネームスペースを一覧表示します。 
 ---
 = SMIS ネームスペース
+:allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 

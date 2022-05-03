@@ -5,6 +5,7 @@ keywords: smis slpd, command, start, stop, slp daemon
 summary: 'smis slpd コマンドは "SLP デーモンを開始または停止します' 
 ---
 = SMIS slpd
+:allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 

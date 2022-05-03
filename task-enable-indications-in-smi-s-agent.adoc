@@ -5,6 +5,7 @@ keywords: netApp smi-s provider, lifecycle, disable, default, indication
 summary: アラート、ファイルシステムクォータ、およびライフサイクルの通知は、デフォルトでは無効になっています。これらの通知を有効にするには、環境変数 PEGASUS_DISABLE_DISASIうち を false に設定します。 
 ---
 = SMI-S プロバイダで通知を有効にします
+:allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 

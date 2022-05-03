@@ -5,6 +5,7 @@ keywords: new, release
 summary: このリリースの新機能 
 ---
 = このリリースの新機能
+:allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 

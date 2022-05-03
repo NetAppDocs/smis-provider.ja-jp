@@ -5,6 +5,7 @@ keywords: thesmis, disk, command, display, information, storage, systems
 summary: このコマンドを実行すると、ストレージシステムのディスク情報が表示されます。SMIS ディスクは、 Data ONTAP 7-Mode コントローラで使用する場合にのみ機能します。 
 ---
 = SMIS ディスク
+:allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 

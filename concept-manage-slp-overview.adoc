@@ -5,6 +5,7 @@ keywords: slp, service broadcasts, wbem services, slp, ebable, client, applicati
 summary: 'SLP サービスは WBEM サービスをブロードキャストします。SLP サービスが有効になっている場合、クライアントアプリケーションは CIMOM サーバーを検出できます。また "slp.conf ファイルを使用して SLP 構成設定を指定することもできます' 
 ---
 = 概要
+:allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 

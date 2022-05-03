@@ -5,6 +5,7 @@ keywords: smis cimon, command, cim object manager
 summary: SMIS CIMOM コマンドは、 CIM オブジェクトマネージャについて説明します。 
 ---
 = シモムとう
+:allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 

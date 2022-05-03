@@ -5,6 +5,7 @@ keywords: smi-s provider, authentication, enable, errors, system, disable
 summary: デフォルトでは、 SMI-S プロバイダに対して認証が有効になっています。認証によってシステムでエラーが発生した場合は、必要に応じて無効にすることができます。認証を無効にしたあとで再度有効にする場合は、再度有効にすることができます。 
 ---
 = NetApp SMI-S プロバイダの認証を有効または無効にします
+:allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 

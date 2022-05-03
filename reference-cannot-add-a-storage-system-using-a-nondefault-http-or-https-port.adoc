@@ -5,6 +5,7 @@ keywords: troubleshooting, issue, encounter
 summary: NetApp SMI-S プロバイダで発生した問題。 
 ---
 = デフォルト以外の HTTP または HTTPS ポートを使用してストレージシステムを追加することはできません
+:allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 

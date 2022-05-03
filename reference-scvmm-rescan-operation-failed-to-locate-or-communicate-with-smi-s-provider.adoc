@@ -5,6 +5,7 @@ keywords: troubleshooting, issue, encounter
 summary: NetApp SMI-S プロバイダで発生した問題。 
 ---
 = SCVMM の再スキャン処理で SMI-S プロバイダの特定または通信に失敗しました
+:allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 

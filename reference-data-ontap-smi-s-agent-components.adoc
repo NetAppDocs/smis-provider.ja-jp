@@ -5,6 +5,7 @@ keywords: smi-s provider
 summary: NetApp SMI-S Provider は、ストレージシステムの管理と監視を可能にする 3 つのコンポーネントで構成されます。 CIMOM 、プロバイダオブジェクト、リポジトリです。 
 ---
 = NetApp SMI-S プロバイダのコンポーネント
+:allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 

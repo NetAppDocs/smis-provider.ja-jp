@@ -5,6 +5,7 @@ keywords: smis config show, list, current cim server, configuration, information
 summary: smis config show コマンドは、現在の CIM サーバの設定情報をリスト表示します。 
 ---
 = SMIS config show のコマンドです
+:allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 

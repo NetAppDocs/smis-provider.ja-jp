@@ -5,6 +5,7 @@ keywords: troubleshooting, issue, encounter
 summary: NetApp SMI-S プロバイダで発生した問題。 
 ---
 = 警告 26130
+:allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 

@@ -5,6 +5,7 @@ keywords: system message, directory, netapp si-s provider, cim server log
 summary: デフォルトでは、すべてのシステムメッセージがログに記録されます。また、デフォルトでは、システムメッセージログは NetApp SMI-S Provider がインストールされているディレクトリの logs ディレクトリにあります。CIM サーバログに書き込まれるシステムメッセージの場所とレベルを変更できます。たとえば、指定したディレクトリにログを保存し、致命的なシステムメッセージのみを CIM サーバログに書き込むように設定できます。 
 ---
 = ログ設定を構成します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 

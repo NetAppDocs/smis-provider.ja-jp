@@ -5,6 +5,7 @@ keywords: smi-s provider, ontap api, calls, storage systems, ontapi, default, 30
 summary: SMI-S プロバイダは、ストレージシステムに対する ONTAP API （ ONTAPI ）呼び出しを実行します。デフォルトでは、 ONTAPI タイムアウトは 300 秒です。タイムアウトは 60 ～ 300 秒の値に設定できます。 
 ---
 = ONTAPI タイムアウト値を指定します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 

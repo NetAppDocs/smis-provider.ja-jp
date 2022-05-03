@@ -5,6 +5,7 @@ keywords: smi-s provider, configure, least storage, cimom repository storage, wo
 summary: SMI-S プロバイダを設定する前に、 CIMOM リポジトリに少なくとも 1 つのストレージシステムを追加して、ストレージシステムが正しく動作していることを確認する必要があります。 
 ---
 = ストレージシステムが正しく動作していることを確認します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 

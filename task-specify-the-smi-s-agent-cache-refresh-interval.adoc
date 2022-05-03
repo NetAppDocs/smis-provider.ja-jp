@@ -5,6 +5,7 @@ keywords: smi-s provider, automatic, retrieves, information, storage systems, 30
 summary: デフォルトでは、 SMI-S プロバイダはストレージシステムから 5 分（ 300 秒）ごとに情報を自動的に取得します。自動キャッシュ更新間隔（ cache_refresh_SEC 環境変数）は、 300 ～ 86400 秒（ 24 時間）の値に設定できます。 
 ---
 = SMI-S プロバイダの自動キャッシュ更新間隔を指定します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 

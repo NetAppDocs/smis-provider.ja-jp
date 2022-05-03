@@ -5,6 +5,7 @@ keywords: validate, storage systems, cim user, cim server
 summary: ストレージシステムを検証する前に、 CIM サーバの使用を許可された CIM ユーザを追加する必要があります。 
 ---
 = CIM サーバーユーザーを追加します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 

@@ -5,6 +5,7 @@ keywords: smis crp, command, describe, cim registered, profile, netapp smi-s pro
 summary: SMIS CRP コマンドは、 NetApp SMI-S プロバイダでサポートされる CIM 登録プロファイルについて、 NetApp SMI-S プロバイダのプロファイルも含めて説明します。 
 ---
 = SMIS CRP
+:allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 

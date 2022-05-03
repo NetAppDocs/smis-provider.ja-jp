@@ -5,6 +5,7 @@ keywords: smis volume, command, list, traditional, storage systems
 summary: smis volumes コマンドは、ストレージシステムのトラディショナルボリュームとフレキシブルボリュームをリスト表示します。 
 ---
 = SMIS ボリューム
+:allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 

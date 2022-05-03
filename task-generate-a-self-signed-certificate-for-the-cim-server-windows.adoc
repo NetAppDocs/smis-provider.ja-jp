@@ -5,6 +5,7 @@ keywords: ssl authentication, enable, cim server, installation, self-signed cert
 summary: デフォルトでは、 SSL 認証は CIM サーバに対して有効になっています。SMI-S プロバイダのインストール中に、 CIM サーバの自己署名証明書が Pegasus ディレクトリにインストールされます。独自の自己署名証明書を生成し、デフォルトの証明書ではなく、独自の証明書を使用できます。 
 ---
 = CIM サーバの自己署名証明書を生成します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 

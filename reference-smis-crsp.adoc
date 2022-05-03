@@ -5,6 +5,7 @@ keywords: smis crsp, cim-resgistered subprofiles, netapp smi-s provider
 summary: SMIS CRSP コマンドは、 NetApp SMI-S プロバイダによってサポートされる CIM 登録サブプロファイルについて、 NetApp SMI-S プロバイダのサブプロファイルも含めて説明します。 
 ---
 = SMIS CRSP
+:allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 

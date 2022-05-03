@@ -5,6 +5,7 @@ keywords: default, smi-s provider, 80 threads, per message, service queue, machi
 summary: デフォルトでは、 SMI-S Provider はメッセージサービスキューごとに 80 スレッドを許可します。最大スレッド値は 1 ～ 5000 で指定できます。最大スレッド数を増やすと、 SMI-S Provider マシンのパフォーマンスに影響を与える可能性があるため、この値を増やす必要があるかどうかを慎重に検討してください。 
 ---
 = メッセージサービスキューあたりの最大スレッド数を指定します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 

@@ -5,6 +5,7 @@ keywords: troubleshooting, issue, encounter
 summary: NetApp SMI-S プロバイダで発生した問題。 
 ---
 = localhost に接続できません： 5988
+:allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 

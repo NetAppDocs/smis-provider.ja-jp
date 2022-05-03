@@ -5,6 +5,7 @@ keywords: configure, smi-s provider, trace files, specify, levels, message loggi
 summary: SMI-S プロバイダによるログファイルとトレースファイルの管理方法を設定できます。たとえば、ログに記録するメッセージのレベルやログの保存先ディレクトリを指定できます。また、トレースするコンポーネント、トレースメッセージの書き込み先となるターゲット、トレースのレベル、トレースファイルの場所も指定します。 
 ---
 = 概要
+:allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 

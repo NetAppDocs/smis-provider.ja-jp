@@ -5,6 +5,7 @@ keywords: netapp smi-s provider, installing, download
 summary: NetApp SMI-S Provider をインストールする前に、ネットアップサポートサイトからソフトウェアパッケージをダウンロードする必要があります。 
 ---
 = NetApp SMI-S プロバイダソフトウェアパッケージをダウンロードします
+:allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 

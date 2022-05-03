@@ -5,6 +5,7 @@ keywords: smis initiators, display, fibre channel, iscsi, storage systems
 summary: smis initiators コマンドは、ストレージシステムのファイバチャネルと iSCSI ポートの情報を表示します。 
 ---
 = SMIS イニシエータ
+:allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 

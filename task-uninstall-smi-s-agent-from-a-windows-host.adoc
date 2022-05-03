@@ -5,6 +5,7 @@ keywords: uninstall, smi-s provider, version, exiting, installation, uninstall, 
 summary: SMI-S プロバイダは必要に応じてアンインストールできます。たとえば、既存のインストールのバージョンによっては、最新バージョンをインストールする前に既存の SMI-S Provider のインストールをアンインストールする必要があります。 
 ---
 = Windows ホストから NetApp SMI-S Provider をアンインストールします
+:allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 

@@ -5,6 +5,7 @@ keywords: netapp, smi-s provider, verify, supported, operating system, platform,
 summary: NetApp SMI-S プロバイダを導入する前に、サポートされているオペレーティングシステムとプラットフォームがあり、必要なライセンスがあり、ホストが最小要件を満たしていることを確認する必要があります。 
 ---
 = 概要
+:allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 

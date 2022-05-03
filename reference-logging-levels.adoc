@@ -5,6 +5,7 @@ keywords: messages, specify, logged
 summary: ログに記録されるメッセージのタイプを指定できます（たとえば、致命的なシステムメッセージのみを記録する場合）。 
 ---
 = ログレベル
+:allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 

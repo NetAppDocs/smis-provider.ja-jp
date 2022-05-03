@@ -5,6 +5,7 @@ keywords: smis class, command, lists, information,
 summary: smis class コマンドは、指定されたクラスまたはすべてのクラスに関する情報をリストします。 
 ---
 = SMIS クラス
+:allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 

@@ -5,6 +5,7 @@ keywords: netApp smis-s provider, fileshare, ntfs-only volume
 summary: Windows でファイル共有（ CIFS 共有）を使用する場合は、ファイル共有を作成するボリュームが NTFS 専用ボリュームである必要があります。 
 ---
 = Windows でファイル共有を使用するための要件
+:allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 

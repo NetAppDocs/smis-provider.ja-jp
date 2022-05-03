@@ -5,6 +5,7 @@ keywords: slptool, command
 summary: これらのオプションは slptool コマンドで使用できます。 
 ---
 = slptool
+:allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 

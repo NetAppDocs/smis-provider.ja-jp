@@ -5,6 +5,7 @@ keywords: slptool, findsrvs, command, wbem, service, run, network
 summary: slptool findsrvs コマンドは、ネットワーク上で実行されている WBEM サービスを検出します。 
 ---
 = slptool findsrvs
+:allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 

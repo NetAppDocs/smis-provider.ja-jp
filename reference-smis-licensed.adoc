@@ -5,6 +5,7 @@ keywords: smis licensed, command, lists, licensed, storage systems
 summary: SMIS licensed コマンドは、ストレージシステムにライセンスされている機能をリストします。 
 ---
 = SMIS ライセンス
+:allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 

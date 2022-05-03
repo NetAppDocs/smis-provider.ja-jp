@@ -5,6 +5,7 @@ keywords: netApp smi-s provider, cluster, platforms
 summary: NetApp SMI-S Provider は、 Data ONTAP 8.3.2 および ONTAP 9 以降を実行するクラスタプラットフォームをサポートします。 
 ---
 = サポートされるクラスタ・プラットフォーム
+:allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 

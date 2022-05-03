@@ -5,6 +5,7 @@ keywords: client, application, discover, cimom server, shared objects, device sp
 summary: ホスト上のクライアントアプリケーションが SLP （ HTTP 経由の CIM-XML エンコーディング）を使用して CIMOM サーバーを検出すると、クライアントは CIMOM に共有オブジェクト（ CIM 言語でモデル化されたオブジェクト）を照会します。CIMOM は共有オブジェクトをロードし、デバイス固有の API を使用して要求された情報をストレージシステムに照会します。 
 ---
 = NetApp SMI-S プロバイダとホストの相互通信方法
+:allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 

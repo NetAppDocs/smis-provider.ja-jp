@@ -5,6 +5,7 @@ keywords: smis pools, command, list, storage, pools
 summary: SMIS pools コマンドは、ストレージシステムのストレージプールをリストします。 
 ---
 = SMIS プール
+:allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 

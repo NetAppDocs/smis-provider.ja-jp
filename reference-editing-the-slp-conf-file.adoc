@@ -5,6 +5,7 @@ keywords: 'slp.conf, configuration, additional options, manage, service location
 summary: 'slp.conf 構成ファイルには " サービスロケーションプロトコルデーモン (slpd) サーバーを管理するための追加オプションが用意されています' 
 ---
 = slp.conf ファイル管理
+:allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 

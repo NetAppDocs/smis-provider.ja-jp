@@ -5,6 +5,7 @@ keywords: troubleshooting, issue, encounter
 summary: NetApp SMI-S プロバイダで発生した問題。 
 ---
 = ランタイムライブラリの問題
+:allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 :pp: &#43;&#43;

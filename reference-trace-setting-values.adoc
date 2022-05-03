@@ -5,6 +5,7 @@ keywords: specify, comments, trace, target, change, location
 summary: トレースするコンポーネント、トレースターゲット、トレースのレベルを指定できます。デフォルトのトレースファイルの名前と場所を使用しない場合は、必要に応じてトレースファイルの名前と場所を変更できます。 
 ---
 = 設定値をトレースします
+:allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 

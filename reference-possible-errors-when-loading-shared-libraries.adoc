@@ -5,6 +5,7 @@ keywords: troubleshooting, issue, encounter
 summary: NetApp SMI-S プロバイダで発生した問題。 
 ---
 = 共有ライブラリのロード中にエラーが発生する可能性があります
+:allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 

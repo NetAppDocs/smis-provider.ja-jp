@@ -5,6 +5,7 @@ keywords: editing, slp.conf, configuration, file, manage, service location proto
 summary: 'SLP .conf 構成ファイルを編集して " サービスロケーションプロトコルデーモン (slpd) サービスを管理できます' 
 ---
 = SLP 設定オプションを指定します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 

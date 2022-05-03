@@ -5,6 +5,7 @@ keywords: cimuser, options, add, remove, modify, list, cim server
 summary: CIMUser オプションを使用して、 CIM サーバーユーザーの追加、削除、変更、一覧表示を行うことができます。 
 ---
 = CIMUser
+:allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 

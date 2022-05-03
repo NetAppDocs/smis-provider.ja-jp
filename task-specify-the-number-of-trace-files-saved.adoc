@@ -5,6 +5,7 @@ keywords: trace, enable, seven trace file, pegasus trace file num, system, space
 summary: トレースが有効になっている場合、デフォルトで 7 つのトレースファイルが保存されます。さらにトレースファイルを保存する必要がある場合は、環境変数 PEGASUS_TRACE_FILE_NUM を設定して、保存するトレースファイルの最大数を増やすことができます。保存されるトレースファイルの最大数を増やす場合は、トレースファイルを保存するための十分なスペースがハードドライブに確保されていることを確認する必要があります。 
 ---
 = 保存するトレースファイルの数を指定します
+:allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
