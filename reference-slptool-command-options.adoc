@@ -13,10 +13,13 @@ summary: これらのオプションは slptool コマンドで使用できま�
 [role="lead"]
 「 slptool」 コマンドを使用して、 WBEM サービスに関する情報を表示できます。
 
+.構文
 slptool[options] _subcommand _
 
+.場所
 C ： \Program Files （ x86 ） \NetApp\SMIS\Pegasus\bin`
 
+.権限レベル
 管理者（ Windows ）
 
 .オプション（ Options ）

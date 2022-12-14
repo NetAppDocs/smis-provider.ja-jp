@@ -13,12 +13,14 @@ summary: NetApp SMI-S プロバイダソフトウェアをインストールし�
 [role="lead"]
 NetApp SMI-S プロバイダソフトウェアをインストールして、 Data ONTAP を実行するストレージシステムを管理できます。ただし、以前のバージョンにリバートまたはダウングレードすることはできません。デフォルトでは、 NetApp SMI-S Provider ソフトウェアは「 C ： \Program Files （ x86 ） \NetApp\SMIS\Pegasus 」ディレクトリにインストールされます。
 
+.作業を開始する前に
 次のクレデンシャルとソフトウェアが必要です。
 
 * Windows 管理者アカウントのログインクレデンシャル
 * NetApp SMI-S プロバイダソフトウェアパッケージ
 
 
+.このタスクについて
 インストールプロセスの結果、ホストの再起動後も自動的に開始される自動サービスとして、 CIMOM サービス（ Service Control Manager では「 NetApp SMI-S Provider 」という名前）および SLP デーモン（ Service Control Manager では「 Service Location Protocol 」という名前）が実行されます。
 
 このインストール手順には、新規インストールが反映されます。

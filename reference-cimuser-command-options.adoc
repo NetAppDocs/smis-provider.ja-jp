@@ -13,10 +13,13 @@ summary: CIMUser オプションを使用して、 CIM サーバーユーザー�
 [role="lead"]
 「 CIMUser 」コマンドを使用して、 CIM サーバユーザの追加、削除、変更、一覧表示、およびパスワードの管理を行うことができます。
 
+.構文
 「 CIMUser_options_` 」
 
+.場所
 C ： \Program Files （ x86 ） \NetApp\SMIS\Pegasus\bin`
 
+.権限レベル
 管理者（ Windows ）
 
 .オプション（ Options ）
@@ -58,6 +61,7 @@ CIM サーバのバージョンを表示します。
 
 
 
+.例
 パスワード 1 を使用して、 Sydney という名前の CIM ユーザーを作成します。
 
 [listing]

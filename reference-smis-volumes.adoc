@@ -13,6 +13,7 @@ summary: smis volumes コマンドは、ストレージシステムのトラデ�
 [role="lead"]
 「 smis volumes 」コマンドは、ストレージ・システムのトラディショナル・ボリュームとフレキシブル・ボリュームを一覧表示します。
 
+.構文
 「 SMIS VOLUMES 」
 
 「 [-t ｛ * http * | * https * ｝ ] 」
@@ -22,8 +23,10 @@ summary: smis volumes コマンドは、ストレージシステムのトラデ�
 clustered Data ONTAP の場合は、「 SMIS volumes 」コマンドではなく、「 SMIS pools 」コマンドを使用する必要があります。
 
 ====
+.場所
 C ： \Program Files （ x86 ） \NetApp\SMIS\Pegasus\bin`
 
+.権限レベル
 有効なユーザ名とパスワードを持つユーザ
 
 .パラメータ
@@ -33,6 +36,7 @@ C ： \Program Files （ x86 ） \NetApp\SMIS\Pegasus\bin`
 
 
 
+.例
 「 SMIS VOLUMES 」コマンドとその省略形の出力は、次のようになります。
 
 [listing]

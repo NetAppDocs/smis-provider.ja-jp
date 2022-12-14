@@ -13,10 +13,13 @@ summary: slptool finaldattrs コマンドは、ネットワーク上で実行さ
 [role="lead"]
 slptool finaldattrs コマンドは ' ネットワーク上で実行される WBEM 属性を検出します
 
+.構文
 slptool findattrs_service_`
 
+.場所
 C ： \Program Files （ x86 ） \NetApp\SMIS\Pegasus\bin`
 
+.権限レベル
 有効なユーザ名とパスワードを持つユーザ
 
 .パラメータ
@@ -26,6 +29,7 @@ C ： \Program Files （ x86 ） \NetApp\SMIS\Pegasus\bin`
 
 
 
+.例
 slptool finaldattrs' コマンドとその省略された出力 :
 
 [listing]

@@ -13,14 +13,17 @@ summary: smis delete コマンドは、ストレージシステムを削除し�
 [role="lead"]
 「 smis delete 」コマンドは、ストレージ・システムを削除します。
 
+.構文
 「 SMIS DELETE 」
 
 `_storage_sys_`
 
 「 [-t ｛ * http * | * https * ｝ ] 」
 
+.場所
 C ： \Program Files （ x86 ） \NetApp\SMIS\Pegasus\bin`
 
+.権限レベル
 管理者（ Windows ）
 
 .パラメータ
@@ -34,6 +37,7 @@ C ： \Program Files （ x86 ） \NetApp\SMIS\Pegasus\bin`
 
 
 
+.例
 mgt-1 というラベルのストレージシステムを削除します。
 
 `*SMIS DELETE mgt-1 *`

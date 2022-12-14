@@ -13,15 +13,18 @@ summary: SMIS Namespaces コマンドは、 CIMOM の登録済みネームスペ
 [role="lead"]
 「 smis Namespaces 」コマンドは、 CIMOM の登録済みネームスペースをリストします。
 
+.構文
 SMIS ネームスペース
 
 「 [-t ｛ * http * | * https * ｝ ] 」
 
+.場所
 C ： \Program Files （ x86 ） \NetApp\SMIS\Pegasus\bin`
 
 * Windows ： C ： \Program Files （ x86 ） \NetApp\SMIS\Pegasus\bin`
 
 
+.権限レベル
 有効なユーザ名とパスワードを持つユーザ
 
 .パラメータ
@@ -31,6 +34,7 @@ C ： \Program Files （ x86 ） \NetApp\SMIS\Pegasus\bin`
 
 
 
+.例
 「 smis Namespaces 」コマンドとその省略形の出力：
 
 [listing]

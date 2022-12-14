@@ -13,6 +13,7 @@ summary: smis addsecure コマンドを使用すると、 HTTPS 接続を使用�
 [role="lead"]
 「 SMIS addsecure 」コマンドを使用すると、 HTTPS 接続を備えたストレージシステムを構成に追加して、デバイスの管理と監視を行うことができます。必要でない限り、「 SMIS add 」ではなく「 SMIS addsecure 」を使用する必要があります。
 
+.構文
 「 SMIS addsecure 」
 
 `_storage_sys storage_sys_user_`+`[-t { * http * | * https * }]`
@@ -22,8 +23,10 @@ summary: smis addsecure コマンドを使用すると、 HTTPS 接続を使用�
 米国以外の言語を使用するオペレーティングシステム英語では 'addsecure' コマンドは使用できません
 
 ====
+.場所
 C ： \Program Files （ x86 ） \NetApp\SMIS\Pegasus\bin`
 
+.権限レベル
 管理者（ Windows ）
 
 .パラメータ
@@ -61,6 +64,7 @@ IP アドレスを指定する場合は、 IPv4 または IPv6 を使用でき�
 
 SSL で暗号化された接続を無効にする前に、環境のセキュリティ上の要件を確認してください。
 
+.例
 IPv4 を使用して、 IP アドレス 10.32.1.4 over HTTPS のストレージシステムを追加します。
 
 [listing]
@@ -69,6 +73,7 @@ smis addsecure 10.32.1.4 user2 password2
 ----
 ストレージシステムが追加されたことを示す確認メッセージが表示されます。エラーが発生した場合は、エラーメッセージが表示されます。
 
+.例
 IPv6 over HTTPS を使用してストレージシステムを追加します。
 
 [listing]
@@ -78,6 +83,7 @@ smis addsecure 1001:2::3:4 user2 password2
 ----
 ストレージシステムが追加されたことを示す確認メッセージが表示されます。エラーが発生した場合は、エラーメッセージが表示されます。
 
+.例
 英語以外のシステムで、 IP アドレスが 10.32.1.4 の HTTPS を使用してストレージシステムを追加する：
 
 [listing]

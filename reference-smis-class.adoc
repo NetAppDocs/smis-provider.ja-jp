@@ -13,12 +13,15 @@ summary: smis class コマンドは、指定されたクラスまたはすべて
 [role="lead"]
 「 smis class 」コマンドは、指定されたクラスまたはすべてのクラスに関する情報をリストします。
 
+.構文
 「 SMIS クラス」
 
 `_name_space_{* Niall*|{* e*|*ni*|*gi*|*gc*}_class_name_}[-t ｛ * http * |*https*}]
 
+.場所
 C ： \Program Files （ x86 ） \NetApp\SMIS\Pegasus\bin`
 
+.権限レベル
 有効なユーザ名とパスワードを持つユーザ
 
 .パラメータ
@@ -56,6 +59,7 @@ CIMOM がサポートするネームスペース
 
 
 
+.例
 「 smis class 」コマンドとその省略された出力は次のとおりです。
 
 [listing]

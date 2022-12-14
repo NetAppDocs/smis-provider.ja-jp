@@ -18,6 +18,7 @@ summary: アラート、ファイルシステムクォータ、およびライ�
 * ホストシステムに Administrator としてログインしている必要があります。
 
 
+.このタスクについて
 「 PEGASUS_DISABLE_DEISMそれら 」が「 false 」に設定されている場合、 NetApp SMI-S Provider で Alert （「 ONTAP_AlertIndication 」）、 FileSystem Quota （「 ONTAP_FSQuotaIndication 」）、および Lifecycle インジケータが有効になります。
 
 .手順

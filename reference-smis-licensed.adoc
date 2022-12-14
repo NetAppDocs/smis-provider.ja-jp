@@ -13,12 +13,15 @@ summary: SMIS licensed コマンドは、ストレージシステムにライセ
 [role="lead"]
 「 SMIS licensed 」コマンドは、ストレージ・システムのライセンス機能を一覧表示します。
 
+.構文
 SMIS ライセンス
 
 「 [-t ｛ * http * | * https * ｝ ] 」
 
+.場所
 C ： \Program Files （ x86 ） \NetApp\SMIS\Pegasus\bin`
 
+.権限レベル
 有効なユーザ名とパスワードを持つユーザ
 
 .パラメータ
@@ -28,6 +31,7 @@ C ： \Program Files （ x86 ） \NetApp\SMIS\Pegasus\bin`
 
 
 
+.例
 「 SMIS licensed 」コマンドとその省略された出力は次のとおりです。
 
 [listing]

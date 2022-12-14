@@ -13,10 +13,13 @@ summary: SMIS exports コマンドは、ストレージシステムの Network A
 [role="lead"]
 「 SMIS exports 」コマンドは、ストレージシステムの NAS （ Network Attached Storage ）エクスポートを表示します。
 
+.構文
 SMIS は '[-t ｛ * http * | * https * ｝ ] をエクスポートします
 
+.場所
 C ： \Program Files （ x86 ） \NetApp\SMIS\Pegasus\bin`
 
+.権限レベル
 有効なユーザ名とパスワードを持つユーザ
 
 .パラメータ
@@ -26,6 +29,7 @@ C ： \Program Files （ x86 ） \NetApp\SMIS\Pegasus\bin`
 
 
 
+.例
 「 SMIS exports 」コマンドとその出力：
 
 [listing]

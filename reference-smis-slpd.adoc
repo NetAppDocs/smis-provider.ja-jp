@@ -13,14 +13,18 @@ summary: 'smis slpd コマンドは "SLP デーモンを開始または停止し
 [role="lead"]
 'SMIS slpd' コマンドは 'SLP デーモンを開始または停止します
 
+.構文
 「 SMIS slpd 」と入力します
 
 '{*start*|*stop*}`
 
+.場所
 C ： \Program Files （ x86 ） \NetApp\SMIS\Pegasus\bin`
 
+.権限レベル
 管理者（ Windows ）
 
+.例
 SLP デーモンを開始します。
 
 [listing]

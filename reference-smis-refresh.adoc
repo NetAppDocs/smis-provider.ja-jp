@@ -13,12 +13,15 @@ summary: デフォルトでは、 SMI-S Provider は 60 分（ 3 、 600 秒）�
 [role="lead"]
 デフォルトでは、 SMI-S Provider は 60 分（ 3 、 600 秒）ごとにストレージシステムから情報を自動的に取得します。特定のストレージ・システムを手動で更新するには 'SMIS refresh コマンドを使用します
 
+.構文
 「 SMISE_RESIST_SYSTEM_IP_` 」と入力します
 
 「 [-t ｛ * http * | * https * ｝ ] 」
 
+.場所
 C ： \Program Files （ x86 ） \NetApp\SMIS\Pegasus\bin`
 
+.権限レベル
 有効なユーザ名とパスワードを持つユーザ
 
 .パラメータ
@@ -32,6 +35,7 @@ C ： \Program Files （ x86 ） \NetApp\SMIS\Pegasus\bin`
 
 
 
+.例
 「 smis refresh 」コマンドとその出力は次のとおりです。
 
 [listing]

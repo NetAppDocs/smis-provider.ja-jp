@@ -13,12 +13,16 @@ summary: smis config show コマンドは、現在の CIM サーバの設定情�
 [role="lead"]
 「 smis config show 」コマンドは、現在の CIM サーバの設定情報を一覧表示します。
 
+.構文
 「 SMIS config show 」
 
+.場所
 C ： \Program Files （ x86 ） \NetApp\SMIS\Pegasus\bin`
 
+.権限レベル
 管理者（ Windows ）
 
+.例
 「 smis config show 」とその出力は次のとおりです。
 
 [listing]
