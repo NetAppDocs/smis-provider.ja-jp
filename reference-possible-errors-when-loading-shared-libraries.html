@@ -1,0 +1,2584 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head class="at-element-marker">
+  <title>共有ライブラリのロード中にエラーが発生する可能性があります</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+  <meta http-equiv="language" content="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="共有ライブラリのロード中にエラーが発生する可能性があります" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://docs.netapp.com/ja-jp/smis-provider/reference-possible-errors-when-loading-shared-libraries.html" />
+	<meta property="og:description" content="NetApp SMI-S プロバイダで発生した問題。" />
+  <meta property="og:image" content="https://docs.netapp.com/ja-jp/smis-provider/images/logo-tophat-social.png" />
+  <meta property="og:image:alt" content="NetApp Logo" />
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="encoding" content="utf-8">
+  <meta http-equiv="nss-type" content="Product Documentation"/>
+  <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="NetApp SMI-S プロバイダで発生した問題。">
+  <meta name="keywords" content=" troubleshooting, issue, encounter"><!-- Icons -->
+  <link rel="icon" href="/ja-jp/smis-provider/images/favicon.ico" type="image/x-icon">
+
+  <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
+
+
+  <!-- Combined CSS -->
+  <link rel="stylesheet" type="text/css" href="/ja-jp/smis-provider/css/ie-netappdocs.css">
+
+  
+  <link rel="stylesheet" href="/ja-jp/smis-provider/css/ie-landing-page.css" type="text/css">
+  <link rel="stylesheet" href="/ja-jp/smis-provider/css/ie-tabbed-blocks.css" type="text/css">
+  <!-- Canonical url -->
+  <link rel="canonical" href="https://docs.netapp.com/ja-jp/smis-provider/reference-possible-errors-when-loading-shared-libraries.html" />
+  <link rel="alternate" hreflang="x-default" href="https://docs.netapp.com/us-en/smis-provider/reference-possible-errors-when-loading-shared-libraries.html" />
+  <link rel="alternate" hreflang="ja" href="https://docs.netapp.com/ja-jp/smis-provider/reference-possible-errors-when-loading-shared-libraries.html" />
+  <link rel="alternate" hreflang="en" href="https://docs.netapp.com/us-en/smis-provider/reference-possible-errors-when-loading-shared-libraries.html" />
+  <link rel="alternate" hreflang="ko" href="https://docs.netapp.com/ko-kr/smis-provider/reference-possible-errors-when-loading-shared-libraries.html" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://docs.netapp.com/zh-cn/smis-provider/reference-possible-errors-when-loading-shared-libraries.html" />
+  <link rel="alternate" hreflang="zh-Hant" href="https://docs.netapp.com/zh-tw/smis-provider/reference-possible-errors-when-loading-shared-libraries.html" />
+  <link rel="alternate" hreflang="de" href="https://docs.netapp.com/de-de/smis-provider/reference-possible-errors-when-loading-shared-libraries.html" />
+  <link rel="alternate" hreflang="es" href="https://docs.netapp.com/es-es/smis-provider/reference-possible-errors-when-loading-shared-libraries.html" />
+  <link rel="alternate" hreflang="fr" href="https://docs.netapp.com/fr-fr/smis-provider/reference-possible-errors-when-loading-shared-libraries.html" />
+  <link rel="alternate" hreflang="it" href="https://docs.netapp.com/it-it/smis-provider/reference-possible-errors-when-loading-shared-libraries.html" />
+  <!-- Top level site integrations -->
+<script type="text/javascript" src="https://cdn.cookielaw.org/consent/72570c5c-fe30-465f-b0e0-b77f7fb4ae34/OtAutoBlock.js"></script>
+    <script type="text/javascript" src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" charset="UTF-8" data-document-language="true" data-domain-script="72570c5c-fe30-465f-b0e0-b77f7fb4ae34"></script>
+    <script type="text/javascript">function OptanonWrapper() { }</script>
+    <script type="text/plain" class="optanon-category-C0002" src="https://assets.adobedtm.com/60287eadf1ee/c284da483c83/launch-e9ff3acac59f.min.js"></script>
+    <script class="optanon-category-C0001">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.setAttributeNode(d.createAttribute('data-ot-ignore'));j.setAttribute('class','optanon-category-C0001');j.async=true;
+        j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl+'';f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-MD73T9M');</script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  
+  <script>
+    $(document).ready(function() {
+      const MASTHEAD_OFFSET = 65;
+      const SECTIONS = $("main h2, main h3");
+      // PAGE NAV - Init
+      if (SECTIONS.length == 0) {
+        // remove if there is no elements
+        /*
+        $("#ie-right-navbar").remove();
+        $("#ie-right-navbar-collapse").remove();
+        */
+      } else {
+        $(".page-nav-title").css('display', 'block');
+        for (var i = 0; i < SECTIONS.length; i++) {
+          var sectionId = $(SECTIONS[i]).attr('id');
+          var sectionName = $(SECTIONS[i]).text();
+          var subClass = $(SECTIONS[i]).is("h3") ? ' page-nav__sublink' : '';
+          $("#page-menu").append('<li class="page-nav-item"><a href="#' + sectionId + '" class="page-nav__link' + subClass + '">' + sectionName + '</a></li>');
+        }
+        $(".page-nav__link").first().addClass('page-nav__link--active');
+      }
+    });
+  </script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+  <!-- Used for Product Family Page Sidebar Visibility --><!-- Used to import Promise for IE. Required for SearchKit -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/ja-jp/smis-provider/js/na-search.js'></script><script src='/ja-jp/smis-provider/js/ie-clouddocs.js'></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script><script>
+    /*
+      $(document).ready(function() {
+          $("#tg-sb-link").click(function() {
+              $("#tg-sb-sidebar").toggle();
+              $("#tg-sb-content").toggleClass('col-md-9');
+              $("#tg-sb-content").toggleClass('col-md-12');
+              $("#tg-sb-icon").toggleClass('fa-toggle-on');
+              $("#tg-sb-icon").toggleClass('fa-toggle-off');
+          });
+      });
+      */
+  </script>
+  <script src='/ja-jp/smis-provider/js/custom-dropdown.js'></script>
+  <script src='/ja-jp/smis-provider/js/FileSaver.min.js'></script>
+  <script src='/ja-jp/smis-provider/js/jszip-utils.min.js'></script>
+  <script src='/ja-jp/smis-provider/js/jszip.min.js'></script><script src='/ja-jp/smis-provider/js/ie-pdf-ux.js'></script></head>
+
+
+  <body class role="document" data-flavor=""><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MD73T9M"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><div id="page" class="">
+      <div id="ie-phone-menu" class=""></div>
+      <div id="ie-content-wrap" class="">
+        <nav id="ie-new-header">
+    <ul>
+        <li id="ie-phone-menu-button">
+            <a href="#">
+                <image id="" src="/ja-jp/smis-provider/images/hamburger.svg" alt="menu" />
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.netapp.com/ja/">
+                <image id="ie-header-logo" src="/ja-jp/smis-provider/images/netapp_logo.svg" alt="netapp" />
+            </a>
+        </li>
+        <li id="ie-header-docs">
+            <a href="https://www.netapp.com/ja/support-and-training/documentation/">ドキュメント</a>
+        </li>
+
+        <!-- Empty container to push header left with or without lang selector -->
+        <li id="empty-container" style="margin-left: auto">
+        </li>
+        <!-- Start Language Selector --><li id="ie-language-dropdown">
+            <div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+                <div class="custom-dropdown-select custom-dropdown-select-lang">
+                    <img src="/ja-jp/smis-provider/images/language_white_24dp.svg" class="n-globe__icon" />
+                    <span class="lang-name">日本語</span>
+                    <img src="/ja-jp/smis-provider/images/dropdown-arrow.svg" alt="" class="custom-icon chevrondown header invisible" />
+                    <img src="/ja-jp/smis-provider/images/dropdown-arrow.svg" alt="" class="custom-icon chevronup header" />
+                    </button>
+                </div>
+
+                <ul class="custom-dropdown-menu"><li>
+                        <a href="https://docs.netapp.com/ja-jp/smis-provider/reference-possible-errors-when-loading-shared-libraries.html"
+                            target="_self"><span translate="no" class="notranslate">日本語</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/us-en/smis-provider/reference-possible-errors-when-loading-shared-libraries.html"
+                            target="_self"><span translate="no" class="notranslate">English</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/ko-kr/smis-provider/reference-possible-errors-when-loading-shared-libraries.html"
+                            target="_self"><span translate="no" class="notranslate">한국어</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/zh-cn/smis-provider/reference-possible-errors-when-loading-shared-libraries.html"
+                            target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/zh-tw/smis-provider/reference-possible-errors-when-loading-shared-libraries.html"
+                            target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/de-de/smis-provider/reference-possible-errors-when-loading-shared-libraries.html"
+                            target="_self"><span translate="no" class="notranslate">Deutsch</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/es-es/smis-provider/reference-possible-errors-when-loading-shared-libraries.html"
+                            target="_self"><span translate="no" class="notranslate">Español</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/fr-fr/smis-provider/reference-possible-errors-when-loading-shared-libraries.html"
+                            target="_self"><span translate="no" class="notranslate">Français</span></a>
+                    </li><li>
+                        <a href="https://docs.netapp.com/it-it/smis-provider/reference-possible-errors-when-loading-shared-libraries.html"
+                            target="_self"><span translate="no" class="notranslate">Italiano</span></a>
+                    </li></ul>
+            </div>
+            </li>
+        <!-- End Language Selector -->
+
+
+        <li id="ie-allnetapp">
+            <div id="allnetapp-dropdown" class="custom-dropdown custom-dropdown-allnetapp">
+                <div class="custom-dropdown-select custom-dropdown-select-allnetapp">
+                    <img src="/ja-jp/smis-provider/images/apps_white_24dp.svg" alt="" class="allnetapp-icon" />
+                    <span class="allnetapp-name">すべてのNetApp</span>
+                    <img src="/ja-jp/smis-provider/images/dropdown-arrow.svg" alt="" class="custom-icon chevrondown header invisible" />
+                    <img src="/ja-jp/smis-provider/images/dropdown-arrow.svg" alt="" class="custom-icon chevronup header" />
+                    </button>
+                </div>
+
+                <ul class="custom-dropdown-menu allnetapp-dropdown">
+                    <li>
+                        <a href="https://bluexp.netapp.com/ja/"
+                            target="_self"><span translate="no" class="notranslate">BlueXP</span></a>
+                    </li>
+                    <li>
+                        <a href="https://mysupport.netapp.com/site/"
+                            target="_self"><span translate="no" class="notranslate">サポート</span></a>
+                    </li>
+                    <li>
+                        <a href="https://kb-ja.netapp.com/"
+                            target="_self"><span translate="no" class="notranslate">ナレッジ ベース</span></a>
+                    </li>
+                    <li>
+                        <a href="https://www.netapp.com/support-and-training/netapp-learning-services/"
+                            target="_self"><span translate="no" class="notranslate">トレーニング</span></a>
+                    </li>
+                </ul>
+            </div>
+
+        </li>
+
+    </ul>
+</nav>
+
+        <main id="n-main-content" class="n-main-content">
+          <!-- Start Documentation Content -->
+<div class="ie-main">
+
+<div id="ie-new-sidebar-collapse" style="display: none">
+    <img id="sidebar-expand" class="ie-searchbox-icon" src="/ja-jp/smis-provider/images/double_arrow.svg" alt="" />
+</div>
+<div id="ie-new-sidebar">
+    <div id="ie-product-identity-lockup">
+        <div id="sidebar-collapse" class="">
+            <img src="/ja-jp/smis-provider/images/double_arrow.svg" alt="" />
+        </div>
+        <div id="ie-breadcrumb" class="">
+  <ul class="ie-breadcrumb">
+    <li class="">
+      <a href="https://docs.netapp.com">すべてのドキュメント</a>
+    </li>
+    
+    
+
+    
+  </ul>
+  
+  <div class="ie-product-name" >
+    <!--<a href="/ja-jp/smis-provider/">-->
+      NetApp SMI-S Provider
+    <!--</a>-->
+  </div>
+</div>
+
+            
+
+        
+        
+
+<div id="ie-searchbox" class="ie-searchbox-sidebar ">
+    <img class="ie-searchbox-icon" src="/ja-jp/smis-provider/images/loupe.svg" alt=""/>
+    <div id="react-search" 
+        data-search-html="/ja-jp/smis-provider/search.html" 
+        data-type="widget"
+        data-placeholder="ドキュメントを検索"
+        data-no-results-found="{query}に一致する結果は見つかりませんでした"
+        data-did-you-mean="{suggestion}で検索しています。"
+        data-no-results-found-did-you-mean="{query}に一致する結果は見つかりませんでした。{suggestion}で検索しますか？"
+        data-results-found="{hitCount}件の結果が見つかりました"
+        data-error-message="エラーが発生しました。もう一度お試しください。"
+        data-error-reset="検索をリセット"
+        data-sk-es-pf-indexes="" 
+        data-flavor="">
+    </div>
+</div>
+        
+    </div>
+    <div id="ie-new-toc"><script>
+  let sidebarAccordion = true;
+
+  /* specific css rules for Mac */
+  if(navigator.platform.match('Mac') !== null) {
+    document.body.setAttribute('class', 'OSX');
+  }
+
+</script>
+
+<div id="ie-sidebar-container">
+  <ul id="ie-sidebar-list" ><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="NetApp SMI-S プロバイダのドキュメント"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/index.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/ja-jp/smis-provider/index.html">
+        NetApp SMI-S プロバイダのドキュメント
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="リリースノート"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/releasenotes.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/ja-jp/smis-provider/releasenotes.html">
+        リリースノート
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="NetApp SMI-S Provider の概要"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ja-jp/smis-provider/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ja-jp/smis-provider/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> NetApp SMI-S Provider の概要</div>-->
+         NetApp SMI-S Provider の概要
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="概要"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/concept-overview.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/concept-overview.html">
+        概要
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="このリリースの新機能"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/reference-new-in-this-release-smis.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/reference-new-in-this-release-smis.html">
+        このリリースの新機能
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="NetApp SMI-S プロバイダの使用"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/reference-uses-of-data-ontap-smi-s-agent.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/reference-uses-of-data-ontap-smi-s-agent.html">
+        NetApp SMI-S プロバイダの使用
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="NetApp SMI-S プロバイダによるサイジングとパフォーマンス"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/reference-smi-s-agent-sizing-and-performance-information.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/reference-smi-s-agent-sizing-and-performance-information.html">
+        NetApp SMI-S プロバイダによるサイジングとパフォーマンス
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="NetApp SMI-S プロバイダのコンポーネント"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/reference-data-ontap-smi-s-agent-components.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/reference-data-ontap-smi-s-agent-components.html">
+        NetApp SMI-S プロバイダのコンポーネント
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="NetApp SMI-S プロバイダプロトコル"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/reference-data-ontap-smi-s-agent-protocols.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/reference-data-ontap-smi-s-agent-protocols.html">
+        NetApp SMI-S プロバイダプロトコル
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="NetApp SMI-S プロバイダとホストの相互通信方法"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/concept-how-smi-s-provider-interacts-with-a-host.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/concept-how-smi-s-provider-interacts-with-a-host.html">
+        NetApp SMI-S プロバイダとホストの相互通信方法
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="SMI-S プロファイル"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/concept-smi-s-profiles.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/concept-smi-s-profiles.html">
+        SMI-S プロファイル
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="導入のワークフロー"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/concept-deployment-workflow.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/ja-jp/smis-provider/concept-deployment-workflow.html">
+        導入のワークフロー
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="導入を準備"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ja-jp/smis-provider/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ja-jp/smis-provider/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 導入を準備</div>-->
+         導入を準備
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="概要"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/concept-prepare-for-deployment-overview.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/concept-prepare-for-deployment-overview.html">
+        概要
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="サポートされているオペレーティングシステムのバージョン"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/reference-supported-operating-systems.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/reference-supported-operating-systems.html">
+        サポートされているオペレーティングシステムのバージョン
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ハードウェア要件"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/reference-hardware-requirements.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/reference-hardware-requirements.html">
+        ハードウェア要件
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="必要なライセンス"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/reference-required-licenses.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/reference-required-licenses.html">
+        必要なライセンス
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="サポートされるクラスタ・プラットフォーム"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/reference-supported-platforms.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/reference-supported-platforms.html">
+        サポートされるクラスタ・プラットフォーム
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="NetApp SMI-S プロバイダソフトウェアパッケージをダウンロードします"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/task-download-smi-s-provider.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/task-download-smi-s-provider.html">
+        NetApp SMI-S プロバイダソフトウェアパッケージをダウンロードします
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="NetApp SMI-S Provider をインストールします"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ja-jp/smis-provider/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ja-jp/smis-provider/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> NetApp SMI-S Provider をインストールします</div>-->
+         NetApp SMI-S Provider をインストールします
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Windows ホストに NetApp SMI-S Provider をインストールします"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/task-install-smi-s-agent-on-a-windows-host.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/task-install-smi-s-agent-on-a-windows-host.html">
+        Windows ホストに NetApp SMI-S Provider をインストールします
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="NetApp SMI-S Provider をアンインストールします"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ja-jp/smis-provider/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ja-jp/smis-provider/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> NetApp SMI-S Provider をアンインストールします</div>-->
+         NetApp SMI-S Provider をアンインストールします
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Windows ホストから NetApp SMI-S Provider をアンインストールします"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/task-uninstall-smi-s-agent-from-a-windows-host.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/task-uninstall-smi-s-agent-from-a-windows-host.html">
+        Windows ホストから NetApp SMI-S Provider をアンインストールします
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="事前設定の検証"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ja-jp/smis-provider/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ja-jp/smis-provider/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> 事前設定の検証</div>-->
+         事前設定の検証
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="概要"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/concept-preconfiguration-task-overview.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/concept-preconfiguration-task-overview.html">
+        概要
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="CIM サーバのステータスを確認します"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/task-verify-the-cim-server-status.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/task-verify-the-cim-server-status.html">
+        CIM サーバのステータスを確認します
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="CIM サーバーユーザーを追加します"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/task-add-cim-server-users.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/task-add-cim-server-users.html">
+        CIM サーバーユーザーを追加します
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ストレージシステムが正しく動作していることを確認します"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/task-verify-that-the-storage-system-is-working-correctly.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/task-verify-that-the-storage-system-is-working-correctly.html">
+        ストレージシステムが正しく動作していることを確認します
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="CIM サーバの自己署名証明書を生成します"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/task-generate-a-self-signed-certificate-for-the-cim-server-windows.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/task-generate-a-self-signed-certificate-for-the-cim-server-windows.html">
+        CIM サーバの自己署名証明書を生成します
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="CIM サーバを管理します"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/task-manage-the-cim-server.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/ja-jp/smis-provider/task-manage-the-cim-server.html">
+        CIM サーバを管理します
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ストレージシステムを管理"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/task-manage-storage-systems.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/ja-jp/smis-provider/task-manage-storage-systems.html">
+        ストレージシステムを管理
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="CIM サーバーユーザーを管理します"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ja-jp/smis-provider/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ja-jp/smis-provider/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> CIM サーバーユーザーを管理します</div>-->
+         CIM サーバーユーザーを管理します
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="概要"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/task-manage-cim-server-users-overview.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/task-manage-cim-server-users-overview.html">
+        概要
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="CIM ユーザーのタイプと関連する操作"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/reference-types-of-cim-users-and-associated-operations.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/reference-types-of-cim-users-and-associated-operations.html">
+        CIM ユーザーのタイプと関連する操作
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="CIMOM 設定を管理します"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/task-manage-cimom-configuration-settings.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/ja-jp/smis-provider/task-manage-cimom-configuration-settings.html">
+        CIMOM 設定を管理します
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ロギングとトレースを管理します"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ja-jp/smis-provider/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ja-jp/smis-provider/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> ロギングとトレースを管理します</div>-->
+         ロギングとトレースを管理します
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="概要"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/concept-manage-logging-and-tracing-overview.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/concept-manage-logging-and-tracing-overview.html">
+        概要
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ログ設定を構成します"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/task-configure-log-settings.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/task-configure-log-settings.html">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ja-jp/smis-provider/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ja-jp/smis-provider/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> ログ設定を構成します</div>-->
+         ログ設定を構成します
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ログレベル"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/reference-logging-levels.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/smis-provider/reference-logging-levels.html">
+        ログレベル
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="トレースを管理します"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/concept-manage-tracing.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/concept-manage-tracing.html">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ja-jp/smis-provider/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ja-jp/smis-provider/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> トレースを管理します</div>-->
+         トレースを管理します
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="トレース設定を指定します"
+      data-li-level="3" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/task-specify-trace-settings.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/smis-provider/task-specify-trace-settings.html">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ja-jp/smis-provider/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ja-jp/smis-provider/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> トレース設定を指定します</div>-->
+         トレース設定を指定します
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="設定値をトレースします"
+      data-li-level="4#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/reference-trace-setting-values.html" 
+    ><a class="ie-sidebar-menuitem-4 " href="/ja-jp/smis-provider/reference-trace-setting-values.html">
+        設定値をトレースします
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="トレースファイルのサイズを指定してください"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/task-specify-trace-file-size.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/smis-provider/task-specify-trace-file-size.html">
+        トレースファイルのサイズを指定してください
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="保存するトレースファイルの数を指定します"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/task-specify-the-number-of-trace-files-saved.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/smis-provider/task-specify-the-number-of-trace-files-saved.html">
+        保存するトレースファイルの数を指定します
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="SMI-S コマンドの監査ログを有効または無効にします"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/task-enable-or-disable-audit-log-for-smi-s-commands.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/task-enable-or-disable-audit-log-for-smi-s-commands.html">
+        SMI-S コマンドの監査ログを有効または無効にします
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="SMI-S プロバイダの詳細設定を管理します"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ja-jp/smis-provider/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ja-jp/smis-provider/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> SMI-S プロバイダの詳細設定を管理します</div>-->
+         SMI-S プロバイダの詳細設定を管理します
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="概要"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/concept-manage-smi-s-agent-advanced-settings-overview.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/concept-manage-smi-s-agent-advanced-settings-overview.html">
+        概要
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="SMI-S プロバイダの自動キャッシュ更新間隔を指定します"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/task-specify-the-smi-s-agent-cache-refresh-interval.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/task-specify-the-smi-s-agent-cache-refresh-interval.html">
+        SMI-S プロバイダの自動キャッシュ更新間隔を指定します
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="具体的なジョブの有効期間の値を指定します"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/task-specify-the-concrete-job-lifetime-value.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/task-specify-the-concrete-job-lifetime-value.html">
+        具体的なジョブの有効期間の値を指定します
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ONTAPI タイムアウト値を指定します"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/task-specify-the-ontapi-timeout-value.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/task-specify-the-ontapi-timeout-value.html">
+        ONTAPI タイムアウト値を指定します
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="メッセージサービスキューあたりの最大スレッド数を指定します"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/task-specify-the-maximum-number-of-threads-per-message-service-queue.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/task-specify-the-maximum-number-of-threads-per-message-service-queue.html">
+        メッセージサービスキューあたりの最大スレッド数を指定します
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="NetApp SMI-S プロバイダの認証を有効または無効にします"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/task-enable-or-disable-authentication-for-smi-s-provider.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/task-enable-or-disable-authentication-for-smi-s-provider.html">
+        NetApp SMI-S プロバイダの認証を有効または無効にします
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="SMI-S プロバイダで通知を有効にします"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/task-enable-indications-in-smi-s-agent.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/task-enable-indications-in-smi-s-agent.html">
+        SMI-S プロバイダで通知を有効にします
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="SLP を管理します"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ja-jp/smis-provider/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ja-jp/smis-provider/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> SLP を管理します</div>-->
+         SLP を管理します
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="概要"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/concept-manage-slp-overview.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/concept-manage-slp-overview.html">
+        概要
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="SLP 設定オプションを指定します"
+      data-li-level="2" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/concept-specify-slp-configuration-options.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/concept-specify-slp-configuration-options.html">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ja-jp/smis-provider/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ja-jp/smis-provider/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> SLP 設定オプションを指定します</div>-->
+         SLP 設定オプションを指定します
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="slp.conf ファイル管理"
+      data-li-level="3#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/reference-editing-the-slp-conf-file.html" 
+    ><a class="ie-sidebar-menuitem-3 " href="/ja-jp/smis-provider/reference-editing-the-slp-conf-file.html">
+        slp.conf ファイル管理
+      </a></li></ul></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="CIMOM コマンド"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ja-jp/smis-provider/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ja-jp/smis-provider/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> CIMOM コマンド</div>-->
+         CIMOM コマンド
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="cimconfig"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/reference-cimconfig-command-options.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/reference-cimconfig-command-options.html">
+        cimconfig
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="CIM ユーザーコマンド"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ja-jp/smis-provider/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ja-jp/smis-provider/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> CIM ユーザーコマンド</div>-->
+         CIM ユーザーコマンド
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="CIMUser"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/reference-cimuser-command-options.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/reference-cimuser-command-options.html">
+        CIMUser
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="SMI-S プロバイダコマンド"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ja-jp/smis-provider/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ja-jp/smis-provider/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> SMI-S プロバイダコマンド</div>-->
+         SMI-S プロバイダコマンド
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="概要"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/concept-smi-s-provider-commands-overview.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/concept-smi-s-provider-commands-overview.html">
+        概要
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="SMIS が追加します"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/reference-smis-add.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/reference-smis-add.html">
+        SMIS が追加します
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="SMIS addsecure"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/reference-smis-addsecure.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/reference-smis-addsecure.html">
+        SMIS addsecure
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="シモムとう"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/reference-smis-cimom.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/reference-smis-cimom.html">
+        シモムとう
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="SMIS cimserver"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/reference-smis-cimserver.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/reference-smis-cimserver.html">
+        SMIS cimserver
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="SMIS クラス"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/reference-smis-class.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/reference-smis-class.html">
+        SMIS クラス
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="SMIS config show のコマンドです"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/reference-smis-config-show.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/reference-smis-config-show.html">
+        SMIS config show のコマンドです
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="SMIS CRP"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/reference-smis-crp.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/reference-smis-crp.html">
+        SMIS CRP
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="SMIS CRSP"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/reference-smis-crsp.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/reference-smis-crsp.html">
+        SMIS CRSP
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="SMIS DELETE"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/reference-smis-delete.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/reference-smis-delete.html">
+        SMIS DELETE
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="SMIS ディスク"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/reference-smis-disks.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/reference-smis-disks.html">
+        SMIS ディスク
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="SMIS エクスポート"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/reference-smis-exports.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/reference-smis-exports.html">
+        SMIS エクスポート
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="SMIS イニシエータ"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/reference-smis-initiators.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/reference-smis-initiators.html">
+        SMIS イニシエータ
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="SMIS ライセンス"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/reference-smis-licensed.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/reference-smis-licensed.html">
+        SMIS ライセンス
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="SMIS リスト"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/reference-smis-list.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/reference-smis-list.html">
+        SMIS リスト
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="SMIS LUN の場合"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/reference-smis-luns.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/reference-smis-luns.html">
+        SMIS LUN の場合
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="SMIS ネームスペース"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/reference-smis-namespaces.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/reference-smis-namespaces.html">
+        SMIS ネームスペース
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="SMIS プール"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/reference-smis-pools.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/reference-smis-pools.html">
+        SMIS プール
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="SMIS 更新"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/reference-smis-refresh.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/reference-smis-refresh.html">
+        SMIS 更新
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="SMIS slpd"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/reference-smis-slpd.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/reference-smis-slpd.html">
+        SMIS slpd
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="SMIS バージョン"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/reference-smis-version.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/reference-smis-version.html">
+        SMIS バージョン
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="SMIS ボリューム"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/reference-smis-volumes.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/reference-smis-volumes.html">
+        SMIS ボリューム
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="SLP コマンド"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ja-jp/smis-provider/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ja-jp/smis-provider/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> SLP コマンド</div>-->
+         SLP コマンド
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="slptool"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/reference-slptool-command-options.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/reference-slptool-command-options.html">
+        slptool
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="slptool finaldtrs"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/reference-slptool-findattrs.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/reference-slptool-findattrs.html">
+        slptool finaldtrs
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="slptool findsrvs"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/reference-slptool-findsrvs.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/reference-slptool-findsrvs.html">
+        slptool findsrvs
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="SMI-S プロバイダのトラブルシューティングを行います"
+      data-li-level="1" 
+      class=" sidebar-folder    "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="" 
+    ><a class="ie-sidebar-menuitem-1  ie-sidebar-button " href="#">
+        <img class="ie-sidebar-icon ie-sidebar-button open" src="/ja-jp/smis-provider/images/link_expand.svg" alt="" />
+        <img class="ie-sidebar-icon ie-sidebar-button close" src="/ja-jp/smis-provider/images/link_collapse.svg" alt="" />
+        <!--<div class="" style="display: inline;"> SMI-S プロバイダのトラブルシューティングを行います</div>-->
+         SMI-S プロバイダのトラブルシューティングを行います
+      </a>
+      <ul class="">
+        <li 
+      data-pdf-exists="true" 
+      data-pdf-filename="概要"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/concept-troubleshoot-smi-s-agent-overview.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/concept-troubleshoot-smi-s-agent-overview.html">
+        概要
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="アクセスが拒否されました"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/reference-access-is-denied-error.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/reference-access-is-denied-error.html">
+        アクセスが拒否されました
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="共有ライブラリのロード中にエラーが発生する可能性があります"
+      data-li-level="2#" 
+      class="  ie-sidebar-selected    "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/reference-possible-errors-when-loading-shared-libraries.html">
+        共有ライブラリのロード中にエラーが発生する可能性があります
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="接続が拒否されました"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/reference-connection-refused-error.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/reference-connection-refused-error.html">
+        接続が拒否されました
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ストレージシステムが返す： ONTAP 要素がない"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/reference-no-ontap-element-in-response-error.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/reference-no-ontap-element-in-response-error.html">
+        ストレージシステムが返す： ONTAP 要素がない
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="クローン処理や Snapshot 処理は実行できません"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/reference-clone-snapshot-operations-are-not-allowed.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/reference-clone-snapshot-operations-are-not-allowed.html">
+        クローン処理や Snapshot 処理は実行できません
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="警告 26130"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/reference-warning-26130.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/reference-warning-26130.html">
+        警告 26130
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="HostAgentAccessDenied （ ID ： 26263 ）"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/reference-hostagentaccessdenied-error-id-26263.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/reference-hostagentaccessdenied-error-id-26263.html">
+        HostAgentAccessDenied （ ID ： 26263 ）
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="localhost に接続できません： 5988"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/reference-cannot-connect-to-localhost-5988-error.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/reference-cannot-connect-to-localhost-5988-error.html">
+        localhost に接続できません： 5988
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="localhost に接続できません： 5989"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/reference-cannot-connect-to-localhost-5989-error.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/reference-cannot-connect-to-localhost-5989-error.html">
+        localhost に接続できません： 5989
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Windows で SMI-S プロバイダがクラッシュします"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/reference-handling-smi-s-agent-crashes-in-windows.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/reference-handling-smi-s-agent-crashes-in-windows.html">
+        Windows で SMI-S プロバイダがクラッシュします
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="問題特殊文字を含むパスワードの入力"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/reference-entering-passwords-containing-special-characters.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/reference-entering-passwords-containing-special-characters.html">
+        問題特殊文字を含むパスワードの入力
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="SMI-S プロバイダで使用されるクローンテクノロジ"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/concept-clone-technology-used-in-smi-s-agent-4-0.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/concept-clone-technology-used-in-smi-s-agent-4-0.html">
+        SMI-S プロバイダで使用されるクローンテクノロジ
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="重要なオブジェクトの表示を確認します"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/concept-confirm-visibility-of-important-objects.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/concept-confirm-visibility-of-important-objects.html">
+        重要なオブジェクトの表示を確認します
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="Windows でファイル共有を使用するための要件"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/concept-requirement-for-using-fileshares-in-windows.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/concept-requirement-for-using-fileshares-in-windows.html">
+        Windows でファイル共有を使用するための要件
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="デフォルト以外のファイアウォールでは、例外として手動でポートを追加する必要があります"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/reference-non-default-firewalls-must-have-ports-manually-added-as-exceptions.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/reference-non-default-firewalls-must-have-ports-manually-added-as-exceptions.html">
+        デフォルト以外のファイアウォールでは、例外として手動でポートを追加する必要があります
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="デフォルト以外の HTTP または HTTPS ポートを使用してストレージシステムを追加することはできません"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/reference-cannot-add-a-storage-system-using-a-nondefault-http-or-https-port.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/reference-cannot-add-a-storage-system-using-a-nondefault-http-or-https-port.html">
+        デフォルト以外の HTTP または HTTPS ポートを使用してストレージシステムを追加することはできません
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="サーバからの応答がありません"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/reference-no-response-from-the-server.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/reference-no-response-from-the-server.html">
+        サーバからの応答がありません
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ランタイムライブラリの問題"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/reference-runtime-library-issues.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/reference-runtime-library-issues.html">
+        ランタイムライブラリの問題
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="NetApp SMI-S プロバイダの起動に時間がかかります"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/reference-smi-s-agent-takes-a-long-time-to-start.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/reference-smi-s-agent-takes-a-long-time-to-start.html">
+        NetApp SMI-S プロバイダの起動に時間がかかります
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ストレージプール（ボリューム）の管理対象スペースの合計が正しくありません"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/reference-total-managed-space-for-a-storage-pool-aggregate-discrepancy.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/reference-total-managed-space-for-a-storage-pool-aggregate-discrepancy.html">
+        ストレージプール（ボリューム）の管理対象スペースの合計が正しくありません
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="ネットワークパスが見つかりません"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/reference-network-path-not-found-error-during-vm-deployment.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/reference-network-path-not-found-error-during-vm-deployment.html">
+        ネットワークパスが見つかりません
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="要求されたサービスを完了するための十分なシステムリソースがありません"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/reference-vm-provisioning-in-scvmm-fails-with-insufficient-system-resources-error.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/reference-vm-provisioning-in-scvmm-fails-with-insufficient-system-resources-error.html">
+        要求されたサービスを完了するための十分なシステムリソースがありません
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="SCVMM で SMB 共有のサイズが 0 に縮小されます"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/reference-smb-share-size-dropping-to-0-in-scvmm.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/reference-smb-share-size-dropping-to-0-in-scvmm.html">
+        SCVMM で SMB 共有のサイズが 0 に縮小されます
+      </a></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="SCVMM の再スキャン処理で SMI-S プロバイダの特定または通信に失敗しました"
+      data-li-level="2#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/reference-scvmm-rescan-operation-failed-to-locate-or-communicate-with-smi-s-provider.html" 
+    ><a class="ie-sidebar-menuitem-2 " href="/ja-jp/smis-provider/reference-scvmm-rescan-operation-failed-to-locate-or-communicate-with-smi-s-provider.html">
+        SCVMM の再スキャン処理で SMI-S プロバイダの特定または通信に失敗しました
+      </a></li></ul></li><li 
+      data-pdf-exists="true" 
+      data-pdf-filename="法的通知"
+      data-li-level="1#" 
+      class="   "
+      dale-page-url="/reference-possible-errors-when-loading-shared-libraries.html" 
+      dale-entry-url="/reference-legal-notices.html" 
+    ><a class="ie-sidebar-menuitem-1 " href="/ja-jp/smis-provider/reference-legal-notices.html">
+        法的通知
+      </a></li></ul>
+</div>
+<script>
+
+  $(".ie-sidebar-button").click(function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+
+    expandedLI = $('li.ie-sidebar-expand')
+
+    const li = $(this).closest("li");
+
+    const parentsLI = $(li).parents('li');
+
+    expandedLI.map(element => {
+      if (sidebarAccordion && !li.hasClass('ie-sidebar-expand') && jQuery.inArray(expandedLI[element], parentsLI) == -1) {
+        $(expandedLI[element]).toggleClass('ie-sidebar-expand');
+        $(expandedLI[element]).children("ul").animate({ height: 'toggle' }, 400, function () {
+          $(li).children("ul").toggleClass('ie-sidebar-open');
+
+        })
+      }
+
+    })
+
+    $(li).toggleClass('ie-sidebar-expand');
+    $(li).children("ul").animate({ height: 'toggle' }, 400, function () {
+      $(li).children("ul").toggleClass('ie-sidebar-open');
+    })
+  });
+
+
+  
+    $("li.ie-sidebar-selected").parents('ul').toggleClass("ie-sidebar-open");
+    $("li.ie-sidebar-selected").toggleClass("ie-sidebar-expand")
+    $("ul.ie-sidebar-open").parent().toggleClass("ie-sidebar-expand");
+    $("li.ie-sidebar-selected").children('ul').toggleClass("ie-sidebar-open")
+  
+  
+</script>
+    </div>
+</div>
+<script>
+
+    
+    let sidebarScrollTopPosition = 0;
+    $("#ie-new-toc").on("scroll", function () {
+        if (sidebarScrollTopPosition == 0) {
+            $.cookie("sidebarScroll", $("#ie-new-toc").scrollTop(), {
+                path: "/ja-jp/smis-provider"
+            });
+        }
+
+        if ($("#ie-new-toc").scrollTop() > 0) {
+            $('#ie-product-identity-lockup').addClass('ie-addShadow');
+        } else {
+            $('#ie-product-identity-lockup').removeClass('ie-addShadow');
+        }
+    });
+
+    $(function () {
+        if ($.cookie("sidebarScroll")) {
+            $("#ie-new-toc").scrollTop($.cookie("sidebarScroll"));
+        }
+    });
+
+    function setSidebarBottom() {
+        const footerGap = PXinViewport($(".n-footer"));
+        document.getElementById("ie-new-sidebar").style.bottom = Math.max(0, footerGap) + "px";
+    }
+
+    window.onscroll = () => {
+        setSidebarBottom();
+    };
+
+    $("#sidebar-collapse").click(function (e) {
+        const sidebarWidth = $("#ie-new-sidebar").width() - $("#ie-new-sidebar-collapse").width();
+        e.preventDefault();
+        const width = $(".ie-content-pane").width();
+        const marginLeft = parseInt($(".ie-content-pane").css('marginLeft'));
+
+        if ($.cookie("sidebarScroll")) {
+            sidebarScrollTopPosition = $.cookie("sidebarScroll");
+        }
+
+        $("#ie-new-sidebar").animate({ width: 'toggle' }, 350, function () {
+            $("#ie-new-sidebar-collapse").show();
+            $("#ie-new-sidebar").removeClass("open")
+            $("#ie-new-sidebar").addClass("close")
+            $("#ie-new-sidebar").removeAttr("style")
+        });
+        $(".ie-content-pane").animate({ width: (width + sidebarWidth), marginLeft: (marginLeft - sidebarWidth) }, 350, function () {
+            resizeContent()
+        })
+
+    });
+    $("#sidebar-expand").click(function (e) {
+        const sidebarWidth = $("#ie-new-sidebar").width() - $("#ie-new-sidebar-collapse").width();
+        e.preventDefault();
+        const width = $(".ie-content-pane").width();
+        const marginLeft = parseInt($(".ie-content-pane").css('marginLeft'));
+
+        $("#ie-new-sidebar").animate({ width: 'toggle' }, 250, function () {
+            $('#ie-new-sidebar').css('display', 'flex');
+            $("#ie-new-sidebar-collapse").hide();
+            $("#ie-new-sidebar").removeClass("close")
+            $("#ie-new-sidebar").addClass("open")
+            setSidebarBottom();
+
+            if (sidebarScrollTopPosition != 0) {
+                $.cookie("sidebarScroll", sidebarScrollTopPosition, {
+                    path: "/ja-jp/smis-provider"
+                })
+                $("#ie-new-toc").scrollTop(sidebarScrollTopPosition);
+                sidebarScrollTopPosition = 0;
+            }
+        });
+        $(".ie-content-pane").animate({ width: (width - sidebarWidth), 'marginLeft': (marginLeft + sidebarWidth) }, 250, function () {
+            resizeContent()
+        })
+    });
+    function resizeContent() {
+        const sidebarWidth = $("#ie-new-sidebar").width() - $("#ie-new-sidebar-collapse").width();
+        const rightNavbarVisible =  $("#ie-right-navbar").css('display') && $("#ie-right-navbar").css('display') != 'none';
+        const sidebarVisible = $("#ie-new-sidebar").css('display') != 'none';
+        const rightNavbarWidth = $("#ie-right-navbar").width();
+        const rightNavbarCollapseWidth = $("#ie-right-navbar-collapse").width();
+        const rightNavbarCollapseVisible = $("#ie-right-navbar-collapse").css('display') && $("#ie-right-navbar-collapse").css('display') != 'none';
+        
+        if (rightNavbarVisible && sidebarVisible) {
+            $(".ie-content-pane").width(`calc(100% - ${sidebarWidth + rightNavbarWidth}px)`)
+            $(".ie-content-pane").css('marginLeft', `${sidebarWidth}px`)
+        } else if (sidebarVisible) {
+            $(".ie-content-pane").css('marginLeft', `${sidebarWidth}px`)
+            if (rightNavbarCollapseVisible) {
+                $(".ie-content-pane").width(`calc(100% - ${sidebarWidth + rightNavbarCollapseWidth}px)`)
+            } else {
+                $(".ie-content-pane").width(`calc(100% - ${$("#ie-new-sidebar").width()}px)`)
+            }
+
+        } else if (rightNavbarVisible) {
+            $(".ie-content-pane").css('marginLeft', `${$("#ie-new-sidebar-collapse").width()}px`)
+            $(".ie-content-pane").width(`calc(100% - ${rightNavbarWidth}px)`)
+        } else {
+            $(".ie-content-pane").css('marginLeft', `${$("#ie-new-sidebar-collapse").width()}px`)
+            if (rightNavbarCollapseVisible) {
+                $(".ie-content-pane").width(`calc(100% - ${rightNavbarCollapseWidth}px)`);
+            } else {
+                $(".ie-content-pane").width(`calc(100% - ${$("#ie-new-sidebar-collapse").width()}px) `);
+            }
+            
+        }
+    }
+    $(window).on("resize load", function () {
+        setSidebarBottom();
+        resizeContent()
+    });
+
+
+</script>
+
+<div class="ie-content-pane ie-component-detail-content ie-component-detail-content--show-code">
+    <!-- Begin of page container --><article class="page-content" id="main">
+      <!-- include utility.html -->
+      <div class="ie-info-disclaimer">
+    <span>
+      <div class="ie-info-disclaimer-container">
+        <div class="ie-info-disclaimer-icon">
+          <img src="/ja-jp/smis-provider/images/notification-icons.svg" class="luci-icon" alt="" />
+        </div>
+        <div class="ie-info-disclaimer-content">
+          <span> 日本語は機械翻訳による参考訳です。内容に矛盾や不一致があった場合には、英語の内容が優先されます。 </span>
+        </div>
+        <div style="clear:both;"></div>
+      </div>
+    </span>
+  </div><div class="ie-component-detail-heading-wrap">
+  <h1 class="ie-component-detail-heading">共有ライブラリのロード中にエラーが発生する可能性があります</h1>
+</div>
+
+<div id="ie-byline">
+  
+<div class="page-details">
+    
+        
+            <time datetime="2022-12-14 18:08:40 +0000">12/14/2022</time>
+        
+    
+    
+        <span>共同作成者
+        </span>
+    
+    
+</div>
+<div class="page-controls">
+    <div id="contribute-dropdown" class="custom-dropdown custom-dropdown-contrib" >
+        <div class="custom-dropdown-select custom-dropdown-select-contrib">
+        <span class="contrib-name"><img src="/ja-jp/smis-provider/images/discuss-sm.svg" alt="" class="github-icon" />変更を提案</span>
+        <img src="/ja-jp/smis-provider/images/dropdown-arrow.svg" alt="" class="custom-icon chevrondown invisible" />
+        <img src="/ja-jp/smis-provider/images/dropdown-arrow.svg" alt="" class="custom-icon chevronup" />
+        </div>
+        <ul class="custom-dropdown-menu suggested-changes-dropdown"><li>
+                <a target="_blank" href="https://github.com/NetAppDocs/smis-provider.ja-jp/issues/new?template=new-from-page.yml&page-url=https://docs.netapp.com/ja-jp/smis-provider/reference-possible-errors-when-loading-shared-libraries.html&page-title=共有ライブラリのロード中にエラーが発生する可能性があります" class="page-nav-contribute-link" role="button">ドキュメントの変更をリクエスト</a>
+            </li><li> 
+                <a target="_blank" href="https://github.com/NetAppDocs/smis-provider/blob/main/reference-possible-errors-when-loading-shared-libraries.adoc" class="page-nav-contribute-link" role="button">このページを編集</a>
+            </li><li><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  >フィードバックを送るには</a></li>
+        </ul>
+    </div>
+    <div id="pdf-control-container">
+        <div class="n-pdf-header">
+            <a id="toggleButtonPdf" class="n-pdf-button" type="button">
+                <img class="adobe-icon" src="/ja-jp/smis-provider/images/pdf-icon.png" alt="" width="16" height="16"/>PDF<img src="/ja-jp/smis-provider/images/dropdown-arrow.svg" class="custom-icon" alt="" />
+            </a>
+        </div>
+        <div class="n-pdf-body-container">
+            <ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;"><li class="pdf-ux-container">
+                    
+                    
+                    
+                    <a target="_blank" class="pdf-download-link" href="/ja-jp/smis-provider/pdfs/fullsite-sidebar/NetApp_SMI_S_プロバイダのドキュメント.pdf" >
+                    <img src="/ja-jp/smis-provider/images/pdf-icon.png" alt="" width="16" height="16"/>このドキュメント ページのPDF</a>
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ja-jp/smis-provider/pdfs/sidebar/NetApp_SMI_S_Provider_の概要.pdf" 
+            
+          >
+            <img src="/ja-jp/smis-provider/images/pdf-icon.png" alt="" width="16" height="16"/>
+            NetApp SMI-S Provider の概要
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ja-jp/smis-provider/pdfs/sidebar/導入を準備.pdf" 
+            
+          >
+            <img src="/ja-jp/smis-provider/images/pdf-icon.png" alt="" width="16" height="16"/>
+            導入を準備
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ja-jp/smis-provider/pdfs/sidebar/NetApp_SMI_S_Provider_をインストールします.pdf" 
+            
+          >
+            <img src="/ja-jp/smis-provider/images/pdf-icon.png" alt="" width="16" height="16"/>
+            NetApp SMI-S Provider をインストールします
+          </a>
+          
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ja-jp/smis-provider/pdfs/sidebar/NetApp_SMI_S_Provider_をアンインストールします.pdf" 
+            
+          >
+            <img src="/ja-jp/smis-provider/images/pdf-icon.png" alt="" width="16" height="16"/>
+            NetApp SMI-S Provider をアンインストールします
+          </a>
+          
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ja-jp/smis-provider/pdfs/sidebar/事前設定の検証.pdf" 
+            
+          >
+            <img src="/ja-jp/smis-provider/images/pdf-icon.png" alt="" width="16" height="16"/>
+            事前設定の検証
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ja-jp/smis-provider/pdfs/sidebar/CIM_サーバーユーザーを管理します.pdf" 
+            
+          >
+            <img src="/ja-jp/smis-provider/images/pdf-icon.png" alt="" width="16" height="16"/>
+            CIM サーバーユーザーを管理します
+          </a>
+          
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ja-jp/smis-provider/pdfs/sidebar/ロギングとトレースを管理します.pdf" 
+            
+          >
+            <img src="/ja-jp/smis-provider/images/pdf-icon.png" alt="" width="16" height="16"/>
+            ロギングとトレースを管理します
+          </a>
+          
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ja-jp/smis-provider/pdfs/sidebar/ログ設定を構成します.pdf" 
+            
+          >
+            <img src="/ja-jp/smis-provider/images/pdf-icon.png" alt="" width="16" height="16"/>
+            ログ設定を構成します
+          </a>
+          
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ja-jp/smis-provider/pdfs/sidebar/トレースを管理します.pdf" 
+            
+          >
+            <img src="/ja-jp/smis-provider/images/pdf-icon.png" alt="" width="16" height="16"/>
+            トレースを管理します
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ja-jp/smis-provider/pdfs/sidebar/トレース設定を指定します.pdf" 
+            
+          >
+            <img src="/ja-jp/smis-provider/images/pdf-icon.png" alt="" width="16" height="16"/>
+            トレース設定を指定します
+          </a>
+          
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ja-jp/smis-provider/pdfs/sidebar/SMI_S_プロバイダの詳細設定を管理します.pdf" 
+            
+          >
+            <img src="/ja-jp/smis-provider/images/pdf-icon.png" alt="" width="16" height="16"/>
+            SMI-S プロバイダの詳細設定を管理します
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ja-jp/smis-provider/pdfs/sidebar/SLP_を管理します.pdf" 
+            
+          >
+            <img src="/ja-jp/smis-provider/images/pdf-icon.png" alt="" width="16" height="16"/>
+            SLP を管理します
+          </a>
+          
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ja-jp/smis-provider/pdfs/sidebar/SLP_設定オプションを指定します.pdf" 
+            
+          >
+            <img src="/ja-jp/smis-provider/images/pdf-icon.png" alt="" width="16" height="16"/>
+            SLP 設定オプションを指定します
+          </a>
+          
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ja-jp/smis-provider/pdfs/sidebar/CIMOM_コマンド.pdf" 
+            
+          >
+            <img src="/ja-jp/smis-provider/images/pdf-icon.png" alt="" width="16" height="16"/>
+            CIMOM コマンド
+          </a>
+          
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ja-jp/smis-provider/pdfs/sidebar/CIM_ユーザーコマンド.pdf" 
+            
+          >
+            <img src="/ja-jp/smis-provider/images/pdf-icon.png" alt="" width="16" height="16"/>
+            CIM ユーザーコマンド
+          </a>
+          
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ja-jp/smis-provider/pdfs/sidebar/SMI_S_プロバイダコマンド.pdf" 
+            
+          >
+            <img src="/ja-jp/smis-provider/images/pdf-icon.png" alt="" width="16" height="16"/>
+            SMI-S プロバイダコマンド
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ja-jp/smis-provider/pdfs/sidebar/SLP_コマンド.pdf" 
+            
+          >
+            <img src="/ja-jp/smis-provider/images/pdf-icon.png" alt="" width="16" height="16"/>
+            SLP コマンド
+          </a>
+          
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          
+          
+          
+          <a target="_blank" class="pdf-download-link"
+            
+              href="/ja-jp/smis-provider/pdfs/sidebar/SMI_S_プロバイダのトラブルシューティングを行います.pdf" 
+            
+          >
+            <img src="/ja-jp/smis-provider/images/pdf-icon.png" alt="" width="16" height="16"/>
+            SMI-S プロバイダのトラブルシューティングを行います
+          </a>
+          
+
+
+
+
+    <ul class="subfolders" id="pdf-remove" style="display:none;"><li class="active"></li></ul>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </li>
+      </ul>
+    
+
+  
+
+
+
+</li></ul>
+            <div class="zip-pdf-link-container" style="display: none;">   
+                <a href="#" id="zipPdf">
+                <img src="/ja-jp/smis-provider/images/pdf-zip.png" alt="" width="16" height="16"/>
+                <pre>PDF版ドキュメントのセット<span class="zip-size"></span></pre>
+                </a><div id="zip-link-popup" class="hide">
+    <div class="inner-modal">
+        <div class="downloading-progress">
+            <div class="spinner"></div>
+            <h1>Creating your file...</h1>
+            <div>This may take a few minutes. Thanks for your patience.</div>
+            <button class="cancel-download-btn" type="button">Cancel</button>
+        </div>
+        <div class="download-complete hide">
+            <div class="done-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg>
+            </div>
+            <div>Your file is ready</div>
+            <button class="cancel-download-btn" type="button">OK</button>
+        </div>
+    </div>
+</div>
+<script>
+    $(".cancel-download-btn").click(function(){
+        $("#zip-link-popup").addClass("hide");
+        $("#zip-link-popup .downloading-progress").removeClass("hide");
+        $("#zip-link-popup .download-complete").addClass("hide");
+    });
+</script></div>
+        </div>
+    </div>        
+<script>
+$("#toggleContainerPdf li.active:last-child").parents('ul.subfolders').toggle('display');
+$("#toggleButtonPdf").on('click', function(e){ 
+    e.stopPropagation();
+    $("#toggleContainerPdf").toggle('display');
+    $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
+});
+
+//hide is by clicking outside pdfcontainer
+$(document).on('click', function (e) {
+    if ($('#toggleContainerPdf').is(':visible') && !$('.n-pdf-body-container').is(e.target) && !$('.n-pdf-body-container').has(e.target).length)  {
+        
+        $("#toggleContainerPdf").toggle('display');
+        $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
+        $("#toggleButtonPdf").removeClass("active");
+    }
+});
+</script>
+<script>
+    function getPdfLocation() {
+        const pdfLocation = window.scrollX + document.querySelector('#pdf-control-container').getBoundingClientRect().left
+        if (pdfLocation < 450) {
+            $(".n-pdf-body-container").addClass("block")
+        } else {
+            $(".n-pdf-body-container").removeClass("block")
+        }
+    
+    }
+    $( window ).on( "resize", function() {
+        getPdfLocation()
+} );
+</script>
+<script>
+    const pdfButtonWidth =  $(".n-pdf-header").width();
+    const pdfMenuWidth = $(".n-pdf-body-container").width();
+    $(".n-pdf-body-container").css('margin-left', `calc(${pdfButtonWidth - pdfMenuWidth}px)`);
+</script>
+</div>
+
+    
+
+</div>
+
+<div class="ulist lead">
+<ul>
+<li>
+<p>* メッセージ *</p>
+<div class="paragraph">
+<p>共有ライブラリのロード中にエラーが発生しました : libssl.so 1.0.0: 共有オブジェクトファイルを開くことができません : そのようなファイルまたはディレクトリはありません</p>
+</div>
+<div class="paragraph">
+<p>「 SMIS cimserver 」ステータスは、 cimserver が正常に実行されていることを示しますが、それ以外のすべての「 /usr/NetApp/sism/Pegasus/bin/CIM 」コマンドは、さまざまなエラーメッセージを表示します。</p>
+</div>
+<div class="paragraph">
+<p>たとえば、「 cimserver 」を実行したときに「 cimserver not running 」というメッセージが表示されたり、「 /usr/NetApp/sism/Pegasus/bin/cimcli ： symbol lookup error:/usr/NetApp/sSMIS/Pegasus/bin/cimcli ： undefined symbol ： _ZNegasusesmegasutes16Stringcimctimnctimoles16Stringcfusr 」というメッセージが出力される場合があります。これらの例はすべてを網羅しているわけではありません。</p>
+</div>
+</li>
+<li>
+<p>* 概要 *</p>
+<div class="paragraph">
+<p>このメッセージ（および同様のメッセージ）は 'LD_LIBRARY_PATH' 環境がインストールディレクトリに設定されていない場合に発生します</p>
+</div>
+</li>
+<li>
+<p>* 是正措置 *</p>
+<div class="paragraph">
+<p>次のいずれかのコマンドを入力して 'LD_LIBRARY_PATH' 環境変数をインストールディレクトリに設定します</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/netapp/SMIS/Pegasus/lib`</p>
+</div>
+<div class="paragraph">
+<p>setsetenv LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/NetApp/sism/Pegasus/lib`</p>
+</div>
+
+    </article>
+    <!-- Page Container -->
+  </div>
+
+  
+  <!-- Start Page Toolbar -->
+<div id="ie-right-navbar-collapse" class="close">
+  <img id="navbar-expand" class="ie-searchbox-icon" src="/ja-jp/smis-provider/images/double_arrow.svg" alt="" />
+</div>
+<div id="ie-right-navbar" class="open">
+  <div id="right-navbar-collapse">
+    <img src="/ja-jp/smis-provider/images/double_arrow.svg" alt="" />
+  </div>
+  <div class="page-nav-container">
+    <nav class="page-nav-fixed">
+      <div class="page-nav-title">このページ</div>
+      <div class="page-nav-links">
+        <ul class="page-nav-inner" id="page-menu"></ul>
+      </div>
+    </nav>
+  </div>
+</div>
+
+
+<script>
+  resizeContent();
+  function setRightBarHeight() {
+    var h = 0;
+
+    // header 1
+    h += PXinViewport($('.n-footer'));
+    h += PXinViewport($('#ie-new-header'));
+
+    if ($('#ie-right-navbar').length) {
+      $('#ie-right-navbar').css({ height: `calc(100vh - ${h}px)` });
+    }
+    if ($('.page-nav-links').length) {
+      h += 98;
+      $('.page-nav-links').css({ height: `calc(100vh - ${h}px)` });
+    }
+  }
+
+  $(document).ready(function () {
+    // PAGE NAV - Click
+    const MASTHEAD_OFFSET = 65;
+    const SECTIONS = $("main h2, main h3");
+    let calculateActiveSection = false;
+    setTimeout(() => {
+      calculateActiveSection = true;
+    }, 100)
+
+    $(".page-nav__link").click(function (event) {
+      calculateActiveSection = false;
+      $(".page-nav__link").removeClass('page-nav__link--active');
+      var target = $(event.target);
+      target.addClass('page-nav__link--active');
+      location.hash = event.target.hash;
+      setTimeout(() => {
+        calculateActiveSection = true;
+      }, 100)
+
+    });
+
+    // PAGE NAV - Scroll
+    $(window).on('resize scroll', function () {
+      if (calculateActiveSection) {
+        var activeSection = getActiveSection(SECTIONS, MASTHEAD_OFFSET);
+        if (activeSection) {
+          var activeHref = $(activeSection).attr('id');
+          $(".page-nav__link").removeClass('page-nav__link--active');
+          $("#page-menu a[href=#" + activeHref + "]").addClass('page-nav__link--active');
+          if (location.hash != "#" + activeHref) {
+            if (history.replaceState) {
+              history.replaceState(null, null, "#" + activeHref);
+            }
+          }
+        }
+      }
+    });
+
+    $(".n-pdf-button").click(function () {
+      $(this).toggleClass("active");
+    });
+
+    $.fn.isVisibleAndInViewport = function () {
+      var elementTop = $(this).offset().top;
+      var elementBottom = elementTop + $(this).outerHeight();
+
+      var viewportTop = $(window).scrollTop();
+      var viewportBottom = viewportTop + $(window).height();
+
+      return elementBottom > viewportTop && elementTop < viewportBottom && $(this).is(":visible");
+    };
+
+
+    $(window).on('resize scroll', function () {
+      setRightBarHeight();
+    });
+
+    $(window).trigger('resize');
+
+
+  });
+
+  $("#right-navbar-collapse").click(function (e) {
+    const rightNavbarWidth = $("#ie-right-navbar").width() - $("#ie-right-navbar-collapse").width();
+    e.preventDefault();
+    const width = $(".ie-content-pane").width();
+
+    $("#ie-right-navbar").animate({ width: 'toggle' }, 350, function () {
+      $("#ie-right-navbar-collapse").removeClass("close")
+      $("#ie-right-navbar-collapse").addClass("open")
+      $("#ie-right-navbar").removeClass("open")
+      $("#ie-right-navbar").addClass("close")
+    });
+    $(".ie-content-pane").animate({ width: (width + rightNavbarWidth) }, 350, function () {
+      resizeContent()
+      setSidebarBottom();
+    })
+
+  });
+  $("#navbar-expand").click(function (e) {
+    const rightNavbarWidth = $("#ie-right-navbar").width() - $("#ie-right-navbar-collapse").width();
+    e.preventDefault();
+    const width = $(".ie-content-pane").width();
+    $("#ie-right-navbar").animate({ width: 'toggle' }, 250, function () {
+      $("#ie-right-navbar-collapse").removeClass("open")
+      $("#ie-right-navbar-collapse").addClass("close")
+      $("#ie-right-navbar").removeClass("close")
+      $("#ie-right-navbar").addClass("open")
+      setRightBarHeight();
+      setSidebarBottom();
+    });
+    $(".ie-content-pane").animate({ width: (width - rightNavbarWidth) }, 250, function () {
+      resizeContent()
+    })
+  });
+
+  function navbarResize() {
+    const rightNavbarResized = $("#ie-right-navbar-collapse").hasClass('resized');
+    if (window.innerWidth < 1024) {
+      $("#ie-right-navbar").removeClass("open")
+      $("#ie-right-navbar").addClass("close")
+      $("#ie-right-navbar").removeAttr("style")
+      $("#ie-right-navbar-collapse").removeClass("close")
+      $("#ie-right-navbar-collapse").addClass("open")
+      $("#ie-right-navbar-collapse").addClass("resized")
+    } else {
+      if (rightNavbarResized) {
+        $('#ie-right-navbar').removeClass('close');
+        $('#ie-right-navbar').addClass('open');
+        $("#ie-right-navbar-collapse").removeClass("resized")
+        $("#ie-right-navbar-collapse").removeClass("open")
+        $("#ie-right-navbar-collapse").addClass("close")
+      }
+    }
+    resizeContent()
+  }
+  navbarResize();
+  $(window).on('resize load', function () {
+    navbarResize()
+  });
+
+  function getActiveSection(sections, offset) {
+    var scrollPosition = $(window).scrollTop() + offset + 5;
+    var activeSection;
+    for (var i = 0; i < sections.length; i++) {
+      var el = $(sections[i]);
+      var activePosition = el.offset().top;
+      if (activePosition > scrollPosition) {
+        break;
+      }
+
+      activeSection = sections[i];
+    }
+
+    return activeSection;
+  }
+
+  $("a[href*=#]:not([href=#])").click(function () {
+    setTimeout(() => {
+      $(window).trigger('scroll');
+    }, 105)
+  })
+
+  const hashOnLoad = location.href.split("#")[1];
+  setTimeout(function () {
+    if (hashOnLoad) {
+      $(".page-nav__link").removeClass('page-nav__link--active');
+      $("#page-menu a[href=#" + hashOnLoad + "]").addClass('page-nav__link--active');
+    }
+  }, 100)
+
+</script>
+
+
+  <div style="clear: both"></div><!-- Main needs to have height --></div>
+
+        </main>
+
+        <footer class="n-footer">
+  <div class="n-footer__bottom">
+    <div class="n-container">
+        <div class="n-footer__left">
+          <li class="n-footer__copyright-link">
+                    <a href="https://www.netapp.com/company/legal/copyright/">© 2023 NetApp, Inc.</a>
+          </li>
+        </div>
+        <div class="n-footer__center">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/terms-of-use/">ご利用規約</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/privacy-policy/">プライバシー ポリシー</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a href="https://www.netapp.com/company/legal/cookie-policy/">クッキー ポリシー</a>
+            </li>
+            <li class="n-footer__copyright-link">
+              <a class="ot-sdk-show-settings">クッキーの設定</a>
+            </li>
+          </ul>
+       </div>
+        <div class="n-footer__right">
+              <li class="n-footer__copyright-link">
+                <a target="_self" href="javascript:netapp_mailto()">このページに関するフィードバックをお寄せください</a>
+              </li>
+        </div>
+     </div>
+  </div>
+</footer>
+
+      </div><!-- Elasticsearch JS -->
+      <script type="text/javascript" src='/ja-jp/smis-provider/js/bundle.js'></script>
+
+      <!-- Syntax Highlighting -->
+      <script type="text/javascript" src='/ja-jp/smis-provider/js/prism.js'></script>
+      <script type="text/javascript" src='/ja-jp/smis-provider/js/prism-curl.js'></script>
+    </div>
+    <script>
+      document.body.offsetWidth=1903;
+      cookieLaw = {}
+      cookieLaw.euCountry = "US";
+      cookieLaw.invoke = function(){return false;}
+    </script>
+    <script src='/ja-jp/smis-provider/js/ie-tabbed-blocks.js'></script>
+    <script src='/ja-jp/smis-provider/js/ie-sidebar.js'></script>
+  </body>
+
+</html>
