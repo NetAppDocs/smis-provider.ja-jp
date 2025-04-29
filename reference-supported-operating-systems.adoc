@@ -24,6 +24,8 @@ Windows の場合
  a| 
 * Microsoft Windows Server 2016
 * Microsoft Windows Server 2019
+* Microsoft Windows Server 2022
+* Microsoft Windows Server 2025
 
  a| 
 Microsoft Visual C ｛ pp ｝ 2010 ランタイムライブラリは、 SMI-S Provider のインストール時に自動的にインストールされます。ランタイムライブラリに関連する潜在的な問題を回避するには、 Microsoft Visual C {pp} 2010 再頒布可能パッケージ (x86) をインストールする必要があります。次の場所から入手します。 http://www.microsoft.com[]
@@ -31,11 +33,11 @@ Microsoft Visual C ｛ pp ｝ 2010 ランタイムライブラリは、 SMI-S Pr
 |===
 
 
-== SCVMM 2016 UR 2.1 の要件
+== SCVMM UR 2.1の要件
 
-NetApp SMI-S Provider 5.2.4 以降で NetApp ファイルサーバを管理するには、 System Center Virtual Machine Manager （ SCVMM ） 2016 Update Rollup （ UR ） 2.1 が必要です。
+System Center Virtual Machine Manager（SCVMM）アップデートロールアップ（UR）2.1は、NetApp SMI-Sプロバイダ5.2.7以降でNetAppファイルサーバを管理するために必要です。
 
-この UR を行わない場合、 SCVMM 2016 は、 NetApp File Server の既存のファイル共有の「 Total Capacity 」オプションと「 Available Capacity 」オプションの値を「 * 0 GB * 」として表示します。
+このURがない場合、SCVMM（バージョン2016、2019、2022、または2025）には、NetAppファイルサーバの既存のファイル共有に関するオプションと `Available Capacity`オプションの `*0 GB*`値が表示され `Total Capacity`ます。
 
 SMI-S プロバイダを実行するには、プロバイダホストマシンが次の仕様を満たしている必要があります。
 

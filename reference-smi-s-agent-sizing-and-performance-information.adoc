@@ -15,10 +15,11 @@ NetApp SMI-S プロバイダで管理するシステムの最大数を把握し�
 
 * サイジング *
 
-NetApp SMI-S プロバイダは、 clustered Data ONTAP で次の数のオブジェクトを管理できます。
+NetApp SMI-Sプロバイダでは、ONTAPで次の数のオブジェクトを管理できます。
 
-* Storage Virtual Machine （ SVM ） × 100 （適応なし）
-* 10 個の Storage Virtual Machine （適応あり）
+* 30個のStorage Virtual Machine（SVM） 
+* 100個のSVM（適応症なし）
+* SVM×10（適応症あり）
 * 1 、 500 個の LUN （ FlexVol ボリュームあたり）
 * CIFS ファイル共有 × 200 （ FlexVol あたり）
 

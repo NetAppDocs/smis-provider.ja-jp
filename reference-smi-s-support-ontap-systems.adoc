@@ -1,0 +1,20 @@
+---
+permalink: reference-supported-platforms.html 
+sidebar: sidebar 
+keywords: netApp smi-s provider, cluster, platforms, support for ONTAP systems 
+summary: NetApp SMI-Sプロバイダは、ONTAP 9以降を実行するクラスタプラットフォームをサポートします。 
+---
+= NetApp SMI-SプロバイダによるONTAPシステムのサポート
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp SMI-Sプロバイダは、ONTAP 9以降を実行するクラスタプラットフォームをサポートします。
+
+NetApp SMI-S Provider でストレージボリューム（ LUN ）のクローンを作成するには、ストレージシステムに FlexClone ライセンスをインストールしておく必要があります。
+
+NetApp SMI-Sプロバイダは、FASシステムをサポートしています。
+
+NetApp SMI-Sプロバイダは、ASAシステムをサポートしていません。

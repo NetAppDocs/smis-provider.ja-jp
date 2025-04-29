@@ -1,17 +1,17 @@
 ---
 permalink: task-specify-the-ontapi-timeout-value.html 
 sidebar: sidebar 
-keywords: smi-s provider, ontap api, calls, storage systems, ontapi, default, 300 sec 
-summary: SMI-S プロバイダは、ストレージシステムに対する ONTAP API （ ONTAPI ）呼び出しを実行します。デフォルトでは、 ONTAPI タイムアウトは 300 秒です。タイムアウトは 60 ～ 300 秒の値に設定できます。 
+keywords: smi-s provider, ontap api, calls, storage systems, default, 300 sec 
+summary: SMI-Sプロバイダは、ストレージシステムへのONTAP API呼び出しを実行します。デフォルトでは、ONTAP APIコールタイムアウトは300秒です。タイムアウトは 60 ～ 300 秒の値に設定できます。 
 ---
-= ONTAPI タイムアウト値を指定します
+= ONTAP APIコールタイムアウト値の指定
 :allow-uri-read: 
 :icons: font
 :imagesdir: ./media/
 
 
 [role="lead"]
-SMI-S プロバイダは、ストレージシステムに対する ONTAP API （ ONTAPI ）呼び出しを実行します。デフォルトでは、 ONTAPI タイムアウトは 300 秒です。タイムアウトは 60 ～ 300 秒の値に設定できます。
+SMI-Sプロバイダは、ストレージシステムへのONTAP API呼び出しを実行します。デフォルトでは、ONTAP APIコールタイムアウトは300秒です。タイムアウトは 60 ～ 300 秒の値に設定できます。
 
 .作業を開始する前に
 * Administrator としてのログインクレデンシャルが必要です。

@@ -20,13 +20,13 @@ sidebar:
     - title: このリリースの新機能
       url: "/reference-new-in-this-release-smis.html"
     - title: NetApp SMI-S プロバイダの使用
-      url: "/reference-uses-of-data-ontap-smi-s-agent.html"
+      url: "/reference-uses-of-ontap-smi-s-agent.html"
     - title: NetApp SMI-S プロバイダによるサイジングとパフォーマンス
       url: "/reference-smi-s-agent-sizing-and-performance-information.html"
     - title: NetApp SMI-S プロバイダのコンポーネント
-      url: "/reference-data-ontap-smi-s-agent-components.html"
+      url: "/reference-ontap-smi-s-agent-components.html"
     - title: NetApp SMI-S プロバイダプロトコル
-      url: "/reference-data-ontap-smi-s-agent-protocols.html"
+      url: "/reference-ontap-smi-s-agent-protocols.html"
     - title: NetApp SMI-S プロバイダとホストの相互通信方法
       url: "/concept-how-smi-s-provider-interacts-with-a-host.html"
     - title: SMI-S プロファイル
@@ -43,8 +43,8 @@ sidebar:
       url: "/reference-hardware-requirements.html"
     - title: 必要なライセンス
       url: "/reference-required-licenses.html"
-    - title: サポートされるクラスタ・プラットフォーム
-      url: "/reference-supported-platforms.html"
+    - title: NetApp SMI-SプロバイダによるONTAPシステムのサポート
+      url: "/reference-smi-s-support-ontap-systems.html"
     - title: NetApp SMI-S プロバイダソフトウェアパッケージをダウンロードします
       url: "/task-download-smi-s-provider.html"
   - title: NetApp SMI-S Provider をインストールします
@@ -110,8 +110,8 @@ sidebar:
       url: "/task-specify-the-smi-s-agent-cache-refresh-interval.html"
     - title: 具体的なジョブの有効期間の値を指定します
       url: "/task-specify-the-concrete-job-lifetime-value.html"
-    - title: ONTAPI タイムアウト値を指定します
-      url: "/task-specify-the-ontapi-timeout-value.html"
+    - title: ONTAP APIコールタイムアウト値の指定
+      url: "/task-specify-the-ontap-api-call-timeout-value.html"
     - title: メッセージサービスキューあたりの最大スレッド数を指定します
       url: "/task-specify-the-maximum-number-of-threads-per-message-service-queue.html"
     - title: NetApp SMI-S プロバイダの認証を有効または無効にします
@@ -242,4 +242,4 @@ sidebar:
     - title: SCVMM の再スキャン処理で SMI-S プロバイダの特定または通信に失敗しました
       url: "/reference-scvmm-rescan-operation-failed-to-locate-or-communicate-with-smi-s-provider.html"
   - title: 法的通知
-    url: "/reference-legal-notices.html"
+    url: "/legal-notices.html"

@@ -20,7 +20,7 @@ summary: smis volumes コマンドは、ストレージシステムのトラデ�
 
 [NOTE]
 ====
-clustered Data ONTAP の場合は、「 SMIS volumes 」コマンドではなく、「 SMIS pools 」コマンドを使用する必要があります。
+ONTAPの場合は、コマンドではなくコマンドを `smis volumes`使用する必要があります `smis pools`。
 
 ====
 .場所

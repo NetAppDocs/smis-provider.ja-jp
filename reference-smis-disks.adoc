@@ -2,7 +2,7 @@
 permalink: reference-smis-disks.html 
 sidebar: sidebar 
 keywords: thesmis, disk, command, display, information, storage, systems 
-summary: このコマンドを実行すると、ストレージシステムのディスク情報が表示されます。SMIS ディスクは、 Data ONTAP 7-Mode コントローラで使用する場合にのみ機能します。 
+summary: smis disksコマンドを使用すると、ストレージシステムのディスク情報が表示されます。SMISディスクは、ONTAP 7-Modeコントローラで使用した場合にのみ機能します。 
 ---
 = SMIS ディスク
 :allow-uri-read: 
@@ -11,7 +11,7 @@ summary: このコマンドを実行すると、ストレージシステムの�
 
 
 [role="lead"]
-「 smis disks 」コマンドを使用すると、ストレージ・システムのディスク情報が表示されます。「 SMIS disks 」は、 Data ONTAP 7-Mode コントローラで使用する場合にのみ機能します。
+ `smis disks`コマンドは、ストレージシステムのディスク情報を表示します。コマンドは `smis disks`、ONTAP 7-Modeコントローラでのみサポートされます。
 
 .構文
 SMIS ディスク

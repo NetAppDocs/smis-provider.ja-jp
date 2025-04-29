@@ -1,8 +1,8 @@
 ---
 permalink: concept-manage-smi-s-agent-advanced-settings-overview.html 
 sidebar: sidebar 
-keywords: manage, advance, smi-s provider, smis-s cache, refresh, interval, ontapi, timeout, thread, service, queue 
-summary: SMI-S キャッシュの更新間隔、 ONTAPI のタイムアウト、メッセージサービスキューあたりの最大スレッド数など、 SMI-S プロバイダの詳細設定を管理できます。 
+keywords: manage, advance, smi-s provider, smis-s cache, refresh, interval, ontap API call, timeout, thread, service, queue 
+summary: SMI-Sキャッシュの更新間隔、ONTAP APIコールタイムアウト、メッセージサービスキューごとのスレッドの最大数など、SMI-Sプロバイダの詳細設定を管理できます。 
 ---
 = 概要
 :allow-uri-read: 
@@ -11,4 +11,4 @@ summary: SMI-S キャッシュの更新間隔、 ONTAPI のタイムアウト、
 
 
 [role="lead"]
-SMI-S キャッシュの更新間隔、 ONTAPI のタイムアウト、メッセージサービスキューあたりの最大スレッド数など、 SMI-S プロバイダの詳細設定を管理できます。
+SMI-Sキャッシュの更新間隔、ONTAP APIコールタイムアウト、メッセージサービスキューごとのスレッドの最大数など、SMI-Sプロバイダの詳細設定を管理できます。
