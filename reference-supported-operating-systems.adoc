@@ -12,6 +12,8 @@ summary: SMI-S Provider をインストールする前に、 Windows ホスト�
 
 
 [role="lead"]
+SMI-S プロバイダーは、専用の Windows 仮想マシン (VM) にインストールすることをお勧めします。この VM は同じドメイン上に配置できるため、安全で便利な管理が可能になります。
+
 SMI-S Provider をインストールする前に、 Windows ホストでサポートされるオペレーティングシステムが実行されていることを確認する必要があります。
 
 [cols="3*"]
@@ -22,36 +24,23 @@ SMI-S Provider をインストールする前に、 Windows ホストでサポ�
  a| 
 Windows の場合
  a| 
-* Microsoft Windows Server 2016
-* Microsoft Windows Server 2019
-* Microsoft Windows Server 2022
 * Microsoft Windows Server 2025
+* Microsoft Windows Server 2022
+* Microsoft Windows Server 2019
+* Microsoft Windows Server 2016
 
  a| 
-Microsoft Visual C ｛ pp ｝ 2010 ランタイムライブラリは、 SMI-S Provider のインストール時に自動的にインストールされます。ランタイムライブラリに関連する潜在的な問題を回避するには、 Microsoft Visual C {pp} 2010 再頒布可能パッケージ (x86) をインストールする必要があります。次の場所から入手します。 http://www.microsoft.com[]
+Microsoft Visual C{pp} 2010 ランタイム ライブラリは、SMI-S プロバイダーのインストール中に自動的にインストールされます。ランタイム ライブラリに関連する潜在的な問題を回避するには、次の場所から Microsoft Visual C{pp} 2010 再頒布可能パッケージ (x86) をインストールする必要があります。 http://www.microsoft.com[]
 
 |===
 
 
-== SCVMM UR 2.1の要件
-
-System Center Virtual Machine Manager（SCVMM）アップデートロールアップ（UR）2.1は、NetApp SMI-Sプロバイダ5.2.7以降でNetAppファイルサーバを管理するために必要です。
-
-このURがない場合、SCVMM（バージョン2016、2019、2022、または2025）には、NetAppファイルサーバの既存のファイル共有に関するオプションと `Available Capacity`オプションの `*0 GB*`値が表示され `Total Capacity`ます。
+== プロバイダーのホストマシンが仕様を満たしていることを確認する
 
 SMI-S プロバイダを実行するには、プロバイダホストマシンが次の仕様を満たしている必要があります。
 
-* プロバイダのホストマシンを Hyper-V ノードのホストに使用することはできません。
-* SCVMM は、プロバイダのホストマシン上で実行しないでください。
+* プロバイダーを Hyper-V ノードに直接インストールすることはできません。代わりに、Hyper-V VM にインストールすることもできます。
+* System Center Virtual Machine Manager (SCVMM) がプロバイダー ホスト マシン上で実行されていない必要があります。
 * プロバイダのホストマシンは、メモリを大量に消費する他のプログラムを実行しないでください。
-* プロバイダのホストマシンでは、他のベンダーの SMI-S プロバイダを実行しないでください。
-
-
-サポートされるハイパーバイザーは次のとおりです。
-
-* Microsoft Windows Server 2016 Hyper-V
-* VMware ESX 5.0
-* VMware ESX 5.1
-* VMware ESX 5.5 の場合
-* VMware ESX 6.0
+* プロバイダー ホスト マシンでは、他のベンダーの SMI-S プロバイダーを実行してはなりません。
 

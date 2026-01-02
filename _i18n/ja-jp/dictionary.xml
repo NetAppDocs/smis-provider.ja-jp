@@ -86,7 +86,6 @@
   <block id="835376d40913a770b6afbedee870d08d" category="paragraph">'slp.conf 構成ファイルには ' サービスロケーションプロトコルデーモン (slpd) サーバーを管理するための追加オプションがあります</block>
   <block id="d09e7ed0d3d5bcf9b4d891eb75068566" category="paragraph">C ： \Program Files （ x86 ） \NetApp\SMIS\Pegasus\cfg`</block>
   <block id="c27013a5a91be7a7f811990b4c345c0c" category="paragraph">'slp.conf 構成ファイルを使用すると ' ホストが SLP 要求をリッスンするインタフェースの数と ' ホストがマルチキャストに使用する IP アドレスの数を変更できます</block>
-  <block id="8a89bc88abd7f83c0aa84b1d5d0d605d" category="paragraph">テキストエディタを使用して 'slp.conf を開きます</block>
   <block id="a49a968397d3eea3b27de92643158cbc" category="list-text">*'interfaces`*</block>
   <block id="e14a37b48112f37a804ec03c140c064a" category="paragraph">ホストが SLP 要求をリスンできる IP アドレスの最大数を指定します。</block>
   <block id="8423702607bab52f36dd74e369cc82b7" category="list-text">*'multicast`*</block>
@@ -476,18 +475,8 @@
   <block id="aea23489ce3aa9b6406ebb28e0cda430" category="paragraph">Windows の場合</block>
   <block id="74dd40aa9a6635d79204e610e8324c38" category="list-text">Microsoft Windows Server 2016</block>
   <block id="1ee2c5253c485a81cfff8c8e3e23a23f" category="list-text">Microsoft Windows Server 2019</block>
-  <block id="89ff2866e74db001ea07e0b7fdde9ac5" category="paragraph">Microsoft Visual C ｛ pp ｝ 2010 ランタイムライブラリは、 SMI-S Provider のインストール時に自動的にインストールされます。ランタイムライブラリに関連する潜在的な問題を回避するには、 Microsoft Visual C {pp} 2010 再頒布可能パッケージ (x86) をインストールする必要があります。次の場所から入手します。<block ref="b7a41ff45868862feefaef480db2df7e" category="inline-link-rx"></block></block>
   <block id="05dbd63393cf525e41d034d5de449c98" category="paragraph">SMI-S プロバイダを実行するには、プロバイダホストマシンが次の仕様を満たしている必要があります。</block>
-  <block id="fd72eadfdaeb4e69b5477af765434a93" category="list-text">プロバイダのホストマシンを Hyper-V ノードのホストに使用することはできません。</block>
-  <block id="b74c30689c8afa829d128cf3e62d6817" category="list-text">SCVMM は、プロバイダのホストマシン上で実行しないでください。</block>
   <block id="b821588d84782d0b1d55c19cfdb5b9b4" category="list-text">プロバイダのホストマシンは、メモリを大量に消費する他のプログラムを実行しないでください。</block>
-  <block id="e7a61d9bf7f995d12bec06e5dc826433" category="list-text">プロバイダのホストマシンでは、他のベンダーの SMI-S プロバイダを実行しないでください。</block>
-  <block id="9e6a91e446af633c638f982317104862" category="paragraph">サポートされるハイパーバイザーは次のとおりです。</block>
-  <block id="aac0de225be44800bd6bac76c5eb4a63" category="list-text">Microsoft Windows Server 2016 Hyper-V</block>
-  <block id="be90425df543f66a8660032f3bec11ea" category="list-text">VMware ESX 5.0</block>
-  <block id="ced23abf6261326792853710d17c1e64" category="list-text">VMware ESX 5.1</block>
-  <block id="1c34588d8157e46be3e3ed89163e2d36" category="list-text">VMware ESX 5.5 の場合</block>
-  <block id="c3b86f2f3b5685e4fd42669ba402e8d2" category="list-text">VMware ESX 6.0</block>
   <block id="98b75b1855a58db6fc5fc919ae7581df" category="summary">smis version コマンドを使用すると、 NetApp SMI-S Provider のバージョンが表示されます。</block>
   <block id="c2c12b46946042a5bfafc346500e9c6b" category="doc">SMIS バージョン</block>
   <block id="96f117305cce12a9a31c4596adf8ab21" category="paragraph">「 smis version 」コマンドは、 NetApp SMI-S Provider のバージョンを表示します。</block>
@@ -908,9 +897,6 @@
   <block id="efad0d1809b94075c94937353c4001ef" category="paragraph">ONTAPの場合は、コマンドではなくコマンドを<block ref="0f44b667bbfb5498165b4f0f5ca52339" prefix=" " category="inline-code"></block>使用する必要があります<block ref="9f0928f5c491149e0d68d561ecf558bc" prefix=" " category="inline-code"></block>。</block>
   <block id="6ed0120f37738e825d889dcb299d9251" category="list-text">Microsoft Windows Server 2022</block>
   <block id="6e6b7efb9f9c24d5ca212d65430689fd" category="list-text">Microsoft Windows Server 2025</block>
-  <block id="fcebb93ad5cad2ad8092153d77893f24" category="section-title">SCVMM UR 2.1の要件</block>
-  <block id="a66b176f80a3f93d31be0edb241f3215" category="paragraph">System Center Virtual Machine Manager（SCVMM）アップデートロールアップ（UR）2.1は、NetApp SMI-Sプロバイダ5.2.7以降でNetAppファイルサーバを管理するために必要です。</block>
-  <block id="77e677c64c1986dc2a8a1c9afdb930e8" category="paragraph">このURがない場合、SCVMM（バージョン2016、2019、2022、または2025）には、NetAppファイルサーバの既存のファイル共有に関するオプションと<block ref="6af63b14f64f6cb255988d8fde2e0437" prefix=" " category="inline-code"></block>オプションの<block ref="5406f75e1620d4c00bc95d050311cd8a" prefix=" " category="inline-code"></block>値が表示され<block ref="207e174801113bba5afa048ccd3450bf" prefix=" " category="inline-code"></block>ます。</block>
   <block id="9794792e794e863d0bd2afdc0bc7a283" category="paragraph">NetApp SMI-Sプロバイダを使用して、System Center 2016、2019、2022、2025を使用してストレージコントローラを管理できます。</block>
   <block id="60f804573e049a0f18647ca5ddadf79f" category="list-text">ONTAPに接続されている各ホストマシンについて、MPIOアプリケーションを開き、次のハードウェアIDを追加します。</block>
   <block id="bfdf270b33cb3dc13957bd36fee69058" category="list-text">ONTAPにと入力します。<block ref="ade191b1004522550d83e818f2d7139d" prefix=" " category="inline-code"></block></block>
@@ -920,4 +906,11 @@
   <block id="a29f0f75cbf44d12b1fb98ed37473297" category="paragraph">NetApp SMI-S Providerソフトウェアをインストールすると、ONTAPを実行するストレージシステムを管理できます。ただし、以前のバージョンにリバートまたはダウングレードすることはできません。デフォルトでは、NetApp SMI-Sプロバイダソフトウェアはディレクトリにインストールされ<block ref="e93eb95a4a6d54999769913bf79a69c9" prefix=" " category="inline-code"></block>ます。</block>
   <block id="738fc2618ae3cc77b3d364faaf5e4b42" category="summary">SMI-Sプロバイダは、ストレージシステムへのONTAP API呼び出しを実行します。デフォルトでは、ONTAP APIコールタイムアウトは300秒です。タイムアウトは 60 ～ 300 秒の値に設定できます。</block>
   <block id="7162b9fa7c706619cc067c40bb9d383b" category="doc">ONTAP APIコールタイムアウト値の指定</block>
+  <block id="2a5f6638ef24c976e6df1a332e199b6f" category="paragraph">テキストエディタを使用して<block ref="cd8fa2e8a9ca8395c90e6d05c6dd4df4" prefix=" " category="inline-code"></block> ファイル。</block>
+  <block id="4d93c7f951ee9893244700500c246604" category="paragraph">SMI-S プロバイダーは、専用の Windows 仮想マシン (VM) にインストールすることをお勧めします。この VM は同じドメイン上に配置できるため、安全で便利な管理が可能になります。</block>
+  <block id="9822409bbabbad1f2c0e3d15465983b3" category="paragraph">Microsoft Visual C{pp} 2010 ランタイム ライブラリは、SMI-S プロバイダーのインストール中に自動的にインストールされます。ランタイム ライブラリに関連する潜在的な問題を回避するには、次の場所から Microsoft Visual C{pp} 2010 再頒布可能パッケージ (x86) をインストールする必要があります。<block ref="b7a41ff45868862feefaef480db2df7e" category="inline-link-rx"></block></block>
+  <block id="78d9d7434c061e2d05638600805e10c2" category="section-title">プロバイダーのホストマシンが仕様を満たしていることを確認する</block>
+  <block id="7455ebb8e235fe565c33132298dc9ae2" category="list-text">プロバイダーを Hyper-V ノードに直接インストールすることはできません。代わりに、Hyper-V VM にインストールすることもできます。</block>
+  <block id="76e285f066350a12e27bc3bc52c6ac1b" category="list-text">System Center Virtual Machine Manager (SCVMM) がプロバイダー ホスト マシン上で実行されていない必要があります。</block>
+  <block id="cf25bf52de5fb16cb01c369f194fa595" category="list-text">プロバイダー ホスト マシンでは、他のベンダーの SMI-S プロバイダーを実行してはなりません。</block>
 </blocks>

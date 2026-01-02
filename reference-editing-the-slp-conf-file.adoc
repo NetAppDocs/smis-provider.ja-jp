@@ -25,7 +25,7 @@ C ： \Program Files （ x86 ） \NetApp\SMIS\Pegasus\cfg`
 
 'slp.conf 構成ファイルを使用すると ' ホストが SLP 要求をリッスンするインタフェースの数と ' ホストがマルチキャストに使用する IP アドレスの数を変更できます
 
-テキストエディタを使用して 'slp.conf を開きます
+テキストエディタを使用して `slp.conf` ファイル。
 
 .パラメータ
 * *'interfaces`*
@@ -51,7 +51,6 @@ SLP 経由でメッセージを送信するときに、マルチキャストオ�
 
 [listing]
 ----
-
 ################################################################
 # OpenSLP configuration file
 # Format and contents conform to specification in IETF RFC 2614 so
