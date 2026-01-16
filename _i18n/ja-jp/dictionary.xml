@@ -377,7 +377,6 @@
   <block id="9d2169c1c2855b78a7aeaa4f42d27dc7" category="inline-link">ネットアップサポートサイト</block>
   <block id="5df91904e284b02eadf3bef23d5a41d4" category="summary">デフォルトでは、 SSL 認証は CIM サーバに対して有効になっています。SMI-S プロバイダのインストール中に、 CIM サーバの自己署名証明書が Pegasus ディレクトリにインストールされます。独自の自己署名証明書を生成し、デフォルトの証明書ではなく、独自の証明書を使用できます。</block>
   <block id="706bd7f5dc0fd11f32957fcfe95a1d86" category="doc">CIM サーバの自己署名証明書を生成します</block>
-  <block id="ddf96c0ef94c04177aac4c565af47742" category="paragraph">デフォルトでは、 SSL 認証は CIM サーバに対して有効になっています。SMI-S プロバイダのインストール中に、 CIM サーバの自己署名証明書が「 Pegasus 」ディレクトリにインストールされます。独自の自己署名証明書を生成し、デフォルトの証明書ではなく、独自の証明書を使用できます。</block>
   <block id="ce1605c578adffb355881da427936cf6" category="list-text">秘密鍵を生成します。</block>
   <block id="ee01244ad0458fc0bceca3ca21a19bcf" category="paragraph">'*openssl genrsa -out cimom.key 2048*</block>
   <block id="d1cc3793bab6382471940558e1237709" category="list-text">証明書要求を生成します。</block>
@@ -913,4 +912,9 @@
   <block id="7455ebb8e235fe565c33132298dc9ae2" category="list-text">プロバイダーを Hyper-V ノードに直接インストールすることはできません。代わりに、Hyper-V VM にインストールすることもできます。</block>
   <block id="76e285f066350a12e27bc3bc52c6ac1b" category="list-text">System Center Virtual Machine Manager (SCVMM) がプロバイダー ホスト マシン上で実行されていない必要があります。</block>
   <block id="cf25bf52de5fb16cb01c369f194fa595" category="list-text">プロバイダー ホスト マシンでは、他のベンダーの SMI-S プロバイダーを実行してはなりません。</block>
+  <block id="84168690f051a56e2cb7f4e07041531d" category="paragraph">デフォルトでは、CIM サーバーに対して SSL 認証が有効になっています。SMI-Sプロバイダーのインストール中に、CIMサーバーの自己署名証明書が<block ref="3015ca4f270b6938b27c95863174a8db" prefix=" " category="inline-code"></block> ディレクトリ。デフォルトの証明書を使用する代わりに、独自の自己署名証明書を生成する必要があります。</block>
+  <block id="6395062fd7cc0c18b923c77707428ae7" category="inline-link-macro">NetAppナレッジベースの記事:「CSMIS-3: NetApp SMI-S Provider5.2.7 の cimom.cert はインストール時に期限切れです。」</block>
+  <block id="e8dfaf98cdbd392a09efaa9768cab219" category="admonition">SMI-S プロバイダーをインストールすると、インストールされるデフォルトの自己署名証明書が古くなります。その結果、System Center Virtual Machine Manager (SCVMM) の *ストレージ デバイスの追加* から SMI-S プロバイダーへの SSL 接続が失敗します。CIM サーバー用の自己署名証明書を生成し、その後 SMI-S プロバイダー サービスを再起動する必要があります。詳細については、 <block ref="6b2d7bc4026d64afffa89af6ebec1110" category="inline-link-macro-rx"></block></block>
+  <block id="cc2ad876e77ac64c0d4f8e5e89900549" category="list-text">Windows ホストに OpenSSL をダウンロードしてインストールしておく必要があります。</block>
+  <block id="c104915e9f0d8e0313edcca7765f005e" category="list-text">SMI-S プロバイダー サービスを再起動します。</block>
 </blocks>
