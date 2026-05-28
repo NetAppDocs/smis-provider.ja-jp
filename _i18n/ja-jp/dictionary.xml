@@ -275,7 +275,6 @@
   <block id="c79b9638e429df89a219f67e64877677" category="paragraph">NetApp SMI-S プロバイダは、 ONTAP ソフトウェアを実行するプラットフォームを検出して管理するコマンドベースのインターフェイスです。SMI-S プロバイダは、 Web-based Enterprise Management （ WBEM ）プロトコルを使用して、ストレージ要素の管理、監視、レポートを実行します。</block>
   <block id="a316d32069744858b73bc2472339bb1d" category="paragraph">NetApp SMI-S プロバイダは、次の 2 つの組織によって標準化されたスキーマを使用します。</block>
   <block id="ffb373b0246b03d37058c9917311f9ba" category="inline-link">Distributed Management Task Force （ DMTF ；分散管理タスクフォース）</block>
-  <block id="3196a1e76b7eb51b7ff2baa784e99b4f" category="list-text"><block ref="3196a1e76b7eb51b7ff2baa784e99b4f" category="inline-link-rx"></block></block>
   <block id="b3973a38d43f2f1fe906a50cc9911f34" category="inline-link">Storage Networking Industry Association （ SNIA ）</block>
   <block id="6406ef7be2956ab22d718f61a164ac48" category="list-text"><block ref="6406ef7be2956ab22d718f61a164ac48" category="inline-link-rx"></block></block>
   <block id="6409b577d21cd98c3caae687888555d6" category="paragraph">SMI-S プロバイダは、複数の管理オブジェクトモデル、プロトコル、およびトランスポートの使用を、ストレージネットワーク内のすべてのコンポーネントに対する単一のオブジェクト指向モデルに置き換えます。</block>
@@ -917,4 +916,5 @@
   <block id="e8dfaf98cdbd392a09efaa9768cab219" category="admonition">SMI-S プロバイダーをインストールすると、インストールされるデフォルトの自己署名証明書が古くなります。その結果、System Center Virtual Machine Manager (SCVMM) の *ストレージ デバイスの追加* から SMI-S プロバイダーへの SSL 接続が失敗します。CIM サーバー用の自己署名証明書を生成し、その後 SMI-S プロバイダー サービスを再起動する必要があります。詳細については、 <block ref="6b2d7bc4026d64afffa89af6ebec1110" category="inline-link-macro-rx"></block></block>
   <block id="cc2ad876e77ac64c0d4f8e5e89900549" category="list-text">Windows ホストに OpenSSL をダウンロードしてインストールしておく必要があります。</block>
   <block id="c104915e9f0d8e0313edcca7765f005e" category="list-text">SMI-S プロバイダー サービスを再起動します。</block>
+  <block id="fa623328d311ec4315ab82a9a7303cbe" category="list-text"><block ref="fa623328d311ec4315ab82a9a7303cbe" category="inline-link-rx"></block></block>
 </blocks>
