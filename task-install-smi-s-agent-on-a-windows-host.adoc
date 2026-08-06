@@ -33,6 +33,7 @@ NetApp SMI-S Providerソフトウェアをインストールすると、ONTAPを
 
 
 
+[[result]]
 == 結果
 
 NetApp SMI-S Provider は、インストールプロセスの終了に向けて自動的に開始されます。

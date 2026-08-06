@@ -32,6 +32,7 @@ HTTP トラフィックに 80 以外のポートを使用するストレージ�
 
 
 
+[[adding-a-storage-system-that-uses-port-8000-for-http-traffic]]
 == HTTP トラフィックにポート 8000 を使用するストレージシステムを追加します
 
 「 cimcli ci -n root/ONTAP ONTAP_FilerData hostname = 10.60.167.12 port = 8000 username = root password = Netapp1 ！comMechanism = HTTP -u root -p Netapp1 ！-l localhost:5989-s-- タイムアウト 180`

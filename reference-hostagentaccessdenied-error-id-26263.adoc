@@ -12,12 +12,14 @@ summary: NetApp SMI-S プロバイダで発生した問題。
 
 
 
+[[message]]
 == メッセージ
 
 'Storage provider_SMIS_provider_machine_for user_name failed from _SCVMM __ （ machine ） _ with error code HostAgentAccessDenied （ストレージプロバイダの登録 _SMIS_provider_machine_for user_name で失敗しました。）ストレージ検出に使用する有効なプロバイダ、ポート、およびユーザクレデンシャルを指定してください。ID:2626263`
 
 
 
+[[description]]
 == 説明
 
 このメッセージは、ユーザーが SCVMM で SMI-S プロバイダに接続するよう指定されていて、 SMIS 信頼ストアの一部ではない場合に表示されます。
@@ -26,6 +28,7 @@ SCVMM と SMI-S Provider 間の通信を有効にするには、有効な CIM �
 
 
 
+[[corrective-action]]
 == 対処方法
 
 「 CIMUser 」コマンドを使用して、ローカル管理者ユーザ（ SMI-S Provider マシン上）を CIM サーバデータベースに追加します。「 CIMUser -a -u admin user 」その後、 NetApp SMI-S プロバイダを SCVMM に追加する際に、その管理ユーザを使用する必要があります。

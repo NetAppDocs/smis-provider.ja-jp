@@ -35,6 +35,7 @@ Microsoft Visual C{pp} 2010 ランタイム ライブラリは、SMI-S プロバ
 |===
 
 
+[[ensure-the-provider-host-machine-meets-the-specifications]]
 == プロバイダーのホストマシンが仕様を満たしていることを確認する
 
 SMI-S プロバイダを実行するには、プロバイダホストマシンが次の仕様を満たしている必要があります。
