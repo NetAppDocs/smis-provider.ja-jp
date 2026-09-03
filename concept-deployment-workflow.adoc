@@ -13,4 +13,4 @@ summary: SMI-S プロバイダを使用してストレージシステムを管�
 [role="lead"]
 SMI-S プロバイダを使用してストレージシステムを管理および監視するには、 SMI-S プロバイダソフトウェアをインストールし、事前構成を検証する必要があります。
 
-image::../media/smi_s_provider_workflow.gif[SMI s プロバイダのワークフロー]
+image::../media/smi_s_provider_workflow.gif[SMI-S Providerの展開、事前構成検証、および管理タスクのワークフローを示す図]

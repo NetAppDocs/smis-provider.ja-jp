@@ -304,7 +304,6 @@
   <block id="64dcf446a7778f30264ca7a94586a6e1" category="doc">SMI-S プロバイダの詳細設定を管理します</block>
   <block id="42c81e79f364b151f80c02c552b5850d" category="summary">SMI-S プロバイダを使用してストレージシステムを管理および監視するには、 SMI-S プロバイダソフトウェアをインストールし、事前構成を検証する必要があります。</block>
   <block id="ab3ccb0be518e752d20f706d36d252c9" category="doc">導入のワークフロー</block>
-  <block id="04c2ee750a71bee087a7164fa9418c8b" category="image-alt">SMI s プロバイダのワークフロー</block>
   <block id="11db62ef1b82524e398ad3812618f7ea" category="doc">NetApp SMI-S プロバイダの起動に時間がかかります</block>
   <block id="a3519a79e1fa4e9109ec373b28d1609d" category="paragraph">すでに管理中のストレージシステムを使用している Windows システムでは、「 SMIS cimserver 」コマンドを使用して NetApp SMI-S Provider を起動した場合、プロバイダのローカルキャッシュが読み込まれるまでコマンドは返されません。キャッシュが読み込まれるまで最大 15 分待機し、 NetApp SMI-S プロバイダを使用することはできません。</block>
   <block id="f9ac0617143317e28bbf839b5d2db80a" category="paragraph">NetApp SMI-S Provider の起動には 'SMIS cimserver コマンドを使用することをお勧めします</block>
@@ -655,7 +654,6 @@
   <block id="37735049e65188a885df4388c67153a4" category="summary">ホスト上のクライアントアプリケーションが SLP （ HTTP 経由の CIM-XML エンコーディング）を使用して CIMOM サーバーを検出すると、クライアントは CIMOM に共有オブジェクト（ CIM 言語でモデル化されたオブジェクト）を照会します。CIMOM は共有オブジェクトをロードし、デバイス固有の API を使用して要求された情報をストレージシステムに照会します。</block>
   <block id="9016abb1e0944872fd232fd72ca5bc80" category="doc">NetApp SMI-S プロバイダとホストの相互通信方法</block>
   <block id="14f75c43461428b4df3f6d3980b25d02" category="paragraph">次の図は、 SMI-S プロバイダがクエリまたはコマンドを受信したときに、 NetApp SMI-S プロバイダが WBEM 管理クライアントと通信する方法を示しています。</block>
-  <block id="707facb1331bad235d191a85d3686ab2" category="image-alt">SMI のエージェントとホストの対話</block>
   <block id="cacc10f2bbbb96e6d2a0d9b4aef02b69" category="summary">トレースが有効になっている場合、デフォルトで 7 つのトレースファイルが保存されます。さらにトレースファイルを保存する必要がある場合は、環境変数 PEGASUS_TRACE_FILE_NUM を設定して、保存するトレースファイルの最大数を増やすことができます。保存されるトレースファイルの最大数を増やす場合は、トレースファイルを保存するための十分なスペースがハードドライブに確保されていることを確認する必要があります。</block>
   <block id="28b9df3d45d41cf4deb33c545836d2a7" category="doc">保存するトレースファイルの数を指定します</block>
   <block id="03ef8ba810aaf28989881c22a0a0d0b4" category="paragraph">トレースが有効になっている場合、デフォルトで 7 つのトレースファイルが保存されます。さらにトレースファイルを保存する必要がある場合は ' 環境変数 PEGASUS_TRACE_FILE_NUM を設定して ' 保存するトレースファイルの最大数を増やすことができます保存されるトレースファイルの最大数を増やす場合は、トレースファイルを保存するための十分なスペースがハードドライブに確保されていることを確認する必要があります。</block>
@@ -917,4 +915,6 @@
   <block id="cc2ad876e77ac64c0d4f8e5e89900549" category="list-text">Windows ホストに OpenSSL をダウンロードしてインストールしておく必要があります。</block>
   <block id="c104915e9f0d8e0313edcca7765f005e" category="list-text">SMI-S プロバイダー サービスを再起動します。</block>
   <block id="fa623328d311ec4315ab82a9a7303cbe" category="list-text"><block ref="fa623328d311ec4315ab82a9a7303cbe" category="inline-link-rx"></block></block>
+  <block id="f08445df01bad5aee6547cb7953d07d6" category="image-alt">SMI-S Providerの展開、事前構成検証、および管理タスクのワークフローを示す図</block>
+  <block id="459eb66f775af707f84ca3f4c3f5f129" category="image-alt">ホストがSMI-SプロバイダCIMOM、リポジトリ、プロバイダDLL、およびストレージシステムにクエリを送信する様子を示す図</block>
 </blocks>
