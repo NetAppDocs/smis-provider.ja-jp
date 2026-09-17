@@ -10,4 +10,7 @@ summary: NetApp SMI-S Provider 5.2.7 ソフトウェアの機能、制限事項�
 :imagesdir: ./media/
 
 
+[role="lead"]
+NetApp SMI-Sプロバイダーのリリースノートには、各リリースにおける新機能、アップグレードに関する注意事項、修正された問題、および既知の制限事項が記載されています。NetApp SMI-Sプロバイダー5.2.7の最新リリースノートはこちらをご覧ください。
+
 には https://library.netapp.com/ecm/ecm_download_file/ECMLP3344664["NetApp SMI-S プロバイダリリースノート"^]、新機能、アップグレードに関する注意事項、解決済みの問題、既知の制限事項、および既知の問題が記載されています。

@@ -10,6 +10,7 @@ summary: ネットアップストレージシステムを検出して管理す�
 :imagesdir: ./media/
 
 
+[role="lead"]
 NetApp SMI-S プロバイダ情報ライブラリへようこそ。ここでは、 NetApp ストレージシステムを検出して管理するコマンドベースのインターフェイスである NetApp SMI-S Provider ソフトウェアのインストール方法と管理方法を記載したドキュメントを参照できます。
 
 以前のリリースの NetApp SMI-S プロバイダのドキュメントは、にあります https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62215["ネットアップサポートサイト"^]。

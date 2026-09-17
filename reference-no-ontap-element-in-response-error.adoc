@@ -10,6 +10,9 @@ summary: NetApp SMI-S プロバイダで発生した問題。
 :imagesdir: ./media/
 
 
+[role="lead"]
+この `Filer return: No ontap element in response`メッセージは、NetApp SMI-S ProviderによるONTAP API呼び出しがタイムアウトしたときに発生します。この問題を解決するには、タイムアウト値を増やしてください。
+
 * * メッセージ *
 +
 'filer return: 応答に ONTAP 要素がありません

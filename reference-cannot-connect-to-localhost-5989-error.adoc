@@ -10,6 +10,9 @@ summary: NetApp SMI-S プロバイダで発生した問題。
 :imagesdir: ./media/
 
 
+[role="lead"]
+NetApp SMI-Sプロバイダは、HTTPS接続が無効になっている場合、HTTPSポートの設定が間違っている場合、またはプロバイダが応答しなくなった場合に、 `localhost:5989`への接続に失敗することがあります。HTTPS接続設定を確認し、プロバイダを再起動して問題を解決してください。
+
 * * メッセージ *
 +
 'localhost に接続できません :5989接続に失敗しました。localhost に接続しようとしています :5989`

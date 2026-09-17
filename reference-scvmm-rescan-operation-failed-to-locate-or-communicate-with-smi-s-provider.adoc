@@ -10,6 +10,9 @@ summary: NetApp SMI-S プロバイダで発生した問題。
 :imagesdir: ./media/
 
 
+[role="lead"]
+まれに、System Center Virtual Machine Manager (SCVMM) が、セキュリティインフラストラクチャのアップデート後に NetApp SMI-S Provider を見つけられない、または通信できないことがあります。この問題を解決するには、プロバイダーを再インストールし、SCVMM で再スキャン操作を実行してください。
+
 * * 問題 *
 +
 まれに、 SCVMM が SMI-S プロバイダを特定できないことがあります。

@@ -10,6 +10,9 @@ summary: NetApp SMI-S プロバイダで発生した問題。
 :imagesdir: ./media/
 
 
+[role="lead"]
+SMB 3.0 の共有サイズは、I/O 負荷が高い場合に ONTAP でクォータの再初期化に時間がかかると、System Center Virtual Machine Manager (SCVMM) で 0 に低下することがあり、新しい仮想マシンをプロビジョニングできなくなります。クォータ設定を調整することで、この問題を解決してください。
+
 * * 問題 *
 +
 System Center Virtual Machine Manager （ SCVMM ）では、新規または既存の SMB 3.0 共有サイズが 0 になることがあります。

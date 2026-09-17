@@ -10,6 +10,9 @@ summary: NetApp SMI-S プロバイダで発生した問題。
 :imagesdir: ./media/
 
 
+[role="lead"]
+メッセージは、NetApp SMI-S Providerが使用するCIMサーバーが起動していないことを示しています。 `Connection refused`CIMサーバーのステータスを確認し、必要に応じて起動してください。
+
 * * メッセージ *
 +
 「接続が拒否されました」
