@@ -12,7 +12,6 @@
   <block id="ccf6fa61cfac4827cab18b713647f22c" category="list-text">「 PEGASUS_DISABLE_DELITES 」環境変数を「 false 」に設定します。</block>
   <block id="303b50921b53d3609d0e06a97d955426" category="list-text">CIM サーバを再起動します。</block>
   <block id="127244f141478553012a969bb50d8169" category="paragraph">`*SMIS cimserver restart*`</block>
-  <block id="4ca8f8dc1b36b9c411697fcb2f505c44" category="summary">トレースするコンポーネントの指定、トレースメッセージの書き込み先のターゲット、トレースのレベル、トレースファイルの場所など、 SMI-S プロバイダによるトレースファイルの管理方法を設定できます。</block>
   <block id="ff33a03ec388f99378211d1528ffde50" category="doc">トレースを管理します</block>
   <block id="2f46f994932279267adf63af53ef8631" category="summary">NetApp SMI-S プロバイダで発生した問題。</block>
   <block id="a276b571413c6c0fe3cdc0eb1cca1726" category="doc">localhost に接続できません： 5989</block>
@@ -461,9 +460,6 @@
   <block id="d10e609c9f10971c9ad9a9e63ddc2439" category="list-text">'*_class_name_*'</block>
   <block id="655546f65ee5fb9186411efa5747bec4" category="paragraph">情報を表示するクラスの名前</block>
   <block id="c807c0fac735539610e5b517945b000e" category="paragraph">「 smis class 」コマンドとその省略された出力は次のとおりです。</block>
-  <block id="ef23db5e5a3a16df609d1db8b2ff882c" category="summary">SLP .conf 構成ファイルを編集して ' サービスロケーションプロトコルデーモン (slpd) サービスを管理できます</block>
-  <block id="e1cd17773638b5c6ba6a33ec0efa8bed" category="doc">SLP 設定オプションを指定します</block>
-  <block id="c520045e753333a3e19361a8bcc5accb" category="paragraph">SLP .conf 構成ファイルを編集して ' サービスロケーションプロトコルデーモン (slpd) サービスを管理できます</block>
   <block id="44f8fbce4489a6c5b317b3f8b2f2121a" category="summary">SMI-S Provider をインストールする前に、 Windows ホストでサポートされるオペレーティングシステムが実行されていることを確認する必要があります。</block>
   <block id="8a83ea3699cafca0e6d30e8c5ffb9259" category="doc">サポートされているオペレーティングシステムのバージョン</block>
   <block id="696c660ff8d9323e55146a6dbd4e4088" category="cell">オペレーティングシステム</block>
@@ -898,7 +894,6 @@
   <block id="bfdf270b33cb3dc13957bd36fee69058" category="list-text">ONTAPにと入力します。<block ref="ade191b1004522550d83e818f2d7139d" prefix=" " category="inline-code"></block></block>
   <block id="cf0d6d290cc1c4520fbbfc002c946664" category="summary">NetApp SMI-S Provider 5.2.7 ソフトウェアの機能、制限事項、および既知の問題に関する情報を提供します。</block>
   <block id="24b5861592ee7b4615fa625b97669f21" category="paragraph">には<block ref="f88e2f39ae65eb4268159ba7fe6b9dda" category="inline-link-rx"></block>、新機能、アップグレードに関する注意事項、解決済みの問題、既知の制限事項、および既知の問題が記載されています。</block>
-  <block id="c77d93c9bafb13a9882093351ecdb498" category="summary">NetApp SMI-S Providerソフトウェアをインストールすると、ONTAPを実行するストレージシステムを管理できます。デフォルトでは、 NetApp SMI-S プロバイダソフトウェアは C ： \Program Files （ x86 ） \NetApp\SMIS\Pegasus ディレクトリにインストールされます。</block>
   <block id="a29f0f75cbf44d12b1fb98ed37473297" category="paragraph">NetApp SMI-S Providerソフトウェアをインストールすると、ONTAPを実行するストレージシステムを管理できます。ただし、以前のバージョンにリバートまたはダウングレードすることはできません。デフォルトでは、NetApp SMI-Sプロバイダソフトウェアはディレクトリにインストールされ<block ref="e93eb95a4a6d54999769913bf79a69c9" prefix=" " category="inline-code"></block>ます。</block>
   <block id="738fc2618ae3cc77b3d364faaf5e4b42" category="summary">SMI-Sプロバイダは、ストレージシステムへのONTAP API呼び出しを実行します。デフォルトでは、ONTAP APIコールタイムアウトは300秒です。タイムアウトは 60 ～ 300 秒の値に設定できます。</block>
   <block id="7162b9fa7c706619cc067c40bb9d383b" category="doc">ONTAP APIコールタイムアウト値の指定</block>
@@ -938,4 +933,7 @@
   <block id="6b9a7e33b136d15333a1b5ea897e1536" category="paragraph"><block ref="d6bea59fb7c3e2297074e152f32b36f6" prefix=" " category="inline-code"></block>のメッセージは、System Center Virtual Machine Manager （SCVMM） で単一のファイル共有上に多数の仮想マシンをプロビジョニングする際に、接続あたりのユーザーセッションの最大制限に達した場合に表示されます。より大規模な仮想マシン展開をサポートするために、この制限値を引き上げてください。</block>
   <block id="3d30ad5f2e0a9dd55e0a8cd699fdd7a8" category="paragraph">警告26130は、ストレージ容量がホストグループに割り当てられているにもかかわらず、そのホストグループのどのホストもストレージアレイにアクセスできない場合に発生し、仮想マシンをストレージシステムに配置することができなくなります。この警告を解消するには、各ホストに必要なアクセス権限を付与してください。</block>
   <block id="415be26ab3c45e9b0e674fcda56c11bb" category="paragraph">NetApp SMI-Sプロバイダーのリリースノートには、各リリースにおける新機能、アップグレードに関する注意事項、修正された問題、および既知の制限事項が記載されています。NetApp SMI-Sプロバイダー5.2.7の最新リリースノートはこちらをご覧ください。</block>
+  <block id="ee6721a9bb4d509731f29438bd62f95e" category="summary">SMI-S Providerは、SMI-S v1.7に準拠したプロファイルおよびサブプロファイルを使用します。</block>
+  <block id="cbba47ea1866712504ecb2c8ff66414b" category="summary">NetApp SMI-S Providerは、ストレージシステム、CIMOM、プロバイダオブジェクト、およびリポジトリを管理および監視するための3つのコンポーネントで構成されています。</block>
+  <block id="44ba926fa432704769627324f65ba8a6" category="summary">ONTAPを実行するストレージシステムを管理するには、NetApp SMI-S Providerソフトウェアをインストールします。</block>
 </blocks>

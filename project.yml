@@ -85,17 +85,14 @@ sidebar:
       url: "/concept-manage-logging-and-tracing-overview.html"
     - title: ログ設定を構成します
       url: "/task-configure-log-settings.html"
-      entries:
-      - title: ログレベル
-        url: "/reference-logging-levels.html"
+    - title: ログレベル
+      url: "/reference-logging-levels.html"
     - title: トレースを管理します
-      url: "/concept-manage-tracing.html"
       entries:
       - title: トレース設定を指定します
         url: "/task-specify-trace-settings.html"
-        entries:
-        - title: 設定値をトレースします
-          url: "/reference-trace-setting-values.html"
+      - title: 設定値をトレースします
+        url: "/reference-trace-setting-values.html"
       - title: トレースファイルのサイズを指定してください
         url: "/task-specify-trace-file-size.html"
       - title: 保存するトレースファイルの数を指定します
@@ -122,11 +119,8 @@ sidebar:
     entries:
     - title: 概要
       url: "/concept-manage-slp-overview.html"
-    - title: SLP 設定オプションを指定します
-      url: "/concept-specify-slp-configuration-options.html"
-      entries:
-      - title: slp.conf ファイル管理
-        url: "/reference-editing-the-slp-conf-file.html"
+    - title: slp.conf ファイル管理
+      url: "/reference-editing-the-slp-conf-file.html"
   - title: CIMOM コマンド
     entries:
     - title: cimconfig

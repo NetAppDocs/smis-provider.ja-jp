@@ -2,7 +2,7 @@
 permalink: task-install-smi-s-agent-on-a-windows-host.html 
 sidebar: sidebar 
 keywords: netapp smi-s provider, software, storage systems, ontap 
-summary: NetApp SMI-S Providerソフトウェアをインストールすると、ONTAPを実行するストレージシステムを管理できます。デフォルトでは、 NetApp SMI-S プロバイダソフトウェアは C ： \Program Files （ x86 ） \NetApp\SMIS\Pegasus ディレクトリにインストールされます。 
+summary: ONTAPを実行するストレージシステムを管理するには、NetApp SMI-S Providerソフトウェアをインストールします。 
 ---
 = Windows ホストに NetApp SMI-S Provider をインストールします
 :allow-uri-read: 

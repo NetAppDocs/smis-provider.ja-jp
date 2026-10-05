@@ -1,7 +1,7 @@
 ---
 permalink: reference-editing-the-slp-conf-file.html 
 sidebar: sidebar 
-keywords: 'slp.conf, configuration, additional options, manage, service location,daemon (SLPD) server' 
+keywords: slp.conf, configuration, additional options, manage, service location, daemon, SLPD, server 
 summary: 'slp.conf 構成ファイルには " サービスロケーションプロトコルデーモン (slpd) サーバーを管理するための追加オプションが用意されています' 
 ---
 = slp.conf ファイル管理
